@@ -1,4 +1,4 @@
-﻿namespace DataTools
+﻿namespace Craftsmaneer.DataTools
 {
     partial class Form1
     {

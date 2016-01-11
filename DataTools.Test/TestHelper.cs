@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataTools.Test
+namespace Craftsmaneer.DataTools.Test
 {
     class TestHelper
     {

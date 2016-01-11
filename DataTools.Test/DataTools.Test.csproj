@@ -7,7 +7,7 @@
     <ProjectGuid>{EC8B486F-34CA-4B3C-9E9E-BE13A756A912}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataTools.Test</RootNamespace>
+    <RootNamespace>Craftsmaneer.DataTools.Test</RootNamespace>
     <AssemblyName>DataTools.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

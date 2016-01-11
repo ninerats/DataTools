@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace DataTools
+namespace Craftsmaneer.DataTools
 {
     public class DataTypeComparer
     {
