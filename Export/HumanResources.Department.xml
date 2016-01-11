@@ -1,0 +1,117 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.Department" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="HumanResources.Department">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="DepartmentID" type="xs:short" minOccurs="0" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="GroupName" type="xs:string" minOccurs="0" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <HumanResources.Department>
+    <DepartmentID>1</DepartmentID>
+    <Name>Engineering</Name>
+    <GroupName>Research and Development</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>2</DepartmentID>
+    <Name>Tool Design</Name>
+    <GroupName>Research and Development</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>3</DepartmentID>
+    <Name>Sales</Name>
+    <GroupName>Sales and Marketing</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>4</DepartmentID>
+    <Name>Marketing</Name>
+    <GroupName>Sales and Marketing</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>5</DepartmentID>
+    <Name>Purchasing</Name>
+    <GroupName>Inventory Management</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>6</DepartmentID>
+    <Name>Research and Development</Name>
+    <GroupName>Research and Development</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>7</DepartmentID>
+    <Name>Production</Name>
+    <GroupName>Manufacturing</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>8</DepartmentID>
+    <Name>Production Control</Name>
+    <GroupName>Manufacturing</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>9</DepartmentID>
+    <Name>Human Resources</Name>
+    <GroupName>Executive General and Administration</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>10</DepartmentID>
+    <Name>Finance</Name>
+    <GroupName>Executive General and Administration</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>11</DepartmentID>
+    <Name>Information Services</Name>
+    <GroupName>Executive General and Administration</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>12</DepartmentID>
+    <Name>Document Control</Name>
+    <GroupName>Quality Assurance</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>13</DepartmentID>
+    <Name>Quality Assurance</Name>
+    <GroupName>Quality Assurance</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>14</DepartmentID>
+    <Name>Facilities and Maintenance</Name>
+    <GroupName>Executive General and Administration</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>15</DepartmentID>
+    <Name>Shipping and Receiving</Name>
+    <GroupName>Inventory Management</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+  <HumanResources.Department>
+    <DepartmentID>16</DepartmentID>
+    <Name>Executive</Name>
+    <GroupName>Executive General and Administration</GroupName>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </HumanResources.Department>
+</SelectedTables>
