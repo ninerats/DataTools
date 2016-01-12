@@ -48,12 +48,18 @@ namespace Craftsmaneer.DataTools
     public class RowDiff
     {
         public DiffType DiffType { get; set; }
-        List<DataColumn> DiffColumns;
+        public List<ColumnDiff> ColumnDiffs { get; set; }
+        public DataRow Row { get; set; }
+       
         public RowDiff()
         {
             DiffType = DiffType.None;
-            DiffColumns = new List<DataColumn>();
+            ColumnDiffs = new List<ColumnDiff>();
         }
+
+
+
+      
     }
 
     public class ColumnDiff
