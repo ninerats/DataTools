@@ -1,0 +1,20 @@
+Craftsmaneer.com open source license v1
+--------------------------------------------
+The copyright holder of this software grants a public license to use this software royalty-free, provided they abide by the following restrictions:
+
+DEFINTIONS
+1. "software" in this context will refer to any copyrightable works, including source code, compiled code, binaries, images, or any file created the author or owned by the copyright holder.
+2. "namespace" refers the to the original source code Microsoft.NET names, or Java namespace depending on source.  
+
+RESTRICTIONS
+
+1. The user of this software can not place any restrictions the copyright holder for use of this software.
+2. The copyright holder bares no liablity for the software.
+3. Except for the restrictions lised above, the user may use this software for any legal purpose.
+
+FORKING
+
+1. The user may alter this software to suit their needs.  However, once the software is no longer binary compatible, it will be considered a "derived work", and will the following will happen:
+1a. Derived works are the property of the user altering the software.  It will be considered a seperated work, not under the scope of this license, provided the user changes the namespace to something other than "craftsmaneer",
+1b. Derived works that still reside in the craftsmaneer namespace are considered property of the copyright holder, and are bound by the license.
+2. This section shall not apply to non-source file types that do not have a namespace.  In this case, the file may be freely use part of a derived work without restrictions.
