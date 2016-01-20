@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Craftsmaneer.DataTools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,10 +75,55 @@ namespace DataToolUtils
         private void cmdCompare_Click(object sender, EventArgs e)
         {
             var dtImported = (DataTable)dgvImported.DataSource;
-            var dtActualTable = TableListView.ExecSql(new SqlConnection(txtConnStr.Text), string.Format("select * from {0}", txtCompareToTable.Text) );
-            var delta = CompareDataTables(dtImported, dtActualTable);
+          //  var dtActualTable = TableListView.ExecSql(new SqlConnection(txtConnStr.Text), string.Format("select * from {0}", txtCompareToTable.Text) );
+            var dtActualTable = TableListView.GetTable(dtImported.TableName, new SqlConnection(txtConnStr.Text));
+            //var delta = CompareDataTables(dtImported, dtActualTable);
+            var dtc = new DataTableComparer();
+            //!dtImported.PrimaryKey = dtActualTable.PrimaryKey;
+            var deltaResult = dtc.Compare(dtImported, dtActualTable);
+           if (!deltaResult.Success)
+           {
+               MessageBox.Show(deltaResult.ToString(), "Error Comparing table");
+           } 
+           else
+           {
+               var delta = deltaResult.Value;
+               if (delta.DiffType == TableDiffType.IncompatibleSchema)
+               {
+                   MessageBox.Show(delta.SchemaDiff.ToString(), "Incompatible schema");
+               }
+               else
+               {
+                   HighlightDifferences(dgvImported, delta);
+               }
+           }
         }
 
+        #region Diff highlight
+        private void HighlightDifferences(DataGridView dgvImported, TableDiff delta)
+        {
+            if (delta.DiffType == TableDiffType.IncompatibleSchema)
+            {
+              //  dgvImported.Enabled = false;
+                return;
+            }
+
+            var rows= dgvImported.Rows.Cast<DataGridViewRow>();
+           
+            foreach (var item in delta.RowDiffs)
+            {
+
+                var thisRow = rows.FirstOrDefault(r => (r.DataBoundItem as DataRowView).Row == item.Row);
+
+                thisRow.DefaultCellStyle.BackColor = Color.Yellow;
+
+                if (item.DiffType == DiffType.Missing)
+                {
+                   
+                }
+            }
+        }
+        #endregion
         private DataTable CompareDataTables(DataTable FirstDataTable, DataTable SecondDataTable)
         {
             var ResultDataTable = new DataTable();

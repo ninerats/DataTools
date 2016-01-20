@@ -7,9 +7,12 @@ using System.Data;
 
 namespace Craftsmaneer.DataTools
 {
+    /// <summary>
+    /// structure the contains infomation about a tables differences, compared to a *master* table
+    /// </summary>
     public class TableDiff
     {
-        public TableDiffType DiffType { get; set; }
+        public TableDiffType DiffType { get; set; } // TODO: this enum is akward, and might reduntant.  rework.
         public SchemaDiff SchemaDiff { get; set; }
         public List<RowDiff> RowDiffs { get; set; }
         public TableDiff()
@@ -24,7 +27,10 @@ namespace Craftsmaneer.DataTools
                 return SchemaDiff.HasDiffs || RowDiffs.Count() > 0;
             }
         }
+
+        
     }
+
 
     public class SchemaDiff
     {
@@ -43,8 +49,18 @@ namespace Craftsmaneer.DataTools
                 return ColumnDiffs.Count() > 0;
             }
         }
+
+        public override string ToString()
+        {
+            var template = "Diff Type: {0}\r\nIs Compatible: {1}\r\n{2}";
+            return string.Format(template, DiffType, IsCompatible, string.Join("\r\n", ColumnDiffs));
+        }
     }
 
+    /// <summary>
+    /// determines the delta between two rows.
+    /// TODO: Consider caching current and original values.
+    /// </summary>
     public class RowDiff
     {
         public DiffType DiffType { get; set; }
@@ -69,6 +85,11 @@ namespace Craftsmaneer.DataTools
         public ColumnDiff()
         {
             DiffType = DiffType.None;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("\t{0}\t{1}", Column.ColumnName, DiffType);
         }
     }
 

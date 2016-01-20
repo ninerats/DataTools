@@ -43,8 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTableComparerTest.cs" />
+    <Compile Include="DataTableExploratoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchemaTiffTest.cs" />
+    <Compile Include="SchemaDiffTest.cs" />
     <Compile Include="TestHelper.cs" />
   </ItemGroup>
   <ItemGroup>

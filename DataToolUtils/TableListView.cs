@@ -115,16 +115,27 @@ namespace DataToolUtils
             {
                 conn.Open();
                 var ds = new DataSet("SelectedTables");
-               
+
                 foreach (var item in this.CheckedItems.Cast<ListViewItem>())
                 {
                     var tableName = item.SubItems[0].Text;
-                    var sql = string.Format("select * from {0}", tableName);
-                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-                    da.Fill(ds, tableName);
+                    var dt = GetTable(tableName,conn);
+                    ds.Tables.Add(dt);
+
                 }
                 return ds;
             }
+        }
+
+        public static DataTable GetTable(string tableName, SqlConnection conn)
+        {
+            
+            var sql = string.Format("select * from {0}", tableName);
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            var dt = new DataTable(tableName);
+            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            da.Fill(dt);
+            return dt;
         }
     }
 }

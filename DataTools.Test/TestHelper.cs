@@ -9,6 +9,21 @@ namespace Craftsmaneer.DataTools.Test
 {
     class TestHelper
     {
+        public static DataTable GetBlankDataTable()
+        {
+            var dt = new DataTable("DataTable1");
+            var pk = new DataColumn("pk", typeof(int));
+            pk.Unique = true;
+            pk.AllowDBNull = false;
+            dt.Columns.Add(pk);
+            dt.PrimaryKey = new DataColumn[] { pk };
+            dt.Columns.Add("varchar1", typeof(String));
+            dt.Columns.Add("int1", typeof(int));
+            dt.Columns.Add("bool1", typeof(Boolean));
+            dt.Columns.Add("dateTime1", typeof(DateTime));
+            return dt;
+        }
+
         public static DataTable BasicDataTable()
         {
             var dt = GetBlankDataTable();
@@ -84,21 +99,27 @@ namespace Craftsmaneer.DataTools.Test
             return dt;
         }
 
-
-        public static DataTable GetBlankDataTable()
+        public static DataTable CompositeKeyTable()
         {
-            var dt = new DataTable("DataTable1");
-            var pk = new DataColumn("pk", typeof(int));
-            pk.Unique = true;
-            pk.AllowDBNull = false;
-            dt.Columns.Add(pk);
-            dt.PrimaryKey = new DataColumn[] { pk };
+            var dt = new DataTable("CompositeKeys");
+            var pkstr = new DataColumn("pkstr", typeof(string));
+            var pkint = new DataColumn("pkint", typeof(int));
+           // pk.Unique = true;
+            pkstr.AllowDBNull = false;
+            pkint.AllowDBNull = false;
+            dt.Columns.Add(pkstr);
+            dt.Columns.Add(pkint);
+            dt.PrimaryKey = new DataColumn[] { pkstr, pkint };
             dt.Columns.Add("varchar1", typeof(String));
-            dt.Columns.Add("int1", typeof(Boolean));
-            dt.Columns.Add("bool1", typeof(Boolean));
-            dt.Columns.Add("dateTime1", typeof(DateTime));
+            dt.Columns.Add("int1", typeof(int));
+
+            dt.Rows.Add(new object[] { "Bob", 1,  "aaaa", 99 });
+            dt.Rows.Add(new object[] { "Bob", 2, "bbbb", 100 });
+            dt.Rows.Add(new object[] { "Bob", 3, "cccc", 101 });
+            dt.Rows.Add(new object[] { "Alice", 1, "ddd", 201 });
             return dt;
         }
+       
 
         public static DataTable BobTableV1()
         {
