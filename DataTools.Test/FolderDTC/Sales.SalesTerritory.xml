@@ -1,0 +1,165 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Sales.SalesTerritory" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Sales.SalesTerritory">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TerritoryID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CountryRegionCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Group">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="SalesYTD" type="xs:decimal" />
+                <xs:element name="SalesLastYear" type="xs:decimal" />
+                <xs:element name="CostYTD" type="xs:decimal" />
+                <xs:element name="CostLastYear" type="xs:decimal" />
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Sales.SalesTerritory>
+    <TerritoryID>1</TerritoryID>
+    <Name>Northwest</Name>
+    <CountryRegionCode>US</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>7887186.7882</SalesYTD>
+    <SalesLastYear>3298694.4938</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>43689a10-e30b-497f-b0de-11de20267ff7</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>2</TerritoryID>
+    <Name>Northeast</Name>
+    <CountryRegionCode>US</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>2402176.8476</SalesYTD>
+    <SalesLastYear>3607148.9371</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>00fb7309-96cc-49e2-8363-0a1ba72486f2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>3</TerritoryID>
+    <Name>Central</Name>
+    <CountryRegionCode>US</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>3072175.1180</SalesYTD>
+    <SalesLastYear>3205014.0767</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>df6e7fd8-1a8d-468c-b103-ed8addb452c1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>4</TerritoryID>
+    <Name>Southwest</Name>
+    <CountryRegionCode>US</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>10510853.8739</SalesYTD>
+    <SalesLastYear>5366575.7098</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>dc3e9ea0-7950-4431-9428-99dbcbc33865</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>5</TerritoryID>
+    <Name>Southeast</Name>
+    <CountryRegionCode>US</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>2538667.2515</SalesYTD>
+    <SalesLastYear>3925071.4318</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>6dc4165a-5e4c-42d2-809d-4344e0ac75e7</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>6</TerritoryID>
+    <Name>Canada</Name>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <Group>North America</Group>
+    <SalesYTD>6771829.1376</SalesYTD>
+    <SalesLastYear>5693988.8600</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>06b4af8a-1639-476e-9266-110461d66b00</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>7</TerritoryID>
+    <Name>France</Name>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <Group>Europe</Group>
+    <SalesYTD>4772398.3078</SalesYTD>
+    <SalesLastYear>2396539.7601</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>bf806804-9b4c-4b07-9d19-706f2e689552</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>8</TerritoryID>
+    <Name>Germany</Name>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <Group>Europe</Group>
+    <SalesYTD>3805202.3478</SalesYTD>
+    <SalesLastYear>1307949.7917</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>6d2450db-8159-414f-a917-e73ee91c38a9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>9</TerritoryID>
+    <Name>Australia</Name>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <Group>Pacific</Group>
+    <SalesYTD>5977814.9154</SalesYTD>
+    <SalesLastYear>2278548.9776</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>602e612e-dfe9-41d9-b894-27e489747885</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+  <Sales.SalesTerritory>
+    <TerritoryID>10</TerritoryID>
+    <Name>United Kingdom</Name>
+    <CountryRegionCode>GB</CountryRegionCode>
+    <Group>Europe</Group>
+    <SalesYTD>5012905.3656</SalesYTD>
+    <SalesLastYear>1635823.3967</SalesLastYear>
+    <CostYTD>0.0000</CostYTD>
+    <CostLastYear>0.0000</CostLastYear>
+    <rowguid>05fc7e1f-2dea-414e-9ecd-09d150516fb5</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTerritory>
+</SelectedTables>

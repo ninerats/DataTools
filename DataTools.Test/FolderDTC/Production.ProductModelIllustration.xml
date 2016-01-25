@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.ProductModelIllustration" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Production.ProductModelIllustration">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ProductModelID" type="xs:int" />
+                <xs:element name="IllustrationID" type="xs:int" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Production.ProductModelIllustration>
+    <ProductModelID>7</ProductModelID>
+    <IllustrationID>3</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.167-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>10</ProductModelID>
+    <IllustrationID>3</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.167-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>47</ProductModelID>
+    <IllustrationID>4</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>47</ProductModelID>
+    <IllustrationID>5</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>48</ProductModelID>
+    <IllustrationID>4</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>48</ProductModelID>
+    <IllustrationID>5</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+  <Production.ProductModelIllustration>
+    <ProductModelID>67</ProductModelID>
+    <IllustrationID>6</IllustrationID>
+    <ModifiedDate>2008-02-10T14:41:02.2-08:00</ModifiedDate>
+  </Production.ProductModelIllustration>
+</SelectedTables>

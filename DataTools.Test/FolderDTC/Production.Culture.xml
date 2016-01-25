@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.Culture" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Production.Culture">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CultureID">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="6" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Production.Culture>
+    <CultureID xml:space="preserve">      </CultureID>
+    <Name>Invariant Language (Invariant Country)</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>ar    </CultureID>
+    <Name>Arabic</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>en    </CultureID>
+    <Name>English</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>es    </CultureID>
+    <Name>Spanish</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>fr    </CultureID>
+    <Name>French</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>he    </CultureID>
+    <Name>Hebrew</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>th    </CultureID>
+    <Name>Thai</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+  <Production.Culture>
+    <CultureID>zh-cht</CultureID>
+    <Name>Chinese</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.Culture>
+</SelectedTables>

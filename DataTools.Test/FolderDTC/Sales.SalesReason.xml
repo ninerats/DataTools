@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Sales.SalesReason" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Sales.SalesReason">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SalesReasonID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ReasonType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Sales.SalesReason>
+    <SalesReasonID>1</SalesReasonID>
+    <Name>Price</Name>
+    <ReasonType>Other</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>2</SalesReasonID>
+    <Name>On Promotion</Name>
+    <ReasonType>Promotion</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>3</SalesReasonID>
+    <Name>Magazine Advertisement</Name>
+    <ReasonType>Marketing</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>4</SalesReasonID>
+    <Name>Television  Advertisement</Name>
+    <ReasonType>Marketing</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>5</SalesReasonID>
+    <Name>Manufacturer</Name>
+    <ReasonType>Other</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>6</SalesReasonID>
+    <Name>Review</Name>
+    <ReasonType>Other</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>7</SalesReasonID>
+    <Name>Demo Event</Name>
+    <ReasonType>Marketing</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>8</SalesReasonID>
+    <Name>Sponsorship</Name>
+    <ReasonType>Marketing</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>9</SalesReasonID>
+    <Name>Quality</Name>
+    <ReasonType>Other</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+  <Sales.SalesReason>
+    <SalesReasonID>10</SalesReasonID>
+    <Name>Other</Name>
+    <ReasonType>Other</ReasonType>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesReason>
+</SelectedTables>

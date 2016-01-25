@@ -1,0 +1,229 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Person.vAdditionalContactInfo" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Person.vAdditionalContactInfo">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessEntityID" type="xs:int" />
+                <xs:element name="FirstName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="MiddleName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LastName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="TelephoneNumber" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="TelephoneSpecialInstructions" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Street" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="City" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="StateProvince" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PostalCode" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CountryRegion" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="HomeAddressSpecialInstructions" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="EMailAddress" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="EMailSpecialInstructions" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="EMailTelephoneNumber" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>291</BusinessEntityID>
+    <FirstName>Gustavo</FirstName>
+    <LastName>Achong</LastName>
+    <TelephoneNumber>425-555-1112</TelephoneNumber>
+    <TelephoneSpecialInstructions>Call only after 5:00 p.m.</TelephoneSpecialInstructions>
+    <Street>123 Oak</Street>
+    <City>Seattle</City>
+    <StateProvince>WA</StateProvince>
+    <PostalCode>98001</PostalCode>
+    <CountryRegion>USA</CountryRegion>
+    <HomeAddressSpecialInstructions>If correspondence to the primary address fails, try this one.</HomeAddressSpecialInstructions>
+    <EMailAddress>customer1@sample.com</EMailAddress>
+    <EMailSpecialInstructions>For urgent issues, do not send e-mail. Instead use this emergency contact phone</EMailSpecialInstructions>
+    <EMailTelephoneNumber>425-555-1111</EMailTelephoneNumber>
+    <rowguid>d4c132d3-fcb5-4231-9dd5-888a54bec693</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.06-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>293</BusinessEntityID>
+    <FirstName>Catherine</FirstName>
+    <MiddleName>R.</MiddleName>
+    <LastName>Abel</LastName>
+    <TelephoneNumber>206-555-2222</TelephoneNumber>
+    <TelephoneSpecialInstructions>On weekends, contact the manager at this number.</TelephoneSpecialInstructions>
+    <Street>P.O Box 5</Street>
+    <City>Edmonds</City>
+    <StateProvince>WA</StateProvince>
+    <PostalCode>98431</PostalCode>
+    <CountryRegion>USA</CountryRegion>
+    <HomeAddressSpecialInstructions>This is an alternative address for billing only.</HomeAddressSpecialInstructions>
+    <EMailAddress>Joe@sample.com</EMailAddress>
+    <EMailSpecialInstructions>Do not send e-mail for urgent issues. Use telephone instead.</EMailSpecialInstructions>
+    <rowguid>d54e0552-c226-4c22-af3b-762ca854cdd3</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.077-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>295</BusinessEntityID>
+    <FirstName>Kim</FirstName>
+    <LastName>Abercrombie</LastName>
+    <TelephoneNumber>605-555-9877</TelephoneNumber>
+    <Street>990 5th Avenue</Street>
+    <City>Redmond</City>
+    <StateProvince>WA</StateProvince>
+    <PostalCode>98052</PostalCode>
+    <CountryRegion>USA</CountryRegion>
+    <HomeAddressSpecialInstructions>Use this address for billing only.</HomeAddressSpecialInstructions>
+    <EMailAddress>Customer3@sample.com</EMailAddress>
+    <EMailSpecialInstructions>Do not send e-mails for urgent issues. Use telephone instead.</EMailSpecialInstructions>
+    <rowguid>f7cbdb48-0b44-470e-9f37-7060446fbfb9</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.077-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>297</BusinessEntityID>
+    <FirstName>Humberto</FirstName>
+    <LastName>Acevedo</LastName>
+    <EMailAddress>Customer4@sample.com</EMailAddress>
+    <EMailSpecialInstructions>This is secondary email address.</EMailSpecialInstructions>
+    <rowguid>5a41d336-84cf-44d7-b12b-83b64b511f7e</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.09-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>299</BusinessEntityID>
+    <FirstName>Pilar</FirstName>
+    <LastName>Ackerman</LastName>
+    <rowguid>df1fb8ab-2323-4330-9ab8-54e13ce6d8f9</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.09-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>301</BusinessEntityID>
+    <FirstName>Frances</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Adams</LastName>
+    <EMailAddress>Customer6@sample.com</EMailAddress>
+    <rowguid>66980082-c186-40ae-972a-74560e78c1af</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.09-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>303</BusinessEntityID>
+    <FirstName>Margaret</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Smith</LastName>
+    <TelephoneNumber>206-555-2222</TelephoneNumber>
+    <TelephoneSpecialInstructions>Best time to call is Monday-Wednesday mornings.</TelephoneSpecialInstructions>
+    <rowguid>691818e1-fc19-445f-b161-e401867368e3</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.107-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>305</BusinessEntityID>
+    <FirstName>Carla</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Adams</LastName>
+    <rowguid>5f183b92-1648-4948-8937-47c9c10f0583</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.107-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>307</BusinessEntityID>
+    <FirstName>Jay</FirstName>
+    <LastName>Adams</LastName>
+    <TelephoneNumber>253-555-4689</TelephoneNumber>
+    <rowguid>38256645-4b88-4169-b68a-5b0118f18445</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.123-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+  <Person.vAdditionalContactInfo>
+    <BusinessEntityID>309</BusinessEntityID>
+    <FirstName>Ronald</FirstName>
+    <MiddleName>L.</MiddleName>
+    <LastName>Adina</LastName>
+    <rowguid>dbb05a55-2256-42b1-901e-824d28158911</rowguid>
+    <ModifiedDate>2009-05-16T16:33:33.123-07:00</ModifiedDate>
+  </Person.vAdditionalContactInfo>
+</SelectedTables>

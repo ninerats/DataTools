@@ -1,0 +1,1880 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.vProductModelInstructions" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Production.vProductModelInstructions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ProductModelID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Instructions" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LocationID" type="xs:int" minOccurs="0" />
+                <xs:element name="SetupHours" type="xs:decimal" minOccurs="0" />
+                <xs:element name="MachineHours" type="xs:decimal" minOccurs="0" />
+                <xs:element name="LaborHours" type="xs:decimal" minOccurs="0" />
+                <xs:element name="LotSize" type="xs:int" minOccurs="0" />
+                <xs:element name="Step" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="1024" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert aluminum sheet MS-2341 into the T-85A framing tool.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Attach Trim Jig TJ-26 to the upper and lower right corners of the aluminum sheet.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Using a router with a carbide tip 15, route the aluminum sheet following the jig carefully.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert the frame into Forming Tool FT-15 and press Start.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        When finished, inspect the forms for defects per Inspection Specification INFS-111.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.5000</SetupHours>
+    <MachineHours>3.0000</MachineHours>
+    <LaborHours>2.5000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Remove the frames from the tool and place them in the Completed or Rejected bin as appropriate.</Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.1500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.7500</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Assemble all frame components following blueprint 1299.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.1500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.7500</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Weld all frame components together as shown in illustration 3</Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.1500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.7500</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect all weld joints per Adventure Works Cycles Inspection Specification INFS-208.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>30</LocationID>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Using the standard debur tool, remove all excess material from weld areas.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>30</LocationID>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Using Acme Polish Cream, polish all weld areas.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Attach a maximum of 20 frames to paint harness ensuring frames are not touching.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Mix primer PA-529S. Test spray pattern on sample area and correct flow and pattern as required per engineering spec AWC-501.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>Apply thin coat of primer to all surfaces.  </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>After 30 minutes, touch test for dryness. If dry to touch, lightly sand all surfaces. Remove all surface debris with compressed air. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Mix paint per manufacturer instructions.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Test spray pattern on sample area and correct flow and pattern as required per engineering spec AWC-509.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>Apply thin coat of paint to all surfaces. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>After 60 minutes, touch test for dryness. If dry to touch, reapply second coat. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>45</LocationID>
+    <MachineHours>0.6500</MachineHours>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Allow paint to cure for 24 hours and inspect per AWC-5015.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Add Seat Assembly. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Add Brake assembly.   </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Add Wheel Assembly. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inspect Front Derailleur. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inspect Rear Derailleur. </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Perform final inspection per engineering specification AWC-915.
+                    </Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Complete all required certification forms.</Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>7</ProductModelID>
+    <Name>HL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-210B Instructions for Manufacturing HL Touring Frame. Summary: This document contains manufacturing instructions for manufacturing the HL Touring Frame, Product Model 7. Instructions are work center specific and are identified by Work Center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Move to shipping.</Step>
+    <rowguid>d60ed2a5-c100-4c54-89a1-531404c4a20f</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert aluminum sheet MS-6061 into tool T-99 framing tool.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Attach Trim Jig TJ-25 to the upper and lower right corners of the aluminum sheet.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Using a router with a carbide tip 26, route the aluminum sheet following the jig carefully.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert the frame into Forming Tool FT-25 and press Start.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        When finished, inspect the form for defects per Inspection Specification INFS-110.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>2.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Remove the frame from the tool and place it in the Completed or Rejected bin as appropriate.</Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Assemble all frame components following blueprint 12345.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Weld all frame components together as shown in illustration 3</Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect all weld joints per Adventure Works Cycles Inspection Specification INFS-206.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>30</LocationID>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Using the standard debur tool, remove all excess material from weld areas.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>30</LocationID>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Using Acme Polish Cream, polish all weld areas.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Attach a maximum of 20 frames to paint harness ensuring frames are not touching.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Mix primer PA-345. Test spray pattern on sample area and correct flow and pattern as required per engineering spec AWC-502.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>Apply thin coat of primer to all surfaces.  </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        After 30 minutes, touch test for dryness. If dry to touch, lightly sand all surfaces. Remove all surface debris with compressed air.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Mix paint per manufacturer instructions.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Test spray pattern on sample area and correct flow and pattern as required per engineering specificationAWC-503.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>Apply thin coat of paint to all surfaces. </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>After 60 minutes, touch test for dryness. If dry to touch, reapply second coat. </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>4</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>20</LotSize>
+    <Step>
+                        Allow paint to cure for 24 hours and inspect per AWC-5010.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Add Seat Assembly.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Add Brake assembly.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Add Wheel Assembly.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inspect Front Derailleur. </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inspect Rear Derailleur.</Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Perform final inspection per engineering specification AWC-910.
+                    </Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Complete all required certification forms.</Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>10</ProductModelID>
+    <Name>LL Touring Frame</Name>
+    <Instructions>
+                Adventure Works CyclesFR-200A Instructions for Manufacturing LL Touring Frame Summary: This document contains manufacturing instructions for manufacturing the LL Touring Frame, Product Model 10. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>60</LocationID>
+    <LaborHours>4.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Move to shipping.</Step>
+    <rowguid>66c63844-2a24-473c-96d5-d3b3fd57d834</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.98-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect the rim for dents, cracks or other damage.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Slide each spoke through the hub flange working in a clockwise direction.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        For each spoke, screw on the spoke nipple (NI-9522). Do not over tighten.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Place the wheel in the truing stand.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Pluck each spoke. The sound from each spoke should be consistent. Adjust as needed. </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inflate the tire tubeto one-quarter pressure.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Insert the valve stem through Rim RM-M823.
+                    </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Tuck the tube into the tire ensuring there are no wrinkles or kinks.</Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inflate the tube to half pressure. </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Spin the wheel and ensure the bead line is just above the rim. </Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inflate the tube to 35 PSI.</Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>43</ProductModelID>
+    <Name>Touring Rear Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-150C Instructions for Assembling Touring Front Wheel Summary: This document contains manufacturing instructions for assembling the Touring Front Wheel, Product Model 43. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach reflector as shown in illustration 7</Step>
+    <rowguid>e878fcaa-61cc-4014-988a-51f52643f7aa</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect the rim for dents, cracks or other damage.
+                    </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Slide each spoke through the hub flange working in a clockwise direction.
+                    </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        For each spoke, screw on the spoke nipple (NI-9525). Do not over tighten.
+                    </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Place the wheel in the truing stand.
+                    </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Pluck each spoke. The sound from each spoke should be consistent. Adjust as needed.</Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inflate the tire tube to one-quarter pressure.</Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Insert the valve stem through Rim RM-M825.
+                    </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Tuck the tube into the tire ensuring there are no wrinkles or kinks.</Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inflate the tube to half pressure. </Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Spin the wheel and ensure the bead line is just above the rim.</Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>44</ProductModelID>
+    <Name>Touring Front Wheel</Name>
+    <Instructions>
+                Adventure Works CyclesWA-151C Instructions for Assembling Touring Rear Wheel Summary: This document contains manufacturing instructions for assembling the Touring Rear Wheel, Product Model 44. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Inflate the tube to 35 PSI.</Step>
+    <rowguid>6da78798-3793-4b8e-829e-dba9d140b1d4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:28.997-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert aluminum sheet MS-2259 into tool T-50 Tube Forming tool.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Attach Trim Jig TJ-8 to the upper and lower right corners of the aluminum sheet.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Route the aluminum sheet following the jig carefully. </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert the cut pieces into Tube Forming Tool FT-90 and press Start.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        When finished, inspect the form for defects per Inspection Specification INFS-90.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Remove the lengths of tube from the tool and place it in the Completed or Rejected bin as appropriate.</Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Assemble all handlebar components following blueprint 1111.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Weld all components together as shown in illustration 5</Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>1.7500</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect all weld joints per Adventure Works Cycles Inspection Specification INFS-222.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Slide the stem onto the handlebar centering it over the knurled section.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Take care not to scratch the handlebar.</Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>The ends of the handlebar should turn toward the rear. </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the Pinch Bolt (Product Number PB-6109), Lock Washer 10 (Product Number LW-1210), and Lock Nut 7 (Product Number LN-1224) onto the stem.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Tighten the nut just enough to keep the handlebar from rotating in the stem. Do not over tighten. </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Put a Flat Washer 1 (Product Number FW-1000) onto the stem bolt, and then insert the bolt down into the stem.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Thread the plug nut onto the stem bolt aligning it with the stem body as shown in illustration 4. Insert the stem down into the lock nut until the minimum insertion line marked on the stem is hidden inside the nut.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the grips.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>47</ProductModelID>
+    <Name>LL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the LL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the LL Touring Handlebars, Product Model 47. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect per specification FI-225.
+                    </Step>
+    <rowguid>84138622-1ea6-489f-9c98-6e3924cfbac0</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.01-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert aluminum sheet MS-2259 into tool T-51 Tube Forming tool.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Attach Trim Jig TJ-9 to the upper and lower right corners of the aluminum sheet.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Route the aluminum sheet following the jig carefully. </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        Insert the cut pieces into Tube Forming Tool FT-91 and press Start.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>
+                        When finished, inspect the form for defects per Inspection Specification INFS-90.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>10</LocationID>
+    <SetupHours>0.1000</SetupHours>
+    <MachineHours>2.5000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>100</LotSize>
+    <Step>Remove the lengths of tube from the tool and place it in the Completed or Rejected bin as appropriate.</Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Assemble all handlebar components following blueprint 1112.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Using weld torch, weld all components together as shown in illustration 5</Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>20</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <MachineHours>2.0000</MachineHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect all weld joints per Adventure Works Cycles Inspection Specification INFS-222.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Slide the stem onto the handlebar centering it over the knurled section.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Take care not to scratch the handlebar.</Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>The ends of the handlebar should turn toward the rear. </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the Pinch Bolt (Product Number PB-6109), Lock Washer 7 (Product Number LI-3800), and Lock Nut 16 (Product Number LN-1213) onto the stem.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Tighten the nut just enough to keep the handlebar from rotating in the stem. Do not over tighten. </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Put a Flat Washer 9 (Product Number FW-3400) onto the stem bolt, and then insert the bolt down into the stem.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Thread the plug nut onto the stem bolt aligning it with the stem body as shown in illustration 4. Insert the stem down into the lock nut until the minimum insertion line marked on the stem is hidden inside the nut.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the grips.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>48</ProductModelID>
+    <Name>HL Touring Handlebars</Name>
+    <Instructions>
+                Adventure Works CyclesWA-190A Instructions for Manufacturing and Assembling the HL Touring Handlebars Summary: This document contains manufacturing instructions for manufacturing and assembling the HL Touring Handlebars, Product Model 48. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>3.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect per specification FI-225.
+                    </Step>
+    <rowguid>9da82e49-80ad-4918-9a54-31f4b0c8eabb</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Visually examine the pedal spindles to determine left and right pedals. The left and right pedals have different threading directions. It is important you identify them correctly.
+                    </Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Apply a small amount of grease to the left pedal and thread the pedal onto the left crank arm by hand.
+                    </Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>If the threads do not turn easily, back the spindle out and re-start.</Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Securely tighten the spindle against the crank arm using a small wrench.
+                    </Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Apply a small amount of grease to the right pedal and thread the pedal onto the right crank arm by hand.</Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>If the threads do not turn easily, back the spindle out and re-start.</Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>Securely tighten the spindle against the crank arm using a small wrench.</Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>53</ProductModelID>
+    <Name>Touring Pedal</Name>
+    <Instructions>
+                Adventure Works CyclesWA-500 Instructions Assembling the Touring Pedal Summary: This document contains manufacturing instructions for assembling the Touring Pedal, Product Model 53. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>0.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect per specification FI-520.
+                    </Step>
+    <rowguid>b98a3207-56fc-405c-a040-3c7a90cc7890</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.027-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>66</ProductModelID>
+    <Name>LL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the LL Touring Seat Summary: This document contains manufacturing instructions for assembling the LL Touring Seat, Product Model 63. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Put the Seat post Lug (Product Number SL-0931) on the Seat Post (Product Number SP-2981).
+                    </Step>
+    <rowguid>4a17c43a-1a55-41bb-bc97-612f47cedeb3</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>66</ProductModelID>
+    <Name>LL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the LL Touring Seat Summary: This document contains manufacturing instructions for assembling the LL Touring Seat, Product Model 63. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Insert the Pinch Bolt (Product Number PB-6109) and tighten until it is secure but still able to slide up or down the post as shown in illustration 6.
+                    </Step>
+    <rowguid>4a17c43a-1a55-41bb-bc97-612f47cedeb3</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>66</ProductModelID>
+    <Name>LL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the LL Touring Seat Summary: This document contains manufacturing instructions for assembling the LL Touring Seat, Product Model 63. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the LL Seat (Product Number SE-T312) to the top of the Seat Post and tighten securely.
+                    </Step>
+    <rowguid>4a17c43a-1a55-41bb-bc97-612f47cedeb3</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>66</ProductModelID>
+    <Name>LL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the LL Touring Seat Summary: This document contains manufacturing instructions for assembling the LL Touring Seat, Product Model 63. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <LaborHours>1.5000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect per specification FI-620.
+                    </Step>
+    <rowguid>4a17c43a-1a55-41bb-bc97-612f47cedeb3</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>67</ProductModelID>
+    <Name>HL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the HL Touring Seat Summary: This document contains manufacturing instructions for assembling the HL Touring Seat, Product Model 67. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Put the Seatpost Lug (Product Number SL-0932) on the Seat Post (Product Number SP-3981).
+                    </Step>
+    <rowguid>059a2000-7549-4b49-8e0c-2de6b2771ef4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>67</ProductModelID>
+    <Name>HL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the HL Touring Seat Summary: This document contains manufacturing instructions for assembling the HL Touring Seat, Product Model 67. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Insert the Pinch Bolt (Product Number PB-6109) and tighten until it is secure but still able to slide up or down the post. See illustration 6.
+                    </Step>
+    <rowguid>059a2000-7549-4b49-8e0c-2de6b2771ef4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>67</ProductModelID>
+    <Name>HL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the HL Touring Seat Summary: This document contains manufacturing instructions for assembling the HL Touring Seat, Product Model 67. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Attach the HL Seat (Product Number SE-T315) to the top of the Seat Post and tighten securely.
+                    </Step>
+    <rowguid>059a2000-7549-4b49-8e0c-2de6b2771ef4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+  <Production.vProductModelInstructions>
+    <ProductModelID>67</ProductModelID>
+    <Name>HL Touring Seat/Saddle</Name>
+    <Instructions>
+                Adventure Works CyclesWA-620 Instructions Assembling the HL Touring Seat Summary: This document contains manufacturing instructions for assembling the HL Touring Seat, Product Model 67. Instructions are work center specific and are identified by work center ID. These instructions must be followed in the order presented. Deviation from the instructions is not permitted unless an authorized Change Order detailing the deviation is provided by the Engineering Manager.</Instructions>
+    <LocationID>50</LocationID>
+    <SetupHours>0.2500</SetupHours>
+    <LaborHours>1.0000</LaborHours>
+    <LotSize>1</LotSize>
+    <Step>
+                        Inspect per specification FI-625.
+                    </Step>
+    <rowguid>059a2000-7549-4b49-8e0c-2de6b2771ef4</rowguid>
+    <ModifiedDate>2009-05-16T16:34:29.043-07:00</ModifiedDate>
+  </Production.vProductModelInstructions>
+</SelectedTables>

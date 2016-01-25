@@ -1,0 +1,222 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.UnitMeasure" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Production.UnitMeasure">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="UnitMeasureCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>BOX</UnitMeasureCode>
+    <Name>Boxes</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>BTL</UnitMeasureCode>
+    <Name>Bottle</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>C  </UnitMeasureCode>
+    <Name>Celsius</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CAN</UnitMeasureCode>
+    <Name>Canister</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CAR</UnitMeasureCode>
+    <Name>Carton</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CBM</UnitMeasureCode>
+    <Name>Cubic meters</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CCM</UnitMeasureCode>
+    <Name>Cubic centimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CDM</UnitMeasureCode>
+    <Name>Cubic decimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CM </UnitMeasureCode>
+    <Name>Centimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CM2</UnitMeasureCode>
+    <Name>Square centimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CR </UnitMeasureCode>
+    <Name>Crate</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CS </UnitMeasureCode>
+    <Name>Case</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>CTN</UnitMeasureCode>
+    <Name>Container</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>DM </UnitMeasureCode>
+    <Name>Decimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>DZ </UnitMeasureCode>
+    <Name>Dozen</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>EA </UnitMeasureCode>
+    <Name>Each</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>FT3</UnitMeasureCode>
+    <Name>Cubic foot</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>G  </UnitMeasureCode>
+    <Name>Gram</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>GAL</UnitMeasureCode>
+    <Name>Gallon</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>IN </UnitMeasureCode>
+    <Name>Inch</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>KG </UnitMeasureCode>
+    <Name>Kilogram</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>KGV</UnitMeasureCode>
+    <Name>Kilogram/cubic meter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>KM </UnitMeasureCode>
+    <Name>Kilometer</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>KT </UnitMeasureCode>
+    <Name>Kiloton</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>L  </UnitMeasureCode>
+    <Name>Liter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>LB </UnitMeasureCode>
+    <Name>US pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>M  </UnitMeasureCode>
+    <Name>Meter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>M2 </UnitMeasureCode>
+    <Name>Square meter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>M3 </UnitMeasureCode>
+    <Name>Cubic meter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>MG </UnitMeasureCode>
+    <Name>Milligram</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>ML </UnitMeasureCode>
+    <Name>Milliliter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>MM </UnitMeasureCode>
+    <Name>Millimeter</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>OZ </UnitMeasureCode>
+    <Name>Ounces</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>PAK</UnitMeasureCode>
+    <Name>Pack</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>PAL</UnitMeasureCode>
+    <Name>Pallet</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>PC </UnitMeasureCode>
+    <Name>Piece</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>PCT</UnitMeasureCode>
+    <Name>Percentage</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+  <Production.UnitMeasure>
+    <UnitMeasureCode>PT </UnitMeasureCode>
+    <Name>Pint, US liquid</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Production.UnitMeasure>
+</SelectedTables>

@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Person.PhoneNumberType" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Person.PhoneNumberType">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PhoneNumberTypeID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Person.PhoneNumberType>
+    <PhoneNumberTypeID>1</PhoneNumberTypeID>
+    <Name>Cell</Name>
+    <ModifiedDate>2012-01-14T13:19:22.273-08:00</ModifiedDate>
+  </Person.PhoneNumberType>
+  <Person.PhoneNumberType>
+    <PhoneNumberTypeID>2</PhoneNumberTypeID>
+    <Name>Home</Name>
+    <ModifiedDate>2012-01-14T13:19:22.273-08:00</ModifiedDate>
+  </Person.PhoneNumberType>
+  <Person.PhoneNumberType>
+    <PhoneNumberTypeID>3</PhoneNumberTypeID>
+    <Name>Work</Name>
+    <ModifiedDate>2012-01-14T13:19:22.273-08:00</ModifiedDate>
+  </Person.PhoneNumberType>
+</SelectedTables>

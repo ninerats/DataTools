@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Sales.ShoppingCartItem" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Sales.ShoppingCartItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ShoppingCartItemID" type="xs:int" />
+                <xs:element name="ShoppingCartID">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Quantity" type="xs:int" />
+                <xs:element name="ProductID" type="xs:int" />
+                <xs:element name="DateCreated" type="xs:dateTime" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Sales.ShoppingCartItem>
+    <ShoppingCartItemID>2</ShoppingCartItemID>
+    <ShoppingCartID>14951</ShoppingCartID>
+    <Quantity>3</Quantity>
+    <ProductID>862</ProductID>
+    <DateCreated>2007-12-11T17:54:07.603-08:00</DateCreated>
+    <ModifiedDate>2007-12-11T17:54:07.603-08:00</ModifiedDate>
+  </Sales.ShoppingCartItem>
+  <Sales.ShoppingCartItem>
+    <ShoppingCartItemID>4</ShoppingCartItemID>
+    <ShoppingCartID>20621</ShoppingCartID>
+    <Quantity>4</Quantity>
+    <ProductID>881</ProductID>
+    <DateCreated>2007-12-11T17:54:07.603-08:00</DateCreated>
+    <ModifiedDate>2007-12-11T17:54:07.603-08:00</ModifiedDate>
+  </Sales.ShoppingCartItem>
+  <Sales.ShoppingCartItem>
+    <ShoppingCartItemID>5</ShoppingCartItemID>
+    <ShoppingCartID>20621</ShoppingCartID>
+    <Quantity>7</Quantity>
+    <ProductID>874</ProductID>
+    <DateCreated>2007-12-11T17:54:07.603-08:00</DateCreated>
+    <ModifiedDate>2007-12-11T17:54:07.603-08:00</ModifiedDate>
+  </Sales.ShoppingCartItem>
+</SelectedTables>

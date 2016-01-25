@@ -1,0 +1,2973 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.vEmployeeDepartment" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="HumanResources.vEmployeeDepartment">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessEntityID" type="xs:int" />
+                <xs:element name="Title" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="8" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="FirstName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="MiddleName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LastName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Suffix" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="JobTitle">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Department">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="GroupName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="StartDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>1</BusinessEntityID>
+    <FirstName>Ken</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Sánchez</LastName>
+    <JobTitle>Chief Executive Officer</JobTitle>
+    <Department>Executive</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>2</BusinessEntityID>
+    <FirstName>Terri</FirstName>
+    <MiddleName>Lee</MiddleName>
+    <LastName>Duffy</LastName>
+    <JobTitle>Vice President of Engineering</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2002-03-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>3</BusinessEntityID>
+    <FirstName>Roberto</FirstName>
+    <LastName>Tamburello</LastName>
+    <JobTitle>Engineering Manager</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2001-12-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>4</BusinessEntityID>
+    <FirstName>Rob</FirstName>
+    <LastName>Walters</LastName>
+    <JobTitle>Senior Tool Designer</JobTitle>
+    <Department>Tool Design</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2004-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>5</BusinessEntityID>
+    <Title>Ms.</Title>
+    <FirstName>Gail</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Erickson</LastName>
+    <JobTitle>Design Engineer</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2002-02-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>6</BusinessEntityID>
+    <Title>Mr.</Title>
+    <FirstName>Jossef</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Goldberg</LastName>
+    <JobTitle>Design Engineer</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2002-02-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>7</BusinessEntityID>
+    <FirstName>Dylan</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Miller</LastName>
+    <JobTitle>Research and Development Manager</JobTitle>
+    <Department>Research and Development</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2003-03-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>8</BusinessEntityID>
+    <FirstName>Diane</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Margheim</LastName>
+    <JobTitle>Research and Development Engineer</JobTitle>
+    <Department>Research and Development</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2003-01-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>9</BusinessEntityID>
+    <FirstName>Gigi</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Matthew</LastName>
+    <JobTitle>Research and Development Engineer</JobTitle>
+    <Department>Research and Development</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2003-02-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>10</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <LastName>Raheem</LastName>
+    <JobTitle>Research and Development Manager</JobTitle>
+    <Department>Research and Development</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2003-06-04T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>11</BusinessEntityID>
+    <FirstName>Ovidiu</FirstName>
+    <MiddleName>V</MiddleName>
+    <LastName>Cracium</LastName>
+    <JobTitle>Senior Tool Designer</JobTitle>
+    <Department>Tool Design</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2005-01-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>12</BusinessEntityID>
+    <FirstName>Thierry</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>D'Hers</LastName>
+    <JobTitle>Tool Designer</JobTitle>
+    <Department>Tool Design</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2002-01-11T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>13</BusinessEntityID>
+    <Title>Ms.</Title>
+    <FirstName>Janice</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Galvin</LastName>
+    <JobTitle>Tool Designer</JobTitle>
+    <Department>Tool Design</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2005-01-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>14</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>I</MiddleName>
+    <LastName>Sullivan</LastName>
+    <JobTitle>Senior Design Engineer</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2005-01-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>15</BusinessEntityID>
+    <FirstName>Sharon</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Salavaria</LastName>
+    <JobTitle>Design Engineer</JobTitle>
+    <Department>Engineering</Department>
+    <GroupName>Research and Development</GroupName>
+    <StartDate>2005-02-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>16</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Bradley</LastName>
+    <JobTitle>Marketing Manager</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2003-08-16T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>17</BusinessEntityID>
+    <FirstName>Kevin</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Brown</LastName>
+    <JobTitle>Marketing Assistant</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2001-02-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>18</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Wood</LastName>
+    <JobTitle>Marketing Specialist</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-03-10T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>19</BusinessEntityID>
+    <FirstName>Mary</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Dempsey</LastName>
+    <JobTitle>Marketing Assistant</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-03-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>20</BusinessEntityID>
+    <FirstName>Wanida</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Benshoof</LastName>
+    <JobTitle>Marketing Assistant</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-02-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>21</BusinessEntityID>
+    <FirstName>Terry</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Eminhizer</LastName>
+    <JobTitle>Marketing Specialist</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2003-04-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>22</BusinessEntityID>
+    <FirstName>Sariya</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Harnpadoungsataya</LastName>
+    <JobTitle>Marketing Specialist</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2003-01-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>23</BusinessEntityID>
+    <FirstName>Mary</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Gibson</LastName>
+    <JobTitle>Marketing Specialist</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2003-02-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>24</BusinessEntityID>
+    <Title>Ms.</Title>
+    <FirstName>Jill</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Williams</LastName>
+    <JobTitle>Marketing Specialist</JobTitle>
+    <Department>Marketing</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2003-02-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>25</BusinessEntityID>
+    <FirstName>James</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Hamilton</LastName>
+    <JobTitle>Vice President of Production</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>26</BusinessEntityID>
+    <FirstName>Peter</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Krebs</LastName>
+    <JobTitle>Production Control Manager</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>27</BusinessEntityID>
+    <FirstName>Jo</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Brown</LastName>
+    <JobTitle>Production Supervisor - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>28</BusinessEntityID>
+    <FirstName>Guy</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Gilbert</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2000-07-31T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>29</BusinessEntityID>
+    <FirstName>Mark</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>McArthur</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>30</BusinessEntityID>
+    <FirstName>Britta</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Simon</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>31</BusinessEntityID>
+    <FirstName>Margie</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Shoop</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>32</BusinessEntityID>
+    <FirstName>Rebecca</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Laszlo</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>33</BusinessEntityID>
+    <FirstName>Annik</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Stahl</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>34</BusinessEntityID>
+    <FirstName>Suchitra</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Mohan</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-20T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>35</BusinessEntityID>
+    <FirstName>Brandon</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Heidepriem</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>36</BusinessEntityID>
+    <FirstName>Jose</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Lugo</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-14T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>37</BusinessEntityID>
+    <FirstName>Chris</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Okelberry</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-08T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>38</BusinessEntityID>
+    <FirstName>Kim</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Abercrombie</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>39</BusinessEntityID>
+    <FirstName>Ed</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Dudenhoefer</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>40</BusinessEntityID>
+    <FirstName>JoLynn</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Dobney</LastName>
+    <JobTitle>Production Supervisor - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>41</BusinessEntityID>
+    <FirstName>Bryan</FirstName>
+    <LastName>Baker</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>42</BusinessEntityID>
+    <FirstName>James</FirstName>
+    <MiddleName>D</MiddleName>
+    <LastName>Kramer</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>43</BusinessEntityID>
+    <FirstName>Nancy</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Anderson</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>44</BusinessEntityID>
+    <FirstName>Simon</FirstName>
+    <MiddleName>D</MiddleName>
+    <LastName>Rapier</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-09T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>45</BusinessEntityID>
+    <FirstName>Thomas</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Michaels</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>46</BusinessEntityID>
+    <FirstName>Eugene</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Kogan</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>47</BusinessEntityID>
+    <FirstName>Andrew</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Hill</LastName>
+    <JobTitle>Production Supervisor - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>48</BusinessEntityID>
+    <FirstName>Ruth</FirstName>
+    <MiddleName>Ann</MiddleName>
+    <LastName>Ellerbrock</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-02-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>49</BusinessEntityID>
+    <FirstName>Barry</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Johnson</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-02-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>50</BusinessEntityID>
+    <FirstName>Sidney</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Higa</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-03-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>51</BusinessEntityID>
+    <FirstName>Jeffrey</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Ford</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-03-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>52</BusinessEntityID>
+    <FirstName>Doris</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Hartwig</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-04-11T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>53</BusinessEntityID>
+    <FirstName>Diane</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Glimp</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-04-29T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>54</BusinessEntityID>
+    <FirstName>Bonnie</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Kearney</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>55</BusinessEntityID>
+    <FirstName>Taylor</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Maxwell</LastName>
+    <JobTitle>Production Supervisor - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-03-11T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>56</BusinessEntityID>
+    <FirstName>Denise</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Smith</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-09T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>57</BusinessEntityID>
+    <FirstName>Frank</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Miller</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>58</BusinessEntityID>
+    <FirstName>Kendall</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Keil</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>59</BusinessEntityID>
+    <FirstName>Bob</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Hohman</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>60</BusinessEntityID>
+    <FirstName>Pete</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Male</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>61</BusinessEntityID>
+    <FirstName>Diane</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Tibbott</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>62</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Campbell</LastName>
+    <JobTitle>Production Supervisor - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2002-04-18T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>63</BusinessEntityID>
+    <FirstName>Maciej</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Dusza</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>64</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Zwilling</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>65</BusinessEntityID>
+    <FirstName>Randy</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Reeves</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>66</BusinessEntityID>
+    <FirstName>Karan</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Khanna</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>67</BusinessEntityID>
+    <FirstName>Jay</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Adams</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>68</BusinessEntityID>
+    <FirstName>Charles</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Fitzgerald</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>69</BusinessEntityID>
+    <FirstName>Steve</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Masters</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>70</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Ortiz</LastName>
+    <JobTitle>Production Technician - WC60</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>71</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>Sean</MiddleName>
+    <LastName>Ray</LastName>
+    <JobTitle>Production Supervisor - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>72</BusinessEntityID>
+    <FirstName>Steven</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Selikoff</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>73</BusinessEntityID>
+    <FirstName>Carole</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Poland</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-20T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>74</BusinessEntityID>
+    <FirstName>Bjorn</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Rettig</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>75</BusinessEntityID>
+    <FirstName>Michiko</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Osada</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>76</BusinessEntityID>
+    <FirstName>Carol</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Philips</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>77</BusinessEntityID>
+    <FirstName>Merav</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Netz</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>78</BusinessEntityID>
+    <FirstName>Reuben</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>D'sa</LastName>
+    <JobTitle>Production Supervisor - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>79</BusinessEntityID>
+    <FirstName>Eric</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Brown</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>80</BusinessEntityID>
+    <FirstName>Sandeep</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Kaliyath</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>81</BusinessEntityID>
+    <FirstName>Mihail</FirstName>
+    <MiddleName>U</MiddleName>
+    <LastName>Frintu</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>82</BusinessEntityID>
+    <FirstName>Jack</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Creasey</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-04-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>83</BusinessEntityID>
+    <FirstName>Patrick</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Cook</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>84</BusinessEntityID>
+    <FirstName>Frank</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Martinez</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>85</BusinessEntityID>
+    <FirstName>Brian</FirstName>
+    <MiddleName>Richard</MiddleName>
+    <LastName>Goldstein</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>86</BusinessEntityID>
+    <FirstName>Ryan</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Cornelsen</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>87</BusinessEntityID>
+    <FirstName>Cristian</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Petculescu</LastName>
+    <JobTitle>Production Supervisor - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>88</BusinessEntityID>
+    <FirstName>Betsy</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Stadick</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>89</BusinessEntityID>
+    <FirstName>Patrick</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Wedge</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>90</BusinessEntityID>
+    <FirstName>Danielle</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Tiedt</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>91</BusinessEntityID>
+    <FirstName>Kimberly</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Zimmerman</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>92</BusinessEntityID>
+    <FirstName>Tom</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Vande Velde</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-04-10T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>93</BusinessEntityID>
+    <FirstName>Kok-Ho</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Loh</LastName>
+    <JobTitle>Production Supervisor - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>94</BusinessEntityID>
+    <FirstName>Russell</FirstName>
+    <LastName>Hunter</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>95</BusinessEntityID>
+    <FirstName>Jim</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Scardelis</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-20T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>96</BusinessEntityID>
+    <FirstName>Elizabeth</FirstName>
+    <MiddleName>I</MiddleName>
+    <LastName>Keyser</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>97</BusinessEntityID>
+    <FirstName>Mandar</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Samant</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-14T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>98</BusinessEntityID>
+    <FirstName>Sameer</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Tejani</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>99</BusinessEntityID>
+    <FirstName>Nuan</FirstName>
+    <LastName>Yu</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>100</BusinessEntityID>
+    <FirstName>Lolan</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Song</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>101</BusinessEntityID>
+    <FirstName>Houman</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Pournasseh</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>102</BusinessEntityID>
+    <FirstName>Zheng</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Mu</LastName>
+    <JobTitle>Production Supervisor - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>103</BusinessEntityID>
+    <FirstName>Ebru</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Ersan</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>104</BusinessEntityID>
+    <FirstName>Mary</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Baker</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>105</BusinessEntityID>
+    <FirstName>Kevin</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Homer</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>106</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Kane</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>107</BusinessEntityID>
+    <FirstName>Christopher</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Hill</LastName>
+    <JobTitle>Production Technician - WC10</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-11T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>108</BusinessEntityID>
+    <FirstName>Jinghao</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Liu</LastName>
+    <JobTitle>Production Supervisor - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-09T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>109</BusinessEntityID>
+    <FirstName>Alice</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Ciccu</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>110</BusinessEntityID>
+    <FirstName>Jun</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Cao</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>111</BusinessEntityID>
+    <FirstName>Suroor</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Fatima</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>112</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Evans</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>113</BusinessEntityID>
+    <FirstName>Linda</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Moschell</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>114</BusinessEntityID>
+    <FirstName>Mindaugas</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Krapauskas</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-14T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>115</BusinessEntityID>
+    <FirstName>Angela</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Barbariol</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-21T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>116</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Patten</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>117</BusinessEntityID>
+    <FirstName>Chad</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Niswonger</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>118</BusinessEntityID>
+    <FirstName>Don</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Hall</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>119</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Entin</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-29T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>120</BusinessEntityID>
+    <FirstName>Kitti</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Lertpiriyasuwat</LastName>
+    <JobTitle>Production Technician - WC50</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>121</BusinessEntityID>
+    <FirstName>Pilar</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Ackerman</LastName>
+    <JobTitle>Shipping and Receiving Supervisor</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-02-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>122</BusinessEntityID>
+    <FirstName>Susan</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Eaton</LastName>
+    <JobTitle>Stocker</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-01-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>123</BusinessEntityID>
+    <FirstName>Vamsi</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Kuppa</LastName>
+    <JobTitle>Shipping and Receiving Clerk</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-01-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>124</BusinessEntityID>
+    <FirstName>Kim</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Ralls</LastName>
+    <JobTitle>Stocker</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-01-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>125</BusinessEntityID>
+    <FirstName>Matthias</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Berndt</LastName>
+    <JobTitle>Shipping and Receiving Clerk</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-02-21T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>126</BusinessEntityID>
+    <FirstName>Jimmy</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Bischoff</LastName>
+    <JobTitle>Stocker</JobTitle>
+    <Department>Shipping and Receiving</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>127</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Hamilton</LastName>
+    <JobTitle>Production Supervisor - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>128</BusinessEntityID>
+    <FirstName>Paul</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Komosinski</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>129</BusinessEntityID>
+    <FirstName>Gary</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Yukish</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>130</BusinessEntityID>
+    <FirstName>Rob</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Caron</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>131</BusinessEntityID>
+    <FirstName>Baris</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Cetinok</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>132</BusinessEntityID>
+    <FirstName>Nicole</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Holliday</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>133</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Rothkugel</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-11T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>134</BusinessEntityID>
+    <FirstName>Eric</FirstName>
+    <LastName>Gubbels</LastName>
+    <JobTitle>Production Supervisor - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>135</BusinessEntityID>
+    <FirstName>Ivo</FirstName>
+    <MiddleName>William</MiddleName>
+    <LastName>Salmre</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>136</BusinessEntityID>
+    <FirstName>Sylvester</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Valdez</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-01-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>137</BusinessEntityID>
+    <FirstName>Anibal</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Sousa</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>138</BusinessEntityID>
+    <FirstName>Samantha</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Smith</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>139</BusinessEntityID>
+    <Title>Mr.</Title>
+    <FirstName>Hung-Fu</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Ting</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>140</BusinessEntityID>
+    <FirstName>Prasanna</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Samarawickrama</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>141</BusinessEntityID>
+    <FirstName>Min</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Su</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-02-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>142</BusinessEntityID>
+    <FirstName>Olinda</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Turner</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-04-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>143</BusinessEntityID>
+    <FirstName>Krishna</FirstName>
+    <LastName>Sunkammurali</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2004-03-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>144</BusinessEntityID>
+    <FirstName>Paul</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Singh</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>145</BusinessEntityID>
+    <FirstName>Cynthia</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Randall</LastName>
+    <JobTitle>Production Supervisor - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>146</BusinessEntityID>
+    <FirstName>Jian Shuo</FirstName>
+    <LastName>Wang</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>147</BusinessEntityID>
+    <FirstName>Sandra</FirstName>
+    <LastName>Reátegui Alayo</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>148</BusinessEntityID>
+    <FirstName>Jason</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Watters</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>149</BusinessEntityID>
+    <FirstName>Andy</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Ruth</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>150</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Vanderhyde</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>151</BusinessEntityID>
+    <FirstName>Rostislav</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Shabalin</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>152</BusinessEntityID>
+    <FirstName>Yuhong</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Li</LastName>
+    <JobTitle>Production Supervisor - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>153</BusinessEntityID>
+    <FirstName>Hanying</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Feng</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>154</BusinessEntityID>
+    <FirstName>Raymond</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Sam</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>155</BusinessEntityID>
+    <FirstName>Fadi</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Fakhouri</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>156</BusinessEntityID>
+    <FirstName>Lane</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Sacksteder</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>157</BusinessEntityID>
+    <FirstName>Linda</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Randall</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>158</BusinessEntityID>
+    <FirstName>Shelley</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Dyck</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-08T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>159</BusinessEntityID>
+    <FirstName>Terrence</FirstName>
+    <MiddleName>W</MiddleName>
+    <LastName>Earls</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-20T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>160</BusinessEntityID>
+    <FirstName>Jeff</FirstName>
+    <MiddleName>V</MiddleName>
+    <LastName>Hay</LastName>
+    <JobTitle>Production Supervisor - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>161</BusinessEntityID>
+    <FirstName>Kirk</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Koenigsbauer</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>162</BusinessEntityID>
+    <FirstName>Laura</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Steele</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>163</BusinessEntityID>
+    <FirstName>Alex</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Nayberg</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>164</BusinessEntityID>
+    <FirstName>Andrew</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Cencini</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-07T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>165</BusinessEntityID>
+    <FirstName>Chris</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Preston</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>166</BusinessEntityID>
+    <FirstName>Jack</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Richins</LastName>
+    <JobTitle>Production Supervisor - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>167</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Johnson</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>168</BusinessEntityID>
+    <FirstName>Garrett</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Young</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>169</BusinessEntityID>
+    <FirstName>Susan</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Metters</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>170</BusinessEntityID>
+    <FirstName>George</FirstName>
+    <MiddleName>Z</MiddleName>
+    <LastName>Li</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>171</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Yalovsky</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>172</BusinessEntityID>
+    <FirstName>Marc</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Ingle</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>173</BusinessEntityID>
+    <FirstName>Eugene</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Zabokritski</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>174</BusinessEntityID>
+    <FirstName>Benjamin</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Martin</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>175</BusinessEntityID>
+    <FirstName>Reed</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Koch</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>176</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>Oliver</MiddleName>
+    <LastName>Lawrence</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>177</BusinessEntityID>
+    <FirstName>Russell</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>King</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>178</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Frum</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>179</BusinessEntityID>
+    <FirstName>Jan</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Miksovsky</LastName>
+    <JobTitle>Production Technician - WC30</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>180</BusinessEntityID>
+    <FirstName>Katie</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>McAskill-White</LastName>
+    <JobTitle>Production Supervisor - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>181</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Hines</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-10T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>182</BusinessEntityID>
+    <FirstName>Nitin</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Mirchandani</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-29T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>183</BusinessEntityID>
+    <FirstName>Barbara</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Decker</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>184</BusinessEntityID>
+    <FirstName>John</FirstName>
+    <MiddleName>Y</MiddleName>
+    <LastName>Chen</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>185</BusinessEntityID>
+    <FirstName>Stefen</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Hesse</LastName>
+    <JobTitle>Production Technician - WC20</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>186</BusinessEntityID>
+    <FirstName>Shane</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Kim</LastName>
+    <JobTitle>Production Supervisor - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>187</BusinessEntityID>
+    <FirstName>Yvonne</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>McKay</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-10T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>188</BusinessEntityID>
+    <FirstName>Douglas</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Hite</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>189</BusinessEntityID>
+    <FirstName>Janeth</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Esteves</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>190</BusinessEntityID>
+    <FirstName>Robert</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Rounthwaite</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>191</BusinessEntityID>
+    <FirstName>Lionel</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Penuchot</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>192</BusinessEntityID>
+    <FirstName>Brenda</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Diaz</LastName>
+    <JobTitle>Production Supervisor - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>193</BusinessEntityID>
+    <FirstName>Alejandro</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>McGuel</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>194</BusinessEntityID>
+    <FirstName>Fred</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Northup</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>195</BusinessEntityID>
+    <FirstName>Kevin</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Liu</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>196</BusinessEntityID>
+    <FirstName>Shammi</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Mohamed</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>197</BusinessEntityID>
+    <FirstName>Rajesh</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Patel</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>198</BusinessEntityID>
+    <FirstName>Lorraine</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Nay</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>199</BusinessEntityID>
+    <FirstName>Paula</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Nartker</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>200</BusinessEntityID>
+    <FirstName>Frank</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Lee</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>201</BusinessEntityID>
+    <FirstName>Brian</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Lloyd</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>202</BusinessEntityID>
+    <FirstName>Tawana</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Nusbaum</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-09T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>203</BusinessEntityID>
+    <FirstName>Ken</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Myer</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>204</BusinessEntityID>
+    <FirstName>Gabe</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Mares</LastName>
+    <JobTitle>Production Technician - WC40</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-09T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>205</BusinessEntityID>
+    <FirstName>Lori</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Kane</LastName>
+    <JobTitle>Production Supervisor - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-30T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>206</BusinessEntityID>
+    <FirstName>Stuart</FirstName>
+    <MiddleName>V</MiddleName>
+    <LastName>Munson</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>207</BusinessEntityID>
+    <FirstName>Greg</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Alderson</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>208</BusinessEntityID>
+    <FirstName>Scott</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Gode</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-09T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>209</BusinessEntityID>
+    <FirstName>Kathie</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Flood</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>210</BusinessEntityID>
+    <FirstName>Belinda</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Newman</LastName>
+    <JobTitle>Production Technician - WC45</JobTitle>
+    <Department>Production</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>211</BusinessEntityID>
+    <FirstName>Hazem</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Abolrous</LastName>
+    <JobTitle>Quality Assurance Manager</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-04-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>212</BusinessEntityID>
+    <FirstName>Peng</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Wu</LastName>
+    <JobTitle>Quality Assurance Supervisor</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-01-10T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>213</BusinessEntityID>
+    <FirstName>Sootha</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Charncherngkha</LastName>
+    <JobTitle>Quality Assurance Technician</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2004-03-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>214</BusinessEntityID>
+    <FirstName>Andreas</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Berglund</LastName>
+    <JobTitle>Quality Assurance Technician</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-03-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>215</BusinessEntityID>
+    <FirstName>Mark</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Harrington</LastName>
+    <JobTitle>Quality Assurance Technician</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-02-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>216</BusinessEntityID>
+    <FirstName>Sean</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Alexander</LastName>
+    <JobTitle>Quality Assurance Technician</JobTitle>
+    <Department>Quality Assurance</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-01-29T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>217</BusinessEntityID>
+    <FirstName>Zainal</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Arifin</LastName>
+    <JobTitle>Document Control Manager</JobTitle>
+    <Department>Document Control</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-02-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>218</BusinessEntityID>
+    <FirstName>Tengiz</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Kharatishvili</LastName>
+    <JobTitle>Control Specialist</JobTitle>
+    <Department>Document Control</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-01-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>219</BusinessEntityID>
+    <FirstName>Sean</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Chai</LastName>
+    <JobTitle>Document Control Assistant</JobTitle>
+    <Department>Document Control</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-02-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>220</BusinessEntityID>
+    <FirstName>Karen</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Berge</LastName>
+    <JobTitle>Document Control Assistant</JobTitle>
+    <Department>Document Control</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-03-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>221</BusinessEntityID>
+    <FirstName>Chris</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Norred</LastName>
+    <JobTitle>Control Specialist</JobTitle>
+    <Department>Document Control</Department>
+    <GroupName>Quality Assurance</GroupName>
+    <StartDate>2003-04-07T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>222</BusinessEntityID>
+    <FirstName>A. Scott</FirstName>
+    <LastName>Wright</LastName>
+    <JobTitle>Master Scheduler</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-01-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>223</BusinessEntityID>
+    <FirstName>Sairaj</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Uddin</LastName>
+    <JobTitle>Scheduling Assistant</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-02-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>224</BusinessEntityID>
+    <FirstName>William</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Vong</LastName>
+    <JobTitle>Scheduling Assistant</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2005-10-02T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>225</BusinessEntityID>
+    <FirstName>Alan</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Brewer</LastName>
+    <JobTitle>Scheduling Assistant</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-03-17T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>226</BusinessEntityID>
+    <FirstName>Brian</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>LaMee</LastName>
+    <JobTitle>Scheduling Assistant</JobTitle>
+    <Department>Production Control</Department>
+    <GroupName>Manufacturing</GroupName>
+    <StartDate>2003-04-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>227</BusinessEntityID>
+    <FirstName>Gary</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Altman</LastName>
+    <Suffix>III</Suffix>
+    <JobTitle>Facilities Manager</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-01-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>228</BusinessEntityID>
+    <FirstName>Christian</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Kleinerman</LastName>
+    <JobTitle>Maintenance Supervisor</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>229</BusinessEntityID>
+    <FirstName>Lori</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Penor</LastName>
+    <JobTitle>Janitor</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-03-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>230</BusinessEntityID>
+    <FirstName>Stuart</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Macrae</LastName>
+    <JobTitle>Janitor</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-04-05T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>231</BusinessEntityID>
+    <FirstName>Jo</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Berry</LastName>
+    <JobTitle>Janitor</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-04-07T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>232</BusinessEntityID>
+    <FirstName>Pat</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Coleman</LastName>
+    <JobTitle>Janitor</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-02-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>233</BusinessEntityID>
+    <FirstName>Magnus</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Hedlund</LastName>
+    <JobTitle>Facilities Administrative Assistant</JobTitle>
+    <Department>Facilities and Maintenance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2004-01-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>234</BusinessEntityID>
+    <FirstName>Laura</FirstName>
+    <MiddleName>F</MiddleName>
+    <LastName>Norman</LastName>
+    <JobTitle>Chief Financial Officer</JobTitle>
+    <Department>Executive</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2007-12-16T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>235</BusinessEntityID>
+    <FirstName>Paula</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Barreto de Mattos</LastName>
+    <JobTitle>Human Resources Manager</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>236</BusinessEntityID>
+    <FirstName>Grant</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Culbertson</LastName>
+    <JobTitle>Human Resources Administrative Assistant</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-29T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>237</BusinessEntityID>
+    <FirstName>Hao</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Chen</LastName>
+    <JobTitle>Human Resources Administrative Assistant</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-10T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>238</BusinessEntityID>
+    <FirstName>Vidur</FirstName>
+    <MiddleName>X</MiddleName>
+    <LastName>Luthra</LastName>
+    <JobTitle>Recruiter</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>239</BusinessEntityID>
+    <FirstName>Mindy</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Martin</LastName>
+    <JobTitle>Benefits Specialist</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>240</BusinessEntityID>
+    <FirstName>Willis</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Johnson</LastName>
+    <JobTitle>Recruiter</JobTitle>
+    <Department>Human Resources</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-14T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>241</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Liu</LastName>
+    <JobTitle>Accounts Manager</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>242</BusinessEntityID>
+    <FirstName>Deborah</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Poe</LastName>
+    <JobTitle>Accounts Receivable Specialist</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-19T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>243</BusinessEntityID>
+    <FirstName>Candy</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Spoon</LastName>
+    <JobTitle>Accounts Receivable Specialist</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>244</BusinessEntityID>
+    <FirstName>Bryan</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Walton</LastName>
+    <JobTitle>Accounts Receivable Specialist</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>245</BusinessEntityID>
+    <FirstName>Barbara</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Moreland</LastName>
+    <JobTitle>Accountant</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-22T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>246</BusinessEntityID>
+    <FirstName>Dragan</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Tomic</LastName>
+    <JobTitle>Accounts Payable Specialist</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-15T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>247</BusinessEntityID>
+    <FirstName>Janet</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Sheperdigian</LastName>
+    <JobTitle>Accounts Payable Specialist</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-04-02T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>248</BusinessEntityID>
+    <FirstName>Mike</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Seamans</LastName>
+    <JobTitle>Accountant</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-04-09T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>249</BusinessEntityID>
+    <FirstName>Wendy</FirstName>
+    <MiddleName>Beth</MiddleName>
+    <LastName>Kahn</LastName>
+    <JobTitle>Finance Manager</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-26T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>250</BusinessEntityID>
+    <FirstName>Sheela</FirstName>
+    <MiddleName>H</MiddleName>
+    <LastName>Word</LastName>
+    <JobTitle>Purchasing Manager</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2006-08-16T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>251</BusinessEntityID>
+    <FirstName>Mikael</FirstName>
+    <MiddleName>Q</MiddleName>
+    <LastName>Sandberg</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-03-14T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>252</BusinessEntityID>
+    <FirstName>Arvind</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Rao</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2003-04-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>253</BusinessEntityID>
+    <FirstName>Linda</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Meisner</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-01-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>254</BusinessEntityID>
+    <FirstName>Fukiko</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>Ogisu</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-02-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>255</BusinessEntityID>
+    <FirstName>Gordon</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Hee</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-02-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>256</BusinessEntityID>
+    <FirstName>Frank</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Pellow</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-02-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>257</BusinessEntityID>
+    <FirstName>Eric</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Kurjan</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-02-28T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>258</BusinessEntityID>
+    <FirstName>Erin</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Hagens</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-03-03T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>259</BusinessEntityID>
+    <FirstName>Ben</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Miller</LastName>
+    <JobTitle>Buyer</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2004-04-09T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>260</BusinessEntityID>
+    <FirstName>Annette</FirstName>
+    <MiddleName>L</MiddleName>
+    <LastName>Hill</LastName>
+    <JobTitle>Purchasing Assistant</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2005-01-06T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>261</BusinessEntityID>
+    <FirstName>Reinout</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Hillmann</LastName>
+    <JobTitle>Purchasing Assistant</JobTitle>
+    <Department>Purchasing</Department>
+    <GroupName>Inventory Management</GroupName>
+    <StartDate>2005-01-25T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>262</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>M</MiddleName>
+    <LastName>Barber</LastName>
+    <JobTitle>Assistant to the Chief Financial Officer</JobTitle>
+    <Department>Finance</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-13T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>263</BusinessEntityID>
+    <FirstName>Jean</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Trenary</LastName>
+    <JobTitle>Information Services Manager</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>264</BusinessEntityID>
+    <FirstName>Stephanie</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Conroy</LastName>
+    <JobTitle>Network Manager</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-08T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>265</BusinessEntityID>
+    <FirstName>Ashvini</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Sharma</LastName>
+    <JobTitle>Network Administrator</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-05T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>266</BusinessEntityID>
+    <FirstName>Peter</FirstName>
+    <MiddleName>I</MiddleName>
+    <LastName>Connelly</LastName>
+    <JobTitle>Network Administrator</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-27T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>267</BusinessEntityID>
+    <FirstName>Karen</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Berg</LastName>
+    <JobTitle>Application Specialist</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-20T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>268</BusinessEntityID>
+    <FirstName>Ramesh</FirstName>
+    <MiddleName>V</MiddleName>
+    <LastName>Meyyappan</LastName>
+    <JobTitle>Application Specialist</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-03-07T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>269</BusinessEntityID>
+    <FirstName>Dan</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Bacon</LastName>
+    <Suffix>Jr.</Suffix>
+    <JobTitle>Application Specialist</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-12T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>270</BusinessEntityID>
+    <FirstName>François</FirstName>
+    <MiddleName>P</MiddleName>
+    <LastName>Ajenstat</LastName>
+    <JobTitle>Database Administrator</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>271</BusinessEntityID>
+    <FirstName>Dan</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Wilson</LastName>
+    <JobTitle>Database Administrator</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-02-23T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>272</BusinessEntityID>
+    <FirstName>Janaina</FirstName>
+    <MiddleName>Barreiro Gambaro</MiddleName>
+    <LastName>Bueno</LastName>
+    <JobTitle>Application Specialist</JobTitle>
+    <Department>Information Services</Department>
+    <GroupName>Executive General and Administration</GroupName>
+    <StartDate>2003-01-24T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>273</BusinessEntityID>
+    <Title>Mr.</Title>
+    <FirstName>Brian</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Welcker</LastName>
+    <JobTitle>Vice President of Sales</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-03-18T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>274</BusinessEntityID>
+    <FirstName>Stephen</FirstName>
+    <MiddleName>Y</MiddleName>
+    <LastName>Jiang</LastName>
+    <JobTitle>North American Sales Manager</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-02-04T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>275</BusinessEntityID>
+    <FirstName>Michael</FirstName>
+    <MiddleName>G</MiddleName>
+    <LastName>Blythe</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>276</BusinessEntityID>
+    <FirstName>Linda</FirstName>
+    <MiddleName>C</MiddleName>
+    <LastName>Mitchell</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>277</BusinessEntityID>
+    <FirstName>Jillian</FirstName>
+    <LastName>Carson</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>278</BusinessEntityID>
+    <FirstName>Garrett</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Vargas</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>279</BusinessEntityID>
+    <FirstName>Tsvi</FirstName>
+    <MiddleName>Michael</MiddleName>
+    <LastName>Reiter</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>280</BusinessEntityID>
+    <FirstName>Pamela</FirstName>
+    <MiddleName>O</MiddleName>
+    <LastName>Ansman-Wolfe</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>281</BusinessEntityID>
+    <FirstName>Shu</FirstName>
+    <MiddleName>K</MiddleName>
+    <LastName>Ito</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>282</BusinessEntityID>
+    <FirstName>José</FirstName>
+    <MiddleName>Edvaldo</MiddleName>
+    <LastName>Saraiva</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>283</BusinessEntityID>
+    <FirstName>David</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Campbell</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2005-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>284</BusinessEntityID>
+    <Title>Mr.</Title>
+    <FirstName>Tete</FirstName>
+    <MiddleName>A</MiddleName>
+    <LastName>Mensa-Annan</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2006-11-01T00:00:00-08:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>285</BusinessEntityID>
+    <Title>Mr.</Title>
+    <FirstName>Syed</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Abbas</LastName>
+    <JobTitle>Pacific Sales Manager</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2007-04-15T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>286</BusinessEntityID>
+    <FirstName>Lynn</FirstName>
+    <MiddleName>N</MiddleName>
+    <LastName>Tsoflias</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2007-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>287</BusinessEntityID>
+    <FirstName>Amy</FirstName>
+    <MiddleName>E</MiddleName>
+    <LastName>Alberts</LastName>
+    <JobTitle>European Sales Manager</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2006-05-18T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>288</BusinessEntityID>
+    <FirstName>Rachel</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Valdez</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2007-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>289</BusinessEntityID>
+    <FirstName>Jae</FirstName>
+    <MiddleName>B</MiddleName>
+    <LastName>Pak</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2006-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+  <HumanResources.vEmployeeDepartment>
+    <BusinessEntityID>290</BusinessEntityID>
+    <FirstName>Ranjit</FirstName>
+    <MiddleName>R</MiddleName>
+    <LastName>Varkey Chudukatil</LastName>
+    <JobTitle>Sales Representative</JobTitle>
+    <Department>Sales</Department>
+    <GroupName>Sales and Marketing</GroupName>
+    <StartDate>2006-07-01T00:00:00-07:00</StartDate>
+  </HumanResources.vEmployeeDepartment>
+</SelectedTables>
