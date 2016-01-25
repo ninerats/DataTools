@@ -7,19 +7,59 @@
           <xs:element name="dbo.DatabaseLog">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="DatabaseLogID" type="xs:int" minOccurs="0" />
-                <xs:element name="PostTime" type="xs:dateTime" minOccurs="0" />
-                <xs:element name="DatabaseUser" type="xs:string" minOccurs="0" />
-                <xs:element name="Event" type="xs:string" minOccurs="0" />
-                <xs:element name="Schema" type="xs:string" minOccurs="0" />
-                <xs:element name="Object" type="xs:string" minOccurs="0" />
-                <xs:element name="TSQL" type="xs:string" minOccurs="0" />
-                <xs:element name="XmlEvent" type="xs:string" minOccurs="0" />
+                <xs:element name="DatabaseLogID" type="xs:int" />
+                <xs:element name="PostTime" type="xs:dateTime" />
+                <xs:element name="DatabaseUser">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Event">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Schema" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Object" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="TSQL">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="XmlEvent">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
               </xs:sequence>
             </xs:complexType>
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//dbo.DatabaseLog" />
+        <xs:field xpath="DatabaseLogID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <dbo.DatabaseLog>

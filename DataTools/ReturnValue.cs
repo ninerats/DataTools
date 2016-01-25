@@ -16,10 +16,7 @@ namespace Craftsmaneer.Lang
 
 
         private static ReturnValue _successful = new ReturnValue(true);
-        public static ReturnValue Successful
-        {
-            get { return _successful; }
-        }
+       
 
         /// <summary>
         /// default to successful result.
@@ -113,7 +110,7 @@ namespace Craftsmaneer.Lang
         }
 
 
-        public static ReturnValue<T> Wrap(Func<T> func, Action<Exception> errorHandler = null)
+        public static ReturnValue<T> Wrap(Func<T> func, string context = "")
         {
             try
             {
@@ -124,7 +121,7 @@ namespace Craftsmaneer.Lang
             catch (Exception ex)
             {
                 // log it.
-                var r = ReturnValue<T>.FailResult("wrapped action failed", ex);
+                var r = FailResult(context =="" ?   "wrapped action failed" : context, ex);
                 return r;
             }
         }

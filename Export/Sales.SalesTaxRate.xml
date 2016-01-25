@@ -1,0 +1,291 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Sales.SalesTaxRate" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Sales.SalesTaxRate">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SalesTaxRateID" type="xs:int" />
+                <xs:element name="StateProvinceID" type="xs:int" />
+                <xs:element name="TaxType" type="xs:unsignedByte" />
+                <xs:element name="TaxRate" type="xs:decimal" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>1</SalesTaxRateID>
+    <StateProvinceID>1</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>14.0000</TaxRate>
+    <Name>Canadian GST + Alberta Provincial Tax</Name>
+    <rowguid>683de5dd-521a-47d4-a573-06a3cdb1bc5d</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>2</SalesTaxRateID>
+    <StateProvinceID>57</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>14.2500</TaxRate>
+    <Name>Canadian GST + Ontario Provincial Tax</Name>
+    <rowguid>05c4ffdb-4f84-4cdf-abe5-fdf3216ea74e</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>3</SalesTaxRateID>
+    <StateProvinceID>63</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>14.2500</TaxRate>
+    <Name>Canadian GST + Quebec Provincial Tax</Name>
+    <rowguid>d4edb557-56d7-403c-b538-4df5e7302588</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>4</SalesTaxRateID>
+    <StateProvinceID>1</StateProvinceID>
+    <TaxType>2</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>f0d76907-b433-453f-b95e-16fce73b807a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>5</SalesTaxRateID>
+    <StateProvinceID>57</StateProvinceID>
+    <TaxType>2</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>7e0e97a2-878b-476f-a648-05a3dd4450ed</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>6</SalesTaxRateID>
+    <StateProvinceID>63</StateProvinceID>
+    <TaxType>2</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>1e285d2c-8af7-47aa-b06a-762cf4d93acd</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>7</SalesTaxRateID>
+    <StateProvinceID>7</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>590ccb14-cb20-49bf-8fee-e0c3abc4c2b1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>8</SalesTaxRateID>
+    <StateProvinceID>29</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>a8365f30-78b7-4dbe-8985-f8260560126b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>9</SalesTaxRateID>
+    <StateProvinceID>31</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>f4fde24b-7a53-4340-9d10-173e9424864a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>10</SalesTaxRateID>
+    <StateProvinceID>41</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>383d465b-e1d1-492a-83f3-ab3e9cbf3282</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>11</SalesTaxRateID>
+    <StateProvinceID>45</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>8451909f-8a8d-4789-9f87-16a335d28053</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>12</SalesTaxRateID>
+    <StateProvinceID>49</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>fb7607ee-8f12-41ea-b461-10885c6f1533</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>13</SalesTaxRateID>
+    <StateProvinceID>51</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>06df529d-eb11-446f-9570-9ee97b8ea1bf</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>16</SalesTaxRateID>
+    <StateProvinceID>69</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>89d447a8-239a-4f31-a529-478821e8f714</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>17</SalesTaxRateID>
+    <StateProvinceID>83</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Canadian GST</Name>
+    <rowguid>3847b431-f939-4e89-83fc-864912e3cfd2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>18</SalesTaxRateID>
+    <StateProvinceID>6</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>7.7500</TaxRate>
+    <Name>Arizona State Sales Tax</Name>
+    <rowguid>89dd0e3a-c018-449e-a86b-885adf684c5c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>19</SalesTaxRateID>
+    <StateProvinceID>9</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>8.7500</TaxRate>
+    <Name>California State Sales Tax</Name>
+    <rowguid>90e3090e-df71-407a-8059-04c3104523af</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>20</SalesTaxRateID>
+    <StateProvinceID>15</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>8.0000</TaxRate>
+    <Name>Florida State Sales Tax</Name>
+    <rowguid>630ae36f-6e76-4a1f-ab25-6342159c80d2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>21</SalesTaxRateID>
+    <StateProvinceID>30</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>7.0000</TaxRate>
+    <Name>Massachusetts State Sales Tax</Name>
+    <rowguid>207c7024-85fe-42cb-bf74-9fe88e2f4e1b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>22</SalesTaxRateID>
+    <StateProvinceID>35</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>7.2500</TaxRate>
+    <Name>Michigan State Sales Tax</Name>
+    <rowguid>f9d1a85d-6474-43b5-a7ea-bed59e00439a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>23</SalesTaxRateID>
+    <StateProvinceID>36</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>6.7500</TaxRate>
+    <Name>Minnesota State Sales Tax</Name>
+    <rowguid>1753d75f-8357-4497-bc92-543f17bbf514</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>24</SalesTaxRateID>
+    <StateProvinceID>72</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>7.2500</TaxRate>
+    <Name>Tennessese State Sales Tax</Name>
+    <rowguid>ecba1bab-a7a6-4cc2-8d0f-c094a38e5c0e</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>25</SalesTaxRateID>
+    <StateProvinceID>73</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>7.5000</TaxRate>
+    <Name>Texas State Sales Tax</Name>
+    <rowguid>d50102e1-0150-43f3-93ad-12ab6c1deb06</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>26</SalesTaxRateID>
+    <StateProvinceID>74</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>5.0000</TaxRate>
+    <Name>Utah State Sales Tax</Name>
+    <rowguid>5e6d8621-36af-40ce-972b-61aaef0556d8</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>27</SalesTaxRateID>
+    <StateProvinceID>79</StateProvinceID>
+    <TaxType>1</TaxType>
+    <TaxRate>8.8000</TaxRate>
+    <Name>Washington State Sales Tax</Name>
+    <rowguid>9c84c0af-41cd-4670-98bc-5026e188541f</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>28</SalesTaxRateID>
+    <StateProvinceID>77</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>10.0000</TaxRate>
+    <Name>Taxable Supply</Name>
+    <rowguid>f53b6a7e-7da4-49e8-ac09-d57fefac64d3</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>29</SalesTaxRateID>
+    <StateProvinceID>20</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>16.0000</TaxRate>
+    <Name>Germany Output Tax</Name>
+    <rowguid>78c8a559-4d0f-45b6-b7a3-e11ff9a702f4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>30</SalesTaxRateID>
+    <StateProvinceID>84</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>19.6000</TaxRate>
+    <Name>France Output Tax</Name>
+    <rowguid>5446ea04-fa7c-4b02-a157-a05f44bf47b6</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+  <Sales.SalesTaxRate>
+    <SalesTaxRateID>31</SalesTaxRateID>
+    <StateProvinceID>14</StateProvinceID>
+    <TaxType>3</TaxType>
+    <TaxRate>17.5000</TaxRate>
+    <Name>United Kingdom Output Tax</Name>
+    <rowguid>abd185a9-5367-44e1-8a6e-71d083943f3c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.SalesTaxRate>
+</SelectedTables>

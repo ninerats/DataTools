@@ -1,0 +1,557 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Sales.Currency" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Sales.Currency">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CurrencyCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Sales.Currency>
+    <CurrencyCode>AED</CurrencyCode>
+    <Name>Emirati Dirham</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AFA</CurrencyCode>
+    <Name>Afghani</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ALL</CurrencyCode>
+    <Name>Lek</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AMD</CurrencyCode>
+    <Name>Armenian Dram</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ANG</CurrencyCode>
+    <Name>Netherlands Antillian Guilder</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AOA</CurrencyCode>
+    <Name>Kwanza</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ARS</CurrencyCode>
+    <Name>Argentine Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ATS</CurrencyCode>
+    <Name>Shilling</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AUD</CurrencyCode>
+    <Name>Australian Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AWG</CurrencyCode>
+    <Name>Aruban Guilder</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>AZM</CurrencyCode>
+    <Name>Azerbaijanian Manat</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BBD</CurrencyCode>
+    <Name>Barbados Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BDT</CurrencyCode>
+    <Name>Taka</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BEF</CurrencyCode>
+    <Name>Belgian Franc</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BGN</CurrencyCode>
+    <Name>Bulgarian Lev</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BHD</CurrencyCode>
+    <Name>Bahraini Dinar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BND</CurrencyCode>
+    <Name>Brunei Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BOB</CurrencyCode>
+    <Name>Boliviano</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BRL</CurrencyCode>
+    <Name>Brazilian Real</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BSD</CurrencyCode>
+    <Name>Bahamian Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>BTN</CurrencyCode>
+    <Name>Ngultrum</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CAD</CurrencyCode>
+    <Name>Canadian Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CHF</CurrencyCode>
+    <Name>Swiss Franc</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CLP</CurrencyCode>
+    <Name>Chilean Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CNY</CurrencyCode>
+    <Name>Yuan Renminbi</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>COP</CurrencyCode>
+    <Name>Colombian Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CRC</CurrencyCode>
+    <Name>Costa Rican Colon</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CYP</CurrencyCode>
+    <Name>Cyprus Pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>CZK</CurrencyCode>
+    <Name>Czech Koruna</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>DEM</CurrencyCode>
+    <Name>Deutsche Mark</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>DKK</CurrencyCode>
+    <Name>Danish Krone</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>DOP</CurrencyCode>
+    <Name>Dominican Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>DZD</CurrencyCode>
+    <Name>Algerian Dinar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>EEK</CurrencyCode>
+    <Name>Kroon</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>EGP</CurrencyCode>
+    <Name>Egyptian Pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ESP</CurrencyCode>
+    <Name>Spanish Peseta</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>EUR</CurrencyCode>
+    <Name>EURO</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>FIM</CurrencyCode>
+    <Name>Markka</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>FJD</CurrencyCode>
+    <Name>Fiji Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>FRF</CurrencyCode>
+    <Name>French Franc</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>GBP</CurrencyCode>
+    <Name>United Kingdom Pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>GHC</CurrencyCode>
+    <Name>Cedi</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>GRD</CurrencyCode>
+    <Name>Drachma</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>GTQ</CurrencyCode>
+    <Name>Quetzal</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>HKD</CurrencyCode>
+    <Name>Hong Kong Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>HRK</CurrencyCode>
+    <Name>Croatian Kuna</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>HUF</CurrencyCode>
+    <Name>Forint</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>IDR</CurrencyCode>
+    <Name>Rupiah</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>IEP</CurrencyCode>
+    <Name>Irish Pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ILS</CurrencyCode>
+    <Name>New Israeli Shekel</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>INR</CurrencyCode>
+    <Name>Indian Rupee</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ISK</CurrencyCode>
+    <Name>Iceland Krona</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ITL</CurrencyCode>
+    <Name>Italian Lira</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>JMD</CurrencyCode>
+    <Name>Jamaican Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>JOD</CurrencyCode>
+    <Name>Jordanian Dinar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>JPY</CurrencyCode>
+    <Name>Yen</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>KES</CurrencyCode>
+    <Name>Kenyan Shilling</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>KRW</CurrencyCode>
+    <Name>Won</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>KWD</CurrencyCode>
+    <Name>Kuwaiti Dinar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>LBP</CurrencyCode>
+    <Name>Lebanese Pound</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>LKR</CurrencyCode>
+    <Name>Sri Lankan Rupee</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>LTL</CurrencyCode>
+    <Name>Lithuanian Litas</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>LVL</CurrencyCode>
+    <Name>Latvian Lats</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MAD</CurrencyCode>
+    <Name>Moroccan Dirham</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MTL</CurrencyCode>
+    <Name>Maltese Lira</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MUR</CurrencyCode>
+    <Name>Mauritius Rupee</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MVR</CurrencyCode>
+    <Name>Rufiyaa</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MXN</CurrencyCode>
+    <Name>Mexican Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>MYR</CurrencyCode>
+    <Name>Malaysian Ringgit</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NAD</CurrencyCode>
+    <Name>Namibia Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NGN</CurrencyCode>
+    <Name>Naira</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NLG</CurrencyCode>
+    <Name>Netherlands Guilder</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NOK</CurrencyCode>
+    <Name>Norwegian Krone</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NPR</CurrencyCode>
+    <Name>Nepalese Rupee</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>NZD</CurrencyCode>
+    <Name>New Zealand Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>OMR</CurrencyCode>
+    <Name>Omani Rial</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PAB</CurrencyCode>
+    <Name>Balboa</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PEN</CurrencyCode>
+    <Name>Nuevo Sol</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PHP</CurrencyCode>
+    <Name>Philippine Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PKR</CurrencyCode>
+    <Name>Pakistan Rupee</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PLN</CurrencyCode>
+    <Name>Zloty</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PLZ</CurrencyCode>
+    <Name>Polish Zloty(old)</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PTE</CurrencyCode>
+    <Name>Portuguese Escudo</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>PYG</CurrencyCode>
+    <Name>Guarani</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ROL</CurrencyCode>
+    <Name>Leu</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>RUB</CurrencyCode>
+    <Name>Russian Ruble</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>RUR</CurrencyCode>
+    <Name>Russian Ruble(old)</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SAR</CurrencyCode>
+    <Name>Saudi Riyal</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SEK</CurrencyCode>
+    <Name>Swedish Krona</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SGD</CurrencyCode>
+    <Name>Singapore Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SIT</CurrencyCode>
+    <Name>Tolar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SKK</CurrencyCode>
+    <Name>Slovak Koruna</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>SVC</CurrencyCode>
+    <Name>El Salvador Colon</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>THB</CurrencyCode>
+    <Name>Baht</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>TND</CurrencyCode>
+    <Name>Tunisian Dinar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>TRL</CurrencyCode>
+    <Name>Turkish Lira</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>TTD</CurrencyCode>
+    <Name>Trinidad and Tobago Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>TWD</CurrencyCode>
+    <Name>New Taiwan Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>USD</CurrencyCode>
+    <Name>US Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>UYU</CurrencyCode>
+    <Name>Uruguayan Peso</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>VEB</CurrencyCode>
+    <Name>Bolivar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>VND</CurrencyCode>
+    <Name>Dong</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>XOF</CurrencyCode>
+    <Name>CFA Franc BCEAO</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ZAR</CurrencyCode>
+    <Name>Rand</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+  <Sales.Currency>
+    <CurrencyCode>ZWD</CurrencyCode>
+    <Name>Zimbabwe Dollar</Name>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Sales.Currency>
+</SelectedTables>

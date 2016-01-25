@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="dbo.ErrorLog" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="dbo.ErrorLog">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ErrorLogID" type="xs:int" />
+                <xs:element name="ErrorTime" type="xs:dateTime" />
+                <xs:element name="UserName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="128" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ErrorNumber" type="xs:int" />
+                <xs:element name="ErrorSeverity" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorState" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorProcedure" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="126" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ErrorLine" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorMessage">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</SelectedTables>

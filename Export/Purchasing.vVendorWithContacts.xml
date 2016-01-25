@@ -1,0 +1,2047 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Purchasing.vVendorWithContacts" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Purchasing.vVendorWithContacts">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessEntityID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ContactType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Title" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="8" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="FirstName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="MiddleName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LastName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Suffix" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PhoneNumber" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="25" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PhoneNumberType" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="EmailAddress" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="EmailPromotion" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1510</BusinessEntityID>
+    <Name>International</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Julia</FirstName>
+    <LastName>Moseley</LastName>
+    <PhoneNumber>432-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>julia0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1518</BusinessEntityID>
+    <Name>International Trek Center</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Albert</FirstName>
+    <LastName>Mungin</LastName>
+    <PhoneNumber>439-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>albert0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1522</BusinessEntityID>
+    <Name>First National Sport Co.</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Billie Jo</FirstName>
+    <LastName>Murray</LastName>
+    <PhoneNumber>923-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>billiejo0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1528</BusinessEntityID>
+    <Name>Image Makers Bike Center</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Suzanne</FirstName>
+    <LastName>Nelson</LastName>
+    <PhoneNumber>314-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>suzanne0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1536</BusinessEntityID>
+    <Name>Cruger Bike Company</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Lorraine</FirstName>
+    <LastName>Nay</LastName>
+    <PhoneNumber>669-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>lorraine1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1542</BusinessEntityID>
+    <Name>Hill's Bicycle Service</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Amir</FirstName>
+    <MiddleName>T.</MiddleName>
+    <LastName>Netz</LastName>
+    <PhoneNumber>362-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>amir0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1568</BusinessEntityID>
+    <Name>Custom Frames, Inc.</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Fred</FirstName>
+    <MiddleName>A.</MiddleName>
+    <LastName>Ortiz</LastName>
+    <PhoneNumber>275-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>fred2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1582</BusinessEntityID>
+    <Name>Inner City Bikes</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Jyothi</FirstName>
+    <LastName>Pai</LastName>
+    <PhoneNumber>433-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>jyothi0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1594</BusinessEntityID>
+    <Name>Fitness Association</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Trish</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Pederson</LastName>
+    <PhoneNumber>550-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>trish0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1596</BusinessEntityID>
+    <Name>A. Datum Corporation</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Frank</FirstName>
+    <LastName>Pellow</LastName>
+    <PhoneNumber>941-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>frank7@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1600</BusinessEntityID>
+    <Name>Federal Sport</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Elizabeth</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Peoples</LastName>
+    <PhoneNumber>614-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>elizabeth3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1630</BusinessEntityID>
+    <Name>Indiana Bicycle Center</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <FirstName>Alma</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Poorbaugh</LastName>
+    <PhoneNumber>153-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>alma0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1636</BusinessEntityID>
+    <Name>Integrated Sport Products</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Josh</FirstName>
+    <LastName>Pollock</LastName>
+    <PhoneNumber>117-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>josh1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1642</BusinessEntityID>
+    <Name>Electronic Bike Co.</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jeff</FirstName>
+    <LastName>Price</LastName>
+    <PhoneNumber>927-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jeff3@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1644</BusinessEntityID>
+    <Name>International Sport Assoc.</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Milton</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Pugh</LastName>
+    <PhoneNumber>164-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>milton1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1646</BusinessEntityID>
+    <Name>Electronic Bike Repair &amp; Supplies</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Sean</FirstName>
+    <LastName>Purcell</LastName>
+    <PhoneNumber>130-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>sean5@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1648</BusinessEntityID>
+    <Name>Wide World Importers</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Monica</FirstName>
+    <MiddleName>L.</MiddleName>
+    <LastName>Quintana</LastName>
+    <PhoneNumber>207-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>monica0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1670</BusinessEntityID>
+    <Name>Holiday Skate &amp; Cycle</Name>
+    <ContactType>Assistant Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Russell</FirstName>
+    <MiddleName>A.</MiddleName>
+    <LastName>Reed</LastName>
+    <PhoneNumber>115-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>russell3@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1492</BusinessEntityID>
+    <Name>Australia Bike Retailer</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Jo</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Zimmerman</LastName>
+    <PhoneNumber>816-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jo3@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1494</BusinessEntityID>
+    <Name>Allenson Cycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Suchitra</FirstName>
+    <LastName>Mohan</LastName>
+    <PhoneNumber>298-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>suchitra1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1496</BusinessEntityID>
+    <Name>Advanced Bicycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Eugene</FirstName>
+    <LastName>Zabokritski</LastName>
+    <PhoneNumber>762-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>eugene3@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1502</BusinessEntityID>
+    <Name>Cycling Master</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Hillaine</FirstName>
+    <MiddleName>N.</MiddleName>
+    <LastName>Montera</LastName>
+    <PhoneNumber>920-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>hillaine0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1508</BusinessEntityID>
+    <Name>Compete Enterprises, Inc</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Carla</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Zubaty</LastName>
+    <PhoneNumber>516-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>carla2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1512</BusinessEntityID>
+    <Name>Light Speed</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Marie</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Moya</LastName>
+    <PhoneNumber>114-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>marie0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1514</BusinessEntityID>
+    <Name>Training Systems</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Zheng</FirstName>
+    <LastName>Mu</LastName>
+    <PhoneNumber>945-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>zheng1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1520</BusinessEntityID>
+    <Name>G &amp; K Bicycle Corp.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Stuart</FirstName>
+    <LastName>Munson</LastName>
+    <PhoneNumber>235-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>stuart2@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1522</BusinessEntityID>
+    <Name>First National Sport Co.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Todd</FirstName>
+    <MiddleName>K.</MiddleName>
+    <LastName>Whitney</LastName>
+    <PhoneNumber>376-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>todd1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1526</BusinessEntityID>
+    <Name>International Bicycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Ken</FirstName>
+    <LastName>Myer</LastName>
+    <PhoneNumber>176-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>ken2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1528</BusinessEntityID>
+    <Name>Image Makers Bike Center</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Dan</FirstName>
+    <LastName>Wilson</LastName>
+    <PhoneNumber>751-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>dan2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1536</BusinessEntityID>
+    <Name>Cruger Bike Company</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Mike</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>White</LastName>
+    <Suffix>Sr.</Suffix>
+    <PhoneNumber>682-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>mike8@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1540</BusinessEntityID>
+    <Name>Bergeron Off-Roads</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Frank</FirstName>
+    <LastName>Zhang</LastName>
+    <PhoneNumber>889-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>frank8@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1542</BusinessEntityID>
+    <Name>Hill's Bicycle Service</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Benjamin</FirstName>
+    <MiddleName>C.</MiddleName>
+    <LastName>Willett</LastName>
+    <PhoneNumber>302-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>benjamin3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1544</BusinessEntityID>
+    <Name>Circuit Cycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Donals</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Nilson</LastName>
+    <PhoneNumber>526-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>donals0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1546</BusinessEntityID>
+    <Name>Green Lake Bike Company</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Toby</FirstName>
+    <LastName>Nixon</LastName>
+    <PhoneNumber>269-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>toby0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1550</BusinessEntityID>
+    <Name>Merit Bikes</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Fred</FirstName>
+    <LastName>Northup</LastName>
+    <PhoneNumber>330-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>fred1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1554</BusinessEntityID>
+    <Name>WestAmerica Bicycle Co.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Tim</FirstName>
+    <LastName>O'Brien</LastName>
+    <PhoneNumber>360-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>tim1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1560</BusinessEntityID>
+    <Name>Capital Road Cycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Nino</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Olivotto</LastName>
+    <PhoneNumber>528-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>nino0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1566</BusinessEntityID>
+    <Name>Burnett Road Warriors</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Arvid</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Ziegler</LastName>
+    <PhoneNumber>398-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>arvid0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1568</BusinessEntityID>
+    <Name>Custom Frames, Inc.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Vincent</FirstName>
+    <MiddleName>T.</MiddleName>
+    <LastName>White</LastName>
+    <PhoneNumber>677-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>vincent0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1570</BusinessEntityID>
+    <Name>First Rate Bicycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>John</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Ortiz</LastName>
+    <PhoneNumber>133-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>john25@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1572</BusinessEntityID>
+    <Name>National Bike Association</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>David</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Ortiz</LastName>
+    <PhoneNumber>937-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>david21@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1584</BusinessEntityID>
+    <Name>Trey Research</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Cristian</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Osorio</LastName>
+    <PhoneNumber>597-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>cristian1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1594</BusinessEntityID>
+    <Name>Fitness Association</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Kelly</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Whitworth</LastName>
+    <PhoneNumber>550-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>kelly1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1596</BusinessEntityID>
+    <Name>A. Datum Corporation</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jay</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Wilkie</LastName>
+    <PhoneNumber>813-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>jay5@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1598</BusinessEntityID>
+    <Name>Continental Pro Cycles</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Lionel</FirstName>
+    <LastName>Penuchot</LastName>
+    <PhoneNumber>718-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>lionel1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1600</BusinessEntityID>
+    <Name>Federal Sport</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Shawn</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Whitney</LastName>
+    <PhoneNumber>803-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>shawn1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1602</BusinessEntityID>
+    <Name>Beaumont Bikes</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>John</FirstName>
+    <LastName>Peoples</LastName>
+    <PhoneNumber>943-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>john26@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1604</BusinessEntityID>
+    <Name>Bike Satellite Inc.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Larry</FirstName>
+    <LastName>Zhang</LastName>
+    <PhoneNumber>143-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>larry0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1606</BusinessEntityID>
+    <Name>Northwind Traders</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Tina</FirstName>
+    <MiddleName>A.</MiddleName>
+    <LastName>Perko</LastName>
+    <PhoneNumber>104-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>tina1@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1610</BusinessEntityID>
+    <Name>Hybrid Bicycle Center</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Glin</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Peterson</LastName>
+    <PhoneNumber>626-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>glin0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1616</BusinessEntityID>
+    <Name>Aurora Bike Center</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <LastName>Zeman</LastName>
+    <PhoneNumber>240-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michael27@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1622</BusinessEntityID>
+    <Name>Speed Corporation</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Deborah</FirstName>
+    <LastName>Poe</LastName>
+    <PhoneNumber>331-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>deborah2@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1626</BusinessEntityID>
+    <Name>Hill Bicycle Center</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Carole</FirstName>
+    <LastName>Poland</LastName>
+    <PhoneNumber>135-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>carole1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1628</BusinessEntityID>
+    <Name>Bicycle Specialists</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Cheryl</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Pompa</LastName>
+    <PhoneNumber>433-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>cheryl1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1634</BusinessEntityID>
+    <Name>GMA Ski &amp; Bike</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Constance</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Posner</LastName>
+    <PhoneNumber>686-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>constance0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1638</BusinessEntityID>
+    <Name>Inline Accessories</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Betty</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Potts</LastName>
+    <PhoneNumber>120-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>betty1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1642</BusinessEntityID>
+    <Name>Electronic Bike Co.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Gregory</FirstName>
+    <MiddleName>R.</MiddleName>
+    <LastName>Whiting</LastName>
+    <PhoneNumber>218-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>gregory3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1646</BusinessEntityID>
+    <Name>Electronic Bike Repair &amp; Supplies</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Catherine</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Whitney</LastName>
+    <PhoneNumber>206-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>catherine1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1648</BusinessEntityID>
+    <Name>Wide World Importers</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Steven</FirstName>
+    <MiddleName>K.</MiddleName>
+    <LastName>Whitehead</LastName>
+    <PhoneNumber>327-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>steven4@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1650</BusinessEntityID>
+    <Name>American Bicycles and Wheels</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Robert</FirstName>
+    <LastName>Zare</LastName>
+    <PhoneNumber>314-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>robert14@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1652</BusinessEntityID>
+    <Name>Victory Bikes</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Kim</FirstName>
+    <LastName>Ralls</LastName>
+    <PhoneNumber>193-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>kim4@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1654</BusinessEntityID>
+    <Name>American Bikes</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Susan</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Ramos</LastName>
+    <PhoneNumber>839-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>susan5@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1664</BusinessEntityID>
+    <Name>Anderson's Custom Bikes</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Suzann</FirstName>
+    <MiddleName>K.</MiddleName>
+    <LastName>Reams</LastName>
+    <PhoneNumber>354-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>suzann0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1666</BusinessEntityID>
+    <Name>Leaf River Terrain</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Michelle</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Rector</LastName>
+    <PhoneNumber>459-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michelle1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1670</BusinessEntityID>
+    <Name>Holiday Skate &amp; Cycle</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Gloria</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Wilson</LastName>
+    <PhoneNumber>893-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>gloria2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1672</BusinessEntityID>
+    <Name>Expert Bike Co</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Celine</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Reed</LastName>
+    <PhoneNumber>340-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>celine0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1674</BusinessEntityID>
+    <Name>Varsity Sport Co.</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Randy</FirstName>
+    <LastName>Reeves</LastName>
+    <PhoneNumber>668-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>randy1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1680</BusinessEntityID>
+    <Name>Jackson Authority</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Adam</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Reynolds</LastName>
+    <Suffix>Jr.</Suffix>
+    <PhoneNumber>574-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>adam1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1688</BusinessEntityID>
+    <Name>Wood Fitness</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jack</FirstName>
+    <MiddleName>S.</MiddleName>
+    <LastName>Richins</LastName>
+    <PhoneNumber>705-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>jack3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1690</BusinessEntityID>
+    <Name>Bloomington Multisport</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Marie</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Richmeier</LastName>
+    <PhoneNumber>172-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>marie1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1692</BusinessEntityID>
+    <Name>Carlson Specialties</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Juanita</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Zimmerman</LastName>
+    <PhoneNumber>194-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>juanita1@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1698</BusinessEntityID>
+    <Name>Business Equipment Center</Name>
+    <ContactType>Sales Agent</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Karin</FirstName>
+    <LastName>Zimprich</LastName>
+    <PhoneNumber>183-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>karin0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1492</BusinessEntityID>
+    <Name>Australia Bike Retailer</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Paula</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Moberly</LastName>
+    <PhoneNumber>273-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>paula2@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1494</BusinessEntityID>
+    <Name>Allenson Cycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michiel</FirstName>
+    <LastName>Wories</LastName>
+    <PhoneNumber>530-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michiel0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1496</BusinessEntityID>
+    <Name>Advanced Bicycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jonathan</FirstName>
+    <LastName>Moeller</LastName>
+    <PhoneNumber>859-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jonathan0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1498</BusinessEntityID>
+    <Name>Trikes, Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>William</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Monroe</LastName>
+    <PhoneNumber>315-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>william3@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1500</BusinessEntityID>
+    <Name>Morgan Bike Accessories</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Alan</FirstName>
+    <MiddleName>L.</MiddleName>
+    <LastName>Monitor</LastName>
+    <PhoneNumber>142-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>alan2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1508</BusinessEntityID>
+    <Name>Compete Enterprises, Inc</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jon</FirstName>
+    <LastName>Morris</LastName>
+    <PhoneNumber>321-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jon2@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1516</BusinessEntityID>
+    <Name>Gardner Touring Cycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Zwilling</LastName>
+    <PhoneNumber>542-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michael28@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1524</BusinessEntityID>
+    <Name>Recreation Place</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Dorothy</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Myer</LastName>
+    <PhoneNumber>991-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>dorothy2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1538</BusinessEntityID>
+    <Name>Vista Road Bikes</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Alex</FirstName>
+    <LastName>Nayberg</LastName>
+    <PhoneNumber>134-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>alex1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1540</BusinessEntityID>
+    <Name>Bergeron Off-Roads</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Jan</FirstName>
+    <MiddleName>R.</MiddleName>
+    <LastName>Nelsen</LastName>
+    <PhoneNumber>905-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jan2@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1552</BusinessEntityID>
+    <Name>Sports House</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Cathan</FirstName>
+    <LastName>Cook</LastName>
+    <PhoneNumber>55-2555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>cathan0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1556</BusinessEntityID>
+    <Name>West Junction Cycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <FirstName>Tina</FirstName>
+    <MiddleName>Slone</MiddleName>
+    <LastName>O'Dell</LastName>
+    <PhoneNumber>173-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>tina0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1558</BusinessEntityID>
+    <Name>Marsh</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Robert</FirstName>
+    <LastName>O'Hara</LastName>
+    <PhoneNumber>139-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>robert11@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1562</BusinessEntityID>
+    <Name>Norstan Bike Hut</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Lee</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Olguin</LastName>
+    <PhoneNumber>944-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>lee1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1566</BusinessEntityID>
+    <Name>Burnett Road Warriors</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Gloria</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Orona</LastName>
+    <PhoneNumber>810-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>gloria1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1574</BusinessEntityID>
+    <Name>Jeff's Sporting Goods</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Michiko</FirstName>
+    <LastName>Osada</LastName>
+    <PhoneNumber>288-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>michiko1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1576</BusinessEntityID>
+    <Name>Superior Bicycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Stu</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Osborn</LastName>
+    <PhoneNumber>472-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>stu0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1578</BusinessEntityID>
+    <Name>Vision Cycles, Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Scott</FirstName>
+    <LastName>Oveson</LastName>
+    <PhoneNumber>939-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>scott9@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1586</BusinessEntityID>
+    <Name>Mitchell Sports</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Mosha</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Park</LastName>
+    <PhoneNumber>352-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>mosha0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1588</BusinessEntityID>
+    <Name>Signature Cycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Rajesh</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Patel</LastName>
+    <PhoneNumber>724-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>rajesh1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1590</BusinessEntityID>
+    <Name>SUPERSALES INC.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Shyamalan</FirstName>
+    <LastName>Pather</LastName>
+    <PhoneNumber>843-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>shyamalan0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1592</BusinessEntityID>
+    <Name>Lindell</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <LastName>Patten</LastName>
+    <PhoneNumber>178-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michael20@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1602</BusinessEntityID>
+    <Name>Beaumont Bikes</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Peng</FirstName>
+    <LastName>Wu</LastName>
+    <PhoneNumber>306-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>peng1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1604</BusinessEntityID>
+    <Name>Bike Satellite Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Jonathan</FirstName>
+    <LastName>Perera</LastName>
+    <PhoneNumber>404-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>jonathan1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1608</BusinessEntityID>
+    <Name>Sport Playground</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>James</FirstName>
+    <LastName>Peters</LastName>
+    <PhoneNumber>709-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>james13@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1612</BusinessEntityID>
+    <Name>Midwest Sport, Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Sara</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Pettengill</LastName>
+    <PhoneNumber>125-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>sara1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1614</BusinessEntityID>
+    <Name>Reliance Fitness, Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Carol</FirstName>
+    <LastName>Philips</LastName>
+    <PhoneNumber>996-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>carol3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1616</BusinessEntityID>
+    <Name>Aurora Bike Center</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Patricia</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Porter</LastName>
+    <PhoneNumber>939-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>patricia1@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1618</BusinessEntityID>
+    <Name>Metro Sport Equipment</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Pat</FirstName>
+    <MiddleName>R.</MiddleName>
+    <LastName>Pinkston</LastName>
+    <PhoneNumber>387-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>pat3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1624</BusinessEntityID>
+    <Name>Competition Bike Training Systems</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Grigory</FirstName>
+    <LastName>Pogulsky</LastName>
+    <PhoneNumber>557-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>grigory0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1632</BusinessEntityID>
+    <Name>Sport Fan Co.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Ethel</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Porter</LastName>
+    <PhoneNumber>665-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>ethel0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1640</BusinessEntityID>
+    <Name>Legend Cycles</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Fred</FirstName>
+    <LastName>Preston</LastName>
+    <PhoneNumber>704-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>fred3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1650</BusinessEntityID>
+    <Name>American Bicycles and Wheels</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Mary Lou</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Quintana</LastName>
+    <PhoneNumber>430-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>marylou0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1654</BusinessEntityID>
+    <Name>American Bikes</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Worland</LastName>
+    <Suffix>Jr.</Suffix>
+    <PhoneNumber>196-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>michael26@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1656</BusinessEntityID>
+    <Name>Mountain Works</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Cynthia</FirstName>
+    <LastName>Randall</LastName>
+    <PhoneNumber>961-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>cynthia1@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1658</BusinessEntityID>
+    <Name>Crowley Sport</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Judy</FirstName>
+    <MiddleName>N.</MiddleName>
+    <LastName>Zugelder</LastName>
+    <PhoneNumber>611-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>judy4@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1662</BusinessEntityID>
+    <Name>Northern Bike Travel</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Patricia</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Zubaty</LastName>
+    <PhoneNumber>175-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>patricia3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1664</BusinessEntityID>
+    <Name>Anderson's Custom Bikes</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Steven</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Wright</LastName>
+    <PhoneNumber>232-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>steven5@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1668</BusinessEntityID>
+    <Name>Touring Equipment Center</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Jamie</FirstName>
+    <LastName>Reding</LastName>
+    <PhoneNumber>124-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>jamie0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1676</BusinessEntityID>
+    <Name>Team Athletic Co.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Enoch</FirstName>
+    <MiddleName>T</MiddleName>
+    <LastName>Remick</LastName>
+    <PhoneNumber>800-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>enoch0@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1682</BusinessEntityID>
+    <Name>Premier Sport, Inc.</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Constance</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Remmington</LastName>
+    <PhoneNumber>537-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>constance1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1684</BusinessEntityID>
+    <Name>Professional Athletic Consultants</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Albert</FirstName>
+    <MiddleName>A.</MiddleName>
+    <LastName>Rhodes</LastName>
+    <PhoneNumber>504-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>albert1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1692</BusinessEntityID>
+    <Name>Carlson Specialties</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>William</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Richter</LastName>
+    <PhoneNumber>519-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>william4@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1698</BusinessEntityID>
+    <Name>Business Equipment Center</Name>
+    <ContactType>Sales Associate</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Leota</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Roberts</LastName>
+    <PhoneNumber>336-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>leota0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1492</BusinessEntityID>
+    <Name>Australia Bike Retailer</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Charlene</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Wojcik</LastName>
+    <PhoneNumber>459-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>charlene0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1496</BusinessEntityID>
+    <Name>Advanced Bicycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>James</FirstName>
+    <MiddleName>C.</MiddleName>
+    <LastName>Wilson</LastName>
+    <PhoneNumber>239-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>james16@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1504</BusinessEntityID>
+    <Name>Chicago Rent-All</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Bobby</FirstName>
+    <LastName>Moore</LastName>
+    <PhoneNumber>879-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>bobby0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1506</BusinessEntityID>
+    <Name>Greenwood Athletic Company</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Barbara</FirstName>
+    <LastName>Moreland</LastName>
+    <PhoneNumber>959-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>barbara6@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1508</BusinessEntityID>
+    <Name>Compete Enterprises, Inc</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Sheela</FirstName>
+    <LastName>Word</LastName>
+    <PhoneNumber>387-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>sheela1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1516</BusinessEntityID>
+    <Name>Gardner Touring Cycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Salman</FirstName>
+    <LastName>Mughal</LastName>
+    <PhoneNumber>882-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>salman0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1522</BusinessEntityID>
+    <Name>First National Sport Co.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Rob</FirstName>
+    <LastName>Young</LastName>
+    <PhoneNumber>152-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>rob3@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1528</BusinessEntityID>
+    <Name>Image Makers Bike Center</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Greg</FirstName>
+    <LastName>Yvkoff</LastName>
+    <PhoneNumber>110-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>greg5@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1530</BusinessEntityID>
+    <Name>Comfort Road Bicycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <FirstName>Mandar</FirstName>
+    <LastName>Naik</LastName>
+    <PhoneNumber>240-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>mandar1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1532</BusinessEntityID>
+    <Name>Knopfler Cycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Greg</FirstName>
+    <MiddleName>F.</MiddleName>
+    <LastName>Mohamed</LastName>
+    <PhoneNumber>163-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>greg4@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1534</BusinessEntityID>
+    <Name>Ready Rentals</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Mike</FirstName>
+    <LastName>Nash</LastName>
+    <PhoneNumber>198-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>mike4@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1536</BusinessEntityID>
+    <Name>Cruger Bike Company</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Lenore</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Yasi</LastName>
+    <PhoneNumber>206-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>lenore0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1540</BusinessEntityID>
+    <Name>Bergeron Off-Roads</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Audrey</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Wold</LastName>
+    <PhoneNumber>301-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>audrey0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1542</BusinessEntityID>
+    <Name>Hill's Bicycle Service</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Ian</FirstName>
+    <MiddleName>A.</MiddleName>
+    <LastName>Yuhasz</LastName>
+    <PhoneNumber>845-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>ian0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1548</BusinessEntityID>
+    <Name>Consumer Cycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Laura</FirstName>
+    <LastName>Norman</LastName>
+    <PhoneNumber>460-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>laura2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1552</BusinessEntityID>
+    <Name>Sports House</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <MiddleName>J</MiddleName>
+    <LastName>O'Connell</LastName>
+    <PhoneNumber>761-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>michael19@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1564</BusinessEntityID>
+    <Name>Illinois Trek &amp; Clothing</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Tad</FirstName>
+    <LastName>Orman</LastName>
+    <PhoneNumber>533-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>tad0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1566</BusinessEntityID>
+    <Name>Burnett Road Warriors</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Dorothy</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Wollesen</LastName>
+    <PhoneNumber>208-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>dorothy5@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1568</BusinessEntityID>
+    <Name>Custom Frames, Inc.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Arthur</FirstName>
+    <LastName>Yasinski</LastName>
+    <PhoneNumber>194-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>arthur0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1580</BusinessEntityID>
+    <Name>Litware, Inc.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Lori</FirstName>
+    <LastName>Oviatt</LastName>
+    <PhoneNumber>529-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>lori3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1594</BusinessEntityID>
+    <Name>Fitness Association</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Tom</FirstName>
+    <LastName>Youtsey</LastName>
+    <PhoneNumber>113-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>tom3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1596</BusinessEntityID>
+    <Name>A. Datum Corporation</Name>
+    <ContactType>Sales Manager</ContactType>
+    <FirstName>Wei</FirstName>
+    <LastName>Yu</LastName>
+    <PhoneNumber>870-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>wei0@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1600</BusinessEntityID>
+    <Name>Federal Sport</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Garrett</FirstName>
+    <LastName>Young</LastName>
+    <PhoneNumber>549-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>garrett2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1604</BusinessEntityID>
+    <Name>Bike Satellite Inc.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Eunice</FirstName>
+    <MiddleName>J.</MiddleName>
+    <LastName>Wolf</LastName>
+    <PhoneNumber>305-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>eunice0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1616</BusinessEntityID>
+    <Name>Aurora Bike Center</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Mark</FirstName>
+    <LastName>Wistrom</LastName>
+    <PhoneNumber>890-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>mark6@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1620</BusinessEntityID>
+    <Name>Lakewood Bicycle</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Paulo</FirstName>
+    <MiddleName>Sergio Da Silva</MiddleName>
+    <LastName>Pinto</LastName>
+    <PhoneNumber>823-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>paulo1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1642</BusinessEntityID>
+    <Name>Electronic Bike Co.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Joe</FirstName>
+    <LastName>Yong</LastName>
+    <PhoneNumber>221-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>joe2@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1646</BusinessEntityID>
+    <Name>Electronic Bike Repair &amp; Supplies</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Richard</FirstName>
+    <MiddleName>T.</MiddleName>
+    <LastName>Young</LastName>
+    <PhoneNumber>683-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>richard6@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1648</BusinessEntityID>
+    <Name>Wide World Importers</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Tai</FirstName>
+    <LastName>Yee</LastName>
+    <PhoneNumber>953-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>tai0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1650</BusinessEntityID>
+    <Name>American Bicycles and Wheels</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Barbara</FirstName>
+    <MiddleName>K.</MiddleName>
+    <LastName>Wisnewski</LastName>
+    <PhoneNumber>757-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>barbara8@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1658</BusinessEntityID>
+    <Name>Crowley Sport</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Arvind</FirstName>
+    <MiddleName>B.</MiddleName>
+    <LastName>Rao</LastName>
+    <PhoneNumber>141-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>arvind1@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1660</BusinessEntityID>
+    <Name>Magic Cycles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Simon</FirstName>
+    <LastName>Rapier</LastName>
+    <PhoneNumber>476-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>simon1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1662</BusinessEntityID>
+    <Name>Northern Bike Travel</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Michael</FirstName>
+    <MiddleName>S</MiddleName>
+    <LastName>Ray</LastName>
+    <PhoneNumber>317-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>michael21@adventure-works.com</EmailAddress>
+    <EmailPromotion>1</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1670</BusinessEntityID>
+    <Name>Holiday Skate &amp; Cycle</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Gary</FirstName>
+    <LastName>Yukish</LastName>
+    <PhoneNumber>518-555-0100</PhoneNumber>
+    <PhoneNumberType>Cell</PhoneNumberType>
+    <EmailAddress>gary7@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1678</BusinessEntityID>
+    <Name>Proseware, Inc.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Eric</FirstName>
+    <MiddleName>E.</MiddleName>
+    <LastName>Rhodes</LastName>
+    <PhoneNumber>113-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>eric8@adventure-works.com</EmailAddress>
+    <EmailPromotion>2</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1686</BusinessEntityID>
+    <Name>Pro Sport Industries</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Dave</FirstName>
+    <LastName>Richards</LastName>
+    <PhoneNumber>582-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>dave1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1692</BusinessEntityID>
+    <Name>Carlson Specialties</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Caroline</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Woodard</LastName>
+    <PhoneNumber>384-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>caroline1@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1694</BusinessEntityID>
+    <Name>Compete, Inc.</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>Thomas</FirstName>
+    <MiddleName>M.</MiddleName>
+    <LastName>Richards</LastName>
+    <Suffix>Jr.</Suffix>
+    <PhoneNumber>177-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>thomas3@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1696</BusinessEntityID>
+    <Name>Chicago City Saddles</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Ms.</Title>
+    <FirstName>Stacy</FirstName>
+    <MiddleName>K.</MiddleName>
+    <LastName>Rizzi</LastName>
+    <PhoneNumber>329-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>stacy0@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+  <Purchasing.vVendorWithContacts>
+    <BusinessEntityID>1698</BusinessEntityID>
+    <Name>Business Equipment Center</Name>
+    <ContactType>Sales Manager</ContactType>
+    <Title>Mr.</Title>
+    <FirstName>John</FirstName>
+    <LastName>Wood</LastName>
+    <PhoneNumber>873-555-0100</PhoneNumber>
+    <PhoneNumberType>Work</PhoneNumberType>
+    <EmailAddress>john29@adventure-works.com</EmailAddress>
+    <EmailPromotion>0</EmailPromotion>
+  </Purchasing.vVendorWithContacts>
+</SelectedTables>

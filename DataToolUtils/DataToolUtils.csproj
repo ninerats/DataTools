@@ -7,7 +7,7 @@
     <ProjectGuid>{BC043893-F730-4EB3-A9A7-240DFECDC6D3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataToolUtils</RootNamespace>
+    <RootNamespace>Craftsmaneer.DataToolUtils</RootNamespace>
     <AssemblyName>DataToolUtils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -72,10 +72,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SchemaDiffDialog.resx">
       <DependentUpon>SchemaDiffDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatabaseDTC.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FolderDTC.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

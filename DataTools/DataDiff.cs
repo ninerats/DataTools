@@ -81,6 +81,8 @@ namespace Craftsmaneer.DataTools
     public class ColumnDiff
     {
         public DataColumn Column { get; set; }
+        public object ReplicaValue { get; set; }
+        public object MasterValue { get; set; }
         public DiffType DiffType { get; set; }
         public ColumnDiff()
         {
@@ -91,6 +93,10 @@ namespace Craftsmaneer.DataTools
         {
             return string.Format("\t{0}\t{1}", Column.ColumnName, DiffType);
         }
+
+
+
+       
     }
 
   
@@ -108,6 +114,16 @@ namespace Craftsmaneer.DataTools
         CompatibleSchema,
         IncompatibleSchema,
         Data
+    }
+
+    [Flags]
+    public enum TableCompareOptions
+    {
+        None,
+        AllowIncompatibleSchema, // will do the comparison even if the schemas are not compatible.
+        CaptureValues, // will populate the MasterValue & ReplicaValue fields when a Column diff is detected.
+        KeysOptional, // If the master datatable does not have a primary key, use the all the columns to join.
+        TreatDefaultsAsNull, // if the value of the column is equal to the configured default, it will be treated as null.
     }
 
 

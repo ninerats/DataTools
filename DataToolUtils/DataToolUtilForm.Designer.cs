@@ -1,4 +1,4 @@
-﻿namespace DataToolUtils
+﻿namespace Craftsmaneer.DataToolUtils
 {
     partial class DataToolUtilForm
     {
@@ -28,42 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Table 1",
             "132"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Table 1",
             "132"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Table 1",
             "132"}, -1);
             this.tabUtils = new System.Windows.Forms.TabControl();
             this.tabExportDT = new System.Windows.Forms.TabPage();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtExportPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdExport = new System.Windows.Forms.Button();
+            this.tabImportDataTable = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCompareToTable = new System.Windows.Forms.TextBox();
+            this.cmdCompare = new System.Windows.Forms.Button();
+            this.lblTableName = new System.Windows.Forms.Label();
+            this.dgvImported = new System.Windows.Forms.DataGridView();
+            this.cmdImportDataTable = new System.Windows.Forms.Button();
+            this.txtImportDataTablePath = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.cmdConnect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabImportDataTable = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtConnStr = new System.Windows.Forms.TextBox();
-            this.txtExportPath = new System.Windows.Forms.TextBox();
-            this.txtImportDataTablePath = new System.Windows.Forms.TextBox();
-            this.cmdImportDataTable = new System.Windows.Forms.Button();
-            this.dgvImported = new System.Windows.Forms.DataGridView();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.mnuExportOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.miSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSelectNone = new System.Windows.Forms.ToolStripMenuItem();
             this.lvwTables = new DataToolUtils.TableListView();
-            this.lblTableName = new System.Windows.Forms.Label();
-            this.cmdCompare = new System.Windows.Forms.Button();
-            this.txtCompareToTable = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cmdMakeConfig = new System.Windows.Forms.Button();
             this.tabUtils.SuspendLayout();
             this.tabExportDT.SuspendLayout();
             this.pnlBottom.SuspendLayout();
-            this.pnlTop.SuspendLayout();
             this.tabImportDataTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImported)).BeginInit();
+            this.pnlTop.SuspendLayout();
+            this.mnuExportOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabUtils
@@ -95,6 +102,8 @@
             // 
             this.pnlBottom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBottom.Controls.Add(this.cmdMakeConfig);
+            this.pnlBottom.Controls.Add(this.button1);
             this.pnlBottom.Controls.Add(this.txtExportPath);
             this.pnlBottom.Controls.Add(this.label2);
             this.pnlBottom.Controls.Add(this.cmdExport);
@@ -102,6 +111,26 @@
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(669, 71);
             this.pnlBottom.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(92, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtExportPath
+            // 
+            this.txtExportPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExportPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtExportPath_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtExportPath.Location = new System.Drawing.Point(78, 6);
+            this.txtExportPath.Name = "txtExportPath";
+            this.txtExportPath.Size = new System.Drawing.Size(577, 20);
+            this.txtExportPath.TabIndex = 6;
+            this.txtExportPath.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtExportPath_Text;
             // 
             // label2
             // 
@@ -121,6 +150,104 @@
             this.cmdExport.Text = "Export";
             this.cmdExport.UseVisualStyleBackColor = true;
             this.cmdExport.Click += new System.EventHandler(this.cmdExport_Click);
+            // 
+            // tabImportDataTable
+            // 
+            this.tabImportDataTable.Controls.Add(this.label4);
+            this.tabImportDataTable.Controls.Add(this.txtCompareToTable);
+            this.tabImportDataTable.Controls.Add(this.cmdCompare);
+            this.tabImportDataTable.Controls.Add(this.lblTableName);
+            this.tabImportDataTable.Controls.Add(this.dgvImported);
+            this.tabImportDataTable.Controls.Add(this.cmdImportDataTable);
+            this.tabImportDataTable.Controls.Add(this.txtImportDataTablePath);
+            this.tabImportDataTable.Controls.Add(this.label3);
+            this.tabImportDataTable.Location = new System.Drawing.Point(4, 22);
+            this.tabImportDataTable.Name = "tabImportDataTable";
+            this.tabImportDataTable.Padding = new System.Windows.Forms.Padding(3);
+            this.tabImportDataTable.Size = new System.Drawing.Size(702, 417);
+            this.tabImportDataTable.TabIndex = 1;
+            this.tabImportDataTable.Text = "Import DataTable";
+            this.tabImportDataTable.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(115, 389);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Compare to table:";
+            // 
+            // txtCompareToTable
+            // 
+            this.txtCompareToTable.Location = new System.Drawing.Point(209, 386);
+            this.txtCompareToTable.Name = "txtCompareToTable";
+            this.txtCompareToTable.Size = new System.Drawing.Size(236, 20);
+            this.txtCompareToTable.TabIndex = 6;
+            // 
+            // cmdCompare
+            // 
+            this.cmdCompare.Location = new System.Drawing.Point(24, 384);
+            this.cmdCompare.Name = "cmdCompare";
+            this.cmdCompare.Size = new System.Drawing.Size(75, 23);
+            this.cmdCompare.TabIndex = 5;
+            this.cmdCompare.Text = "Compare";
+            this.cmdCompare.UseVisualStyleBackColor = true;
+            this.cmdCompare.Click += new System.EventHandler(this.cmdCompare_Click);
+            // 
+            // lblTableName
+            // 
+            this.lblTableName.AutoSize = true;
+            this.lblTableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTableName.Location = new System.Drawing.Point(21, 42);
+            this.lblTableName.Name = "lblTableName";
+            this.lblTableName.Size = new System.Drawing.Size(272, 13);
+            this.lblTableName.TabIndex = 4;
+            this.lblTableName.Text = "Select an exported Datatable and click Import.";
+            // 
+            // dgvImported
+            // 
+            this.dgvImported.AllowUserToOrderColumns = true;
+            this.dgvImported.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvImported.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImported.Location = new System.Drawing.Point(21, 58);
+            this.dgvImported.Name = "dgvImported";
+            this.dgvImported.Size = new System.Drawing.Size(656, 319);
+            this.dgvImported.TabIndex = 3;
+            // 
+            // cmdImportDataTable
+            // 
+            this.cmdImportDataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdImportDataTable.Location = new System.Drawing.Point(602, 13);
+            this.cmdImportDataTable.Name = "cmdImportDataTable";
+            this.cmdImportDataTable.Size = new System.Drawing.Size(75, 23);
+            this.cmdImportDataTable.TabIndex = 2;
+            this.cmdImportDataTable.Text = "Import";
+            this.cmdImportDataTable.UseVisualStyleBackColor = true;
+            this.cmdImportDataTable.Click += new System.EventHandler(this.cmdImportDataTable_Click);
+            // 
+            // txtImportDataTablePath
+            // 
+            this.txtImportDataTablePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImportDataTablePath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtImportDataTablePath_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtImportDataTablePath.Location = new System.Drawing.Point(92, 15);
+            this.txtImportDataTablePath.Name = "txtImportDataTablePath";
+            this.txtImportDataTablePath.Size = new System.Drawing.Size(504, 20);
+            this.txtImportDataTablePath.TabIndex = 1;
+            this.txtImportDataTablePath.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtImportDataTablePath_Text;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Import From:";
             // 
             // pnlTop
             // 
@@ -154,92 +281,42 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Connection String:";
             // 
-            // tabImportDataTable
-            // 
-            this.tabImportDataTable.Controls.Add(this.label4);
-            this.tabImportDataTable.Controls.Add(this.txtCompareToTable);
-            this.tabImportDataTable.Controls.Add(this.cmdCompare);
-            this.tabImportDataTable.Controls.Add(this.lblTableName);
-            this.tabImportDataTable.Controls.Add(this.dgvImported);
-            this.tabImportDataTable.Controls.Add(this.cmdImportDataTable);
-            this.tabImportDataTable.Controls.Add(this.txtImportDataTablePath);
-            this.tabImportDataTable.Controls.Add(this.label3);
-            this.tabImportDataTable.Location = new System.Drawing.Point(4, 22);
-            this.tabImportDataTable.Name = "tabImportDataTable";
-            this.tabImportDataTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tabImportDataTable.Size = new System.Drawing.Size(702, 417);
-            this.tabImportDataTable.TabIndex = 1;
-            this.tabImportDataTable.Text = "Import DataTable";
-            this.tabImportDataTable.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Import From:";
-            // 
             // txtConnStr
             // 
             this.txtConnStr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConnStr.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DataToolUtils.Properties.Settings.Default, "txtConnStr_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtConnStr.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtConnStr_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtConnStr.Location = new System.Drawing.Point(18, 26);
             this.txtConnStr.Name = "txtConnStr";
             this.txtConnStr.Size = new System.Drawing.Size(592, 20);
             this.txtConnStr.TabIndex = 0;
-            this.txtConnStr.Text = global::DataToolUtils.Properties.Settings.Default.txtConnStr_Text;
-            // 
-            // txtExportPath
-            // 
-            this.txtExportPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtExportPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DataToolUtils.Properties.Settings.Default, "txtExportPath_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtExportPath.Location = new System.Drawing.Point(78, 6);
-            this.txtExportPath.Name = "txtExportPath";
-            this.txtExportPath.Size = new System.Drawing.Size(577, 20);
-            this.txtExportPath.TabIndex = 6;
-            this.txtExportPath.Text = global::DataToolUtils.Properties.Settings.Default.txtExportPath_Text;
-            // 
-            // txtImportDataTablePath
-            // 
-            this.txtImportDataTablePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImportDataTablePath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DataToolUtils.Properties.Settings.Default, "txtImportDataTablePath_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtImportDataTablePath.Location = new System.Drawing.Point(92, 15);
-            this.txtImportDataTablePath.Name = "txtImportDataTablePath";
-            this.txtImportDataTablePath.Size = new System.Drawing.Size(504, 20);
-            this.txtImportDataTablePath.TabIndex = 1;
-            this.txtImportDataTablePath.Text = global::DataToolUtils.Properties.Settings.Default.txtImportDataTablePath_Text;
-            // 
-            // cmdImportDataTable
-            // 
-            this.cmdImportDataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdImportDataTable.Location = new System.Drawing.Point(602, 13);
-            this.cmdImportDataTable.Name = "cmdImportDataTable";
-            this.cmdImportDataTable.Size = new System.Drawing.Size(75, 23);
-            this.cmdImportDataTable.TabIndex = 2;
-            this.cmdImportDataTable.Text = "Import";
-            this.cmdImportDataTable.UseVisualStyleBackColor = true;
-            this.cmdImportDataTable.Click += new System.EventHandler(this.cmdImportDataTable_Click);
-            // 
-            // dgvImported
-            // 
-            this.dgvImported.AllowUserToOrderColumns = true;
-            this.dgvImported.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvImported.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvImported.Location = new System.Drawing.Point(21, 58);
-            this.dgvImported.Name = "dgvImported";
-            this.dgvImported.Size = new System.Drawing.Size(656, 319);
-            this.dgvImported.TabIndex = 3;
+            this.txtConnStr.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtConnStr_Text;
             // 
             // ofd
             // 
             this.ofd.FileName = "openFileDialog1";
+            // 
+            // mnuExportOptions
+            // 
+            this.mnuExportOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miSelectAll,
+            this.miSelectNone});
+            this.mnuExportOptions.Name = "mnuExportOptions";
+            this.mnuExportOptions.Size = new System.Drawing.Size(138, 48);
+            // 
+            // miSelectAll
+            // 
+            this.miSelectAll.Name = "miSelectAll";
+            this.miSelectAll.Size = new System.Drawing.Size(137, 22);
+            this.miSelectAll.Text = "Select All";
+            this.miSelectAll.Click += new System.EventHandler(this.miSelectAll_Click);
+            // 
+            // miSelectNone
+            // 
+            this.miSelectNone.Name = "miSelectNone";
+            this.miSelectNone.Size = new System.Drawing.Size(137, 22);
+            this.miSelectNone.Text = "Select None";
+            this.miSelectNone.Click += new System.EventHandler(this.miSelectNone_Click);
             // 
             // lvwTables
             // 
@@ -248,13 +325,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwTables.CheckBoxes = true;
             this.lvwTables.ConnectionString = null;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
+            this.lvwTables.ContextMenuStrip = this.mnuExportOptions;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
             this.lvwTables.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.lvwTables.Location = new System.Drawing.Point(18, 7);
             this.lvwTables.Name = "lvwTables";
             this.lvwTables.Size = new System.Drawing.Size(669, 322);
@@ -262,42 +340,15 @@
             this.lvwTables.UseCompatibleStateImageBehavior = false;
             this.lvwTables.View = System.Windows.Forms.View.Details;
             // 
-            // lblTableName
+            // cmdMakeConfig
             // 
-            this.lblTableName.AutoSize = true;
-            this.lblTableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTableName.Location = new System.Drawing.Point(21, 42);
-            this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(272, 13);
-            this.lblTableName.TabIndex = 4;
-            this.lblTableName.Text = "Select an exported Datatable and click Import.";
-            // 
-            // cmdCompare
-            // 
-            this.cmdCompare.Location = new System.Drawing.Point(24, 384);
-            this.cmdCompare.Name = "cmdCompare";
-            this.cmdCompare.Size = new System.Drawing.Size(75, 23);
-            this.cmdCompare.TabIndex = 5;
-            this.cmdCompare.Text = "Compare";
-            this.cmdCompare.UseVisualStyleBackColor = true;
-            this.cmdCompare.Click += new System.EventHandler(this.cmdCompare_Click);
-            // 
-            // txtCompareToTable
-            // 
-            this.txtCompareToTable.Location = new System.Drawing.Point(209, 386);
-            this.txtCompareToTable.Name = "txtCompareToTable";
-            this.txtCompareToTable.Size = new System.Drawing.Size(236, 20);
-            this.txtCompareToTable.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 389);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Compare to table:";
+            this.cmdMakeConfig.Location = new System.Drawing.Point(173, 32);
+            this.cmdMakeConfig.Name = "cmdMakeConfig";
+            this.cmdMakeConfig.Size = new System.Drawing.Size(75, 23);
+            this.cmdMakeConfig.TabIndex = 8;
+            this.cmdMakeConfig.Text = "Make Cfg";
+            this.cmdMakeConfig.UseVisualStyleBackColor = true;
+            this.cmdMakeConfig.Click += new System.EventHandler(this.cmdMakeConfig_Click);
             // 
             // DataToolUtilForm
             // 
@@ -313,11 +364,12 @@
             this.tabExportDT.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.pnlBottom.PerformLayout();
-            this.pnlTop.ResumeLayout(false);
-            this.pnlTop.PerformLayout();
             this.tabImportDataTable.ResumeLayout(false);
             this.tabImportDataTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImported)).EndInit();
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
+            this.mnuExportOptions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,6 +398,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCompareToTable;
         private System.Windows.Forms.Button cmdCompare;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip mnuExportOptions;
+        private System.Windows.Forms.ToolStripMenuItem miSelectAll;
+        private System.Windows.Forms.ToolStripMenuItem miSelectNone;
+        private System.Windows.Forms.Button cmdMakeConfig;
     }
 }
 

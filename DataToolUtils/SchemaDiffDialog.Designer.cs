@@ -1,4 +1,4 @@
-﻿namespace DataToolUtils
+﻿namespace Craftsmaneer.DataToolUtils
 {
     partial class SchemaDiffDialog
     {

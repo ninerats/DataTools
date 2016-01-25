@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Craftsmaneer.DataTools;
 
-namespace DataToolUtils
+namespace Craftsmaneer.DataToolUtils
 {
     public class TableListView : ListView
     {
@@ -20,7 +21,7 @@ namespace DataToolUtils
             using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
-                _tableInfo = ExecSql(conn, "SELECT t.NAME AS TableName, s.Name AS SchemaName, p.rows AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
+                _tableInfo = conn.ExecSql("SELECT t.NAME AS TableName, s.Name AS SchemaName, p.rows AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
                     "FROM  sys.tables t  " +
                     "INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id " +
                     "INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id " +
@@ -52,18 +53,11 @@ namespace DataToolUtils
         private int GetTableRecordCount(SqlConnection conn, DataRow table)
         {
             string sql = string.Format("SELECT COUNT(*) as recCount FROM {0}.{1}", table["TABLE_SCHEMA"], table["TABLE_NAME"]);
-            DataTable result = ExecSql(conn, sql);
+            DataTable result = conn.ExecSql( sql);
             return result.Rows[0].Field<int>("recCount");
         }
 
-        public static DataTable ExecSql(SqlConnection conn, string sql)
-        {
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            var da = new SqlDataAdapter(cmd);
-            var dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
+       
 
         public TableListView()
             : base()
@@ -119,7 +113,7 @@ namespace DataToolUtils
                 foreach (var item in this.CheckedItems.Cast<ListViewItem>())
                 {
                     var tableName = item.SubItems[0].Text;
-                    var dt = GetTable(tableName,conn);
+                    var dt = conn.GetTable(tableName);
                     ds.Tables.Add(dt);
 
                 }
@@ -127,15 +121,6 @@ namespace DataToolUtils
             }
         }
 
-        public static DataTable GetTable(string tableName, SqlConnection conn)
-        {
-            
-            var sql = string.Format("select * from {0}", tableName);
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            var dt = new DataTable(tableName);
-            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            da.Fill(dt);
-            return dt;
-        }
+       
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataToolUtils
+namespace Craftsmaneer.DataToolUtils
 {
     public partial class SchemaDiffDialog : Form
     {

@@ -7,27 +7,61 @@
           <xs:element name="HumanResources.Employee">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="BusinessEntityID" type="xs:int" minOccurs="0" />
-                <xs:element name="NationalIDNumber" type="xs:string" minOccurs="0" />
-                <xs:element name="LoginID" type="xs:string" minOccurs="0" />
+                <xs:element name="BusinessEntityID" type="xs:int" />
+                <xs:element name="NationalIDNumber">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LoginID">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
                 <xs:element name="OrganizationNode" msdata:DataType="Microsoft.SqlServer.Types.SqlHierarchyId, Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" type="xs:anyType" minOccurs="0" />
                 <xs:element name="OrganizationLevel" type="xs:short" minOccurs="0" />
-                <xs:element name="JobTitle" type="xs:string" minOccurs="0" />
-                <xs:element name="BirthDate" type="xs:dateTime" minOccurs="0" />
-                <xs:element name="MaritalStatus" type="xs:string" minOccurs="0" />
-                <xs:element name="Gender" type="xs:string" minOccurs="0" />
-                <xs:element name="HireDate" type="xs:dateTime" minOccurs="0" />
-                <xs:element name="SalariedFlag" type="xs:boolean" minOccurs="0" />
-                <xs:element name="VacationHours" type="xs:short" minOccurs="0" />
-                <xs:element name="SickLeaveHours" type="xs:short" minOccurs="0" />
-                <xs:element name="CurrentFlag" type="xs:boolean" minOccurs="0" />
-                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
-                <xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="JobTitle">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BirthDate" type="xs:dateTime" />
+                <xs:element name="MaritalStatus">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="1" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Gender">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="1" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="HireDate" type="xs:dateTime" />
+                <xs:element name="SalariedFlag" type="xs:boolean" />
+                <xs:element name="VacationHours" type="xs:short" />
+                <xs:element name="SickLeaveHours" type="xs:short" />
+                <xs:element name="CurrentFlag" type="xs:boolean" />
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
               </xs:sequence>
             </xs:complexType>
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//HumanResources.Employee" />
+        <xs:field xpath="BusinessEntityID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <HumanResources.Employee>

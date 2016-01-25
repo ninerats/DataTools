@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataToolUtils
+namespace Craftsmaneer.DataToolUtils
 {
     static class Program
     {

@@ -1,0 +1,1121 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Purchasing.vVendorWithAddresses" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Purchasing.vVendorWithAddresses">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessEntityID" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AddressType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AddressLine1">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="60" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AddressLine2" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="60" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="City">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="30" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="StateProvinceName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PostalCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CountryRegionName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1492</BusinessEntityID>
+    <Name>Australia Bike Retailer</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>28 San Marino Ct.</AddressLine1>
+    <City>Bellingham</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98225</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1494</BusinessEntityID>
+    <Name>Allenson Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>4659 Montoya</AddressLine1>
+    <City>Altadena</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91001</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1496</BusinessEntityID>
+    <Name>Advanced Bicycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7995 Edwards Ave.</AddressLine1>
+    <City>Lynnwood</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98036</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1498</BusinessEntityID>
+    <Name>Trikes, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>90 Sunny Ave</AddressLine1>
+    <City>Berkeley</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94704</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1500</BusinessEntityID>
+    <Name>Morgan Bike Accessories</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9098 Story Lane</AddressLine1>
+    <City>Albany</City>
+    <StateProvinceName>New York</StateProvinceName>
+    <PostalCode>12210</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1502</BusinessEntityID>
+    <Name>Cycling Master</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>4823 Stonewood Ct.</AddressLine1>
+    <City>Walla Walla</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>99362</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1504</BusinessEntityID>
+    <Name>Chicago Rent-All</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>15 Pear Dr.</AddressLine1>
+    <City>Newport Beach</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>92625</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1506</BusinessEntityID>
+    <Name>Greenwood Athletic Company</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6441 Co Road</AddressLine1>
+    <City>Lemon Grove</City>
+    <StateProvinceName>Arizona</StateProvinceName>
+    <PostalCode>85252</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1508</BusinessEntityID>
+    <Name>Compete Enterprises, Inc</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>50 Via Del Sol</AddressLine1>
+    <City>Lynnwood</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98036</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1510</BusinessEntityID>
+    <Name>International</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>683 Larch Ct.</AddressLine1>
+    <City>Salt Lake City</City>
+    <StateProvinceName>Utah</StateProvinceName>
+    <PostalCode>84101</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1512</BusinessEntityID>
+    <Name>Light Speed</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>298 Sunnybrook Drive</AddressLine1>
+    <City>Spring Valley</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91977</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1514</BusinessEntityID>
+    <Name>Training Systems</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6 Dancing Road</AddressLine1>
+    <City>Burien</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98168</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1516</BusinessEntityID>
+    <Name>Gardner Touring Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8513 Hurlstone Ct.</AddressLine1>
+    <City>Altadena</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91001</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1518</BusinessEntityID>
+    <Name>International Trek Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8844 Garcia</AddressLine1>
+    <City>West Covina</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91791</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1520</BusinessEntityID>
+    <Name>G &amp; K Bicycle Corp.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8981 Carmel Drive</AddressLine1>
+    <City>W. Linn</City>
+    <StateProvinceName>Nevada</StateProvinceName>
+    <PostalCode>89701</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1522</BusinessEntityID>
+    <Name>First National Sport Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8127 Otter Dr.</AddressLine1>
+    <City>Boise</City>
+    <StateProvinceName>Idaho</StateProvinceName>
+    <PostalCode>83702</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1524</BusinessEntityID>
+    <Name>Recreation Place</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>207 Concerto Circle</AddressLine1>
+    <City>Salem</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97301</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1526</BusinessEntityID>
+    <Name>International Bicycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>20 Rambling Rose Ave.</AddressLine1>
+    <AddressLine2># 103</AddressLine2>
+    <City>West Covina</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91791</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1528</BusinessEntityID>
+    <Name>Image Makers Bike Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3195 RiverRock Dr.</AddressLine1>
+    <City>Burlingame</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94010</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1530</BusinessEntityID>
+    <Name>Comfort Road Bicycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7651 Smiling Tree Court</AddressLine1>
+    <AddressLine2>Space 55</AddressLine2>
+    <City>Los Angeles</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90012</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1532</BusinessEntityID>
+    <Name>Knopfler Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3253 La Jolla</AddressLine1>
+    <City>Salem</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97301</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1534</BusinessEntityID>
+    <Name>Ready Rentals</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>35 Buckthorn Court</AddressLine1>
+    <AddressLine2># 1</AddressLine2>
+    <City>Kirkland</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98033</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1536</BusinessEntityID>
+    <Name>Cruger Bike Company</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>67 Monetary Way</AddressLine1>
+    <City>Berkeley</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94704</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1538</BusinessEntityID>
+    <Name>Vista Road Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8197 Hermosa</AddressLine1>
+    <City>Salem</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97301</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1540</BusinessEntityID>
+    <Name>Bergeron Off-Roads</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9830 May Way</AddressLine1>
+    <City>Mill Valley</City>
+    <StateProvinceName>Montana</StateProvinceName>
+    <PostalCode>59715</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1542</BusinessEntityID>
+    <Name>Hill's Bicycle Service</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3664 Colt Ct.</AddressLine1>
+    <City>Richmond</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94801</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1544</BusinessEntityID>
+    <Name>Circuit Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1 Mt. Dell Drive</AddressLine1>
+    <City>Portland</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97205</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1546</BusinessEntityID>
+    <Name>Green Lake Bike Company</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2342 Peachwillow</AddressLine1>
+    <City>Denver</City>
+    <StateProvinceName>Colorado</StateProvinceName>
+    <PostalCode>80203</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1548</BusinessEntityID>
+    <Name>Consumer Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3 Chablis Court</AddressLine1>
+    <City>Torrance</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90505</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1550</BusinessEntityID>
+    <Name>Merit Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7 Mayda Way</AddressLine1>
+    <City>Bremerton</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98312</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1552</BusinessEntityID>
+    <Name>Sports House</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2014 Delta Road</AddressLine1>
+    <City>Burien</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98168</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1554</BusinessEntityID>
+    <Name>WestAmerica Bicycle Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8040 Erie Dr</AddressLine1>
+    <AddressLine2>6 Monteira</AddressLine2>
+    <City>Houston</City>
+    <StateProvinceName>Texas</StateProvinceName>
+    <PostalCode>77003</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1556</BusinessEntityID>
+    <Name>West Junction Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7786 Olive St</AddressLine1>
+    <City>Olympia</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98501</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1558</BusinessEntityID>
+    <Name>Marsh</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7 B Way</AddressLine1>
+    <City>Woodburn</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97071</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1560</BusinessEntityID>
+    <Name>Capital Road Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>628 Muir Road</AddressLine1>
+    <City>Los Angeles</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90012</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1562</BusinessEntityID>
+    <Name>Norstan Bike Hut</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>68 Filling Ave.</AddressLine1>
+    <City>Beaverton</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97005</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1564</BusinessEntityID>
+    <Name>Illinois Trek &amp; Clothing</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1192 Parkway Drive</AddressLine1>
+    <City>Mill Valley</City>
+    <StateProvinceName>Nebraska</StateProvinceName>
+    <PostalCode>68601</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1566</BusinessEntityID>
+    <Name>Burnett Road Warriors</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>5807 Churchill Dr.</AddressLine1>
+    <City>Corvallis</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97330</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1568</BusinessEntityID>
+    <Name>Custom Frames, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>419 River Ash Court</AddressLine1>
+    <AddressLine2>#9</AddressLine2>
+    <City>Lakewood</City>
+    <StateProvinceName>Missouri</StateProvinceName>
+    <PostalCode>63301</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1570</BusinessEntityID>
+    <Name>First Rate Bicycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7053 Laurel Dr.</AddressLine1>
+    <City>La Mesa</City>
+    <StateProvinceName>New Mexico</StateProvinceName>
+    <PostalCode>88044</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1572</BusinessEntityID>
+    <Name>National Bike Association</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>90 Trujillo</AddressLine1>
+    <City>Sedro Woolley</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98284</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1574</BusinessEntityID>
+    <Name>Jeff's Sporting Goods</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>31 Bridgeview St</AddressLine1>
+    <City>Glendale</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91203</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1576</BusinessEntityID>
+    <Name>Superior Bicycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>87 S. Rising Ave</AddressLine1>
+    <City>Lynnwood</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98036</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1578</BusinessEntityID>
+    <Name>Vision Cycles, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>40 Panorama Drive</AddressLine1>
+    <City>Glendale</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91203</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1580</BusinessEntityID>
+    <Name>Litware, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>4405 Balboa Court</AddressLine1>
+    <City>Santa Cruz</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>95062</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1582</BusinessEntityID>
+    <Name>Inner City Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>102 Silverado Drive</AddressLine1>
+    <City>W. Linn</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97068</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1584</BusinessEntityID>
+    <Name>Trey Research</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1874 Valley Blvd.</AddressLine1>
+    <City>Palo Alto</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94303</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1586</BusinessEntityID>
+    <Name>Mitchell Sports</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7562 Daylight Place</AddressLine1>
+    <City>Everett</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98201</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1588</BusinessEntityID>
+    <Name>Signature Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>50 Kim Court</AddressLine1>
+    <City>Coronado</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>92118</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1590</BusinessEntityID>
+    <Name>SUPERSALES INC.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9443 Oaxaca</AddressLine1>
+    <City>Lakewood</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90712</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1592</BusinessEntityID>
+    <Name>Lindell</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9151 Napa C.</AddressLine1>
+    <City>Lebanon</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97355</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1594</BusinessEntityID>
+    <Name>Fitness Association</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8629 Pepper Place</AddressLine1>
+    <City>Bellevue</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98004</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1596</BusinessEntityID>
+    <Name>A. Datum Corporation</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2596 Big Canyon Road</AddressLine1>
+    <City>New York</City>
+    <StateProvinceName>New York</StateProvinceName>
+    <PostalCode>10007</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1598</BusinessEntityID>
+    <Name>Continental Pro Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2 Lion Circle</AddressLine1>
+    <City>Long Beach</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90802</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1600</BusinessEntityID>
+    <Name>Federal Sport</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2909 Toyon Dr.</AddressLine1>
+    <City>Burlingame</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94010</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1602</BusinessEntityID>
+    <Name>Beaumont Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2472 Alexander Place</AddressLine1>
+    <City>West Covina</City>
+    <StateProvinceName>Idaho</StateProvinceName>
+    <PostalCode>83301</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1604</BusinessEntityID>
+    <Name>Bike Satellite Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2141 Delaware Ct.</AddressLine1>
+    <City>Downey</City>
+    <StateProvinceName>Tennessee</StateProvinceName>
+    <PostalCode>37501</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1606</BusinessEntityID>
+    <Name>Northwind Traders</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>137 Lancelot Dr</AddressLine1>
+    <City>Phoenix</City>
+    <StateProvinceName>Arizona</StateProvinceName>
+    <PostalCode>85004</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1608</BusinessEntityID>
+    <Name>Sport Playground</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8671 Westwood Lane</AddressLine1>
+    <City>Palo Alto</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94303</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1610</BusinessEntityID>
+    <Name>Hybrid Bicycle Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6959 Lakewood Court</AddressLine1>
+    <City>Daly City</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94015</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1612</BusinessEntityID>
+    <Name>Midwest Sport, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>594 Tossing Way</AddressLine1>
+    <City>Detroit</City>
+    <StateProvinceName>Michigan</StateProvinceName>
+    <PostalCode>48226</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1614</BusinessEntityID>
+    <Name>Reliance Fitness, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>5514 Grant Street</AddressLine1>
+    <City>Ballard</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98107</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1616</BusinessEntityID>
+    <Name>Aurora Bike Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>65 Park Glen Court</AddressLine1>
+    <City>Port Orchard</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98366</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1618</BusinessEntityID>
+    <Name>Metro Sport Equipment</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>60 Oakgrove Rd.</AddressLine1>
+    <City>Lebanon</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97355</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1620</BusinessEntityID>
+    <Name>Lakewood Bicycle</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6030 Winter Drive</AddressLine1>
+    <AddressLine2># 4d</AddressLine2>
+    <City>Imperial Beach</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91932</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1622</BusinessEntityID>
+    <Name>Speed Corporation</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2834 Clifford Court</AddressLine1>
+    <AddressLine2>#9</AddressLine2>
+    <City>Anacortes</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98221</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1624</BusinessEntityID>
+    <Name>Competition Bike Training Systems</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>4151 Olivera</AddressLine1>
+    <City>Atlanta</City>
+    <StateProvinceName>Georgia</StateProvinceName>
+    <PostalCode>30308</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1626</BusinessEntityID>
+    <Name>Hill Bicycle Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>87 Pheasant Circle</AddressLine1>
+    <City>Oakland</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94611</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1628</BusinessEntityID>
+    <Name>Bicycle Specialists</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1286 Cincerto Circle</AddressLine1>
+    <City>Lake Oswego</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97034</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1630</BusinessEntityID>
+    <Name>Indiana Bicycle Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9620 Laurel Drive</AddressLine1>
+    <City>Novato</City>
+    <StateProvinceName>Wyoming</StateProvinceName>
+    <PostalCode>82070</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1632</BusinessEntityID>
+    <Name>Sport Fan Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>80 Edward Ave</AddressLine1>
+    <City>Burien</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98168</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1634</BusinessEntityID>
+    <Name>GMA Ski &amp; Bike</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>50 Breck Court</AddressLine1>
+    <City>Bremerton</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98312</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1636</BusinessEntityID>
+    <Name>Integrated Sport Products</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>75 Q St.</AddressLine1>
+    <City>Chula Vista</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91910</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1638</BusinessEntityID>
+    <Name>Inline Accessories</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>5 Madrid</AddressLine1>
+    <City>Concord</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94519</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1640</BusinessEntityID>
+    <Name>Legend Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>978 Mozden Lane</AddressLine1>
+    <City>San Francisco</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94109</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1642</BusinessEntityID>
+    <Name>Electronic Bike Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8157 Tweed Lane</AddressLine1>
+    <City>Anacortes</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98221</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1644</BusinessEntityID>
+    <Name>International Sport Assoc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6119 11th</AddressLine1>
+    <City>Salt Lake City</City>
+    <StateProvinceName>Utah</StateProvinceName>
+    <PostalCode>84101</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1646</BusinessEntityID>
+    <Name>Electronic Bike Repair &amp; Supplies</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8547 Catherine Way</AddressLine1>
+    <City>Tacoma</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98403</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1648</BusinessEntityID>
+    <Name>Wide World Importers</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>50 Edward Ave</AddressLine1>
+    <City>Concord</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94519</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1650</BusinessEntityID>
+    <Name>American Bicycles and Wheels</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1667 Warren Street</AddressLine1>
+    <City>West Covina</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91791</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1652</BusinessEntityID>
+    <Name>Victory Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3459 Tri-state Ave</AddressLine1>
+    <City>Issaquah</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98027</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1654</BusinessEntityID>
+    <Name>American Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7179 Montana</AddressLine1>
+    <City>Torrance</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90505</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1656</BusinessEntityID>
+    <Name>Mountain Works</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8 Rogers Ave.</AddressLine1>
+    <City>Everett</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98201</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1658</BusinessEntityID>
+    <Name>Crowley Sport</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9056 Mount Dr</AddressLine1>
+    <City>Chicago</City>
+    <StateProvinceName>Illinois</StateProvinceName>
+    <PostalCode>60610</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1660</BusinessEntityID>
+    <Name>Magic Cycles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>24 Bohon Circle</AddressLine1>
+    <City>Burlingame</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94010</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1662</BusinessEntityID>
+    <Name>Northern Bike Travel</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3427 C Del Rio Ln</AddressLine1>
+    <City>Anacortes</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>98221</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1664</BusinessEntityID>
+    <Name>Anderson's Custom Bikes</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9 Guadalupe Dr.</AddressLine1>
+    <City>Burbank</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91502</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1666</BusinessEntityID>
+    <Name>Leaf River Terrain</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>1619 Mills Dr.</AddressLine1>
+    <City>Albany</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97321</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1668</BusinessEntityID>
+    <Name>Touring Equipment Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3681 South St.</AddressLine1>
+    <City>St. Louis</City>
+    <StateProvinceName>Missouri</StateProvinceName>
+    <PostalCode>63103</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1670</BusinessEntityID>
+    <Name>Holiday Skate &amp; Cycle</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3294 Buena Vista</AddressLine1>
+    <City>Lemon Grove</City>
+    <StateProvinceName>Arizona</StateProvinceName>
+    <PostalCode>85284</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1672</BusinessEntityID>
+    <Name>Expert Bike Co</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>8892 Columbia River Ct.</AddressLine1>
+    <City>Santa Cruz</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>95062</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1674</BusinessEntityID>
+    <Name>Varsity Sport Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>81 Ana Mile</AddressLine1>
+    <City>Spokane</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>99202</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1676</BusinessEntityID>
+    <Name>Team Athletic Co.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>581 Roundtree Place</AddressLine1>
+    <City>Spokane</City>
+    <StateProvinceName>Washington</StateProvinceName>
+    <PostalCode>99202</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1678</BusinessEntityID>
+    <Name>Proseware, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>50 Big Canyon Road</AddressLine1>
+    <City>Lebanon</City>
+    <StateProvinceName>Oregon</StateProvinceName>
+    <PostalCode>97355</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1680</BusinessEntityID>
+    <Name>Jackson Authority</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>32 East 87th Street</AddressLine1>
+    <City>Long Beach</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>90802</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1682</BusinessEntityID>
+    <Name>Premier Sport, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7682 Fern Leaf Lane</AddressLine1>
+    <City>Boston</City>
+    <StateProvinceName>Massachusetts</StateProvinceName>
+    <PostalCode>02113</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1684</BusinessEntityID>
+    <Name>Professional Athletic Consultants</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>20 Smiling Tree Court</AddressLine1>
+    <City>Burbank</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91502</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1686</BusinessEntityID>
+    <Name>Pro Sport Industries</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6360 Sand Pointe Lane</AddressLine1>
+    <City>Coronado</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>92118</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1688</BusinessEntityID>
+    <Name>Wood Fitness</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>7824 Frame Ln</AddressLine1>
+    <City>Philadelphia</City>
+    <StateProvinceName>Pennsylvania</StateProvinceName>
+    <PostalCode>19107</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1690</BusinessEntityID>
+    <Name>Bloomington Multisport</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>218 Fall Creek Road</AddressLine1>
+    <City>West Covina</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>91791</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1692</BusinessEntityID>
+    <Name>Carlson Specialties</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>2313 B Southampton Rd</AddressLine1>
+    <City>Missoula</City>
+    <StateProvinceName>Montana</StateProvinceName>
+    <PostalCode>59801</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1694</BusinessEntityID>
+    <Name>Compete, Inc.</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>9491 Toyon Dr</AddressLine1>
+    <City>Dallas</City>
+    <StateProvinceName>Texas</StateProvinceName>
+    <PostalCode>75201</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1696</BusinessEntityID>
+    <Name>Chicago City Saddles</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>3 Gehringer Drive</AddressLine1>
+    <City>Daly City</City>
+    <StateProvinceName>California</StateProvinceName>
+    <PostalCode>94015</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+  <Purchasing.vVendorWithAddresses>
+    <BusinessEntityID>1698</BusinessEntityID>
+    <Name>Business Equipment Center</Name>
+    <AddressType>Main Office</AddressType>
+    <AddressLine1>6061 St. Paul Way</AddressLine1>
+    <City>Everett</City>
+    <StateProvinceName>Montana</StateProvinceName>
+    <PostalCode>98201</PostalCode>
+    <CountryRegionName>United States</CountryRegionName>
+  </Purchasing.vVendorWithAddresses>
+</SelectedTables>

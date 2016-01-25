@@ -1,0 +1,1853 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Person.StateProvince" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Person.StateProvince">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="StateProvinceID" type="xs:int" />
+                <xs:element name="StateProvinceCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CountryRegionCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="IsOnlyStateProvinceFlag" type="xs:boolean" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="TerritoryID" type="xs:int" />
+                <xs:element name="rowguid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Person.StateProvince>
+    <StateProvinceID>1</StateProvinceID>
+    <StateProvinceCode>AB </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alberta</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>298c2880-ab1c-4982-a5ad-a36eb4ba0d34</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>2</StateProvinceID>
+    <StateProvinceCode>AK </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alaska</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>5b7b8462-a888-4e0b-a3e1-7278f8af107e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>3</StateProvinceID>
+    <StateProvinceCode>AL </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alabama</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>41b328be-21ae-45d0-841d-6f8dd71ce626</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>4</StateProvinceID>
+    <StateProvinceCode>AR </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Arkansas</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>54656a80-06f2-4c70-ba10-247179fc246e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>5</StateProvinceID>
+    <StateProvinceCode>AS </StateProvinceCode>
+    <CountryRegionCode>AS</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>American Samoa</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>255d15e1-9f6e-4cf8-9e5f-6b3858ad9b6a</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>6</StateProvinceID>
+    <StateProvinceCode>AZ </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Arizona</Name>
+    <TerritoryID>4</TerritoryID>
+    <rowguid>fb8be18e-f441-44f0-a4a9-1d0f204cb701</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>7</StateProvinceID>
+    <StateProvinceCode>BC </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>British Columbia</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>d27fcc6e-bb99-438b-ba86-285ceeb2fa53</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>8</StateProvinceID>
+    <StateProvinceCode>BY </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Bayern</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>d54e5000-a0da-46d1-86b0-b8fe16c9f781</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>9</StateProvinceID>
+    <StateProvinceCode>CA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>California</Name>
+    <TerritoryID>4</TerritoryID>
+    <rowguid>3b2ff23c-1c75-40ae-9093-f4eb42263f4e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>10</StateProvinceID>
+    <StateProvinceCode>CO </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Colorado</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>292df595-7d3c-41fb-a040-7c184d379fce</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>11</StateProvinceID>
+    <StateProvinceCode>CT </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Connecticut</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>1e7bb47a-e16b-4968-86fa-45af0211fa84</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>12</StateProvinceID>
+    <StateProvinceCode>DC </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>District of Columbia</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>a1f3c57e-85b3-41e3-88e8-07244cf087dd</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>13</StateProvinceID>
+    <StateProvinceCode>DE </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Delaware</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>7a11ab1d-77c0-4021-9140-8e81f105618e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>14</StateProvinceID>
+    <StateProvinceCode>ENG</StateProvinceCode>
+    <CountryRegionCode>GB</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>England</Name>
+    <TerritoryID>10</TerritoryID>
+    <rowguid>3e3cb3f8-44b9-44d9-a1c3-cbfb11e0a7da</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>15</StateProvinceID>
+    <StateProvinceCode>FL </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Florida</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>ee8ba90d-b2c3-418e-93df-20e33f095959</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>16</StateProvinceID>
+    <StateProvinceCode>FM </StateProvinceCode>
+    <CountryRegionCode>FM</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>Micronesia</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>3202da35-aed4-40e2-9ec4-27c17f420170</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>17</StateProvinceID>
+    <StateProvinceCode>GA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Georgia</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>a6ca20d1-31ac-4771-8994-93dbbdcce360</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>18</StateProvinceID>
+    <StateProvinceCode>GU </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Guam</Name>
+    <TerritoryID>4</TerritoryID>
+    <rowguid>92b5a04e-26ec-4edb-8d14-e72e29b14411</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>19</StateProvinceID>
+    <StateProvinceCode>HE </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Hessen</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>834fc3df-b60d-4f94-95bd-aef8a9fb74e8</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>20</StateProvinceID>
+    <StateProvinceCode>HH </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Hamburg</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>1cc5a134-60d7-40c2-9269-cda494214abf</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>21</StateProvinceID>
+    <StateProvinceCode>HI </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Hawaii</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>09cdccdc-b4b8-44ea-b04f-6ef521e3e720</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>22</StateProvinceID>
+    <StateProvinceCode>IA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Iowa</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>956a6c02-7d2f-4c9d-b275-8d2c0ef8fd83</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>23</StateProvinceID>
+    <StateProvinceCode>ID </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Idaho</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>628e983a-33c7-4cb4-867f-274ef12b3597</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>24</StateProvinceID>
+    <StateProvinceCode>IL </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Illinois</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>1f9120cf-683a-4132-a12c-98997fadeb26</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>25</StateProvinceID>
+    <StateProvinceCode>IN </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Indiana</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>91f21ef0-c528-4310-bb29-6ba45ae75a17</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>26</StateProvinceID>
+    <StateProvinceCode>KS </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Kansas</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>4eccc236-56e8-4ff7-b510-bf50e0966046</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>27</StateProvinceID>
+    <StateProvinceCode>KY </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Kentucky</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>810918bc-45dc-4e01-8544-b322a05ec94e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>28</StateProvinceID>
+    <StateProvinceCode>LA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Louisiana</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>4e2bc5a5-0c3e-421b-be18-5d79b4a7c0d0</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>29</StateProvinceID>
+    <StateProvinceCode>LB </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Labrador</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>9847c998-a7bf-4a66-bbac-75939b092cc0</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>30</StateProvinceID>
+    <StateProvinceCode>MA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Massachusetts</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>77d7e754-1b03-4bb3-a4d4-b1a6ac1c968e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>31</StateProvinceID>
+    <StateProvinceCode>MB </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Manitoba</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>0ff23b5d-1e18-40f8-a886-9960ed699049</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>32</StateProvinceID>
+    <StateProvinceCode>MD </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Maryland</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>b3d8517d-a857-41e7-a692-a1cb02a5f667</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>33</StateProvinceID>
+    <StateProvinceCode>ME </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Maine</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>b978a102-632b-4345-8918-e0e8f440fc3b</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>34</StateProvinceID>
+    <StateProvinceCode>MH </StateProvinceCode>
+    <CountryRegionCode>MH</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>Marshall Islands</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>c5c5a615-e2dd-4fdf-a4a7-0613c6ccae80</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>35</StateProvinceID>
+    <StateProvinceCode>MI </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Michigan</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>0cb0855b-783a-4701-9d45-597a919bfb23</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>36</StateProvinceID>
+    <StateProvinceCode>MN </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Minnesota</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>553c8daa-4142-427c-b772-66bedadef372</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>37</StateProvinceID>
+    <StateProvinceCode>MO </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Missouri</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>ff5d76ae-0b45-4f32-96f7-ad5b7775e9ec</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>38</StateProvinceID>
+    <StateProvinceCode>MP </StateProvinceCode>
+    <CountryRegionCode>MP</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>Northern Mariana Islands</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>abebd704-db65-47f7-a778-528025f7e7f4</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>39</StateProvinceID>
+    <StateProvinceCode>MS </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Mississippi</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>d33f23c7-60be-4d31-8028-814a6cca7f37</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>40</StateProvinceID>
+    <StateProvinceCode>MT </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Montana</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>d4ff6e1a-a8e8-4379-a43c-746dbb0d6d13</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>41</StateProvinceID>
+    <StateProvinceCode>NB </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Brunswick</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>c28c848f-ae86-4859-9e7e-0190d6c22700</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>42</StateProvinceID>
+    <StateProvinceCode>NC </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>North Carolina</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>2c1c5211-3388-4dff-b0ff-db0b43e4a22d</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>43</StateProvinceID>
+    <StateProvinceCode>ND </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>North Dakota</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>1551bea8-4dee-477d-858f-45ff7a2fb14f</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>44</StateProvinceID>
+    <StateProvinceCode>NE </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nebraska</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>2dea1c82-a684-4d7c-bea2-4119d9d3ae60</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>45</StateProvinceID>
+    <StateProvinceCode>NF </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Newfoundland</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>26d01b6d-3726-453f-b1f3-98a332eb3d8d</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>46</StateProvinceID>
+    <StateProvinceCode>NH </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>New Hampshire</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>b30c26ae-62e3-499a-80a8-a167275baebd</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>47</StateProvinceID>
+    <StateProvinceCode>NJ </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>New Jersey</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>7464d0b1-78a7-4f8a-b4cc-375900005f46</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>48</StateProvinceID>
+    <StateProvinceCode>NM </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>New Mexico</Name>
+    <TerritoryID>4</TerritoryID>
+    <rowguid>11deda26-4733-497f-bae3-7bed6b076600</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>49</StateProvinceID>
+    <StateProvinceCode>NS </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nova Scotia</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>adf58ba5-269f-4c48-8c7d-6754e4667acf</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>50</StateProvinceID>
+    <StateProvinceCode>NSW</StateProvinceCode>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>New South Wales</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>9910dd7e-a4c5-4599-86f5-9f581b53a92d</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>51</StateProvinceID>
+    <StateProvinceCode>NT </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Northwest Territories</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>ccaac582-ef30-492c-93ce-5f8b3452d531</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>52</StateProvinceID>
+    <StateProvinceCode>NV </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nevada</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>50e0fbe0-50b7-40eb-a20b-aaae85a680dd</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>53</StateProvinceID>
+    <StateProvinceCode>NW </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nordrhein-Westfalen</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>c385b296-fbb7-44e1-9ded-23b7fba346f0</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>54</StateProvinceID>
+    <StateProvinceCode>NY </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>New York</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>4f83e68d-4c26-4c53-a4b3-46b7f19c6498</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>55</StateProvinceID>
+    <StateProvinceCode>OH </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ohio</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>6e1792b5-d021-47b1-98fc-9d60f46f3400</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>56</StateProvinceID>
+    <StateProvinceCode>OK </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Oklahoma</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>aa680eba-b546-4718-8379-963da0cea86f</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>57</StateProvinceID>
+    <StateProvinceCode>ON </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ontario</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>5528e2cf-ae39-4f65-bd32-fa32c6ff96fa</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>58</StateProvinceID>
+    <StateProvinceCode>OR </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Oregon</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>17ebf52e-94c8-4e7b-9ef3-5b6236763b49</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>59</StateProvinceID>
+    <StateProvinceCode>PA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Pennsylvania</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>9e1d834c-7076-4546-9f1b-1bd626037250</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>60</StateProvinceID>
+    <StateProvinceCode>PE </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Prince Edward Island</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>8b3ec300-24f0-42ab-8dcf-60f45f007642</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>61</StateProvinceID>
+    <StateProvinceCode>PR </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Puerto Rico</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>71b87f6c-5c07-4b7f-8d8c-2c5310410579</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>62</StateProvinceID>
+    <StateProvinceCode>PW </StateProvinceCode>
+    <CountryRegionCode>PW</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>Palau</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>efcf1702-2358-40fc-be8f-df6d71a7d89a</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>63</StateProvinceID>
+    <StateProvinceCode>QC </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Quebec</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>ff830158-3466-495f-bfcf-8a1b82a65355</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>64</StateProvinceID>
+    <StateProvinceCode>QLD</StateProvinceCode>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Queensland</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>152658fa-ad59-4fa0-82a6-f76980f0183f</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>65</StateProvinceID>
+    <StateProvinceCode>RI </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Rhode Island</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>7fc72ab3-646d-475f-a708-544af3636aa8</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>66</StateProvinceID>
+    <StateProvinceCode>SA </StateProvinceCode>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>South Australia</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>dcae37cd-fd8d-41fe-90ed-edad22b63dc8</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>67</StateProvinceID>
+    <StateProvinceCode>SC </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>South Carolina</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>131cf47d-4f64-4a08-afcb-0a1ee17a8534</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>68</StateProvinceID>
+    <StateProvinceCode>SD </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>South Dakota</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>90aad17f-451f-42a1-9cf8-ec65b0acb34f</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>69</StateProvinceID>
+    <StateProvinceCode>SK </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Saskatchewan</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>d44759ba-43e8-42e7-98fa-54b377c734fc</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>70</StateProvinceID>
+    <StateProvinceCode>SL </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Saarland</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>f555dd9e-a190-4dc4-9433-7fe257aa6e82</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>71</StateProvinceID>
+    <StateProvinceCode>TAS</StateProvinceCode>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Tasmania</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>2db59b03-9f19-4d12-acef-974016827be1</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>72</StateProvinceID>
+    <StateProvinceCode>TN </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Tennessee</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>d1b0f98f-514d-42b4-b84b-9c40a8a455d5</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>73</StateProvinceID>
+    <StateProvinceCode>TX </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Texas</Name>
+    <TerritoryID>4</TerritoryID>
+    <rowguid>99c542e0-5d3d-43a6-8d96-af65a985d6e4</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>74</StateProvinceID>
+    <StateProvinceCode>UT </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Utah</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>fd66be42-bfef-4233-942b-e8d79a594afa</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>75</StateProvinceID>
+    <StateProvinceCode>VA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Virginia</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>990aa59c-838c-410f-a675-17eb861fa33f</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>76</StateProvinceID>
+    <StateProvinceCode>VI </StateProvinceCode>
+    <CountryRegionCode>VI</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>Virgin Islands</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>14f593d3-1500-477d-ac6b-d41b3fafbe5a</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>77</StateProvinceID>
+    <StateProvinceCode>VIC</StateProvinceCode>
+    <CountryRegionCode>AU</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Victoria</Name>
+    <TerritoryID>9</TerritoryID>
+    <rowguid>6a683928-8f1f-4369-a64a-60979e216824</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>78</StateProvinceID>
+    <StateProvinceCode>VT </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Vermont</Name>
+    <TerritoryID>2</TerritoryID>
+    <rowguid>348687e4-7879-4d74-afd7-c8511588cfa3</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>79</StateProvinceID>
+    <StateProvinceCode>WA </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Washington</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>16274df0-6f05-43a6-bc18-ad171017a1eb</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>80</StateProvinceID>
+    <StateProvinceCode>WI </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Wisconsin</Name>
+    <TerritoryID>3</TerritoryID>
+    <rowguid>9d93821e-3add-42de-bd51-81cfa94046ff</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>81</StateProvinceID>
+    <StateProvinceCode>WV </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>West Virginia</Name>
+    <TerritoryID>5</TerritoryID>
+    <rowguid>c9ce898f-8e21-4fbf-a70a-06f32d543a18</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>82</StateProvinceID>
+    <StateProvinceCode>WY </StateProvinceCode>
+    <CountryRegionCode>US</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Wyoming</Name>
+    <TerritoryID>1</TerritoryID>
+    <rowguid>778951dc-0475-4054-8cab-892c8a38174e</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>83</StateProvinceID>
+    <StateProvinceCode>YT </StateProvinceCode>
+    <CountryRegionCode>CA</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Yukon Territory</Name>
+    <TerritoryID>6</TerritoryID>
+    <rowguid>a01f5896-c4b1-4c2a-9f60-56470dd39f82</rowguid>
+    <ModifiedDate>2008-03-11T10:17:21.587-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>84</StateProvinceID>
+    <StateProvinceCode>FR </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>true</IsOnlyStateProvinceFlag>
+    <Name>France</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>092c7063-901e-414b-bc61-0bf7919da883</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>85</StateProvinceID>
+    <StateProvinceCode>BB </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Brandenburg</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>dd386c06-2beb-4f18-9a85-c066f1a47ea1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>86</StateProvinceID>
+    <StateProvinceCode>SN </StateProvinceCode>
+    <CountryRegionCode>DE</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Saxony</Name>
+    <TerritoryID>8</TerritoryID>
+    <rowguid>c3e9d0d7-12e7-4395-ac37-11498a3c5e2d</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>87</StateProvinceID>
+    <StateProvinceCode>01 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ain</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f6f7985c-9132-46b5-8963-f99c9f3234de</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>88</StateProvinceID>
+    <StateProvinceCode>02 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Aisne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>1b30c5e7-9bb4-4546-9306-4600ca0e90ca</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>89</StateProvinceID>
+    <StateProvinceCode>03 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Allier</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>dd59673d-852a-4aaf-9b27-623f54477ec2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>90</StateProvinceID>
+    <StateProvinceCode>04 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alpes-de-Haute Provence</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>458480b4-e4ab-4015-b73a-1b7296f8b8b3</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>91</StateProvinceID>
+    <StateProvinceCode>05 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alpes (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>0af69922-9301-4e3e-8592-e7a268a27b7a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>92</StateProvinceID>
+    <StateProvinceCode>06 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Alpes-Maritimes</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>1aaa549b-d0d0-4cfe-be07-8f2858d44505</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>93</StateProvinceID>
+    <StateProvinceCode>07 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ardèche</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>7c566b51-1e45-4bff-98b7-34cb813de6e1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>94</StateProvinceID>
+    <StateProvinceCode>08 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ardennes</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>91e9286b-e601-4f26-95e4-062865e515bf</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>95</StateProvinceID>
+    <StateProvinceCode>09 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ariège</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>fe5a9442-417c-48c3-b582-ed40b7813c2c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>96</StateProvinceID>
+    <StateProvinceCode>10 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Aube</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>519d0fb2-ffbf-4b4b-9112-58fea32d84e6</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>97</StateProvinceID>
+    <StateProvinceCode>11 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Aude</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>b451ce92-b0f6-47ff-8769-050050432c9c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>98</StateProvinceID>
+    <StateProvinceCode>12 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Aveyron</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>79cd2767-a7d9-4bd6-beec-d2cdf4da0af1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>99</StateProvinceID>
+    <StateProvinceCode>13 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Bouches du Rhône</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>32519bd3-40c2-4976-8579-0f1a7d2d3de4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>100</StateProvinceID>
+    <StateProvinceCode>14 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Calvados</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>2bd91456-c8ae-4a5d-9270-a4a446eccacb</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>101</StateProvinceID>
+    <StateProvinceCode>15 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Cantal</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>01cec802-20ce-4f96-b475-2ad263cea9d0</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>102</StateProvinceID>
+    <StateProvinceCode>16 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Charente</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>2659c871-80a6-4b8c-b70f-c797d0398bc4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>103</StateProvinceID>
+    <StateProvinceCode>17 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Charente-Maritime</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>00723e00-c976-401d-a92b-e582df3d6e01</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>104</StateProvinceID>
+    <StateProvinceCode>18 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Cher</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>6adb6ece-a89e-4b00-a886-90436ecd9b68</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>105</StateProvinceID>
+    <StateProvinceCode>19 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Corrèze</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>2363831b-b0ba-4976-92fa-1930817f66c4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>106</StateProvinceID>
+    <StateProvinceCode>20 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Corse</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>b424959c-9400-492b-9b4c-9f478b77a02c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>107</StateProvinceID>
+    <StateProvinceCode>21 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Côte d'Or</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>6e9c32d8-b47a-444e-818e-54ecce0b779b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>108</StateProvinceID>
+    <StateProvinceCode>22 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Côtes-d'Armor</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>a18c188b-64ac-44f6-9928-eb8fc2b924fd</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>109</StateProvinceID>
+    <StateProvinceCode>23 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Creuse</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>d745141e-8645-4309-abab-76a95a8b0a83</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>110</StateProvinceID>
+    <StateProvinceCode>24 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Dordogne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>6eba51c3-31d2-4376-a4e2-9121b048768f</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>111</StateProvinceID>
+    <StateProvinceCode>25 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Toubs</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f0622ec9-4eb7-4019-9b08-fd2ed3f74b9b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>112</StateProvinceID>
+    <StateProvinceCode>26 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Drôme</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>be52295d-d7bd-4dc6-8862-82c0a03dbb30</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>113</StateProvinceID>
+    <StateProvinceCode>27 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Eure</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>8d04729d-75ef-410e-9d04-a95fa51b4b02</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>114</StateProvinceID>
+    <StateProvinceCode>28 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Eure et Loir</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>51cc8b1d-a2a1-440b-8105-bf0e6c74d213</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>115</StateProvinceID>
+    <StateProvinceCode>29 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Finistère</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f35691e8-878a-4b62-90d8-3de2fb7fae1e</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>116</StateProvinceID>
+    <StateProvinceCode>30 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Gard</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>486709b6-66ca-4778-8dde-13783af7f08b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>117</StateProvinceID>
+    <StateProvinceCode>31 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Garonne (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>d1c5af23-8e71-4320-845f-d324d2d83011</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>118</StateProvinceID>
+    <StateProvinceCode>32 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Gers</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>1e387594-ef10-401a-820e-58cc44c71d0c</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>119</StateProvinceID>
+    <StateProvinceCode>33 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Gironde</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>90b73724-a580-44a6-a1ce-54f98235b83b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>120</StateProvinceID>
+    <StateProvinceCode>34 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Hérault</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>ab4408a6-1acb-4af4-9b1e-217636d7f3ca</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>121</StateProvinceID>
+    <StateProvinceCode>35 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Ille et Vilaine</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>daf07757-b0b3-49e9-ad2a-cb659ed2b2b4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>122</StateProvinceID>
+    <StateProvinceCode>36 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Indre</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>aa7107a6-c155-491d-9df3-48cf033af366</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>123</StateProvinceID>
+    <StateProvinceCode>37 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Indre et Loire</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>e8b02fcc-964e-4fdc-ab7e-287f4df5142b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>124</StateProvinceID>
+    <StateProvinceCode>38 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Isère</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>9c594ba5-1a5b-4b65-8ebe-85bf850fe27b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>125</StateProvinceID>
+    <StateProvinceCode>39 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Jura</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>2d5e0bde-f3c4-4887-b89f-dca00bab9d63</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>126</StateProvinceID>
+    <StateProvinceCode>40 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Landes</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>95827758-97c8-4058-b5a5-afedfaf4f70f</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>127</StateProvinceID>
+    <StateProvinceCode>41 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Loir et Cher</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>17ec707a-33f7-4261-86cb-9641c2927172</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>128</StateProvinceID>
+    <StateProvinceCode>42 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Loire</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>58b4525b-5306-4390-9ee9-48e2d9502c02</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>129</StateProvinceID>
+    <StateProvinceCode>43 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Loire (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f18ba5b9-2168-4872-9c80-e7f097ab88e0</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>130</StateProvinceID>
+    <StateProvinceCode>44 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Loire Atlantique</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>a87b21f6-4c5c-4735-8615-bba99a16ace2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>131</StateProvinceID>
+    <StateProvinceCode>45 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Loiret</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>cc67b8c0-bab9-4978-8b61-fa985ae094e1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>132</StateProvinceID>
+    <StateProvinceCode>46 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Lot</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>fe593326-b0f0-433d-a060-7aa2d37d9cea</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>133</StateProvinceID>
+    <StateProvinceCode>47 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Lot et Garonne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>4ff85d44-e027-4341-a3b2-b9ba564547f8</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>134</StateProvinceID>
+    <StateProvinceCode>48 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Lozère</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>b862bbab-aef6-4c4d-881f-4207254983c7</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>135</StateProvinceID>
+    <StateProvinceCode>49 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Maine et Loire</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>ef2487e7-0965-4abe-a06c-84cef8964386</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>136</StateProvinceID>
+    <StateProvinceCode>50 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Manche</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>8139979c-2881-4668-9a8e-a45154f809ea</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>137</StateProvinceID>
+    <StateProvinceCode>51 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Marne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>41b9cb24-50b3-43f7-9e0e-79d901bd45d0</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>138</StateProvinceID>
+    <StateProvinceCode>52 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Marne (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>babce9d8-a133-4195-875f-1e65e48844c9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>139</StateProvinceID>
+    <StateProvinceCode>53 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Mayenne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>59593a57-5319-43b4-ad3b-78abcb6c12f2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>140</StateProvinceID>
+    <StateProvinceCode>54 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Meurthe et Moselle</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>8ce54442-acf1-404d-ae17-540e4da781af</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>141</StateProvinceID>
+    <StateProvinceCode>55 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Meuse</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>ca5ed35c-0542-43ed-8f15-a5e1c9c9ab90</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>142</StateProvinceID>
+    <StateProvinceCode>56 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Morbihan</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>a1b147fe-14c8-4cb2-9902-c437ff44ce7b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>143</StateProvinceID>
+    <StateProvinceCode>57 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Moselle</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>23ec96b5-21ee-4769-be59-812eae26a216</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>144</StateProvinceID>
+    <StateProvinceCode>58 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nièvre</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>c6088b46-64b3-492c-a4cd-f81b93f351a1</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>145</StateProvinceID>
+    <StateProvinceCode>59 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Nord</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>70943de7-d74a-4de7-8dcf-3fea66efcfdb</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>146</StateProvinceID>
+    <StateProvinceCode>60 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Oise</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>e15a21bc-1bdb-413e-93fb-0a81d6869068</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>147</StateProvinceID>
+    <StateProvinceCode>61 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Orne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>24753bb2-e1f6-4d1f-b659-81f2ad4a9458</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>148</StateProvinceID>
+    <StateProvinceCode>62 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Pas de Calais</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>72450195-ed1e-4a21-8cc5-5aac8eb9327a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>149</StateProvinceID>
+    <StateProvinceCode>63 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Puy de Dôme</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>e222d130-0d35-4c6a-9a98-024a758fc677</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>150</StateProvinceID>
+    <StateProvinceCode>64 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Pyrénées Atlantiques</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f3b411d2-9e8c-4d53-ab5b-06016a44356b</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>151</StateProvinceID>
+    <StateProvinceCode>65 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Pyrénées (Hautes)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>b5dca57f-0714-4f42-81af-0c5c9eca01f9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>152</StateProvinceID>
+    <StateProvinceCode>66 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Pyrénées Orientales</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>0374fd8e-3a19-4a9b-bb9e-db5871503afe</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>153</StateProvinceID>
+    <StateProvinceCode>67 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Rhin (Bas)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>196859b3-40c3-4d54-abbd-ef6aa8386df9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>154</StateProvinceID>
+    <StateProvinceCode>68 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Rhin (Haut)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>1192f8bf-cca6-4ce2-bd08-2dd6e80b6cf6</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>155</StateProvinceID>
+    <StateProvinceCode>69 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Rhône</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>d4f170d0-ff06-4a97-8de3-9f377272aa74</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>156</StateProvinceID>
+    <StateProvinceCode>70 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Saône (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>546feb94-3737-4698-ba0d-dc051c088939</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>157</StateProvinceID>
+    <StateProvinceCode>71 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Saône et Loire</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>5d86860e-614e-4940-9cc4-549077196d5a</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>158</StateProvinceID>
+    <StateProvinceCode>72 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Sarthe</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>0e32d0e5-e9c9-404d-b500-180bec6637d8</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>159</StateProvinceID>
+    <StateProvinceCode>73 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Savoie</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f8931ede-4941-420b-8d87-11c8514bc080</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>160</StateProvinceID>
+    <StateProvinceCode>74 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Savoie Haute</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>126ab534-ff0b-474e-aefe-1caa53c9c3a2</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>161</StateProvinceID>
+    <StateProvinceCode>75 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Seine (Paris)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>e117a6fc-24b9-438b-86ff-8455107f4e9f</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>162</StateProvinceID>
+    <StateProvinceCode>76 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Seine Maritime</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>46070a8d-2b94-4a05-a29b-189f7ffa7c56</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>163</StateProvinceID>
+    <StateProvinceCode>77 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Seine et Marne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>fd1511db-0a30-4b14-b60e-d2247473415e</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>164</StateProvinceID>
+    <StateProvinceCode>78 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Yveline</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>a111eb2e-3217-485a-a510-673c0843c615</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>165</StateProvinceID>
+    <StateProvinceCode>79 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Sèvres (Deux)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>38e0a3d9-e813-454c-be54-6f019d687ecb</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>166</StateProvinceID>
+    <StateProvinceCode>80 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Somme</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>8366de5d-5615-4168-9104-4379f9e59090</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>167</StateProvinceID>
+    <StateProvinceCode>81 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Tarne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>406b4fd5-e4a8-4db7-838b-8a33a617f242</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>168</StateProvinceID>
+    <StateProvinceCode>82 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Tarne et Garonne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>544f6f15-6359-45ca-b271-2a310e6cf151</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>169</StateProvinceID>
+    <StateProvinceCode>83 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Var</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>08a673dc-6056-45b2-903c-976e8b6bd0b9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>170</StateProvinceID>
+    <StateProvinceCode>84 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Vaucluse</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>29691831-aced-46f8-bad2-a8c914b4f9f4</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>171</StateProvinceID>
+    <StateProvinceCode>85 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>La Vendée</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>2a5a84c2-30b0-4791-8da1-25e3dde497d8</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>172</StateProvinceID>
+    <StateProvinceCode>86 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Vienne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>78a90d81-396c-431a-aa14-0751f2644b25</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>173</StateProvinceID>
+    <StateProvinceCode>87 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Vienne (Haute)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>ab61f91c-50e3-45c3-a9d2-140940cecbf0</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>174</StateProvinceID>
+    <StateProvinceCode>88 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Vosges</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>5a5cb4c2-72a1-40b7-a779-5a36b76e3942</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>175</StateProvinceID>
+    <StateProvinceCode>89 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Yonne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>3f8de296-bee5-4980-b81f-ebfcc1b16790</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>176</StateProvinceID>
+    <StateProvinceCode>90 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Belford (Territoire de)</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>76adcaaa-4eb2-4ad8-893b-ef9f3cb5c6fb</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>177</StateProvinceID>
+    <StateProvinceCode>91 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Essonne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>35894a81-c267-4511-a706-99ea2c08181f</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>178</StateProvinceID>
+    <StateProvinceCode>92 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Hauts de Seine</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>f8fd6d62-a913-4f10-9e42-d348eda02bd9</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>179</StateProvinceID>
+    <StateProvinceCode>93 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Seine Saint Denis</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>466c15bc-46ec-427d-99db-98c380634527</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>180</StateProvinceID>
+    <StateProvinceCode>94 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Val de Marne</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>fe0a2a02-fe1d-4b79-b970-167ec7f724fc</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+  <Person.StateProvince>
+    <StateProvinceID>181</StateProvinceID>
+    <StateProvinceCode>95 </StateProvinceCode>
+    <CountryRegionCode>FR</CountryRegionCode>
+    <IsOnlyStateProvinceFlag>false</IsOnlyStateProvinceFlag>
+    <Name>Val d'Oise</Name>
+    <TerritoryID>7</TerritoryID>
+    <rowguid>e7580d97-910b-42b4-b4e2-72c8733889e0</rowguid>
+    <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
+  </Person.StateProvince>
+</SelectedTables>

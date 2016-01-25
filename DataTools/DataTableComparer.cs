@@ -17,8 +17,41 @@ namespace Craftsmaneer.DataTools
     /// </summary>
     public class DataTableComparer
     {
+        //HACK: this probably should go somewhere else.
+        /// <summary>
+        /// compares each table in the master collection with the corresponding replica table.
+        /// This version will only compare tables that appear in the master collection table list.
+        /// </summary>
+        /// <returns></returns>
+        public static ReturnValue<Dictionary<string, TableDiff>> CompareCollections(DataTableCollection master, DataTableCollection replica, TableCompareOptions options = TableCompareOptions.None)
+        {
+            var tdDict = new Dictionary<string, TableDiff>();
+            try
+            {
+                foreach (DataTable masterTable in master)
+                {
+                    var replicaTable = replica[masterTable.TableName];
+                    var dtc = new DataTableComparer();
+                    var result = dtc.Compare(masterTable, replicaTable, options);
+                    if (!result.Success)
+                    {
+                        tdDict.Add(masterTable.TableName, null);
+                    }
+                    else
+                    {
+                        tdDict.Add(masterTable.TableName, result.Value);
+                    }
+                }
+                return ReturnValue<Dictionary<string, TableDiff>>.SuccessResult(tdDict);
+            }
+            catch (Exception ex)
+            {
+                return ReturnValue<Dictionary<string, TableDiff>>.FailResult("Error comparing table ", ex);
+            }
+        }
+
         // TODO: promote master / replica to fields
-        public ReturnValue<TableDiff> Compare(DataTable master, DataTable replica)
+        public ReturnValue<TableDiff> Compare(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
         {
             ReturnValue<SchemaDiff> schemaDiffResult = CompareSchema(master, replica);
             if (!schemaDiffResult.Success)
@@ -35,16 +68,23 @@ namespace Craftsmaneer.DataTools
             if (!schemaDiff.IsCompatible)
             {
                 tableDiff.DiffType = TableDiffType.IncompatibleSchema;
-                return ReturnValue<TableDiff>.SuccessResult(tableDiff);
+                if (!options.HasFlag(TableCompareOptions.AllowIncompatibleSchema))
+                {
+                    return ReturnValue<TableDiff>.SuccessResult(tableDiff);
+                }
             }
             else if (schemaDiff.HasDiffs)
             {
                 tableDiff.DiffType = TableDiffType.CompatibleSchema;
             }
 
-            var dataDiffs = GetRowDiffs(master, replica);
+            var dataDiffsResult = GetRowDiffs(master, replica, options);
+            if (!dataDiffsResult.Success)
+            {
+                ReturnValue<TableDiff>.Cascade(dataDiffsResult, string.Format("Unable to compare rows for {0} and {1}.", master.TableName, replica.TableName));
+            }
 
-            tableDiff.RowDiffs = dataDiffs;
+            tableDiff.RowDiffs = dataDiffsResult.Value;
             if (tableDiff.RowDiffs.Any())
             {
                 tableDiff.DiffType = TableDiffType.Data;
@@ -60,15 +100,20 @@ namespace Craftsmaneer.DataTools
         /// <param name="master"></param>
         /// <param name="replica"></param>
         /// <returns></returns>
-        public List<RowDiff> GetRowDiffs(DataTable master, DataTable replica)
+        public ReturnValue<List<RowDiff>> GetRowDiffs(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
         {
-            //todo: schema compatiblity check
+
+
             var rowDiffs = new List<RowDiff>();
 
             //use a Dataset to make use of a DataRelation object   
             using (DataSet ds = new DataSet())
             {
-
+                var hasPk = ((master.PrimaryKey != null) && master.PrimaryKey.Any());
+                if (!hasPk && !options.HasFlag(TableCompareOptions.KeysOptional))
+                {
+                    return ReturnValue<List<RowDiff>>.FailResult("Master table has no Primary Key, and the KeysOptional flag was not set.");
+                }
 
                 //Add tables   
                 var masterCopy = master.Copy();
@@ -79,23 +124,33 @@ namespace Craftsmaneer.DataTools
 
 
                 //Get Columns for DataRelation   
-                var numKeyCols = ds.Tables[0].PrimaryKey.Count();
-                DataColumn[] masterCols = new DataColumn[numKeyCols];
-                DataColumn[] repCols = new DataColumn[numKeyCols];
-                for (int i = 0; i < masterCols.Length; i++)
+                List<DataColumn> keyCols = new List<DataColumn>();
+                if (hasPk)
                 {
-                    var keyCol = ds.Tables[0].PrimaryKey[i];
-                    masterCols[i] = keyCol;
-                    repCols[i] = ds.Tables[1].PrimaryKey.First(k => k.ColumnName == keyCol.ColumnName);
+                    keyCols = ds.Tables[0].PrimaryKey.ToList();
+                }
+                else
+                {
+                    var fic = FieldsInCommon(master, replica).ToList();
+                    keyCols = ds.Tables[0].Columns.Cast<DataColumn>().Where(c => fic.Contains(c.ColumnName)).ToList();
+                }
+                var numKeyCols = keyCols.Count();
+                DataColumn[] masterKeyCols = new DataColumn[numKeyCols];
+                DataColumn[] repKeyCols = new DataColumn[numKeyCols];
+                for (int i = 0; i < masterKeyCols.Length; i++)
+                {
+                    var keyCol = keyCols[i];
+                    masterKeyCols[i] = keyCol;
+                    repKeyCols[i] = ds.Tables[1].Columns.Cast<DataColumn>().First(k => k.ColumnName == keyCol.ColumnName);
 
                 }
 
 
                 //Create DataRelation   
-                DataRelation findMissingRelat = new DataRelation(string.Empty, masterCols, repCols, false);
+                DataRelation findMissingRelat = new DataRelation(string.Empty, masterKeyCols, repKeyCols, false);
                 ds.Relations.Add(findMissingRelat);
 
-                DataRelation findExtraRelat = new DataRelation(string.Empty, repCols, masterCols, false);
+                DataRelation findExtraRelat = new DataRelation(string.Empty, repKeyCols, masterKeyCols, false);
                 ds.Relations.Add(findExtraRelat);
 
                 // check for missing rows  and mismatched rows            
@@ -121,7 +176,7 @@ namespace Craftsmaneer.DataTools
                     }
                     else
                     {
-                        var masterRow = FindMasterRow(parentrow,master);
+                        var masterRow = FindMasterRow(parentrow, master);
                         RowDiff matchRows = CompareRowData(masterRow, childrows[0]);
                         if (matchRows.DiffType != DiffType.None)
                         {
@@ -144,7 +199,7 @@ namespace Craftsmaneer.DataTools
                 }
             }
 
-            return rowDiffs;
+            return ReturnValue<List<RowDiff>>.SuccessResult(rowDiffs);
         }
 
         /// <summary>
@@ -166,7 +221,7 @@ namespace Craftsmaneer.DataTools
         /// <param name="masterRow"></param>
         /// <param name="dataRow"></param>
         /// <returns></returns>
-        private RowDiff CompareRowData(DataRow masterRow, DataRow repRow)
+        private RowDiff CompareRowData(DataRow masterRow, DataRow repRow, TableCompareOptions options = TableCompareOptions.None)
         {
             var colDiffs = new List<ColumnDiff>();
             var rowDiff = new RowDiff()
@@ -176,11 +231,8 @@ namespace Craftsmaneer.DataTools
                 Row = masterRow
             };
 
-            //todo: pre-compute intersection columns.
-            var masterFieldNames = masterRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
-            var replicaFieldNames = repRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
 
-            var matchFieldNames = masterFieldNames.Intersect(replicaFieldNames);//TODO: exclude key fields.
+            var matchFieldNames = FieldsInCommon(masterRow.Table, repRow.Table);
 
             foreach (var fieldName in matchFieldNames)
             {
@@ -189,20 +241,28 @@ namespace Craftsmaneer.DataTools
                 if (!masterValue.Equals(repValue))
                 {
                     rowDiff.DiffType = DiffType.DataMismatch;
-                    colDiffs.Add(new ColumnDiff()
+                    var colDiff = new ColumnDiff()
                     {
                         Column = masterRow.Table.Columns[fieldName],
-                        DiffType = DiffType.DataMismatch
-                    });
+                        DiffType = DiffType.DataMismatch,
+
+
+                    };
+                    if (options.HasFlag(TableCompareOptions.CaptureValues))
+                    {
+                        colDiff.ReplicaValue = repValue;
+                        colDiff.MasterValue = masterValue;
+                    }
+                    colDiffs.Add(colDiff);
                 }
             }
 
-            if ((matchFieldNames.Count() == masterFieldNames.Count()) && (masterFieldNames.Count() == replicaFieldNames.Count()))
+            if ((matchFieldNames.Count() == masterRow.Table.Columns.Count) && (matchFieldNames.Count() == repRow.Table.Columns.Count))
             {
                 return rowDiff;
             }
 
-
+            /*
             //! will not be needed after refactor.
             var missingFieldNames = masterFieldNames.Except(replicaFieldNames);
             foreach (var fieldName in missingFieldNames)
@@ -225,8 +285,17 @@ namespace Craftsmaneer.DataTools
                     DiffType = DiffType.Extra
                 });
             }
+             * */
 
             return rowDiff;
+        }
+
+        private static IEnumerable<string> FieldsInCommon(DataTable master, DataTable replica)
+        {
+            var masterFieldNames = master.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
+            var replicaFieldNames = replica.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
+
+            return masterFieldNames.Intersect(replicaFieldNames);//TODO: exclude key fields.
         }
 
         /// <summary>
@@ -263,7 +332,7 @@ namespace Craftsmaneer.DataTools
                 return ReturnValue<SchemaDiff>.FailResult("Primary key is missing.");
             }
 
-            return ReturnValue<SchemaDiff>.SuccessResult( CompareSchema(master.Columns, replica.Columns));
+            return ReturnValue<SchemaDiff>.SuccessResult(CompareSchema(master.Columns, replica.Columns));
 
         }
 
@@ -331,5 +400,7 @@ select new {o, od}
             */
 
         }
+
+
     }
 }

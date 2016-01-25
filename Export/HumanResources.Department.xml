@@ -7,15 +7,31 @@
           <xs:element name="HumanResources.Department">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="DepartmentID" type="xs:short" minOccurs="0" />
-                <xs:element name="Name" type="xs:string" minOccurs="0" />
-                <xs:element name="GroupName" type="xs:string" minOccurs="0" />
-                <xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DepartmentID" type="xs:short" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="GroupName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ModifiedDate" type="xs:dateTime" />
               </xs:sequence>
             </xs:complexType>
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//HumanResources.Department" />
+        <xs:field xpath="DepartmentID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <HumanResources.Department>
