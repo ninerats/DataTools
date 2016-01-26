@@ -56,6 +56,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.Document" />
+        <xs:field xpath="DocumentNode" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.Document>

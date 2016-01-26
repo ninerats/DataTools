@@ -15,6 +15,11 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.ProductModelIllustration" />
+        <xs:field xpath="ProductModelID" />
+        <xs:field xpath="IllustrationID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.ProductModelIllustration>
@@ -33,13 +38,13 @@
     <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
   </Production.ProductModelIllustration>
   <Production.ProductModelIllustration>
-    <ProductModelID>47</ProductModelID>
-    <IllustrationID>5</IllustrationID>
+    <ProductModelID>48</ProductModelID>
+    <IllustrationID>4</IllustrationID>
     <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
   </Production.ProductModelIllustration>
   <Production.ProductModelIllustration>
-    <ProductModelID>48</ProductModelID>
-    <IllustrationID>4</IllustrationID>
+    <ProductModelID>47</ProductModelID>
+    <IllustrationID>5</IllustrationID>
     <ModifiedDate>2008-02-10T14:41:02.183-08:00</ModifiedDate>
   </Production.ProductModelIllustration>
   <Production.ProductModelIllustration>

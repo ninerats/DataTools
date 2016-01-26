@@ -39,6 +39,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//dbo.ErrorLog" />
+        <xs:field xpath="ErrorLogID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
 </SelectedTables>

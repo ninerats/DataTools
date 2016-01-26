@@ -23,6 +23,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.Location" />
+        <xs:field xpath="LocationID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.Location>

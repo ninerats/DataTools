@@ -22,6 +22,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.ProductCategory" />
+        <xs:field xpath="ProductCategoryID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.ProductCategory>

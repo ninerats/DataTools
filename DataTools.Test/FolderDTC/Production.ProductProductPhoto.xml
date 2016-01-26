@@ -16,6 +16,11 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.ProductProductPhoto" />
+        <xs:field xpath="ProductID" />
+        <xs:field xpath="ProductPhotoID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.ProductProductPhoto>

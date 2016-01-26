@@ -27,6 +27,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Production.Culture" />
+        <xs:field xpath="CultureID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Production.Culture>

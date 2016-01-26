@@ -38,6 +38,10 @@
           </xs:element>
         </xs:choice>
       </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Person.StateProvince" />
+        <xs:field xpath="StateProvinceID" />
+      </xs:unique>
     </xs:element>
   </xs:schema>
   <Person.StateProvince>
