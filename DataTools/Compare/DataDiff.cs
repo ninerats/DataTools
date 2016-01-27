@@ -5,7 +5,8 @@ using System.Linq;
 namespace Craftsmaneer.DataTools.Compare
 {
     /// <summary>
-    /// structure the contains infomation about a tables differences, compared to a *master* table
+    /// structure the contains infomation about a tables differences, compared to a *master* table.
+    /// Comparisons are default key based.  The TableCompareOptions enum controls how comparing works.
     /// </summary>
     public class TableDiff
     {
@@ -75,6 +76,10 @@ namespace Craftsmaneer.DataTools.Compare
       
     }
 
+    /// <summary>
+    /// TODO:  Split this into ColumnDiff class, that reports on schema diffs, but doesn't hold values,
+    /// and CellDiff, which refereces a [row, column] in the master table (or replica in the case of an extra column/row) and optionally stores the values being compared. 
+    /// </summary>
     public class ColumnDiff
     {
         public DataColumn Column { get; set; }

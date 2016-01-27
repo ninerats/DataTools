@@ -7,10 +7,10 @@ using NUnit.Framework;
 
 namespace Craftsmaneer.DataTools.Test
 {
-    [TestFixture]
+    [TestFixture, Ignore("Disabled for performance")]
     public class DataTableSetTest
     {
-        [Test]
+       
         public void CompareSetsTest()
         {
             ReturnValue<DataTableSet> folderDts = DataTableSet.FromConfigFile("FolderDTC.config");

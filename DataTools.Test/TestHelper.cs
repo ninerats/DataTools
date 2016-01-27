@@ -203,5 +203,27 @@ namespace Craftsmaneer.DataTools.Test
             dt.Columns.Add("field5", typeof(string));
             return dt;
         }
+
+        #region incompatble schema tests
+        public static DataTable BasicDataTableMissingInt1Column()
+        {
+            var dt = GetBlankDataTable();
+            dt.Columns.Remove(dt.Columns["int1"]);
+            dt.Rows.Add(new object[] { 1, "Bob", true, new DateTime(2000, 1, 1) });
+            //dt.Rows.Add(new object[] { 2, "Carol", false, new DateTime(2011, 1, 1) }); // removed row 2
+            dt.Rows.Add(new object[] { 3, "Alice", false, new DateTime(2006, 7,4) }); // modded datetime1
+            dt.Rows.Add(new object[] { 99, "Rico", true, new DateTime(2011, 6, 6) }); // added new row
+            return dt;
+        }
+
+        public static DataTable BasicDataTableWithNullInt1()
+        {
+            var dt = GetBlankDataTable();
+            dt.Rows.Add(new object[] { 1, "Bob", DBNull.Value, true, new DateTime(2000, 1, 1) });
+            dt.Rows.Add(new object[] { 3, "Alice", DBNull.Value, false, new DateTime(2006, 7, 4) });
+            dt.Rows.Add(new object[] { 99, "Rico", DBNull.Value,true, new DateTime(2011, 6, 6) }); 
+            return dt;
+        }
+        #endregion
     }
 }

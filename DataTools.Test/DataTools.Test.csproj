@@ -45,6 +45,7 @@
     <Compile Include="DataTableSetTest.cs" />
     <Compile Include="DataTableComparerTest.cs" />
     <Compile Include="DataTableExploratoryTest.cs" />
+    <Compile Include="IncompatibleSchemaCompareTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaDiffTest.cs" />
     <Compile Include="Scratch.cs" />

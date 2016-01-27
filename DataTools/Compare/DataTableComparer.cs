@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using Craftsmaneer.Lang;
 
@@ -74,7 +75,8 @@ namespace Craftsmaneer.DataTools.Compare
                     tableDiff.DiffType = TableDiffType.IncompatibleSchema;
                     if (!options.HasFlag(TableCompareOptions.AllowIncompatibleSchema))
                     {
-                        return ReturnValue<TableDiff>.SuccessResult(tableDiff);
+                        return ReturnValue<TableDiff>.FailResult(string.Format("The schema for replica '{0}' is not compatible with '{1}' and the AllowIncompatibleSchema option is not set",
+                            replica.TableName, master.TableName));
                     }
                 }
                 else if (schemaDiff.HasDiffs)
@@ -107,8 +109,7 @@ namespace Craftsmaneer.DataTools.Compare
         /// <summary>
         /// returns a list of rows with differences.  will early exit with empty list if schema is not compatible.
         /// </summary>
-        /// <param name="master"></param>
-        /// <param name="replica"></param>
+
         /// <returns></returns>
         public ReturnValue<List<RowDiff>> GetRowDiffs(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
         {
@@ -237,6 +238,7 @@ namespace Craftsmaneer.DataTools.Compare
                 Row = masterRow
             };
 
+            //TODO: needs general clean up & optimization.
 
             var matchFieldNames = FieldsInCommon(masterRow.Table, repRow.Table).ToArray();
 
@@ -269,30 +271,69 @@ namespace Craftsmaneer.DataTools.Compare
                 return rowDiff;
             }
 
-            /*
-            //! will not be needed after refactor.
-            var missingFieldNames = masterFieldNames.Except(replicaFieldNames);
-            foreach (var fieldName in missingFieldNames)
+            var masterFieldNames = masterRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
+
+
+            var missingFieldNames = masterFieldNames.Except(matchFieldNames).ToArray();
+            if (missingFieldNames.Any())
             {
-                rowDiff.DiffType = DiffType.DataMismatch;
-                colDiffs.Add(new ColumnDiff()
+                // this means the table is not schema comptabile.  
+                //(question - if the all the values in the master column are missing, could this be considered "compatible" even if it's not 
+                // schema compatible?  This might be part of a tighter compatibility check, but for now that will be punted.)
+                Contract.Assert(options.HasFlag(TableCompareOptions.AllowIncompatibleSchema), "Missing column in replica during compare, and AllowIncompatibleSchema is not set.");
+                
+                foreach (var fieldName in missingFieldNames)
                 {
-                    Column = masterRow.Table.Columns[fieldName],
-                    DiffType = DiffType.Missing
-                });
+                    bool valuesMatch = ValuesMatch(masterRow[fieldName], DBNull.Value, options);
+                   if (!valuesMatch)
+                    {
+                        rowDiff.DiffType = DiffType.DataMismatch;
+                        var colDiff = new ColumnDiff()
+                        {
+                            Column = masterRow.Table.Columns[fieldName],
+                            DiffType = DiffType.Missing,
+
+
+                        };
+                        if (options.HasFlag(TableCompareOptions.CaptureValues))
+                        {
+                            colDiff.ReplicaValue = DBNull.Value;
+                            colDiff.MasterValue = masterRow[fieldName];
+                        }
+                        colDiffs.Add(colDiff);
+
+                    }
+                }
             }
 
-            var extraFieldNames = replicaFieldNames.Except(masterFieldNames);
-            foreach (var fieldName in extraFieldNames)
+            var replicaFieldNames = repRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
+            var extraFieldNames = replicaFieldNames.Except(matchFieldNames).ToArray();
+            if (extraFieldNames.Any())
             {
-                rowDiff.DiffType = DiffType.DataMismatch;
-                colDiffs.Add(new ColumnDiff()
+                
+                foreach (var fieldName in extraFieldNames)
                 {
-                    Column = masterRow.Table.Columns[fieldName],
-                    DiffType = DiffType.Extra
-                });
+                    rowDiff.DiffType = DiffType.DataMismatch;
+                    bool valuesMatch = ValuesMatch( DBNull.Value, repRow[fieldName], options);
+                   if (!valuesMatch)
+                    {
+                        var colDiff = new ColumnDiff()
+                        {
+                            Column = repRow.Table.Columns[fieldName],
+                            DiffType = DiffType.Extra,
+
+
+                        };
+                        if (options.HasFlag(TableCompareOptions.CaptureValues))
+                        {
+                            colDiff.ReplicaValue = repRow[fieldName];
+                            colDiff.MasterValue = DBNull.Value;
+                        }
+                        colDiffs.Add(colDiff);
+                    }
+                }
             }
-             * */
+
 
             return rowDiff;
         }
@@ -305,7 +346,7 @@ namespace Craftsmaneer.DataTools.Compare
             }
             if (masterValue == null)
             {
-                return (repValue == null);
+                return (repValue == null || repValue== DBNull.Value);
             }
 
             if (masterValue.GetType().Name == "Byte[]")
@@ -327,7 +368,7 @@ namespace Craftsmaneer.DataTools.Compare
                     return false;
 
             return true;
-            }
+        }
 
         private static IEnumerable<string> FieldsInCommon(DataTable master, DataTable replica)
         {

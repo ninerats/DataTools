@@ -2,6 +2,9 @@ using System;
 
 namespace Craftsmaneer.DataTools.Compare
 {
+    /// <summary>
+    /// List of options available for making comparisons between schema and data.
+    /// </summary>
     [Flags]
     public enum TableCompareOptions
     {
