@@ -23,75 +23,87 @@ namespace Craftsmaneer.DataTools
         /// This version will only compare tables that appear in the master collection table list.
         /// </summary>
         /// <returns></returns>
-        public static ReturnValue<Dictionary<string, TableDiff>> CompareCollections(DataTableCollection master, DataTableCollection replica, TableCompareOptions options = TableCompareOptions.None)
+        public static ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> CompareCollections(DataTableCollection master, DataTableCollection replica, TableCompareOptions options = TableCompareOptions.None)
         {
-            var tdDict = new Dictionary<string, TableDiff>();
+            var tdDict = new Dictionary<string, ReturnValue<TableDiff>>();
             try
             {
                 foreach (DataTable masterTable in master)
                 {
                     var replicaTable = replica[masterTable.TableName];
-                    var dtc = new DataTableComparer();
-                    var result = dtc.Compare(masterTable, replicaTable, options);
-                    if (!result.Success)
+                    ReturnValue<TableDiff> result;
+                    if (replicaTable == null)
                     {
-                        tdDict.Add(masterTable.TableName, null);
+                        result = ReturnValue<TableDiff>.FailResult(string.Format(
+                            "Table '{0}' was not found in the replica collection [{1}]", masterTable.TableName,
+                            replica.Id));
                     }
                     else
                     {
-                        tdDict.Add(masterTable.TableName, result.Value);
+                        var dtc = new DataTableComparer();
+                        result = dtc.Compare(masterTable, replicaTable, options);
                     }
+                    tdDict.Add(masterTable.TableName, result);
                 }
-                return ReturnValue<Dictionary<string, TableDiff>>.SuccessResult(tdDict);
+                return ReturnValue<Dictionary<string, ReturnValue<TableDiff>>>.SuccessResult(tdDict);
             }
             catch (Exception ex)
             {
-                return ReturnValue<Dictionary<string, TableDiff>>.FailResult("Error comparing table ", ex);
+                return ReturnValue<Dictionary<string, ReturnValue<TableDiff>>>.FailResult("Error comparing table ", ex);
             }
         }
 
         // TODO: promote master / replica to fields
         public ReturnValue<TableDiff> Compare(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
         {
-            ReturnValue<SchemaDiff> schemaDiffResult = CompareSchema(master, replica);
-            if (!schemaDiffResult.Success)
-                return ReturnValue<TableDiff>.Cascade(schemaDiffResult);
-
-            var schemaDiff = schemaDiffResult.Value;
-            var tableDiff = new TableDiff()
+            try
             {
-                SchemaDiff = schemaDiff,
-                DiffType = TableDiffType.None
 
-            };
+                ReturnValue<SchemaDiff> schemaDiffResult = CompareSchema(master, replica);
+                if (!schemaDiffResult.Success)
+                    return ReturnValue<TableDiff>.Cascade(schemaDiffResult);
 
-            if (!schemaDiff.IsCompatible)
-            {
-                tableDiff.DiffType = TableDiffType.IncompatibleSchema;
-                if (!options.HasFlag(TableCompareOptions.AllowIncompatibleSchema))
+                var schemaDiff = schemaDiffResult.Value;
+                var tableDiff = new TableDiff()
                 {
-                    return ReturnValue<TableDiff>.SuccessResult(tableDiff);
+                    SchemaDiff = schemaDiff,
+                    DiffType = TableDiffType.None
+
+                };
+
+                if (!schemaDiff.IsCompatible)
+                {
+                    tableDiff.DiffType = TableDiffType.IncompatibleSchema;
+                    if (!options.HasFlag(TableCompareOptions.AllowIncompatibleSchema))
+                    {
+                        return ReturnValue<TableDiff>.SuccessResult(tableDiff);
+                    }
                 }
+                else if (schemaDiff.HasDiffs)
+                {
+                    tableDiff.DiffType = TableDiffType.CompatibleSchema;
+                }
+
+                var dataDiffsResult = GetRowDiffs(master, replica, options);
+                if (!dataDiffsResult.Success)
+                {
+                    ReturnValue<TableDiff>.Cascade(dataDiffsResult,
+                        string.Format("Unable to compare rows for {0} and {1}.", master.TableName, replica.TableName));
+                }
+
+                tableDiff.RowDiffs = dataDiffsResult.Value;
+                if (tableDiff.RowDiffs.Any())
+                {
+                    tableDiff.DiffType = TableDiffType.Data;
+                }
+
+
+                return ReturnValue<TableDiff>.SuccessResult(tableDiff);
             }
-            else if (schemaDiff.HasDiffs)
+            catch (Exception ex)
             {
-                tableDiff.DiffType = TableDiffType.CompatibleSchema;
+                return ReturnValue<TableDiff>.FailResult(string.Format("Unhandled error comparing tables {0}.", master.TableName), ex);
             }
-
-            var dataDiffsResult = GetRowDiffs(master, replica, options);
-            if (!dataDiffsResult.Success)
-            {
-                ReturnValue<TableDiff>.Cascade(dataDiffsResult, string.Format("Unable to compare rows for {0} and {1}.", master.TableName, replica.TableName));
-            }
-
-            tableDiff.RowDiffs = dataDiffsResult.Value;
-            if (tableDiff.RowDiffs.Any())
-            {
-                tableDiff.DiffType = TableDiffType.Data;
-            }
-
-
-            return ReturnValue<TableDiff>.SuccessResult(tableDiff);
 
         }
         /// <summary>

@@ -14,34 +14,33 @@ namespace Craftsmaneer.DataTools
 {
     public abstract class DataTableCollection : ICollection
     {
-        private DataSet _ds = null;
-        private DataSet DS
+        private DataSet _ds;
+
+        public ReturnValue Load()
         {
-            get
+            if (_ds == null)
             {
-                if (_ds == null)
+                var dsResult = GetTables();
+                if (dsResult.Success)
                 {
-                    var dsResult = GetTables();
-                    if (dsResult.Success)
-                    {
-                        _ds = dsResult.Value;
-                    }
-                    else
-                    {
-                        _ds = null;
-                    }
+                    _ds = dsResult.Value;
+                    return ReturnValue.SuccessResult();
                 }
-                return _ds;
+                return ReturnValue.Cascade(dsResult, "Couldn't loan Datatable collection");
             }
+            return ReturnValue.SuccessResult();
         }
+
         public List<string> TableList { get; set; }
+        public string Id { get; set; }
         public DataTable this[string name]
         {
             get
             {
-               return DS.Tables[name];
+                PrepForEnumeration();
+                return _ds.Tables[name];
             }
-           
+
         }
 
         public static ReturnValue<DataTableCollection> FromConfigFile(string fileName)
@@ -53,11 +52,15 @@ namespace Craftsmaneer.DataTools
                 DataTableCollection dtc;
                 if (type == "Database")
                 {
-                    dtc = new DatabaseDataTableCollection(config.Root.Element("ConnectionString").Value);
+                    string connStr = config.Root.Element("ConnectionString").Value;
+                    dtc = new DatabaseDataTableCollection(connStr);
+                    dtc.Id = connStr;
                 }
                 else if (type == "Folder")
                 {
-                    dtc = new FolderDataTableCollection(config.Root.Element("FolderPath").Value);
+                    string folderPath = config.Root.Element("FolderPath").Value;
+                    dtc = new FolderDataTableCollection(folderPath);
+                    dtc.Id = folderPath;
                 }
                 else
                 {
@@ -78,14 +81,22 @@ namespace Craftsmaneer.DataTools
                 return ReturnValue<DataTableCollection>.FailResult(string.Format("Error trying to create DataTableCollection from file: {0}", fileName), ex);
             }
         }
+
+        #region enumeration implementation
         public void CopyTo(Array array, int index)
         {
-            DS.Tables.CopyTo((DataTable[])array, index);
+            PrepForEnumeration();
+            _ds.Tables.CopyTo((DataTable[])array, index);
         }
 
         public int Count
         {
-            get { return DS.Tables.Count; }
+
+            get
+            {
+                PrepForEnumeration();
+                return _ds.Tables.Count;
+            }
         }
 
         public bool IsSynchronized
@@ -98,15 +109,31 @@ namespace Craftsmaneer.DataTools
             get { return this; }
         }
 
+       
+
         public IEnumerator GetEnumerator()
         {
-            return DS.Tables.GetEnumerator();
+            PrepForEnumeration();
+            return _ds.Tables.GetEnumerator();
+        }
+
+        /// <summary>
+        /// does pre-reqs to ensure this is ready to be enumerated.
+        /// </summary>
+        private void PrepForEnumeration()
+        {
+            var result = Load();
+            if (_ds == null || !result.Success)
+            {
+                throw new InvalidOperationException("The underlying dataset for this Enumerator is not available.", result.Error);
+            }
         }
 
         protected abstract ReturnValue<DataSet> GetTables();
 
 
     }
+        #endregion
 
     public class FolderDataTableCollection : DataTableCollection
     {
@@ -119,22 +146,36 @@ namespace Craftsmaneer.DataTools
 
         protected override ReturnValue<DataSet> GetTables()
         {
-            return ReturnValue<DataSet>.Wrap(() =>
+            try
             {
                 var ds = new DataSet();
                 ds.EnforceConstraints = false;
-               // assume each file is {schema}.{table}.xml
-                foreach (var file in Directory.GetFiles(FolderPath))
+                // assume each file is {schema}.{table}.xml
+                var availableFiles = Directory.GetFiles(FolderPath);
+                if (TableList != null && TableList.Count > 0)
+                {
+                    var expandedNames = TableList.Select(tn => string.Format(@"{0}\{1}.xml", FolderPath, tn));
+                    availableFiles = availableFiles.Intersect(expandedNames).ToArray();
+                }
+                foreach (var file in availableFiles)
                 {
                     var fileName = new FileInfo(file).Name;
                     var dt = new DataTable(fileName.Substring(0, fileName.Length - 4));
-                    ds.Tables.Add(dt);                  
-                    dt.ReadXml(file);
-                    
+                    ds.Tables.Add(dt);
+                    var thisFile = file;
+                    var result = ReturnValue.Wrap(() => dt.ReadXml(thisFile));
+                    if (!result.Success)
+                        ReturnValue<DataSet>.Cascade(result,
+                            string.Format("Error reading table {0} from {1}.", dt.TableName, thisFile));
+
                 }
 
-                return ds;
-            }, "Error Getting tables.");
+                return ReturnValue<DataSet>.SuccessResult(ds);
+            }
+            catch (Exception ex)
+            {
+                return ReturnValue<DataSet>.FailResult("Unhandled error getting tables", ex);
+            }
         }
     }
 
@@ -150,31 +191,44 @@ namespace Craftsmaneer.DataTools
 
         protected override ReturnValue<DataSet> GetTables()
         {
-            return ReturnValue<DataSet>.Wrap(() =>
+            try
             {
                 var ds = new DataSet();
                 ds.EnforceConstraints = false;
                 using (var conn = new SqlConnection(ConnStr))
                 {
                     conn.Open();
-               
-                var tables = TableList;
-                if (tables == null || tables.Count == 0)
-                {
-                    tables =
-                        conn.GetTableList()
-                            .Rows.Cast<DataRow>()
-                            .Select(r => string.Format("{0},{1}", r["TableName"], r["SchemaName"]))
-                            .ToList();
-                }
-                    foreach (var table in tables)
-                    {
-                        ds.Tables.Add(conn.GetTable(table));
-                    }
-                    return ds;
-                }
-            }, "Error Getting tables.");
-        }
-    }
 
+                    var tableList = TableList;
+                    if (tableList == null || tableList.Count == 0)
+                    {
+                        tableList =
+                            conn.GetTableList()
+                                .Rows.Cast<DataRow>()
+                                .Select(r => string.Format("{0},{1}", r["TableName"], r["SchemaName"]))
+                                .ToList();
+                    }
+                    foreach (var tableName in tableList)
+                    {
+                        var thisConn = conn;
+                        var thisTableName = tableName;
+                        var result = ReturnValue.Wrap(() => ds.Tables.Add(thisConn.GetTable(thisTableName)));
+                        if (!result.Success)
+                        {
+                            return ReturnValue<DataSet>.Cascade(result,
+                                string.Format("Couldn't get DataTable for {0}.", tableName));
+                        }
+                    }
+                }
+                return ReturnValue<DataSet>.SuccessResult(ds);
+            }
+            catch (Exception ex)
+            {
+                return ReturnValue<DataSet>.FailResult("Unhanlded error while trying to tables.", ex);
+            }
+        }
+
+    }
 }
+
+
