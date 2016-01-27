@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
-namespace Craftsmaneer.DataTools
+namespace Craftsmaneer.DataTools.Compare
 {
     /// <summary>
     /// structure the contains infomation about a tables differences, compared to a *master* table
@@ -115,16 +112,4 @@ namespace Craftsmaneer.DataTools
         IncompatibleSchema,
         Data
     }
-
-    [Flags]
-    public enum TableCompareOptions
-    {
-        None,
-        AllowIncompatibleSchema, // will do the comparison even if the schemas are not compatible.
-        CaptureValues, // will populate the MasterValue & ReplicaValue fields when a Column diff is detected.
-        KeysOptional, // If the master datatable does not have a primary key, use the all the columns to join.
-        TreatDefaultsAsNull, // if the value of the column is equal to the configured default, it will be treated as null.
-    }
-
-
 }

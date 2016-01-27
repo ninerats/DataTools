@@ -3,16 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 using System.Xml.Linq;
+using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
 
-namespace Craftsmaneer.DataTools
+namespace Craftsmaneer.DataTools.Compare
 {
-    public abstract class DataTableCollection : ICollection
+    public abstract class DataTableSet : ICollection
     {
         private DataSet _ds;
 
@@ -43,29 +42,29 @@ namespace Craftsmaneer.DataTools
 
         }
 
-        public static ReturnValue<DataTableCollection> FromConfigFile(string fileName)
+        public static ReturnValue<DataTableSet> FromConfigFile(string fileName)
         {
             try
             {
                 var config = XDocument.Load(fileName);
                 string type = config.Root.Element("Type").Value;
-                DataTableCollection dtc;
+                DataTableSet dtc;
                 if (type == "Database")
                 {
                     string connStr = config.Root.Element("ConnectionString").Value;
-                    dtc = new DatabaseDataTableCollection(connStr);
+                    dtc = new DatabaseDataTableSet(connStr);
                     dtc.Id = connStr;
                 }
                 else if (type == "Folder")
                 {
                     string folderPath = config.Root.Element("FolderPath").Value;
-                    dtc = new FolderDataTableCollection(folderPath);
+                    dtc = new FolderDataTableSet(folderPath);
                     dtc.Id = folderPath;
                 }
                 else
                 {
 
-                    return ReturnValue<DataTableCollection>.FailResult(string.Format("Invalid Type in configration file: {0}", type));
+                    return ReturnValue<DataTableSet>.FailResult(string.Format("Invalid Type in configration file: {0}", type));
                 }
                 var dataTablesElement = config.Root.Element("Tables");
                 if (dataTablesElement != null)
@@ -73,12 +72,12 @@ namespace Craftsmaneer.DataTools
                     dtc.TableList = dataTablesElement.Elements("Table").Select(e => e.Value).ToList();
 
                 }
-                return ReturnValue<DataTableCollection>.SuccessResult(dtc);
+                return ReturnValue<DataTableSet>.SuccessResult(dtc);
 
             }
             catch (Exception ex)
             {
-                return ReturnValue<DataTableCollection>.FailResult(string.Format("Error trying to create DataTableCollection from file: {0}", fileName), ex);
+                return ReturnValue<DataTableSet>.FailResult(string.Format("Error trying to create DataTableSet from file: {0}", fileName), ex);
             }
         }
 
@@ -135,10 +134,10 @@ namespace Craftsmaneer.DataTools
     }
         #endregion
 
-    public class FolderDataTableCollection : DataTableCollection
+    public class FolderDataTableSet : DataTableSet
     {
         public string FolderPath { get; protected set; }
-        public FolderDataTableCollection(string folderPath)
+        public FolderDataTableSet(string folderPath)
         {
             FolderPath = folderPath;
         }
@@ -179,10 +178,10 @@ namespace Craftsmaneer.DataTools
         }
     }
 
-    public class DatabaseDataTableCollection : DataTableCollection
+    public class DatabaseDataTableSet : DataTableSet
     {
         public string ConnStr { get; protected set; }
-        public DatabaseDataTableCollection(string connStr)
+        public DatabaseDataTableSet(string connStr)
         {
             ConnStr = connStr;
         }

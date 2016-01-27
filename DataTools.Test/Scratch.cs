@@ -10,7 +10,7 @@ namespace Craftsmaneer.DataTools.Test
     [TestFixture]
     public class Scratch
     {
-        [Test]
+        [Test, Ignore("already determined")]
         public void CanInnerBeNullTest()
         {
             var x = new Exception("text", null);

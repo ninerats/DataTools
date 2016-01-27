@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Craftsmaneer.DataTools
+namespace Craftsmaneer.Data
 {
     public static class DatabaseExtensions
     {

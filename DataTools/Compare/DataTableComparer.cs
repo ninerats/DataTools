@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
+using System.Linq;
 using Craftsmaneer.Lang;
 
-namespace Craftsmaneer.DataTools
+namespace Craftsmaneer.DataTools.Compare
 {
     /// <summary>
     ///  Analyses the difference between the data in 2 tables.  Differences are relative to a *master* table.
@@ -23,7 +21,7 @@ namespace Craftsmaneer.DataTools
         /// This version will only compare tables that appear in the master collection table list.
         /// </summary>
         /// <returns></returns>
-        public static ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> CompareCollections(DataTableCollection master, DataTableCollection replica, TableCompareOptions options = TableCompareOptions.None)
+        public static ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> CompareSets(DataTableSet master, DataTableSet replica, TableCompareOptions options = TableCompareOptions.None)
         {
             var tdDict = new Dictionary<string, ReturnValue<TableDiff>>();
             try
@@ -189,7 +187,7 @@ namespace Craftsmaneer.DataTools
                     else
                     {
                         var masterRow = FindMasterRow(parentrow, master);
-                        RowDiff matchRows = CompareRowData(masterRow, childrows[0]);
+                        RowDiff matchRows = CompareRowData(masterRow, childrows[0], options);
                         if (matchRows.DiffType != DiffType.None)
                         {
                             rowDiffs.Add(matchRows);
@@ -217,8 +215,6 @@ namespace Craftsmaneer.DataTools
         /// <summary>
         /// finds the row in the master table by keyed look of a copy.
         /// </summary>
-        /// <param name="copyRow"></param>
-        /// <returns></returns>
         private DataRow FindMasterRow(DataRow copyRow, DataTable master)
         {
             var keyCols = master.PrimaryKey;
@@ -230,10 +226,8 @@ namespace Craftsmaneer.DataTools
         /// compares the values of the cells in each row.
         /// Does not do a schema check.
         /// </summary>
-        /// <param name="masterRow"></param>
-        /// <param name="dataRow"></param>
-        /// <returns></returns>
-        private RowDiff CompareRowData(DataRow masterRow, DataRow repRow, TableCompareOptions options = TableCompareOptions.None)
+
+        private RowDiff CompareRowData(DataRow masterRow, DataRow repRow, TableCompareOptions options)
         {
             var colDiffs = new List<ColumnDiff>();
             var rowDiff = new RowDiff()
@@ -244,13 +238,14 @@ namespace Craftsmaneer.DataTools
             };
 
 
-            var matchFieldNames = FieldsInCommon(masterRow.Table, repRow.Table);
+            var matchFieldNames = FieldsInCommon(masterRow.Table, repRow.Table).ToArray();
 
             foreach (var fieldName in matchFieldNames)
             {
                 var masterValue = masterRow[fieldName];
                 var repValue = repRow[fieldName];
-                if (!masterValue.Equals(repValue))
+
+                if (!ValuesMatch(masterValue, repValue, options))
                 {
                     rowDiff.DiffType = DiffType.DataMismatch;
                     var colDiff = new ColumnDiff()
@@ -302,6 +297,38 @@ namespace Craftsmaneer.DataTools
             return rowDiff;
         }
 
+        private bool ValuesMatch(object masterValue, object repValue, TableCompareOptions options)
+        {
+            if (options.HasFlag(TableCompareOptions.TreatDefaultsAsNull))
+            {
+                // this code will compare the value to the default based on it's datatype, and set it to null if it is the same.
+            }
+            if (masterValue == null)
+            {
+                return (repValue == null);
+            }
+
+            if (masterValue.GetType().Name == "Byte[]")
+            {
+                return SlowButSureByteArrayCompare(masterValue as byte[], repValue as byte[]);
+            }
+
+            return masterValue.Equals(repValue);
+        }
+
+        // http://stackoverflow.com/questions/43289/comparing-two-byte-arrays-in-net/8808245#8808245
+        private bool SlowButSureByteArrayCompare(byte[] a1, byte[] a2)
+        {
+            if (a1.Length != a2.Length)
+                return false;
+
+            for (int i = 0; i < a1.Length; i++)
+                if (a1[i] != a2[i])
+                    return false;
+
+            return true;
+            }
+
         private static IEnumerable<string> FieldsInCommon(DataTable master, DataTable replica)
         {
             var masterFieldNames = master.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
@@ -316,7 +343,7 @@ namespace Craftsmaneer.DataTools
         /// <param name="master"></param>
         /// <param name="replica"></param>
         /// <returns></returns>
-        public RowDiff CompareRows(DataRow master, DataRow replica)
+        public RowDiff CompareRows(DataRow master, DataRow replica, TableCompareOptions options = TableCompareOptions.None)
         {
             var schemaDiff = CompareSchema(master.Table.Columns, replica.Table.Columns);
             if (!schemaDiff.IsCompatible)
@@ -326,7 +353,7 @@ namespace Craftsmaneer.DataTools
                     DiffType = DiffType.TypeMismatch
                 };
             }
-            return CompareRowData(master, replica);
+            return CompareRowData(master, replica, options);
         }
 
         /// <summary>
