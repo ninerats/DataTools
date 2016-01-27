@@ -74,6 +74,17 @@ namespace Craftsmaneer.Lang
             }
         }
 
+        /// <summary>
+        /// creates an error chain and returns failure.
+        /// </summary>
+        /// <param name="inner"></param>
+        /// <returns></returns>
+        public static ReturnValue Cascade(ReturnValue inner, string context = "")
+        {
+            var fail = FailResult(string.IsNullOrEmpty(context) ? "Cascade failure" : context);
+            fail.Inner = inner;
+            return fail;
+        }
     }
 
     /// <summary>
@@ -109,6 +120,13 @@ namespace Craftsmaneer.Lang
             return new ReturnValue<T>(false, context, exception);
         }
 
+        public static ReturnValue<T> Cascade(ReturnValue inner, string context = "")
+        {
+            //TODO: refactor so that this method does not have duplicate code compared to ReturnValue.Cascase().
+            var fail = FailResult(string.IsNullOrEmpty(context) ? "Cascade failure" : context);
+            fail.Inner = inner;
+            return fail;
+        }
 
         public static ReturnValue<T> Wrap(Func<T> func, string context = "")
         {
@@ -124,18 +142,6 @@ namespace Craftsmaneer.Lang
                 var r = FailResult(context =="" ?   "wrapped action failed" : context, ex);
                 return r;
             }
-        }
-
-        /// <summary>
-        /// creates an error chain and returns failure.
-        /// </summary>
-        /// <param name="inner"></param>
-        /// <returns></returns>
-        public static ReturnValue<T> Cascade(ReturnValue inner, string context = "")
-        {
-            var fail = FailResult(string.IsNullOrEmpty(context) ? "Cascade failure" : context);
-            fail.Inner = inner;
-            return fail;
         }
     }
 
