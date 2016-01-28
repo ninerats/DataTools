@@ -16,7 +16,7 @@ namespace Craftsmaneer.DataToolUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DataToolUtilForm());
+            Application.Run(new CompareDataTableSetsForm());
         }
     }
 }

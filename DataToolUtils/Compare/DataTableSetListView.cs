@@ -1,20 +1,114 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Craftsmaneer.DataTools.Compare;
+using Craftsmaneer.Lang;
 
-namespace Craftsmaneer.DataToolUtils
+namespace Craftsmaneer.DataToolUtils.Compare
 {
     public class DataTableSetListView : ListView
     {
         public DataTableSetListView()
         {
-            return;
+            
             Init();
-            LoadSampleItems();
+           // LoadSampleItems();
         }
 
-        //public TableSetDiff TableSetDiff { get; set; }
+        private TableSetDiff _tableSetDiff;
+
+        [Browsable(false)]
+        public TableSetDiff TableSetDiff
+        {
+            get { return _tableSetDiff; }
+            set
+            {
+                _tableSetDiff = value;
+               if (! ReturnValue.Wrap(RefreshList).Success)
+                {
+                    // TODO: log it here.
+                };
+            }
+        }
+
+        private void RefreshList()
+        {
+            Items.Clear();
+            foreach (var kv in TableSetDiff)
+            {
+                string schema;
+                string desc;
+                string imageKey;
+                if (kv.Value.Success)
+                {
+                    var tdiff = kv.Value.Value;
+                    if (tdiff.SchemaDiff.IsCompatible)
+                    {
+                        schema = tdiff.SchemaDiff.HasDiffs ? "Compatible" : "Identical";
+                        
+                    }
+                    else
+                    {
+                        schema = "Incompatible";
+                    }
+                    if (tdiff.RowDiffs.Any())
+                    {
+                        desc = string.Format("{0} rows don't match.", tdiff.RowDiffs.Count());
+                    }
+                    else
+                    {
+                        desc = tdiff.HasDiffs ? "The data in the tables match." :
+                        "The tables are identical.";
+                    }
+                    switch (tdiff.DiffType)
+                    {
+                        case TableDiffType.None: imageKey = "equal";
+                            break;
+                        case TableDiffType.CompatibleSchema: imageKey =
+                            "dataschemadiff";
+                            break;
+                        case TableDiffType.IncompatibleSchema:
+                            imageKey = "incompatible";
+                            break;
+                        case TableDiffType.Data:
+                            imageKey = "datadiff";
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                    
+
+                }
+                else
+                {
+                    schema = "Error";
+                    desc = kv.Value.ToString();
+                    imageKey = "error";
+                }
+
+
+
+                AddResult(imageKey,kv.Key, schema, desc, kv.Value);
+            }
+        }
+
+        private void AddResult(string imageKey, string key, string schema, string desc, ReturnValue<TableDiff> tdiffResult )
+        {
+            var groupKey = imageKey;
+            if (imageKey == "dataschemadiff")
+                groupKey = "datadiff";
+            var li = new ListViewItem(new[] {key, schema, desc}, imageKey, Groups[groupKey])
+            {
+                Tag = tdiffResult
+            };
+            if (li.Group.Name != "error" && li.Group.Name != "equal")
+            {
+                li.Checked = true;
+            }
+            Items.Add(li);
+        }
 
         private void Init()
         {
@@ -23,20 +117,20 @@ namespace Craftsmaneer.DataToolUtils
             // 
             // imagelist.
             // 
-            var resources = new ComponentResourceManager(typeof(CompareDataTableSets));
+            var resources = new ComponentResourceManager(typeof(DataTableSetListView));
             //TODO: decouple from this form.
             var ilCompareResult = new ImageList
             {
-              //  ImageStream = ((ImageListStreamer)(resources.GetObject("ilCompareResult.ImageStream"))),
+                 ImageStream = ((ImageListStreamer)(resources.GetObject("ilImageStream"))),
                 TransparentColor = Color.Transparent
             };
-            ilCompareResult.Images.SetKeyName(0, "blue_equal.png");
-            ilCompareResult.Images.SetKeyName(1, "incompatible");
-            ilCompareResult.Images.SetKeyName(2, "warning");
-            ilCompareResult.Images.SetKeyName(3, "error");
-            ilCompareResult.Images.SetKeyName(4, "equal");
+            ilCompareResult.Images.SetKeyName(0, "dataschemadiff");
+            ilCompareResult.Images.SetKeyName(1, "warning");
+            ilCompareResult.Images.SetKeyName(2, "error");
+            ilCompareResult.Images.SetKeyName(3, "equal");
+            ilCompareResult.Images.SetKeyName(4, "incompatible");
             ilCompareResult.Images.SetKeyName(5, "datadiff");
-            ilCompareResult.Images.SetKeyName(6, "unknown");
+            ilCompareResult.Images.SetKeyName(6, "missing");
             SmallImageList = ilCompareResult;
 
             var groupEqual = new ListViewGroup("No Differences", HorizontalAlignment.Left)
@@ -91,7 +185,7 @@ namespace Craftsmaneer.DataToolUtils
         }
 
 
-        private void LoadSampleItems()
+        internal void LoadSampleItems()
         {
             var listViewItem1 = new ListViewItem(new[]
             {
@@ -116,7 +210,7 @@ namespace Craftsmaneer.DataToolUtils
                 "Production.ScrapReason",
                 "--",
                 "Table \'Prodcution.ScrapReason\' could not be found in the Replica set."
-            }, "unknown")
+            }, "missing")
             {
                 Group = Groups["missing"]
             };
