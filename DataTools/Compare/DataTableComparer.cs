@@ -22,9 +22,9 @@ namespace Craftsmaneer.DataTools.Compare
         /// This version will only compare tables that appear in the master collection table list.
         /// </summary>
         /// <returns></returns>
-        public static ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> CompareSets(DataTableSet master, DataTableSet replica, TableCompareOptions options = TableCompareOptions.None)
+        public static ReturnValue<TableSetDiff> CompareSets(DataTableSet master, DataTableSet replica, TableCompareOptions options = TableCompareOptions.None)
         {
-            var tdDict = new Dictionary<string, ReturnValue<TableDiff>>();
+            var tdDict = new TableSetDiff();
             try
             {
                 foreach (DataTable masterTable in master)
@@ -44,11 +44,11 @@ namespace Craftsmaneer.DataTools.Compare
                     }
                     tdDict.Add(masterTable.TableName, result);
                 }
-                return ReturnValue<Dictionary<string, ReturnValue<TableDiff>>>.SuccessResult(tdDict);
+                return ReturnValue<TableSetDiff>.SuccessResult(tdDict);
             }
             catch (Exception ex)
             {
-                return ReturnValue<Dictionary<string, ReturnValue<TableDiff>>>.FailResult("Error comparing table ", ex);
+                return ReturnValue<TableSetDiff>.FailResult("Error comparing table ", ex);
             }
         }
 

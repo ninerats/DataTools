@@ -1,9 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare
 {
+
+    /// <summary>
+    /// a set of TableComparisons bewteen to DataTableSets.
+    /// </summary>
+    public class TableSetDiff : Dictionary<string, ReturnValue<TableDiff>>
+    {
+        
+    }
+
     /// <summary>
     /// structure the contains infomation about a tables differences, compared to a *master* table.
     /// Comparisons are default key based.  The TableCompareOptions enum controls how comparing works.

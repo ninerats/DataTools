@@ -21,7 +21,7 @@ namespace Craftsmaneer.DataTools.Test
             //dbDtc.Value.TableList = folderDts.Value.TableList;
             loadResult = dbDtc.Value.Load();
             Assert.IsTrue(loadResult.Success);
-            ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> result =
+            ReturnValue<TableSetDiff> result =
                 DataTableComparer.CompareSets(folderDts.Value, dbDtc.Value, TableCompareOptions.CaptureValues);
             Assert.IsTrue(result.Success);
 
@@ -65,8 +65,7 @@ namespace Craftsmaneer.DataTools.Test
             ReturnValue<DataTableSet> repDTC = DataTableSet.FromConfigFile("MissingTableReplicaDTC.config");
             loadResult = repDTC.Value.Load();
             Assert.IsTrue(loadResult.Success);
-            ReturnValue<Dictionary<string, ReturnValue<TableDiff>>> result =
-                DataTableComparer.CompareSets(masterDTC.Value, repDTC.Value);
+           var result = DataTableComparer.CompareSets(masterDTC.Value, repDTC.Value);
             Assert.IsTrue(result.Success);
             Assert.AreEqual(TableDiffType.None,
                 result.Value.First(kv => kv.Key == "HumanResources.Employee").Value.Value.DiffType);

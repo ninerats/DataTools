@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DataToolUtils.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Craftsmaneer.DataToolUtils.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="txtConnStr_Text" Type="System.String" Scope="User">
@@ -10,6 +10,12 @@
     </Setting>
     <Setting Name="txtImportDataTablePath_Text" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\tfs\rdb\projects\DataTools\Export</Value>
+    </Setting>
+    <Setting Name="txtMasterDataTableSet_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FolderDTC.config</Value>
+    </Setting>
+    <Setting Name="txtReplicaDtSet_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Database_DTC.config</Value>
     </Setting>
   </Settings>
 </SettingsFile>

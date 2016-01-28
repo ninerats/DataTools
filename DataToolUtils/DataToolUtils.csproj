@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compare\CompareDataTableSets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compare\CompareDataTableSets.Designer.cs">
+      <DependentUpon>CompareDataTableSets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compare\DataTableSetListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataToolUtilForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +70,9 @@
     <Compile Include="TableListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Compare\CompareDataTableSets.resx">
+      <DependentUpon>CompareDataTableSets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataToolUtilForm.resx">
       <DependentUpon>DataToolUtilForm.cs</DependentUpon>
     </EmbeddedResource>

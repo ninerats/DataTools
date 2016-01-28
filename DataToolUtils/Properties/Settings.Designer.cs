@@ -58,5 +58,29 @@ namespace Craftsmaneer.DataToolUtils.Properties {
                 this["txtImportDataTablePath_Text"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FolderDTC.config")]
+        public string txtMasterDataTableSet_Text {
+            get {
+                return ((string)(this["txtMasterDataTableSet_Text"]));
+            }
+            set {
+                this["txtMasterDataTableSet_Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Database_DTC.config")]
+        public string txtReplicaDtSet_Text {
+            get {
+                return ((string)(this["txtReplicaDtSet_Text"]));
+            }
+            set {
+                this["txtReplicaDtSet_Text"] = value;
+            }
+        }
     }
 }
