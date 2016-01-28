@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{57538BC6-313
 	ProjectSection(SolutionItems) = preProject
 		SQL\Add keys to tables.sql = SQL\Add keys to tables.sql
 		SQL\added all keys to tables - META.sql = SQL\added all keys to tables - META.sql
+		SQL\DataDiff_entire_database.sql = SQL\DataDiff_entire_database.sql
+		SQL\DataDiff_entire_database_AND_Data.sql = SQL\DataDiff_entire_database_AND_Data.sql
 	EndProjectSection
 EndProject
 Global
