@@ -3,20 +3,23 @@ using System.Drawing;
 using System.Windows.Forms;
 using Craftsmaneer.DataTools.Compare;
 
-namespace Craftsmaneer.DataToolUtils.Compare
+namespace Craftsmaneer.DataToolUtils
 {
     public class DataTableSetListView : ListView
     {
         public DataTableSetListView()
         {
+            return;
             Init();
             LoadSampleItems();
         }
 
-        public TableSetDiff TableSetDiff { get; set; }
+        //public TableSetDiff TableSetDiff { get; set; }
 
         private void Init()
         {
+           
+           
             // 
             // imagelist.
             // 
@@ -24,7 +27,7 @@ namespace Craftsmaneer.DataToolUtils.Compare
             //TODO: decouple from this form.
             var ilCompareResult = new ImageList
             {
-                ImageStream = ((ImageListStreamer)(resources.GetObject("ilCompareResult.ImageStream"))),
+              //  ImageStream = ((ImageListStreamer)(resources.GetObject("ilCompareResult.ImageStream"))),
                 TransparentColor = Color.Transparent
             };
             ilCompareResult.Images.SetKeyName(0, "blue_equal.png");

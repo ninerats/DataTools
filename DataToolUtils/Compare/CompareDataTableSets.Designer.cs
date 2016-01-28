@@ -1,4 +1,5 @@
-﻿using Craftsmaneer.DataToolUtils.Compare;
+﻿using Craftsmaneer.DataToolUtils;
+
 
 namespace Craftsmaneer.DataToolUtils
 {
@@ -30,11 +31,10 @@ namespace Craftsmaneer.DataToolUtils
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdCompare = new System.Windows.Forms.Button();
             this.txtReplicaDtSet = new System.Windows.Forms.TextBox();
+            this.txtMasterDtSet = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
@@ -45,8 +45,7 @@ namespace Craftsmaneer.DataToolUtils
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRecCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvCompareResults = new DataTableSetListView();
-            this.txtMasterDtSet = new System.Windows.Forms.TextBox();
+            this.lvCompareResults = new Craftsmaneer.DataToolUtils.DataTableSetListView();
             this.panel1.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +83,17 @@ namespace Craftsmaneer.DataToolUtils
             this.txtReplicaDtSet.Size = new System.Drawing.Size(480, 20);
             this.txtReplicaDtSet.TabIndex = 1;
             this.txtReplicaDtSet.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtReplicaDtSet_Text;
+            // 
+            // txtMasterDtSet
+            // 
+            this.txtMasterDtSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMasterDtSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtMasterDataTableSet_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtMasterDtSet.Location = new System.Drawing.Point(139, 10);
+            this.txtMasterDtSet.Name = "txtMasterDtSet";
+            this.txtMasterDtSet.Size = new System.Drawing.Size(480, 20);
+            this.txtMasterDtSet.TabIndex = 1;
+            this.txtMasterDtSet.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtMasterDataTableSet_Text;
             // 
             // label2
             // 
@@ -195,29 +205,15 @@ namespace Craftsmaneer.DataToolUtils
             this.lvCompareResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-           
-           
-           
-          
+            this.lvCompareResults.CheckBoxes = true;
             this.lvCompareResults.Location = new System.Drawing.Point(22, 31);
             this.lvCompareResults.Name = "lvCompareResults";
             this.lvCompareResults.Size = new System.Drawing.Size(676, 323);
-            
             this.lvCompareResults.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvCompareResults.TabIndex = 0;
+           // this.lvCompareResults.TableSetDiff = null;
             this.lvCompareResults.UseCompatibleStateImageBehavior = false;
-           
-
-            // txtMasterDtSet
-            // 
-            this.txtMasterDtSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMasterDtSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtMasterDataTableSet_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtMasterDtSet.Location = new System.Drawing.Point(139, 10);
-            this.txtMasterDtSet.Name = "txtMasterDtSet";
-            this.txtMasterDtSet.Size = new System.Drawing.Size(480, 20);
-            this.txtMasterDtSet.TabIndex = 1;
-            this.txtMasterDtSet.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtMasterDataTableSet_Text;
+            this.lvCompareResults.View = System.Windows.Forms.View.Details;
             // 
             // CompareDataTableSets
             // 
