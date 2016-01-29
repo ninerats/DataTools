@@ -42,24 +42,57 @@ namespace Craftsmaneer.DataTools.Compare
 
         }
 
-        public static ReturnValue<DataTableSet> FromConfigFile(string fileName)
+        public static ReturnValue<FolderDataTableSet> FromRelativeFolderConfigFile(string configFile, string rootFolder,
+            bool loadOnOpen = true)
+        {
+            var createResult = FromConfigFile(configFile, false);
+            if (!createResult.Success)
+                ReturnValue<DataTableSet>.Cascade(createResult, string.Format("Error loading config file at {0}",
+                    configFile));
+            var dtSet = createResult.Value as FolderDataTableSet;
+            if (dtSet == null)
+                return ReturnValue<FolderDataTableSet>.FailResult(
+                    string.Format("This DataTableSet specified in the config file at {0} is not a Folder DataTableSet.",configFile));
+
+            var setPathResult = ReturnValue.Wrap(() =>
+            {
+                var originalRelativePath = dtSet.FolderPath;
+                dtSet.FolderPath = Path.Combine(rootFolder, originalRelativePath ?? "");
+                var x = 1;
+            }, string.Format("adding root apth {0} to relative path in config file",rootFolder));
+            if (!setPathResult.Success)
+            {
+                return ReturnValue<FolderDataTableSet>.Cascade(setPathResult);
+            }
+            if (loadOnOpen)
+            {
+                var loadResult = dtSet.Load();
+                if (!loadResult.Success)
+                    return ReturnValue<FolderDataTableSet>.Cascade(loadResult, "Failed to load tables.");
+            }
+
+            return ReturnValue<FolderDataTableSet>.SuccessResult(dtSet);
+
+        }
+
+        public static ReturnValue<DataTableSet> FromConfigFile(string fileName, bool loadOnOpen = true)
         {
             try
             {
                 var config = XDocument.Load(fileName);
                 string type = config.Root.Element("Type").Value;
-                DataTableSet dtc;
+                DataTableSet dtSet;
                 if (type == "Database")
                 {
                     string connStr = config.Root.Element("ConnectionString").Value;
-                    dtc = new DatabaseDataTableSet(connStr);
-                    dtc.Id = connStr;
+                    dtSet = new DatabaseDataTableSet(connStr);
+                    dtSet.Id = connStr;
                 }
                 else if (type == "Folder")
                 {
                     string folderPath = config.Root.Element("FolderPath").Value;
-                    dtc = new FolderDataTableSet(folderPath);
-                    dtc.Id = folderPath;
+                    dtSet = new FolderDataTableSet(folderPath);
+                    dtSet.Id = folderPath;
                 }
                 else
                 {
@@ -69,10 +102,18 @@ namespace Craftsmaneer.DataTools.Compare
                 var dataTablesElement = config.Root.Element("Tables");
                 if (dataTablesElement != null)
                 {
-                    dtc.TableList = dataTablesElement.Elements("Table").Select(e => e.Value).ToList();
+                    dtSet.TableList = dataTablesElement.Elements("Table").Select(e => e.Value).ToList();
 
                 }
-                return ReturnValue<DataTableSet>.SuccessResult(dtc);
+
+                if (loadOnOpen)
+                {
+                    var loadResult = dtSet.Load();
+                    if (!loadResult.Success)
+                        return ReturnValue<DataTableSet>.Cascade(loadResult, "Failed to load tables.");
+                }
+
+                return ReturnValue<DataTableSet>.SuccessResult(dtSet);
 
             }
             catch (Exception ex)
@@ -136,7 +177,7 @@ namespace Craftsmaneer.DataTools.Compare
 
     public class FolderDataTableSet : DataTableSet
     {
-        public string FolderPath { get; protected set; }
+        public string FolderPath { get;  set; }
         public FolderDataTableSet(string folderPath)
         {
             FolderPath = folderPath;

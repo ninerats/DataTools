@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -26,9 +28,11 @@ namespace Craftsmaneer.DataToolUtils.Compare
             set
             {
                 _tableSetDiff = value;
-               if (! ReturnValue.Wrap(RefreshList).Success)
+                var result = ReturnValue.Wrap(RefreshList);
+                if (!result.Success)
                 {
                     // TODO: log it here.
+                    Debug.WriteLine(result);
                 };
             }
         }
@@ -243,6 +247,15 @@ namespace Craftsmaneer.DataToolUtils.Compare
                 listViewItem4,
                 listViewItem5
             });
+        }
+
+        public ReturnValue<TableDiff> SelectedTable()
+        {
+            if (SelectedItems.Count == 0)
+            {
+                return null;
+            }
+            return SelectedItems[0].Tag as ReturnValue<TableDiff>;
         }
     }
 }

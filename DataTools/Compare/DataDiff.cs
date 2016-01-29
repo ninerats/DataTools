@@ -23,16 +23,26 @@ namespace Craftsmaneer.DataTools.Compare
         public TableDiffType DiffType { get; set; } // TODO: this enum is akward, and might reduntant.  rework.
         public SchemaDiff SchemaDiff { get; set; }
         public List<RowDiff> RowDiffs { get; set; }
+        public DataTable Master { get; private set; }
+        public DataTable Replica { get; private set; }
+
         public TableDiff()
         {
             SchemaDiff = new SchemaDiff();
             RowDiffs = new List<RowDiff>();
         }
+
+        public TableDiff(DataTable master, DataTable replica): this()
+        {
+            Master = master;
+            Replica = replica;
+        }
+
         public bool HasDiffs
         {
             get
             {
-                return SchemaDiff.HasDiffs || RowDiffs.Count() > 0;
+                return SchemaDiff.HasDiffs || RowDiffs.Any();
             }
         }
 

@@ -82,5 +82,14 @@ namespace Craftsmaneer.DataToolUtils.Properties {
                 this["txtReplicaDtSet_Text"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tfs\\rdb\\projects\\DataTools\\DataTools.Test")]
+        public string workspaceRoot {
+            get {
+                return ((string)(this["workspaceRoot"]));
+            }
+        }
     }
 }

@@ -156,3 +156,4 @@ $RECYCLE.BIN/
 
 # specific project ignores
 Export/
+/SQL/DataDiff_entire_database_AND_Data.sql

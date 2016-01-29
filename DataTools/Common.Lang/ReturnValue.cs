@@ -35,7 +35,7 @@ namespace Craftsmaneer.Lang
 
         }
 
-        public static ReturnValue Wrap(Action action)
+        public static ReturnValue Wrap(Action action, string context = "")
         {
             try
             {
@@ -46,11 +46,12 @@ namespace Craftsmaneer.Lang
             catch (Exception ex)
             {
                 // log it.
-                var r = ReturnValue.FailResult("wrapped action failed", ex);
-
+                var r = FailResult(context == "" ? "wrapped action failed" : context, ex);
                 return r;
             }
         }
+
+      
 
         public static ReturnValue SuccessResult()
         {
@@ -64,14 +65,15 @@ namespace Craftsmaneer.Lang
 
         public override string ToString()
         {
+            var desc = Error == null
+                ? Context
+                : string.Format("Context: {0}.   Exception: {1}\r\nStack Trace:\r\n{2}", Context, Error.Message,
+                    Error.StackTrace);
             if (Inner != null)
             {
-                return string.Format("{0}:\r\n\t{1}", Context, Inner.ToString());
+                return string.Format("{0}:\r\n\t{1}", desc, Inner);
             }
-            else
-            {
-                return Context;
-            }
+            return desc;
         }
 
         /// <summary>
@@ -140,6 +142,7 @@ namespace Craftsmaneer.Lang
             {
                 // log it.
                 var r = FailResult(context =="" ?   "wrapped action failed" : context, ex);
+                r.Value = default (T);
                 return r;
             }
         }

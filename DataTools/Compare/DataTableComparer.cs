@@ -63,7 +63,7 @@ namespace Craftsmaneer.DataTools.Compare
                     return ReturnValue<TableDiff>.Cascade(schemaDiffResult);
 
                 var schemaDiff = schemaDiffResult.Value;
-                var tableDiff = new TableDiff()
+                var tableDiff = new TableDiff(master, replica)
                 {
                     SchemaDiff = schemaDiff,
                     DiffType = TableDiffType.None

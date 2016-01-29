@@ -38,6 +38,16 @@ namespace Craftsmaneer.DataToolUtils
             System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompareDataTableSetsForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdCompare = new System.Windows.Forms.Button();
@@ -46,6 +56,8 @@ namespace Craftsmaneer.DataToolUtils
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.chkGroup = new System.Windows.Forms.CheckBox();
+            this.cmdSave = new System.Windows.Forms.Button();
             this.cmdOk = new System.Windows.Forms.Button();
             this.cmdSettings = new System.Windows.Forms.Button();
             this.cmdViewDetails = new System.Windows.Forms.Button();
@@ -126,6 +138,8 @@ namespace Craftsmaneer.DataToolUtils
             // 
             // pnlBottom
             // 
+            this.pnlBottom.Controls.Add(this.chkGroup);
+            this.pnlBottom.Controls.Add(this.cmdSave);
             this.pnlBottom.Controls.Add(this.cmdOk);
             this.pnlBottom.Controls.Add(this.cmdSettings);
             this.pnlBottom.Controls.Add(this.cmdViewDetails);
@@ -134,6 +148,30 @@ namespace Craftsmaneer.DataToolUtils
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(740, 43);
             this.pnlBottom.TabIndex = 1;
+            // 
+            // chkGroup
+            // 
+            this.chkGroup.AutoSize = true;
+            this.chkGroup.Checked = true;
+            this.chkGroup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGroup.Location = new System.Drawing.Point(233, 12);
+            this.chkGroup.Name = "chkGroup";
+            this.chkGroup.Size = new System.Drawing.Size(93, 17);
+            this.chkGroup.TabIndex = 3;
+            this.chkGroup.Text = "Group Results";
+            this.chkGroup.UseVisualStyleBackColor = true;
+            this.chkGroup.CheckedChanged += new System.EventHandler(this.chkGroup_CheckedChanged);
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdSave.Location = new System.Drawing.Point(498, 8);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(97, 23);
+            this.cmdSave.TabIndex = 2;
+            this.cmdSave.Text = "&Save";
+            this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // cmdOk
             // 
@@ -165,6 +203,7 @@ namespace Craftsmaneer.DataToolUtils
             this.cmdViewDetails.TabIndex = 0;
             this.cmdViewDetails.Text = "View Details...";
             this.cmdViewDetails.UseVisualStyleBackColor = true;
+            this.cmdViewDetails.Click += new System.EventHandler(this.cmdViewDetails_Click);
             // 
             // panel2
             // 
@@ -227,12 +266,42 @@ namespace Craftsmaneer.DataToolUtils
             listViewGroup4.Name = "missing";
             listViewGroup5.Header = "Error Comparing";
             listViewGroup5.Name = "error";
+            listViewGroup6.Header = "No Differences";
+            listViewGroup6.Name = "equal";
+            listViewGroup7.Header = "Differences (Incompatible)";
+            listViewGroup7.Name = "incompatible";
+            listViewGroup8.Header = "Differences (Compatible)";
+            listViewGroup8.Name = "datadiff";
+            listViewGroup9.Header = "Missing Tables";
+            listViewGroup9.Name = "missing";
+            listViewGroup10.Header = "Error Comparing";
+            listViewGroup10.Name = "error";
+            listViewGroup11.Header = "No Differences";
+            listViewGroup11.Name = "equal";
+            listViewGroup12.Header = "Differences (Incompatible)";
+            listViewGroup12.Name = "incompatible";
+            listViewGroup13.Header = "Differences (Compatible)";
+            listViewGroup13.Name = "datadiff";
+            listViewGroup14.Header = "Missing Tables";
+            listViewGroup14.Name = "missing";
+            listViewGroup15.Header = "Error Comparing";
+            listViewGroup15.Name = "error";
             this.lvCompareResults.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2,
             listViewGroup3,
             listViewGroup4,
-            listViewGroup5});
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10,
+            listViewGroup11,
+            listViewGroup12,
+            listViewGroup13,
+            listViewGroup14,
+            listViewGroup15});
             this.lvCompareResults.Location = new System.Drawing.Point(22, 31);
             this.lvCompareResults.Name = "lvCompareResults";
             this.lvCompareResults.Size = new System.Drawing.Size(676, 323);
@@ -263,12 +332,14 @@ namespace Craftsmaneer.DataToolUtils
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.panel1);
             this.Name = "CompareDataTableSetsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompareDataTableSetsForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CompareDataTableSets_FormClosing);
             this.Load += new System.EventHandler(this.CompareDataTableSetsForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
+            this.pnlBottom.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -294,5 +365,7 @@ namespace Craftsmaneer.DataToolUtils
         private System.Windows.Forms.Button cmdOk;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button cmdSave;
+        private System.Windows.Forms.CheckBox chkGroup;
     }
 }

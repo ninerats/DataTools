@@ -50,6 +50,15 @@
     <Compile Include="Compare\CompareDataTableSetsForm.Designer.cs">
       <DependentUpon>CompareDataTableSetsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compare\DataDiffDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compare\DataDiffDetailsForm.Designer.cs">
+      <DependentUpon>DataDiffDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compare\DataTableDiffGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Compare\DataTableSetListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -67,12 +76,15 @@
     <Compile Include="SchemaDiffDialog.Designer.cs">
       <DependentUpon>SchemaDiffDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableListView.cs">
+    <Compile Include="Compare\TableListView.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Compare\CompareDataTableSetsForm.resx">
       <DependentUpon>CompareDataTableSetsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compare\DataDiffDetailsForm.resx">
+      <DependentUpon>DataDiffDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compare\DataTableSetListView.resx">
       <DependentUpon>DataTableSetListView.cs</DependentUpon>

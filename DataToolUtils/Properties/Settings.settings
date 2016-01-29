@@ -17,5 +17,8 @@
     <Setting Name="txtReplicaDtSet_Text" Type="System.String" Scope="User">
       <Value Profile="(Default)">Database_DTC.config</Value>
     </Setting>
+    <Setting Name="workspaceRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\tfs\rdb\projects\DataTools\DataTools.Test</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
