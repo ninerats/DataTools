@@ -105,9 +105,6 @@
     <EmbeddedResource Include="SchemaDiffDialog.resx">
       <DependentUpon>SchemaDiffDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabaseDTC.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="FolderDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

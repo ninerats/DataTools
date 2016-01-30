@@ -34,31 +34,45 @@ namespace Craftsmaneer.DataToolUtils
 
         private void CompareDataTableSetsForm_Load(object sender, EventArgs e)
         {
-           // lvCompareResults.LoadSampleItems();
+            // lvCompareResults.LoadSampleItems();
         }
 
         private void cmdCompare_Click(object sender, EventArgs e)
         {
             UiTry(() =>
             {
+                var options = TableCompareOptions.None;
+                if (chkIgnoreWhitespace.Checked)
+                    options = options | TableCompareOptions.IgnoreWhitespace;
 
                 string rootFolder = Properties.Settings.Default.workspaceRoot;
+                ShowStatus("Loading Master Dataset...");
                 var masterSetResult = DataTableSet.FromRelativeFolderConfigFile(txtMasterDtSet.Text, rootFolder);
                 if (!ShowStatus(masterSetResult, "Loading Master Dataset"))
                     return;
-                var repSetResult = DataTableSet.FromConfigFile(txtReplicaDtSet.Text,false);
+                ShowStatus("Master Dataset loaded.  Creating Replica Dataset...");
+                var repSetResult = DataTableSet.FromConfigFile(txtReplicaDtSet.Text, false);
                 if (!ShowStatus(repSetResult, "Creating Replica Dataset"))
                     return;
                 var replicaSet = repSetResult.Value;
                 replicaSet.TableList = masterSetResult.Value.TableList;
                 if (!ShowStatus(replicaSet.Load(), "Loading Replica Dataset"))
                     return;
-                var dataSetDiffResult = DataTableComparer.CompareSets(masterSetResult.Value, replicaSet);
+                var dataSetDiffResult = DataTableComparer.CompareSets(masterSetResult.Value, replicaSet, options);
                 if (!ShowStatus(dataSetDiffResult, "Comparing Datasets"))
                     return;
                 lvCompareResults.TableSetDiff = dataSetDiffResult.Value;
 
-            },"Comparing tables");
+            }, "Comparing tables");
+        }
+
+        private void ShowStatus(string msg, Color color = default(Color))
+        {
+            if (color == default(Color)) color = Color.DarkBlue;
+            lblStatus.ForeColor = color;
+            lblStatus.Text = msg;
+            Application.DoEvents();
+
         }
 
         private void UiTry(Action action, string context)
@@ -73,14 +87,12 @@ namespace Craftsmaneer.DataToolUtils
         {
             if (!result.Success)
             {
-                MessageBox.Show(result.ToString(),context,
+                MessageBox.Show(result.ToString(), context,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblStatus.Text = string.Format("{0} failed.", context);
-                lblStatus.ForeColor = Color.Red;
+                ShowStatus(string.Format("{0} failed.", context), Color.Red);
                 Debug.WriteLine(result);
             }
-            lblStatus.ForeColor = Color.DarkBlue;
-            lblStatus.Text = string.Format("{0} complete.", context);
+            ShowStatus(string.Format("{0} complete.", context));
             return result.Success;
         }
 
@@ -110,6 +122,11 @@ namespace Craftsmaneer.DataToolUtils
             }
 
             DataDiffDetailsForm.Invoke(selected.Value);
+        }
+
+        private void cmdTools_Click(object sender, EventArgs e)
+        {
+            UiTry(() => { new DataToolUtilForm().ShowDialog(); }, "Showing Tools form");
         }
     }
 }

@@ -12,12 +12,11 @@ namespace Craftsmaneer.Data
     {
         public static DataTable GetTableList(this SqlConnection conn)
         {
-            var tableInfo = ExecSql(conn, "SELECT t.NAME AS TableName, s.Name AS SchemaName " +
+            var tableInfo = ExecSql(conn, "s.Name AS SchemaName, SELECT t.NAME AS TableName,  " +
                    "FROM  sys.tables t  " +
-                   "INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id " +
                    "LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id " +
-                   "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) AND (i.OBJECT_ID > 255 ) " +
-                   "ORDER BY t.Name");
+                   "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) " +
+                   "ORDER BY s.name, t.Name");
             return tableInfo;
 
         }

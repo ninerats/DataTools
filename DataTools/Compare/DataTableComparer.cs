@@ -354,6 +354,11 @@ namespace Craftsmaneer.DataTools.Compare
                 return SlowButSureByteArrayCompare(masterValue as byte[], repValue as byte[]);
             }
 
+            if (masterValue.GetType().Name == "String" && options.HasFlag(TableCompareOptions.IgnoreWhitespace))
+            {
+                return (((string) masterValue).Trim().Equals(((string) repValue).Trim()));
+            }
+
             return masterValue.Equals(repValue);
         }
 

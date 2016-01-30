@@ -41,10 +41,15 @@
             this.tabUtils = new System.Windows.Forms.TabControl();
             this.tabExportDT = new System.Windows.Forms.TabPage();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.cmdMakeConfig = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtExportPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdExport = new System.Windows.Forms.Button();
+            this.lvwTables = new Craftsmaneer.DataToolUtils.TableListView();
+            this.mnuExportOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.miSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSelectNone = new System.Windows.Forms.ToolStripMenuItem();
             this.tabImportDataTable = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCompareToTable = new System.Windows.Forms.TextBox();
@@ -59,18 +64,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtConnStr = new System.Windows.Forms.TextBox();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
-            this.mnuExportOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.miSelectAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.miSelectNone = new System.Windows.Forms.ToolStripMenuItem();
-            this.lvwTables = new DataToolUtils.TableListView();
-            this.cmdMakeConfig = new System.Windows.Forms.Button();
             this.tabUtils.SuspendLayout();
             this.tabExportDT.SuspendLayout();
             this.pnlBottom.SuspendLayout();
+            this.mnuExportOptions.SuspendLayout();
             this.tabImportDataTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImported)).BeginInit();
             this.pnlTop.SuspendLayout();
-            this.mnuExportOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabUtils
@@ -112,6 +112,16 @@
             this.pnlBottom.Size = new System.Drawing.Size(669, 71);
             this.pnlBottom.TabIndex = 1;
             // 
+            // cmdMakeConfig
+            // 
+            this.cmdMakeConfig.Location = new System.Drawing.Point(173, 32);
+            this.cmdMakeConfig.Name = "cmdMakeConfig";
+            this.cmdMakeConfig.Size = new System.Drawing.Size(75, 23);
+            this.cmdMakeConfig.TabIndex = 8;
+            this.cmdMakeConfig.Text = "Make Cfg";
+            this.cmdMakeConfig.UseVisualStyleBackColor = true;
+            this.cmdMakeConfig.Click += new System.EventHandler(this.cmdMakeConfig_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(92, 32);
@@ -150,6 +160,51 @@
             this.cmdExport.Text = "Export";
             this.cmdExport.UseVisualStyleBackColor = true;
             this.cmdExport.Click += new System.EventHandler(this.cmdExport_Click);
+            // 
+            // lvwTables
+            // 
+            this.lvwTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwTables.CheckBoxes = true;
+            this.lvwTables.ConnectionString = null;
+            this.lvwTables.ContextMenuStrip = this.mnuExportOptions;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            this.lvwTables.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
+            this.lvwTables.Location = new System.Drawing.Point(18, 7);
+            this.lvwTables.Name = "lvwTables";
+            this.lvwTables.Size = new System.Drawing.Size(669, 322);
+            this.lvwTables.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.lvwTables.TabIndex = 0;
+            this.lvwTables.UseCompatibleStateImageBehavior = false;
+            this.lvwTables.View = System.Windows.Forms.View.Details;
+            // 
+            // mnuExportOptions
+            // 
+            this.mnuExportOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miSelectAll,
+            this.miSelectNone});
+            this.mnuExportOptions.Name = "mnuExportOptions";
+            this.mnuExportOptions.Size = new System.Drawing.Size(138, 48);
+            // 
+            // miSelectAll
+            // 
+            this.miSelectAll.Name = "miSelectAll";
+            this.miSelectAll.Size = new System.Drawing.Size(137, 22);
+            this.miSelectAll.Text = "Select All";
+            this.miSelectAll.Click += new System.EventHandler(this.miSelectAll_Click);
+            // 
+            // miSelectNone
+            // 
+            this.miSelectNone.Name = "miSelectNone";
+            this.miSelectNone.Size = new System.Drawing.Size(137, 22);
+            this.miSelectNone.Text = "Select None";
+            this.miSelectNone.Click += new System.EventHandler(this.miSelectNone_Click);
             // 
             // tabImportDataTable
             // 
@@ -296,60 +351,6 @@
             // 
             this.ofd.FileName = "openFileDialog1";
             // 
-            // mnuExportOptions
-            // 
-            this.mnuExportOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miSelectAll,
-            this.miSelectNone});
-            this.mnuExportOptions.Name = "mnuExportOptions";
-            this.mnuExportOptions.Size = new System.Drawing.Size(138, 48);
-            // 
-            // miSelectAll
-            // 
-            this.miSelectAll.Name = "miSelectAll";
-            this.miSelectAll.Size = new System.Drawing.Size(137, 22);
-            this.miSelectAll.Text = "Select All";
-            this.miSelectAll.Click += new System.EventHandler(this.miSelectAll_Click);
-            // 
-            // miSelectNone
-            // 
-            this.miSelectNone.Name = "miSelectNone";
-            this.miSelectNone.Size = new System.Drawing.Size(137, 22);
-            this.miSelectNone.Text = "Select None";
-            this.miSelectNone.Click += new System.EventHandler(this.miSelectNone_Click);
-            // 
-            // lvwTables
-            // 
-            this.lvwTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwTables.CheckBoxes = true;
-            this.lvwTables.ConnectionString = null;
-            this.lvwTables.ContextMenuStrip = this.mnuExportOptions;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            this.lvwTables.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.lvwTables.Location = new System.Drawing.Point(18, 7);
-            this.lvwTables.Name = "lvwTables";
-            this.lvwTables.Size = new System.Drawing.Size(669, 322);
-            this.lvwTables.TabIndex = 0;
-            this.lvwTables.UseCompatibleStateImageBehavior = false;
-            this.lvwTables.View = System.Windows.Forms.View.Details;
-            // 
-            // cmdMakeConfig
-            // 
-            this.cmdMakeConfig.Location = new System.Drawing.Point(173, 32);
-            this.cmdMakeConfig.Name = "cmdMakeConfig";
-            this.cmdMakeConfig.Size = new System.Drawing.Size(75, 23);
-            this.cmdMakeConfig.TabIndex = 8;
-            this.cmdMakeConfig.Text = "Make Cfg";
-            this.cmdMakeConfig.UseVisualStyleBackColor = true;
-            this.cmdMakeConfig.Click += new System.EventHandler(this.cmdMakeConfig_Click);
-            // 
             // DataToolUtilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,12 +365,12 @@
             this.tabExportDT.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.pnlBottom.PerformLayout();
+            this.mnuExportOptions.ResumeLayout(false);
             this.tabImportDataTable.ResumeLayout(false);
             this.tabImportDataTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImported)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            this.mnuExportOptions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
