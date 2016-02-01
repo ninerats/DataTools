@@ -46,7 +46,9 @@
     <Compile Include="DataTableComparerTest.cs" />
     <Compile Include="DataTableExploratoryTest.cs" />
     <Compile Include="IncompatibleSchemaCompareTest.cs" />
+    <Compile Include="IO\DataSerTestHelper.cs" />
     <Compile Include="IO\DataTableSerializerTest.cs" />
+    <Compile Include="IO\ImportingTablesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaDiffTest.cs" />
     <Compile Include="Scratch.cs" />
@@ -93,24 +95,6 @@
     <Content Include="FolderDTC\HumanResources.Shift.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FolderDTC\HumanResources.vEmployee.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\HumanResources.vEmployeeDepartment.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\HumanResources.vEmployeeDepartmentHistory.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\HumanResources.vJobCandidate.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\HumanResources.vJobCandidateEducation.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\HumanResources.vJobCandidateEmployment.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="FolderDTC\Person.Address.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -148,12 +132,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FolderDTC\Person.StateProvince.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Person.vAdditionalContactInfo.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Person.vStateProvinceCountryRegion.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FolderDTC\Production.BillOfMaterials.xml">
@@ -226,15 +204,6 @@
     <Content Include="FolderDTC\Production.UnitMeasure.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="FolderDTC\Production.vProductAndDescription.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Production.vProductModelCatalogDescription.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Production.vProductModelInstructions.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="FolderDTC\Production.WorkOrder.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -254,12 +223,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FolderDTC\Purchasing.Vendor.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Purchasing.vVendorWithAddresses.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Purchasing.vVendorWithContacts.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FolderDTC\Sales.CountryRegionCurrency.xml">
@@ -317,27 +280,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FolderDTC\Sales.Store.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vIndividualCustomer.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vPersonDemographics.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vSalesPerson.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vSalesPersonSalesByFiscalYears.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vStoreWithAddresses.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vStoreWithContacts.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FolderDTC\Sales.vStoreWithDemographics.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Job.xml">

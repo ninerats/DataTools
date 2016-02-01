@@ -9,6 +9,7 @@ namespace Craftsmaneer.DataTools.Test
 {
     class TestHelper
     {
+       
         public static DataTable GetBlankDataTable()
         {
             var dt = new DataTable("DataTable1");
