@@ -31,13 +31,13 @@ namespace Craftsmaneer.DataToolUtils
                     "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) AND (i.OBJECT_ID > 255 ) " +
                     "GROUP BY t.Name, s.Name " +
                     "ORDER BY t.Name");
-                DisplayTables(conn);
+                DisplayTables();
             }
 
 
         }
 
-        private void DisplayTables(SqlConnection conn)
+        private void DisplayTables()
         {
             Items.Clear();
             var rows = _tableInfo.Rows.Cast<DataRow>();
@@ -51,31 +51,23 @@ namespace Craftsmaneer.DataToolUtils
             }
         }
 
-        private int GetTableRecordCount(SqlConnection conn, DataRow table)
-        {
-            string sql = string.Format("SELECT COUNT(*) as recCount FROM {0}.{1}", table["TABLE_SCHEMA"], table["TABLE_NAME"]);
-            DataTable result = conn.ExecQuery( sql);
-            return result.Rows[0].Field<int>("recCount");
-        }
-
-       
 
         public TableListView()
             : base()
         {
-            var colTableName = new System.Windows.Forms.ColumnHeader()
+            var colTableName = new ColumnHeader()
             {
                 Name = "TableName",
                 Text = "Table Name",
-                Width = 300
+                Width = 400
             };
 
-            var colRecCount = new System.Windows.Forms.ColumnHeader()
+            var colRecCount = new ColumnHeader()
             {
                 Text = "Records",
                 Width = 100,
             };
-            var colTableSize = new System.Windows.Forms.ColumnHeader()
+            var colTableSize = new ColumnHeader()
              {
                  Text = "Table Size",
                  Width = 150,
@@ -88,7 +80,7 @@ namespace Craftsmaneer.DataToolUtils
               "Table 1",
               "132"}, -1);*/
 
-            Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            Columns.AddRange(new[] {
             colTableName,
             colRecCount,
             colTableSize});

@@ -14,6 +14,7 @@ namespace Craftsmaneer.DataToolUtils
         public CompareDataTableSetsForm()
         {
             InitializeComponent();
+            
         }
 
 
@@ -45,19 +46,22 @@ namespace Craftsmaneer.DataToolUtils
                 if (chkIgnoreWhitespace.Checked)
                     options = options | TableCompareOptions.IgnoreWhitespace;
 
-                string rootFolder = Properties.Settings.Default.workspaceRoot;
+               // string rootFolder = Properties.Settings.Default.workspaceRoot;
                 ShowStatus("Loading Master Dataset...");
-                var masterSetResult = DataTableSet.FromRelativeFolderConfigFile(txtMasterDtSet.Text, rootFolder);
+                var masterSetResult = DataTableSet.FromConfigFile(txtMasterDtSet.Text);
+               // var masterSetResult = DataTableSet.FromRelativeFolderConfigFile(txtMasterDtSet.Text, rootFolder);
                 if (!ShowStatus(masterSetResult, "Loading Master Dataset"))
                     return;
                 ShowStatus("Master Dataset loaded.  Creating Replica Dataset...");
                 var repSetResult = DataTableSet.FromConfigFile(txtReplicaDtSet.Text, false);
                 if (!ShowStatus(repSetResult, "Creating Replica Dataset"))
                     return;
+                ShowStatus("Loading Replica Dataset...");
                 var replicaSet = repSetResult.Value;
                 replicaSet.TableList = masterSetResult.Value.TableList;
                 if (!ShowStatus(replicaSet.Load(), "Loading Replica Dataset"))
                     return;
+                ShowStatus("Comparing Datasets...");
                 var dataSetDiffResult = DataTableComparer.CompareSets(masterSetResult.Value, replicaSet, options);
                 if (!ShowStatus(dataSetDiffResult, "Comparing Datasets"))
                     return;

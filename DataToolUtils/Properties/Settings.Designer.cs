@@ -91,5 +91,17 @@ namespace Craftsmaneer.DataToolUtils.Properties {
                 return ((string)(this["workspaceRoot"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool chkIgnoreWhitespace_Checked {
+            get {
+                return ((bool)(this["chkIgnoreWhitespace_Checked"]));
+            }
+            set {
+                this["chkIgnoreWhitespace_Checked"] = value;
+            }
+        }
     }
 }

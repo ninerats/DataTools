@@ -59,7 +59,13 @@ namespace Craftsmaneer.DataToolUtils.Compare
                     }
                     if (tdiff.RowDiffs.Any())
                     {
-                        desc = string.Format("{0} rows don't match.", tdiff.RowDiffs.Count());
+                        desc = string.Format("{0} row(s) were added, {1} row(s) were deleted, {2} row(s) have been updated.",
+                            tdiff.RowDiffs.Count(diff => diff.DiffType == DiffType.Extra),
+                            tdiff.RowDiffs.Count(diff => diff.DiffType == DiffType.Missing),
+                            tdiff.RowDiffs.Count(diff => diff.DiffType == DiffType.DataMismatch)
+                            );
+
+                        
                     }
                     else
                     {

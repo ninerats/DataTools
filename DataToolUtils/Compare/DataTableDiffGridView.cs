@@ -30,6 +30,16 @@ namespace Craftsmaneer.DataToolUtils.Compare
             });
         }
 
+        public DataTableDiffGridView()
+        {
+            DataError += DataTableDiffGridView_DataError;
+        }
+
+        void DataTableDiffGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
         private void HighlightDiffs()
         {
             DataSource = MasterTable;
@@ -46,16 +56,19 @@ namespace Craftsmaneer.DataToolUtils.Compare
                 DataGridViewRow thisRow = FindGridViewRow(rowDiff);
                 Contract.Assert(thisRow != null);
                 thisRow.DefaultCellStyle.BackColor = Color.DeepSkyBlue;
-                thisRow.DefaultCellStyle.Font = new Font(thisRow.DefaultCellStyle.Font, FontStyle.Strikeout);
+               
             }
+            if (false)
             {
-                IEnumerable<RowDiff> missingRows = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Missing);
-                foreach (RowDiff rowDiff in missingRows)
                 {
-                    DataGridViewRow thisRow = FindGridViewRow(rowDiff);
-                    Contract.Assert(thisRow != null);
-                    thisRow.DefaultCellStyle.BackColor = Color.Red;
-                    thisRow.DefaultCellStyle.Font = new Font(thisRow.DefaultCellStyle.Font, FontStyle.Strikeout);
+                    IEnumerable<RowDiff> missingRows = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Missing);
+                    foreach (RowDiff rowDiff in missingRows)
+                    {
+                        DataGridViewRow thisRow = FindGridViewRow(rowDiff);
+                        Contract.Assert(thisRow != null);
+                        thisRow.DefaultCellStyle.BackColor = Color.Red;
+                        thisRow.DefaultCellStyle.Font = new Font(thisRow.DefaultCellStyle.Font, FontStyle.Strikeout);
+                    }
                 }
             }
 
