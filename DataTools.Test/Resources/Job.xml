@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Job" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Job">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JobID" type="xs:int" />
+                <xs:element name="person" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="title" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Job" />
+        <xs:field xpath="JobID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Job>
+    <JobID>1</JobID>
+    <person>Bob</person>
+    <title>Janitor</title>
+  </Job>
+  <Job>
+    <JobID>2</JobID>
+    <person>Bob</person>
+    <title>Fry Cook</title>
+  </Job>
+  <Job>
+    <JobID>3</JobID>
+    <person>Alice</person>
+    <title>Head Sushi Roll Designer</title>
+  </Job>
+  <Job>
+    <JobID>4</JobID>
+    <title>vacant position</title>
+  </Job>
+</NewDataSet>

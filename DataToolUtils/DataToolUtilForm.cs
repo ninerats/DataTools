@@ -116,7 +116,7 @@ namespace Craftsmaneer.DataToolUtils
         private void cmdCompare_Click(object sender, EventArgs e)
         {
             var dtImported = (DataTable) dgvImported.DataSource;
-            //  var dtActualTable = TableListView.ExecSql(new SqlConnection(txtConnStr.Text), string.Format("select * from {0}", txtCompareToTable.Text) );
+            //  var dtActualTable = TableListView.ExecQuery(new SqlConnection(txtConnStr.Text), string.Format("select * from {0}", txtCompareToTable.Text) );
             DataTable dtActualTable = new SqlConnection(txtConnStr.Text).GetTable(dtImported.TableName);
             //var delta = CompareDataTables(dtImported, dtActualTable);
             var dtc = new DataTableComparer();

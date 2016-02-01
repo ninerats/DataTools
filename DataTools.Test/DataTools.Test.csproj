@@ -46,6 +46,7 @@
     <Compile Include="DataTableComparerTest.cs" />
     <Compile Include="DataTableExploratoryTest.cs" />
     <Compile Include="IncompatibleSchemaCompareTest.cs" />
+    <Compile Include="IO\DataTableSerializerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaDiffTest.cs" />
     <Compile Include="Scratch.cs" />
@@ -202,6 +203,7 @@
     </Content>
     <Content Include="FolderDTC\Production.ProductPhoto.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="FolderDTC\Production.ProductProductPhoto.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -337,6 +339,25 @@
     </Content>
     <Content Include="FolderDTC\Sales.vStoreWithDemographics.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Job.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Person-missing-bob.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Person.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\create_DataTools_database.sql" />
+    <Content Include="SQL\reset_tools_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\reset_jobs_and_person.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

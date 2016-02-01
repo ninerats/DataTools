@@ -12,7 +12,7 @@ namespace Craftsmaneer.Data
     {
         public static DataTable GetTableList(this SqlConnection conn)
         {
-            var tableInfo = ExecSql(conn, "s.Name AS SchemaName, SELECT t.NAME AS TableName,  " +
+            var tableInfo = ExecQuery(conn, "s.Name AS SchemaName, SELECT t.NAME AS TableName,  " +
                    "FROM  sys.tables t  " +
                    "LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id " +
                    "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) " +
@@ -21,7 +21,7 @@ namespace Craftsmaneer.Data
 
         }
 
-        public static DataTable ExecSql(this SqlConnection conn, string sql)
+        public static DataTable ExecQuery(this SqlConnection conn, string sql)
         {
             var cmd = new SqlCommand(sql, conn);
             var da = new SqlDataAdapter(cmd);
@@ -29,6 +29,28 @@ namespace Craftsmaneer.Data
             da.Fill(dt);
             return dt;
         }
+
+        public static int ExecSql(this SqlConnection conn, string sql, SqlTransaction tran = null)
+        {
+           
+            SqlCommand cmd;
+            if (tran != null)
+            {
+                cmd = new SqlCommand(sql, conn,tran);
+            }
+            else
+            {
+                cmd = new SqlCommand(sql, conn);
+            }
+           
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            var result = cmd.ExecuteNonQuery();
+            return result;
+        }
+
 
         public static DataTable GetTable(this SqlConnection conn,string tableName )
         {
@@ -40,5 +62,7 @@ namespace Craftsmaneer.Data
             da.Fill(dt);
             return dt;
         }
+
+       
     }
 }

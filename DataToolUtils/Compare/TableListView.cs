@@ -22,7 +22,7 @@ namespace Craftsmaneer.DataToolUtils
             using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
-                _tableInfo = conn.ExecSql("SELECT t.NAME AS TableName, s.Name AS SchemaName,max( p.rows) AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
+                _tableInfo = conn.ExecQuery("SELECT t.NAME AS TableName, s.Name AS SchemaName,max( p.rows) AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
                     "FROM  sys.tables t  " +
                     "INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id " +
                     "INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id " +
@@ -54,7 +54,7 @@ namespace Craftsmaneer.DataToolUtils
         private int GetTableRecordCount(SqlConnection conn, DataRow table)
         {
             string sql = string.Format("SELECT COUNT(*) as recCount FROM {0}.{1}", table["TABLE_SCHEMA"], table["TABLE_NAME"]);
-            DataTable result = conn.ExecSql( sql);
+            DataTable result = conn.ExecQuery( sql);
             return result.Rows[0].Field<int>("recCount");
         }
 

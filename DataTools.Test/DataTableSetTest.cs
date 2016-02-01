@@ -44,7 +44,7 @@ namespace Craftsmaneer.DataTools.Test
             ReturnValue<DataTableSet> dbDtcResult = DataTableSet.FromConfigFile("DatabaseDTC.config");
             Assert.IsTrue(dbDtcResult.Success);
             DataTableSet folderDtc = dbDtcResult.Value;
-            Assert.AreEqual(70, folderDtc.Cast<DataTable>().Count());
+            Assert.AreEqual(67, folderDtc.Cast<DataTable>().Count());
         }
 
         [Test]

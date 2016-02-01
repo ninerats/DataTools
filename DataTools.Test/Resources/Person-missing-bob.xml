@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Person" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Person">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="person">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="age" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Person" />
+        <xs:field xpath="person" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Person>
+    <person>Alice</person>
+    <age>34</age>
+  </Person>
+  <!--
+  <Person>
+    <person>Bob</person>
+    <age>32</age>
+  </Person>
+  -->
+  <Person>
+    <person>Ted</person>
+    <age>41</age>
+  </Person>
+</NewDataSet>

@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Tools" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Tools">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ToolID" type="xs:int" />
+                <xs:element name="ToolName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Company" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Tools" />
+        <xs:field xpath="ToolID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Tools>
+    <ToolID>1</ToolID>
+    <ToolName>Drill/Driver</ToolName>
+    <Company>Makita</Company>
+  </Tools>
+  <Tools>
+    <ToolID>2</ToolID>
+    <ToolName>Table Saw</ToolName>
+    <Company>Craftsman</Company>
+  </Tools>
+  <Tools>
+    <ToolID>3</ToolID>
+    <ToolName>Miter Saw</ToolName>
+    <Company>Dewalk</Company>
+  </Tools>
+  <Tools>
+    <ToolID>4</ToolID>
+    <ToolName>Hand Plane</ToolName>
+    <Company>Stanley</Company>
+  </Tools>
+</NewDataSet>
