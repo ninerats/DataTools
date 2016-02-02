@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<SelectedTables>
+	<xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="BulkLoadTestTable1" msdata:UseCurrentLocale="true">
+			<xs:complexType>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="BulkLoadTestTable1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ID" type="xs:int" />
+								<xs:element name="varchar1" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="50" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="int1" type="xs:int" minOccurs="0" />
+								<xs:element name="extra" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="50" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+				<!--
+								<xs:element name="missing" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="50" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+				-->
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+			<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+				<xs:selector xpath=".//BulkLoadTestTable1" />
+				<xs:field xpath="ID" />
+			</xs:unique>
+		</xs:element>
+	</xs:schema>
+	<BulkLoadTestTable1>
+		<ID>1</ID>
+		<varchar1>Alpha</varchar1>
+		<int1>11</int1>
+		<extra>A</extra>
+		<!-- <missing>missing 1</missing>  -->
+	</BulkLoadTestTable1>
+	<BulkLoadTestTable1>
+		<ID>2</ID>
+		<varchar1>Bravo</varchar1>
+		<int1>22</int1>
+		<extra>B</extra>
+		<!-- <missing>missing 2</missing> -->
+	</BulkLoadTestTable1>
+	<BulkLoadTestTable1>
+		<ID>3</ID>
+		<varchar1>Charlie</varchar1>
+		<int1>33</int1>
+		<extra>C</extra>
+	 <!-- <missing>missing 3</missing> -->
+	</BulkLoadTestTable1>
+</SelectedTables>

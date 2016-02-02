@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Contracts;
+using System.Linq;
 using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
 
@@ -13,7 +15,7 @@ namespace Craftsmaneer.DataTools.IO
     /// </summary>
     public class DataTableSerializer : IDisposable
     {
-        public DataTableSerializer()
+        protected DataTableSerializer()
         {
         }
 
@@ -21,7 +23,7 @@ namespace Craftsmaneer.DataTools.IO
             : this()
         {
             Connection = new SqlConnection(connStr);
-            Connection.Open();
+          
         }
 
         public SqlConnection Connection { get; private set; }
@@ -54,10 +56,12 @@ namespace Craftsmaneer.DataTools.IO
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public ReturnValue ImportTable(string path)
+        [Obsolete("no real reason to use this, just keeping it around for testing.")]
+        public ReturnValue ImportTableWithoutBulkCopy(string path)
         {
             return ReturnValue.Wrap(() =>
             {
+                PreprareConnection();
                 var dt = new DataTable();
                 dt.ReadXml(path);
 
@@ -79,10 +83,22 @@ namespace Craftsmaneer.DataTools.IO
             }, string.Format("Importing table from {0}.", path));
         }
 
+
+        private void PreprareConnection()
+        {
+           Contract.Assert(Connection != null);
+            if (!Connection.State.Equals(ConnectionState.Open))
+            {
+                Connection.Open();
+            }
+        }
+
+
         public ReturnValue ExportTable(string tableName, string path)
         {
             return ReturnValue.Wrap(() =>
             {
+                PreprareConnection();
                 string sql = string.Format("SELECT * FROM {0}", tableName);
                 var cmd = new SqlCommand(sql, Connection);
                 var adapter = new SqlDataAdapter(cmd);
@@ -94,71 +110,91 @@ namespace Craftsmaneer.DataTools.IO
             }, string.Format("Exporting table '{0}' to '{1}'.", tableName, path));
         }
 
-        //    https://social.msdn.microsoft.com/Forums/en-US/98cf1c68-f11b-4cd7-955c-152b7645ec08/readxml-to-datatable-and-update-database?forum=csharpgeneral
-        public ReturnValue ImportTableWithBulkCopy(string path)
+       
+        public ReturnValue ImportTable(string path)
         {
-            string tableName = "";
-            return ReturnValue.Wrap(() =>
-            {
-                // TODO: consider getting a table lock in the whole table.
-                using (SqlTransaction tran = Connection.BeginTransaction(IsolationLevel.Serializable))
-                {
-                    var dt = new DataTable();
-                    dt.ReadXml(path);
-                    tableName = dt.TableName;
-                    // delete table first.  must fake deferable constrain.
-                    //Connection.ExecSql(string.Format("ALTER TABLE {0} NOCHECK CONSTRAINT ALL", dt.TableName),tran);
-                    Connection.ExecSql(string.Format("sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'"), tran);
-                    Connection.ExecSql(string.Format("DELETE FROM {0}", dt.TableName), tran);
-                    // Creat the SqlBulkCopy object using a connection string
-                    using (var bulkCopy = new SqlBulkCopy(Connection, SqlBulkCopyOptions.TableLock, tran))
-                    {
-                        bulkCopy.DestinationTableName = tableName;
-                        // Write from the source to the destination.
-                        bulkCopy.WriteToServer(dt);
-                    }
-                    // turn constraint back on. any error will happen here.
-                    // TODO: return specific error code for a failed constraint.
-
-                    Connection.ExecSql("sp_msforeachtable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all'", tran);
-                }
-            }, string.Format("Importing table '{0}' fron '{1}'.", tableName, path));
+            return ImportTables(new[] { path });
         }
+
 
         /// <summary>
         ///     imports the tables as a single transaction.
         /// // TODO: return specific error code for a failed constraint.
         /// </summary>
-
         public ReturnValue ImportTables(IEnumerable<string> paths)
         {
             return ReturnValue.Wrap(() =>
             {
-                // TODO: consider getting a table lock in the whole table.
-                using (SqlTransaction tran = Connection.BeginTransaction(IsolationLevel.Serializable))
+                PreprareConnection();
+                // transactions automatically roll back if they go out of scope without a commit.
+                using (SqlTransaction tran = Connection.BeginTransaction())
                 {
                     // turn off constraints for all tables.  
                     //TODO: see if only turning off constraints on specific tables affects performance.
                     Connection.ExecSql(string.Format("sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'"), tran);
                     foreach (string path in paths)
                     {
-                        var dt = new DataTable();
-                        dt.ReadXml(path);
-                        string tableName = dt.TableName;
-                        Connection.ExecSql(string.Format("DELETE FROM {0}", dt.TableName), tran);
-                        // Creat the SqlBulkCopy object using a connection string
-                        using (var bulkCopy = new SqlBulkCopy(Connection, SqlBulkCopyOptions.TableLock, tran))
+                        try
                         {
-                            bulkCopy.DestinationTableName = tableName;
-                            // Write from the source to the destination.
-                            bulkCopy.WriteToServer(dt);
+                            var dt = new DataTable();
+                            dt.ReadXml(path);
+                            string tableName = dt.TableName;
+                            Connection.ExecSql(string.Format("DELETE FROM {0}", dt.TableName), tran);
+                            using (var bulkCopy = new SqlBulkCopy(Connection, SqlBulkCopyOptions.TableLock|
+                                                                              SqlBulkCopyOptions.KeepNulls |
+                                                                              SqlBulkCopyOptions.KeepIdentity, tran))
+                            {
+                               // bulkCopy.BatchSize = 1000;
+                                var tableColumns = GetTableColumnNames(dt.TableName, tran);
+                                MapColumns(bulkCopy.ColumnMappings, tableColumns, dt.Columns);
+                                bulkCopy.DestinationTableName = tableName;
+                                // Write from the source to the destination.
+                                bulkCopy.WriteToServer(dt);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new AbortException(string.Format("Exception with importing table {0}",path),ex);
                         }
                     }
                     // turn constraint back on. any DRI error will happen here, rolling back the transaction.
                     // ("WITH CHECK CHECK..." is not a typo, that means "enable CHECK CONSTRAINT, using the WITH CHECK option)                    
                     Connection.ExecSql("sp_msforeachtable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all'", tran);
+               
+                    tran.Commit();
                 }
-            }, string.Format("Importing tables {0}", string.Join(", ", paths)));
+            }, string.Format("Importing tables {0}", string.Join(", ", paths).Substring(0,100)));
+        }
+
+        // TODO: cache table schema for performance.
+        private List<string> GetTableColumnNames(string tableName, SqlTransaction tran = null)
+        {
+            var cmd = new SqlCommand(string.Format("SELECT * FROM {0}", tableName), Connection, tran);
+            using (var dr = cmd.ExecuteReader(CommandBehavior.SchemaOnly))
+            {
+                var dt = dr.GetSchemaTable();
+                if (dt == null)
+                {
+                    return new List<string>();
+                }
+                return dt.Rows.Cast<DataRow>().Select(r => r.Field<string>("ColumnName")).ToList();
+
+            }
+        }
+
+        /// <summary>
+        /// Maps columns by name.  Required by SqlBulkCopy if schema changes or columns are out of order.
+        /// </summary>
+        private void MapColumns(SqlBulkCopyColumnMappingCollection columnMappings, IEnumerable<string> tableColumnNames,
+            DataColumnCollection importFileColumns)
+        {
+            var importColumnNames = importFileColumns.Cast<DataColumn>().Select(c => c.ColumnName);
+            var columnsInCommon = tableColumnNames.Intersect(importColumnNames);
+            foreach (var column in columnsInCommon)
+            {
+                columnMappings.Add(column, column);
+            }
+
         }
     }
 }

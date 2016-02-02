@@ -42,7 +42,7 @@ namespace Craftsmaneer.DataTools.Test.IO
             }
             using (var datSer = new DataTableSerializer(DataSerTestHelper.DataToolsConnectionString))
             {
-                var result = datSer.ImportTable(@"Resources\Tools.xml");
+                var result = datSer.ImportTableWithoutBulkCopy(@"Resources\Tools.xml");
                 DataSerTestHelper.AssertResult(result);
             }
 
@@ -53,7 +53,7 @@ namespace Craftsmaneer.DataTools.Test.IO
             ResetTestTables();
             using (var datSer = new DataTableSerializer(DataSerTestHelper.DataToolsConnectionString))
             {
-                var result = datSer.ImportTableWithBulkCopy(@"Resources\person.xml");
+                var result = datSer.ImportTable(@"Resources\person.xml");
                 DataSerTestHelper.AssertResult(result);
                 DataSerTestHelper.AssertConstraintsAreEnabledAndTrusted();
             }
@@ -65,7 +65,7 @@ namespace Craftsmaneer.DataTools.Test.IO
             ResetTestTables();
             using (var datSer = new DataTableSerializer(DataSerTestHelper.DataToolsConnectionString))
             {
-                var result = datSer.ImportTableWithBulkCopy(@"Resources\person-missing-bob.xml");
+                var result = datSer.ImportTable(@"Resources\person-missing-bob.xml");
                 Assert.IsFalse(result.Success);
             }
 

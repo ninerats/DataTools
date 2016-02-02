@@ -16,10 +16,10 @@ namespace Craftsmaneer.DataTools.Test.IO
     {
         public static string DataToolsConnectionString
         {
-            get { return ConfigurationManager.AppSettings[DataToolsConnectionString]; }
+            get { return ConfigurationManager.AppSettings["DataToolsConnectionString"]; }
         }
 
-        public static string DataDiffConnectionString { get { return ConfigurationManager.AppSettings[DataDiffConnectionString]; } }
+        public static string DataDiffConnectionString { get { return ConfigurationManager.AppSettings["DataDiffConnectionString"]; } }
 
         public static void AssertResult(ReturnValue result)
         {

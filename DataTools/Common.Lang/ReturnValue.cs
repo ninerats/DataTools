@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Craftsmaneer.Lang
@@ -172,5 +173,32 @@ namespace Craftsmaneer.Lang
         }
 
 
+    }
+
+    /// <summary>
+    /// signals to a Wrap()ed function that the function encountered a fatal error needs to early exit.
+    /// Pass the orginal Exception as the Inner parameter (if it exists)
+    /// </summary>
+    [Serializable]
+    public class AbortException : Exception
+    {
+       
+        public AbortException()
+        {
+        }
+
+        public AbortException(string message) : base(message)
+        {
+        }
+
+        public AbortException(string message, Exception inner) : base(message, inner)
+        {
+        }
+
+        protected AbortException(
+            SerializationInfo info,
+            StreamingContext context) : base(info, context)
+        {
+        }
     }
 }

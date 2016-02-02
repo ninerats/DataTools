@@ -283,6 +283,12 @@
     <Content Include="FolderDTC\Sales.Store.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\dbo.BulkLoadTestTable1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\dbo.BulkLoadTestTableSpecial.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Job.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -295,7 +301,14 @@
     <Content Include="Resources\Tools.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQL\create_DataDiff_database.sql" />
     <Content Include="SQL\create_DataTools_database.sql" />
+    <Content Include="SQL\reset_BulkLoadTestTable1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\reset_BulkLoadTestTableSpecial.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SQL\reset_tools_table.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -311,7 +324,9 @@
     <None Include="FolderDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="localsettings.config" />
+    <None Include="localsettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="MissingTableMasterDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
