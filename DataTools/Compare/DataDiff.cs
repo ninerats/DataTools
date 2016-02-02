@@ -11,7 +11,12 @@ namespace Craftsmaneer.DataTools.Compare
     /// </summary>
     public class TableSetDiff : Dictionary<string, ReturnValue<TableDiff>>
     {
-        
+        public override string ToString()
+        {
+            var reports = this.Select(kv => string.Format(
+                "Table {0}: {1}", kv.Key, (kv.Value.Success ? kv.Value.Value.ToString() : kv.Value.ToString())));
+            return string.Join("\r\n", reports);
+        }
     }
 
     /// <summary>
@@ -46,6 +51,20 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
+        public override string ToString()
+        {
+            var working = string.Format("Master Table: {0}.  Diff Type: {1}\r\n", Master.TableName, DiffType);
+            if (SchemaDiff.HasDiffs)
+            {
+                working += string.Format("Schema Diff: {0}\r\n", SchemaDiff);
+            }
+            if (RowDiffs.Any())
+            {
+                working += string.Join("\r\n", RowDiffs);
+            }
+
+            return working;
+        }
         
     }
 
@@ -91,8 +110,19 @@ namespace Craftsmaneer.DataTools.Compare
             ColumnDiffs = new List<ColumnDiff>();
         }
 
+        public override string ToString()
+        {
+            var template = "Row #: {0}.  Diff Type: {1}\r\n{2}";
+            return string.Format(template,RowId(),   DiffType, string.Join("\r\n", ColumnDiffs));
+        }
 
-
+        private string RowId()
+        {
+            var pk = Row.Table.PrimaryKey;
+            if (!pk.Any())
+                return string.Empty;
+            return string.Join(", ", pk.Select(c => Row[c.ColumnName]));
+        }
       
     }
 

@@ -356,6 +356,10 @@ namespace Craftsmaneer.DataTools.Compare
 
             if (masterValue.GetType().Name == "String" && options.HasFlag(TableCompareOptions.IgnoreWhitespace))
             {
+                if ((repValue as string) == null)
+                {
+                    return false;
+                }
                 return (((string) masterValue).Trim().Equals(((string) repValue).Trim()));
             }
 
@@ -365,6 +369,10 @@ namespace Craftsmaneer.DataTools.Compare
         // http://stackoverflow.com/questions/43289/comparing-two-byte-arrays-in-net/8808245#8808245
         private bool SlowButSureByteArrayCompare(byte[] a1, byte[] a2)
         {
+            if (a1 == null || a2 == null)
+            {
+                return (a1 == null && a2 == null);
+            }
             if (a1.Length != a2.Length)
                 return false;
 

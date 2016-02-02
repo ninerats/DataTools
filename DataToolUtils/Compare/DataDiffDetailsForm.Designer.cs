@@ -38,17 +38,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabResults = new System.Windows.Forms.TabControl();
             this.pagDelta = new System.Windows.Forms.TabPage();
+            this.tdgvDelta = new Craftsmaneer.DataToolUtils.Compare.DataTableDiffGridView();
             this.pagOriginal = new System.Windows.Forms.TabPage();
             this.dgvOriginal = new System.Windows.Forms.DataGridView();
-            this.tdgvDelta = new Craftsmaneer.DataToolUtils.Compare.DataTableDiffGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabResults.SuspendLayout();
             this.pagDelta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tdgvDelta)).BeginInit();
             this.pagOriginal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOriginal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tdgvDelta)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +57,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 48);
+            this.panel1.Size = new System.Drawing.Size(851, 48);
             this.panel1.TabIndex = 0;
             // 
             // lblTableName
@@ -79,7 +79,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 586);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(854, 48);
+            this.panel2.Size = new System.Drawing.Size(851, 48);
             this.panel2.TabIndex = 1;
             // 
             // cmdDiffsOnly
@@ -112,12 +112,13 @@
             // cmdOk
             // 
             this.cmdOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdOk.Location = new System.Drawing.Point(763, 13);
+            this.cmdOk.Location = new System.Drawing.Point(760, 13);
             this.cmdOk.Name = "cmdOk";
             this.cmdOk.Size = new System.Drawing.Size(75, 23);
             this.cmdOk.TabIndex = 0;
             this.cmdOk.Text = "&Ok";
             this.cmdOk.UseVisualStyleBackColor = true;
+            this.cmdOk.Click += new System.EventHandler(this.cmdOk_Click);
             // 
             // panel3
             // 
@@ -125,7 +126,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(854, 538);
+            this.panel3.Size = new System.Drawing.Size(851, 538);
             this.panel3.TabIndex = 2;
             // 
             // tabResults
@@ -138,7 +139,7 @@
             this.tabResults.Location = new System.Drawing.Point(4, 7);
             this.tabResults.Name = "tabResults";
             this.tabResults.SelectedIndex = 0;
-            this.tabResults.Size = new System.Drawing.Size(838, 514);
+            this.tabResults.Size = new System.Drawing.Size(835, 514);
             this.tabResults.TabIndex = 0;
             // 
             // pagDelta
@@ -147,10 +148,22 @@
             this.pagDelta.Location = new System.Drawing.Point(4, 22);
             this.pagDelta.Name = "pagDelta";
             this.pagDelta.Padding = new System.Windows.Forms.Padding(3);
-            this.pagDelta.Size = new System.Drawing.Size(830, 488);
+            this.pagDelta.Size = new System.Drawing.Size(827, 488);
             this.pagDelta.TabIndex = 0;
             this.pagDelta.Text = "Current Values";
             this.pagDelta.UseVisualStyleBackColor = true;
+            // 
+            // tdgvDelta
+            // 
+            this.tdgvDelta.AllowUserToAddRows = false;
+            this.tdgvDelta.AllowUserToDeleteRows = false;
+            this.tdgvDelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tdgvDelta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tdgvDelta.Location = new System.Drawing.Point(3, 3);
+            this.tdgvDelta.Name = "tdgvDelta";
+            this.tdgvDelta.ReadOnly = true;
+            this.tdgvDelta.Size = new System.Drawing.Size(821, 482);
+            this.tdgvDelta.TabIndex = 1;
             // 
             // pagOriginal
             // 
@@ -176,23 +189,11 @@
             this.dgvOriginal.Size = new System.Drawing.Size(824, 482);
             this.dgvOriginal.TabIndex = 0;
             // 
-            // tdgvDelta
-            // 
-            this.tdgvDelta.AllowUserToAddRows = false;
-            this.tdgvDelta.AllowUserToDeleteRows = false;
-            this.tdgvDelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tdgvDelta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tdgvDelta.Location = new System.Drawing.Point(3, 3);
-            this.tdgvDelta.Name = "tdgvDelta";
-            this.tdgvDelta.ReadOnly = true;
-            this.tdgvDelta.Size = new System.Drawing.Size(824, 482);
-            this.tdgvDelta.TabIndex = 1;
-            // 
             // DataDiffDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 634);
+            this.ClientSize = new System.Drawing.Size(851, 634);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -206,9 +207,9 @@
             this.panel3.ResumeLayout(false);
             this.tabResults.ResumeLayout(false);
             this.pagDelta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tdgvDelta)).EndInit();
             this.pagOriginal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOriginal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tdgvDelta)).EndInit();
             this.ResumeLayout(false);
 
         }

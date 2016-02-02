@@ -37,6 +37,41 @@ namespace Craftsmaneer.DataToolUtils.Compare
             }
         }
 
+        private bool _showIdentical;
+
+        public bool ShowIdentical
+        {
+            get { return _showIdentical; }
+            set
+            {
+                _showIdentical = value;
+                ShowHideIdentical();
+            }
+        }
+
+        private void ShowHideIdentical()
+        {
+            foreach (ListViewItem item in Items)
+            {
+                try
+                {
+                    var compareResult = (KeyValuePair<string, ReturnValue<TableDiff>>) item.Tag;
+                    if (compareResult.Value.Success)
+                    {
+                        if (compareResult.Value.Value.DiffType == TableDiffType.None)
+                        {
+                            if (!ShowIdentical)
+                            {
+                                item.Remove();
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex) { }
+                
+            }
+        }
+
         private void RefreshList()
         {
             Items.Clear();
@@ -123,6 +158,9 @@ namespace Craftsmaneer.DataToolUtils.Compare
         private void Init()
         {
            
+            // set event handlers
+            
+
            
             // 
             // imagelist.
@@ -178,9 +216,9 @@ namespace Craftsmaneer.DataToolUtils.Compare
             });
 
             // Add columns.
-            var colTableName = new ColumnHeader { Text = "Table", Width = 215 };
-            var colSchema = new ColumnHeader { Text = "Schema", Width = 86 };
-            var colResults = new ColumnHeader { Text = "ResultDetails", Width = 483 };
+            var colTableName = new ColumnHeader { Text = "Table", Width = 300 };
+            var colSchema = new ColumnHeader { Text = "Schema", Width = 80 };
+            var colResults = new ColumnHeader { Text = "ResultDetails", Width = 500 };
             Columns.AddRange(new[]
             {
                 colTableName,
@@ -263,5 +301,7 @@ namespace Craftsmaneer.DataToolUtils.Compare
             }
             return SelectedItems[0].Tag as ReturnValue<TableDiff>;
         }
+
+      
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Craftsmaneer.DataTools.Compare;
 using Craftsmaneer.DataToolUtils.Compare;
@@ -21,6 +22,7 @@ namespace Craftsmaneer.DataToolUtils
         private void cmdOk_Click(object sender, EventArgs e)
         {
             Close();
+           
         }
 
         private void CompareDataTableSets_FormClosing(object sender, FormClosingEventArgs e)
@@ -66,6 +68,7 @@ namespace Craftsmaneer.DataToolUtils
                 if (!ShowStatus(dataSetDiffResult, "Comparing Datasets"))
                     return;
                 lvCompareResults.TableSetDiff = dataSetDiffResult.Value;
+                lvCompareResults.ShowIdentical = chkShowIdentical.Checked;
 
             }, "Comparing tables");
         }
@@ -121,7 +124,7 @@ namespace Craftsmaneer.DataToolUtils
 
             if (!selected.Success)
             {
-                MessageBox.Show("Can't show details for this table because the comparison was unsuccessful.");
+                ReturnValueForm.Show(selected);
                 return;
             }
 
@@ -131,6 +134,11 @@ namespace Craftsmaneer.DataToolUtils
         private void cmdTools_Click(object sender, EventArgs e)
         {
             UiTry(() => { new DataToolUtilForm().ShowDialog(); }, "Showing Tools form");
+        }
+
+        private void cmdDumpDiff_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("TableSetDiffDump.txt",lvCompareResults.TableSetDiff.ToString());
         }
     }
 }

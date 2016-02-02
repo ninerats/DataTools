@@ -34,6 +34,7 @@
       <HintPath>..\..\..\common\3rdparty\NUnit-2.6.2\bin\Debug\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -303,12 +304,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="DatabaseDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="FolderDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="localsettings.config" />
     <None Include="MissingTableMasterDTC.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

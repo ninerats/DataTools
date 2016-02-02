@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -13,10 +14,12 @@ namespace Craftsmaneer.DataTools.Test.IO
 {
     public static class DataSerTestHelper
     {
-        public static string DataToolsConnectionString =          
-            @"Data Source=(localdb)\v11.0;Initial Catalog=DataTools;User ID=DataToolsSerTestLogin;Password=Password1";
-        public static string DataDiffConnectionString =          
-            @"Data Source=(localdb)\v11.0;Initial Catalog=DataDiff;User ID=DataToolsSerTestLogin;Password=Password1";
+        public static string DataToolsConnectionString
+        {
+            get { return ConfigurationManager.AppSettings[DataToolsConnectionString]; }
+        }
+
+        public static string DataDiffConnectionString { get { return ConfigurationManager.AppSettings[DataDiffConnectionString]; } }
 
         public static void AssertResult(ReturnValue result)
         {

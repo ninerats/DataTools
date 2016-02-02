@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnValueForm.Designer.cs">
+      <DependentUpon>ReturnValueForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchemaDiffDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReturnValueForm.resx">
+      <DependentUpon>ReturnValueForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SchemaDiffDialog.resx">
       <DependentUpon>SchemaDiffDialog.cs</DependentUpon>
     </EmbeddedResource>

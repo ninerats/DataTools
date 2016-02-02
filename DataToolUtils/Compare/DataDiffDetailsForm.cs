@@ -44,5 +44,10 @@ namespace Craftsmaneer.DataToolUtils.Compare
             dgvOriginal.DataSource = TableDiff.Master;
             dgvOriginal.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void cmdOk_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
