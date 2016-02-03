@@ -212,7 +212,7 @@ namespace Craftsmaneer.DataTools.IO
                
                     tran.Commit();
                 }
-            }, string.Format("Importing tables {0}", string.Join(", ", paths).Substring(0,100)));
+            }, string.Format("Importing tables {0}", string.Join(", ", paths)));
         }
 
         // TODO: cache table schema for performance.
