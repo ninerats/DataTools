@@ -1,0 +1,7 @@
+add rec count for group heading
+add "Next Group" button.
+remove "no records" label.
+round1 : wait cursor.
+remove checkboxes
+Results details:
+  - if schema changes, detail that.
