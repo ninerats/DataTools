@@ -1,16 +1,34 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using Craftsmaneer.DataTools.Compare;
+using Craftsmaneer.DataTools.Test.IO;
 using Craftsmaneer.Lang;
 using NUnit.Framework;
 
-namespace Craftsmaneer.DataTools.Test
+namespace Craftsmaneer.DataTools.Test.Compare
 {
-    [TestFixture, Ignore("Disabled for performance")]
+    [TestFixture]
     public class DataTableSetTest
     {
-       
+        private Stopwatch sw;
+        
+        [SetUp]
+        public void StartTiming()
+        {
+            sw = new Stopwatch();
+            sw.Start();
+        }
+
+        [TearDown]
+        public void StopTiming()
+        {
+            Debug.WriteLine(string.Format("elapsed: {0}",sw.Elapsed));
+        }
+
         public void CompareSetsTest()
         {
             ReturnValue<DataTableSet> folderDts = DataTableSet.FromConfigFile("FolderDTC.config");
@@ -41,8 +59,9 @@ namespace Craftsmaneer.DataTools.Test
         [Test]
         public void DatabaseDataTableSetTest()
         {
+            
             ReturnValue<DataTableSet> dbDtcResult = DataTableSet.FromConfigFile("DatabaseDTC.config");
-            Assert.IsTrue(dbDtcResult.Success);
+           DataSerTestHelper.AssertResult(dbDtcResult);
             DataTableSet folderDtc = dbDtcResult.Value;
             Assert.AreEqual(67, folderDtc.Cast<DataTable>().Count());
         }
@@ -73,6 +92,21 @@ namespace Craftsmaneer.DataTools.Test
             Assert.IsFalse(missing.Success);
             Assert.AreEqual(missing.Context,
                 "Table 'HumanResources.Department' was not found in the replica collection [Folder2DTC]");
+        }
+
+        [Test]
+        public void ExportTest()
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+            var exportPath = TestHelper.ResetFolder("Export");
+            Directory.CreateDirectory(exportPath);
+            ReturnValue<DataTableSet> dtsReturnValue = DataTableSet.FromConfigFile("DatabaseDTC.config",false);
+            DataSerTestHelper.AssertResult(dtsReturnValue);
+            var exportResult =( dtsReturnValue.Value as DatabaseDataTableSet).ExportTables(exportPath);
+            DataSerTestHelper.AssertResult(exportResult);
+            Debug.WriteLine(string.Format("Writing tables to {0} took {1}.",exportPath,  sw.Elapsed));
+            
         }
     }
 }

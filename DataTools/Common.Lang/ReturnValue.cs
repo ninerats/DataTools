@@ -88,6 +88,16 @@ namespace Craftsmaneer.Lang
             fail.Inner = inner;
             return fail;
         }
+
+        /// <summary>
+        /// throws AbortException if the call fails.  This should only be used inside a Wrap() block.
+        /// </summary>
+        public void AbortOnFail()
+        {
+            if (Success) return;
+
+            throw new AbortException(string.Format("Aborting due to failed function call: {0}.", ToString()));
+        }
     }
 
     /// <summary>

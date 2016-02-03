@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Xml;
 using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
 
@@ -12,10 +14,11 @@ namespace Craftsmaneer.DataTools.IO
     /// <summary>
     ///     transforms dataTables between database and files
     ///     handles referential integrity.
+    /// TODO: split into importer and exporter clasess.
     /// </summary>
     public class DataTableSerializer : IDisposable
     {
-        protected DataTableSerializer()
+        public DataTableSerializer()
         {
         }
 
@@ -94,7 +97,8 @@ namespace Craftsmaneer.DataTools.IO
         }
 
 
-        public ReturnValue ExportTable(string tableName, string path)
+        [Obsolete()]
+        public ReturnValue ExportTableWithDataTable(string tableName, string path)
         {
             return ReturnValue.Wrap(() =>
             {
@@ -110,7 +114,52 @@ namespace Craftsmaneer.DataTools.IO
             }, string.Format("Exporting table '{0}' to '{1}'.", tableName, path));
         }
 
-       
+        public ReturnValue ExportTable(string tableName, string path)
+        {
+            //TODO: sanitize
+            return ReturnValue.Wrap(() =>
+            {
+                PreprareConnection();
+                string sql = string.Format("SELECT * FROM {0}", tableName);
+                var cmd = new SqlCommand(sql, Connection);
+                cmd.CommandType = CommandType.Text;
+                using (var reader = cmd.ExecuteReader(CommandBehavior.KeyInfo | CommandBehavior.SequentialAccess | CommandBehavior.SingleResult))
+                {
+                    var dt = new DataTable();
+                     
+                  //  WriteXmlMyself(reader, path);
+                    dt.Load(reader);
+                    dt.TableName = tableName;
+                    dt.WriteXml(path, XmlWriteMode.WriteSchema);
+                }
+            }, string.Format("Exporting table '{0}' to '{1}'.", tableName, path));
+        }
+
+        private void WriteXmlMyself(SqlDataReader reader, string path)
+        {
+            using (var xmlWriter = XmlWriter.Create(path, new XmlWriterSettings()
+            {
+                ConformanceLevel = ConformanceLevel.Auto,
+                Indent = true
+
+            }))
+            {
+                
+            foreach (IDataRecord something in reader)
+            {xmlWriter.WriteStartElement("Row");
+               
+                    for (int i = 0; i < something.FieldCount; i++)
+                    {
+                       xmlWriter.WriteElementString(something.GetName(i), string.Format("{0}",something.GetValue(i))); 
+                        
+                    }
+                xmlWriter.WriteEndElement();
+                }
+
+               
+            }
+        }
+
         public ReturnValue ImportTable(string path)
         {
             return ImportTables(new[] { path });

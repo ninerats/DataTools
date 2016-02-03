@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Craftsmaneer.Data;
+using Craftsmaneer.DataTools.IO;
 using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare
@@ -42,6 +43,10 @@ namespace Craftsmaneer.DataTools.Compare
 
         }
 
+        protected abstract ReturnValue<DataSet> GetTables();
+        public abstract ReturnValue ImportTables(string connStr);
+
+        // HACK: This really belongs in the FolderDataTableSet class.
         public static ReturnValue<FolderDataTableSet> FromRelativeFolderConfigFile(string configFile, string rootFolder,
             bool loadOnOpen = true)
         {
@@ -122,6 +127,8 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
+       
+
         #region enumeration implementation
         public void CopyTo(Array array, int index)
         {
@@ -169,9 +176,8 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
-        protected abstract ReturnValue<DataSet> GetTables();
 
-
+       
     }
         #endregion
 
@@ -191,13 +197,7 @@ namespace Craftsmaneer.DataTools.Compare
                 var ds = new DataSet();
                 ds.EnforceConstraints = false;
                 // assume each file is {schema}.{table}.xml
-                var availableFiles = Directory.GetFiles(FolderPath);
-                if (TableList != null && TableList.Count > 0)
-                {
-                    var expandedNames = TableList.Select(tn => string.Format(@"{0}\{1}.xml", FolderPath, tn));
-                    availableFiles = availableFiles.Intersect(expandedNames).ToArray();
-                }
-                foreach (var file in availableFiles)
+                foreach (var file in AvailableFiles)
                 {
                     var fileName = new FileInfo(file).Name;
                     var dt = new DataTable(fileName.Substring(0, fileName.Length - 4));
@@ -217,6 +217,29 @@ namespace Craftsmaneer.DataTools.Compare
                 return ReturnValue<DataSet>.FailResult("Unhandled error getting tables", ex);
             }
         }
+
+        private string[] AvailableFiles
+        {
+            get
+            {
+                var availableFiles = Directory.GetFiles(FolderPath);
+                if (TableList != null && TableList.Count > 0)
+                {
+                    var expandedNames = TableList.Select(tn => string.Format(@"{0}\{1}.xml", FolderPath, tn));
+                    availableFiles = availableFiles.Intersect(expandedNames).ToArray();
+                }
+                return availableFiles;
+            }
+        }
+
+        public override ReturnValue ImportTables(string connStr)
+        {
+            return ReturnValue.Wrap(() =>
+            {
+                var dataSer = new DataTableSerializer(connStr);
+                dataSer.ImportTables(AvailableFiles).AbortOnFail();
+            }, "Importing tables");
+        }
     }
 
     public class DatabaseDataTableSet : DataTableSet
@@ -234,6 +257,7 @@ namespace Craftsmaneer.DataTools.Compare
             try
             {
                 var ds = new DataSet();
+                
                 ds.EnforceConstraints = false;
                 using (var conn = new SqlConnection(ConnStr))
                 {
@@ -268,6 +292,37 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
+        public ReturnValue ExportTables(string exportFolder)
+        {
+            if (!Directory.Exists(exportFolder))
+            {
+                return ReturnValue.FailResult(string.Format("Exporting tables"), new DirectoryNotFoundException(
+                    string.Format("The export folder '{0}' does not exist.", exportFolder)));
+            }
+            return ReturnValue.Wrap(() =>
+            {
+                var dataSer = new DataTableSerializer(ConnStr);
+                foreach (string tableName in TableList)
+                {
+
+                    var path = Path.Combine(exportFolder, string.Format("{0}.xml", tableName));
+                    dataSer.ExportTable(tableName, path).AbortOnFail();
+                 
+                    
+                }
+            }, string.Format("Exporting to folder '{0}'.", exportFolder));
+        }
+
+        //TODO: standardize this.
+        private string GetDataTablePath(DataTable table)
+        {
+            return string.Format("{0}.xml", table.TableName);
+        }
+
+        public override ReturnValue ImportTables(string connStr)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

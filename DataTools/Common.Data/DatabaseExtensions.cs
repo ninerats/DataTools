@@ -52,7 +52,7 @@ namespace Craftsmaneer.Data
         }
 
 
-        public static DataTable GetTable(this SqlConnection conn,string tableName )
+        public static DataTable GetTableUsingFill(this SqlConnection conn,string tableName )
         {
 
             var sql = string.Format("select * from {0}", tableName);
@@ -61,6 +61,21 @@ namespace Craftsmaneer.Data
             da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             da.Fill(dt);
             return dt;
+        }
+
+        public static DataTable GetTable(this SqlConnection conn, string tableName)
+        {
+
+
+            var cmd = new SqlCommand(tableName, conn);
+            cmd.CommandType = CommandType.TableDirect;
+            using (var dr = cmd.ExecuteReader(CommandBehavior.KeyInfo | CommandBehavior.SequentialAccess))
+            {
+                var dt = new DataTable(tableName);
+                dt.Load(dr);
+                return dt;
+            }
+            
         }
 
        

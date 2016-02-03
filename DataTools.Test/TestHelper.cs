@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -226,5 +227,16 @@ namespace Craftsmaneer.DataTools.Test
             return dt;
         }
         #endregion
+
+        public static string ResetFolder(string relativePath)
+        {
+            var exportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
+            if (Directory.Exists(exportPath))
+            {
+                Directory.Delete(exportPath, true);
+            }
+            Directory.CreateDirectory(exportPath);
+            return exportPath;
+        }
     }
 }

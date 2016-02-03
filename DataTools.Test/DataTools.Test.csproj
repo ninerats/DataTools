@@ -43,15 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTableSetTest.cs" />
-    <Compile Include="DataTableComparerTest.cs" />
+    <Compile Include="BrundleFlyTest.cs" />
+    <Compile Include="Compare\DataTableSetTest.cs" />
+    <Compile Include="Compare\DataTableComparerTest.cs" />
     <Compile Include="DataTableExploratoryTest.cs" />
-    <Compile Include="IncompatibleSchemaCompareTest.cs" />
+    <Compile Include="Compare\IncompatibleSchemaCompareTest.cs" />
     <Compile Include="IO\DataSerTestHelper.cs" />
     <Compile Include="IO\DataTableSerializerTest.cs" />
     <Compile Include="IO\ImportingTablesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchemaDiffTest.cs" />
+    <Compile Include="Compare\SchemaDiffTest.cs" />
     <Compile Include="Scratch.cs" />
     <Compile Include="TableSerializationTest.cs" />
     <Compile Include="TestHelper.cs" />
