@@ -1,4 +1,6 @@
-﻿namespace Craftsmaneer.DataToolUtils
+﻿using Craftsmaneer.DataToolUtils.Compare;
+
+namespace Craftsmaneer.DataToolUtils
 {
     partial class DataToolUtilForm
     {
@@ -46,7 +48,7 @@
             this.txtExportPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdExport = new System.Windows.Forms.Button();
-            this.lvwTables = new Craftsmaneer.DataToolUtils.TableListView();
+            this.lvwTables = new TableListView();
             this.mnuExportOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.miSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.miSelectNone = new System.Windows.Forms.ToolStripMenuItem();

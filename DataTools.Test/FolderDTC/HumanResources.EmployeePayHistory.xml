@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.EmployeePayHistory" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.EmployeePayHistory" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="HumanResources.EmployeePayHistory">
@@ -2236,4 +2236,4 @@
     <PayFrequency>2</PayFrequency>
     <ModifiedDate>2008-07-31T00:00:00-07:00</ModifiedDate>
   </HumanResources.EmployeePayHistory>
-</SelectedTables>
+</NewDataSet>

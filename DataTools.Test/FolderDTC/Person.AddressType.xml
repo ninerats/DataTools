@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Person.AddressType" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Person.AddressType" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="Person.AddressType">
@@ -64,4 +64,4 @@
     <rowguid>a67f238a-5ba2-444b-966c-0467ed9c427f</rowguid>
     <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
   </Person.AddressType>
-</SelectedTables>
+</NewDataSet>

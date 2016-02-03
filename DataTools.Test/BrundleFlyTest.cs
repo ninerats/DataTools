@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using Craftsmaneer.DataTools.Compare;
 using Craftsmaneer.DataTools.Test.IO;
 using NUnit.Framework;
@@ -25,9 +26,9 @@ namespace Craftsmaneer.DataTools.Test
                 TableList = TableList
             };
 
-            var connStr =DataSerTestHelper.DataDiffConnectionString;
-           
-            Debug.WriteLine(string.Format("Starting import...  elpased: {0}",sw.Elapsed));
+            var connStr = DataSerTestHelper.DataDiffConnectionString;
+
+            Debug.WriteLine(string.Format("Starting import...  elpased: {0}", sw.Elapsed));
             var importResult = importDts.ImportTables(connStr);
             Debug.WriteLine(string.Format("Import complete: {0}", sw.Elapsed));
             DataSerTestHelper.AssertResult(importResult);
@@ -38,13 +39,13 @@ namespace Craftsmaneer.DataTools.Test
                 Id = "Export DataSet",
                 TableList = TableList
             };
-           
+
             var exportResult = exportDts.ExportTables(exportFolder);
             Debug.WriteLine(string.Format("export complete: {0}", sw.Elapsed));
             DataSerTestHelper.AssertResult(exportResult);
 
             Debug.WriteLine("Asserting exported files are the same as the originals...");
-            AssertFolderContentsAreEqual(importFolder,exportFolder);
+            AssertFolderContentsAreEqual(importFolder, exportFolder);
             Debug.WriteLine(string.Format("Total time: {0}", sw.Elapsed));
 
         }
@@ -131,14 +132,15 @@ namespace Craftsmaneer.DataTools.Test
             {
                 Debug.WriteLine("folder1 and folder2 are the same folder.");
                 return;
-                }
+            }
 
             var folder1Files = new DirectoryInfo(folder1).GetFiles();
             var folder2Files = new DirectoryInfo(folder2).GetFiles();
 
+            var filteredList = TableList.Except(new[] {"dbo.DatabaseLog"});
 
 
-            foreach (var table in TableList)
+            foreach (var table in filteredList)
             {
                 var fileName = string.Format("{0}.xml", table);
                 var folder1File = folder1Files.FirstOrDefault(f1f => f1f.Name == fileName);
@@ -146,13 +148,27 @@ namespace Craftsmaneer.DataTools.Test
                 var folder2File = folder2Files.FirstOrDefault(f2f => f2f.Name == fileName);
                 Assert.IsNotNull(folder2File, string.Format("can't find {0} in folder {1}", fileName, folder2));
                 Debug.WriteLine(string.Format("Comparing the contents of {0} to {1}...",
-                    folder1File.FullName,folder2File.FullName));
-                var folder1FileContents = File.ReadAllText(folder1File.FullName).Replace("SelectedTables","{dataSetID}");
-                var folder2FileContents = File.ReadAllText(folder2File.FullName).Replace("NewDataSet", "{dataSetID}"); 
-                Assert.AreEqual(folder1FileContents, folder2FileContents);
+                    folder1File.FullName, folder2File.FullName));
+                var folder1FileContents = File.ReadAllText(folder1File.FullName);
+                var folder2FileContents = File.ReadAllText(folder2File.FullName);
+                Assert.AreEqual(NormalizeText(folder1FileContents), NormalizeText(folder2FileContents));
             }
+        }
+
+        private string NormalizeText(string text)
+        {
+            var working = text.Replace("\r", "");
+            return working;
+        }
+        [Test]
+        public void CompareInputToOutput()
+        {
+            var importFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FolderDTC");
+            var outputFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Export");
+            AssertFolderContentsAreEqual(importFolder, outputFolder);
         }
     }
 
-   
+
+
 }

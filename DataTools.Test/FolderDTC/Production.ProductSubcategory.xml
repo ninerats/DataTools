@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.ProductSubcategory" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Production.ProductSubcategory" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="Production.ProductSubcategory">
@@ -288,4 +288,4 @@
     <rowguid>3c17c9ae-e906-48b4-bdd3-60e28d47dcdf</rowguid>
     <ModifiedDate>2002-06-01T00:00:00-07:00</ModifiedDate>
   </Production.ProductSubcategory>
-</SelectedTables>
+</NewDataSet>

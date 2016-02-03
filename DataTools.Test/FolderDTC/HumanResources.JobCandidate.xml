@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.JobCandidate" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="HumanResources.JobCandidate" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="HumanResources.JobCandidate">
@@ -181,4 +181,4 @@ Propriétaire d'une caisse à outils complète. Effectue des heures supplémenta
         &lt;/ns:Emp.Responsibility&gt;&lt;ns:Emp.FunctionCategory&gt;ฝ่ายผลิต &lt;/ns:Emp.FunctionCategory&gt;&lt;ns:Emp.IndustryCategory&gt;อุตสาหกรรมการผลิต &lt;/ns:Emp.IndustryCategory&gt;&lt;ns:Emp.Location&gt;&lt;ns:Location&gt;&lt;ns:Loc.CountryRegion&gt;ประเทศไทย&lt;/ns:Loc.CountryRegion&gt;&lt;ns:Loc.State&gt;กรุงเทพมหานคร &lt;/ns:Loc.State&gt;&lt;ns:Loc.City&gt;ตลิ่งชัน&lt;/ns:Loc.City&gt;&lt;/ns:Location&gt;&lt;/ns:Emp.Location&gt;&lt;/ns:Employment&gt;&lt;ns:Education&gt;&lt;ns:Edu.Level&gt;ปริญญาตรี &lt;/ns:Edu.Level&gt;&lt;ns:Edu.StartDate&gt;1992-09-09Z&lt;/ns:Edu.StartDate&gt;&lt;ns:Edu.EndDate&gt;1994-05-06Z&lt;/ns:Edu.EndDate&gt;&lt;ns:Edu.Degree&gt;วิทยาศาสตรบัณฑิต&lt;/ns:Edu.Degree&gt;&lt;ns:Edu.Major&gt;Iวิศวกรรมเครื่องกล&lt;/ns:Edu.Major&gt;&lt;ns:Edu.Minor /&gt;&lt;ns:Edu.GPA&gt;3.2&lt;/ns:Edu.GPA&gt;&lt;ns:Edu.GPAScale&gt;4&lt;/ns:Edu.GPAScale&gt;&lt;ns:Edu.School&gt;มหาวิทยาลัยสากล &lt;/ns:Edu.School&gt;&lt;ns:Edu.Location&gt;&lt;ns:Location&gt;&lt;ns:Loc.CountryRegion&gt;ประเทศไท&lt;/ns:Loc.CountryRegion&gt;&lt;ns:Loc.State&gt;ปทุมธานี  &lt;/ns:Loc.State&gt;&lt;ns:Loc.City&gt;รังสิต&lt;/ns:Loc.City&gt;&lt;/ns:Location&gt;&lt;/ns:Edu.Location&gt;&lt;/ns:Education&gt;&lt;ns:Address&gt;&lt;ns:Addr.Type&gt;บ้าน &lt;/ns:Addr.Type&gt;&lt;ns:Addr.Street&gt;512/4 ซอย 21&lt;/ns:Addr.Street&gt;&lt;ns:Addr.Location&gt;&lt;ns:Location&gt;&lt;ns:Loc.CountryRegion&gt;ประเทศไทย &lt;/ns:Loc.CountryRegion&gt;&lt;ns:Loc.State&gt;กรุงเทพมหานคร&lt;/ns:Loc.State&gt;&lt;ns:Loc.City&gt;ตลิ่งชัน &lt;/ns:Loc.City&gt;&lt;/ns:Location&gt;&lt;/ns:Addr.Location&gt;&lt;ns:Addr.PostalCode&gt;10170&lt;/ns:Addr.PostalCode&gt;&lt;ns:Addr.Telephone&gt;&lt;ns:Telephone&gt;&lt;ns:Tel.Type&gt;บ้าน &lt;/ns:Tel.Type&gt;&lt;ns:Tel.IntlCode&gt;2&lt;/ns:Tel.IntlCode&gt;&lt;ns:Tel.Number&gt;555-0114&lt;/ns:Tel.Number&gt;&lt;/ns:Telephone&gt;&lt;/ns:Addr.Telephone&gt;&lt;/ns:Address&gt;&lt;ns:EMail /&gt;&lt;ns:WebSite /&gt;&lt;/ns:Resume&gt;</Resume>
     <ModifiedDate>2001-07-24T00:00:00-07:00</ModifiedDate>
   </HumanResources.JobCandidate>
-</SelectedTables>
+</NewDataSet>

@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="Production.ProductReview" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Production.ProductReview" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="Production.ProductReview">
@@ -114,4 +114,4 @@ we think that after a test drive you'l find the quality and performance above an
 any level of experience. It's a huge step in the right direction for female cyclists and well worth your consideration and hard-earned money.</Comments>
     <ModifiedDate>2007-12-17T00:00:00-08:00</ModifiedDate>
   </Production.ProductReview>
-</SelectedTables>
+</NewDataSet>

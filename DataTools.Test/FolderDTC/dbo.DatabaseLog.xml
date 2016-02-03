@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-<SelectedTables>
-  <xs:schema id="SelectedTables" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="SelectedTables" msdata:IsDataSet="true" msdata:MainDataTable="dbo.DatabaseLog" msdata:UseCurrentLocale="true">
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="dbo.DatabaseLog" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="dbo.DatabaseLog">
@@ -26657,4 +26657,4 @@ CREATE SCHEMA [Sales] AUTHORIZATION [dbo];
     <XmlEvent>&lt;EVENT_INSTANCE&gt;&lt;EventType&gt;CREATE_EXTENDED_PROPERTY&lt;/EventType&gt;&lt;PostTime&gt;2012-03-14T13:14:57.800&lt;/PostTime&gt;&lt;SPID&gt;51&lt;/SPID&gt;&lt;ServerName&gt;DERRICKVLAPTOP2&lt;/ServerName&gt;&lt;LoginName&gt;REDMOND\derrickv&lt;/LoginName&gt;&lt;UserName&gt;dbo&lt;/UserName&gt;&lt;DatabaseName&gt;AdventureWorks2012&lt;/DatabaseName&gt;&lt;SchemaName&gt;Sales&lt;/SchemaName&gt;&lt;ObjectName&gt;StoreSurveySchemaCollection&lt;/ObjectName&gt;&lt;ObjectType&gt;XML SCHEMA COLLECTION&lt;/ObjectType&gt;&lt;TargetObjectName /&gt;&lt;TargetObjectType /&gt;&lt;PropertyName&gt;MS_Description&lt;/PropertyName&gt;&lt;PropertyValue&gt;Collection of XML schemas for the Demographics column in the Sales.Store table.&lt;/PropertyValue&gt;&lt;Parameters&gt;&lt;Param&gt;MS_Description&lt;/Param&gt;&lt;Param&gt;Collection of XML schemas for the Demographics column in the Sales.Store table.&lt;/Param&gt;&lt;Param&gt;SCHEMA&lt;/Param&gt;&lt;Param&gt;Sales&lt;/Param&gt;&lt;Param&gt;XML SCHEMA COLLECTION&lt;/Param&gt;&lt;Param&gt;StoreSurveySchemaCollection&lt;/Param&gt;&lt;Param /&gt;&lt;Param /&gt;&lt;/Parameters&gt;&lt;TSQLCommand&gt;&lt;SetOptions ANSI_NULLS="ON" ANSI_NULL_DEFAULT="ON" ANSI_PADDING="ON" QUOTED_IDENTIFIER="ON" ENCRYPTED="FALSE" /&gt;&lt;CommandText&gt;EXECUTE [sys].[sp_addextendedproperty] N'MS_Description', N'Collection of XML schemas for the Demographics column in the Sales.Store table.', N'SCHEMA', [Sales], N'XML SCHEMA COLLECTION', [StoreSurveySchemaCollection], NULL, NULL;
 &lt;/CommandText&gt;&lt;/TSQLCommand&gt;&lt;/EVENT_INSTANCE&gt;</XmlEvent>
   </dbo.DatabaseLog>
-</SelectedTables>
+</NewDataSet>
