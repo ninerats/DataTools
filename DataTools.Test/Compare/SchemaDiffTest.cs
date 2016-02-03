@@ -16,8 +16,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var dtMaster = TestHelper.BobTableV1();
             var dtReplica = dtMaster.Copy();
-            var dtc = new DataTableComparer();
-            var result = dtc.CompareSchema(dtMaster,dtReplica).Value;
+            var dtc = new DataTableComparer(dtMaster,dtReplica);
+            var result = dtc.CompareSchema().Value;
             Assert.IsTrue(result.IsCompatible);
             Assert.IsFalse(result.HasDiffs);
             
@@ -27,8 +27,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var dtMaster = TestHelper.BobTableV1();
             var dtReplica =TestHelper.BobTableAddField();
-            var dtc = new DataTableComparer();
-            var result = dtc.CompareSchema(dtMaster,dtReplica).Value;
+            var dtc = new DataTableComparer(dtMaster, dtReplica);
+            var result = dtc.CompareSchema().Value;
             Assert.IsTrue(result.IsCompatible);
             Assert.IsTrue(result.HasDiffs);
             Assert.AreEqual(DiffType.Extra,  result.ColumnDiffs[0].DiffType);
@@ -39,8 +39,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var dtMaster = TestHelper.BobTableV1();
             var dtReplica =TestHelper.BobTableRemoveField();
-            var dtc = new DataTableComparer();
-            var result = dtc.CompareSchema(dtMaster,dtReplica).Value;
+            var dtc = new DataTableComparer(dtMaster, dtReplica);
+            var result = dtc.CompareSchema().Value;
             Assert.IsFalse(result.IsCompatible);
             Assert.IsTrue(result.HasDiffs);
             Assert.AreEqual(1, result.ColumnDiffs.Count());
@@ -53,8 +53,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var dtMaster = TestHelper.BobTableV1();
             var dtReplica = TestHelper.BobTableChangeDT();
-            var dtc = new DataTableComparer();
-            var result = dtc.CompareSchema(dtMaster, dtReplica).Value;
+            var dtc = new DataTableComparer(dtMaster, dtReplica);
+            var result = dtc.CompareSchema().Value;
             Assert.IsFalse(result.IsCompatible);
             Assert.IsTrue(result.HasDiffs);
             Assert.AreEqual(1, result.ColumnDiffs.Count());
@@ -67,8 +67,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var dtMaster = TestHelper.BobTableV1();
             var dtReplica = TestHelper.BobTableAddAndRemove();
-            var dtc = new DataTableComparer();
-            var result = dtc.CompareSchema(dtMaster, dtReplica).Value;
+            var dtc = new DataTableComparer(dtMaster, dtReplica); ;
+            var result = dtc.CompareSchema().Value;
             Assert.IsFalse(result.IsCompatible);
             Assert.IsTrue(result.HasDiffs);
             Assert.AreEqual(2, result.ColumnDiffs.Count());

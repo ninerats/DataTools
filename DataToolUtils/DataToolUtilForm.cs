@@ -119,9 +119,9 @@ namespace Craftsmaneer.DataToolUtils
             //  var dtActualTable = TableListView.ExecQuery(new SqlConnection(txtConnStr.Text), string.Format("select * from {0}", txtCompareToTable.Text) );
             DataTable dtActualTable = new SqlConnection(txtConnStr.Text).GetTable(dtImported.TableName);
             //var delta = CompareDataTables(dtImported, dtActualTable);
-            var dtc = new DataTableComparer();
+            var dtc = new DataTableComparer(dtImported, dtActualTable);
             //!dtImported.PrimaryKey = dtActualTable.PrimaryKey;
-            ReturnValue<TableDiff> deltaResult = dtc.Compare(dtImported, dtActualTable);
+            ReturnValue<TableDiff> deltaResult = dtc.Compare();
             if (!deltaResult.Success)
             {
                 MessageBox.Show(deltaResult.ToString(), "Error Comparing table");

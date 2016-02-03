@@ -8,39 +8,109 @@ using Craftsmaneer.Lang;
 namespace Craftsmaneer.DataTools.Compare
 {
     /// <summary>
-    ///  Analyses the difference between the data in 2 tables.  Differences are relative to a *master* table.
-    /// Will also check schema, to determine if a data compare operation is even valid.
-    /// Schemas are considered *compatible* if the data in the replica can be made to match the data in the master.
-    /// Comparisons are done between keys.  Only the master DataTable needs to have columns defined in the PrimaryKey property.
-
+    ///     Analyses the difference between the data in 2 tables.  Differences are relative to a *master* table.
+    ///     Will also check schema, to determine if a data compare operation is even valid.
+    ///     Schemas are considered *compatible* if the data in the replica can be made to match the data in the master.
+    ///     Comparisons are done between keys.  Only the master DataTable needs to have columns defined in the PrimaryKey
+    ///     property.
     /// </summary>
     public class DataTableComparer
     {
-        //HACK: this probably should go somewhere else.
+
+        private readonly DataTable _master;
+
+        private readonly DataTable _replica;
+        private string[] _masterFieldNames;
+        private string[] _replicaFieldNames;
+        private string[] _fieldsInCommon;
+        private string[] _extraFieldNames;
+        private string[] _missingFieldNames;
+
+
+        public DataTableComparer(DataTable master, DataTable replica)
+        {
+            _master = master;
+            _replica = replica;
+        }
+
+        private IEnumerable<string> MasterFieldNames
+        {
+            get
+            {
+                if (_masterFieldNames == null)
+                    _masterFieldNames = _master.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
+                return _masterFieldNames;
+            }
+        }
+
+        private IEnumerable<string> ReplicaFieldNames
+        {
+            get
+            {
+
+                if (_replicaFieldNames == null)
+                    _replicaFieldNames = _replica.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
+                return _replicaFieldNames;
+            }
+        }
+
+        private string[] FieldsInCommon
+        {
+            get
+            {
+                if (_fieldsInCommon == null)
+                    _fieldsInCommon = MasterFieldNames.Intersect(ReplicaFieldNames).ToArray();
+                return _fieldsInCommon;
+            }
+        }
+
+        private string[] ExtraFieldNames
+        {
+            get
+            {
+                if (_extraFieldNames == null)
+                    _extraFieldNames = ReplicaFieldNames.Except(FieldsInCommon.ToArray()).ToArray();
+                return _extraFieldNames;
+            }
+        }
+
+        private string[] MissingFieldNames
+        {
+            get
+            {
+                if (_missingFieldNames == null)
+                    _missingFieldNames = MasterFieldNames.Except(FieldsInCommon.ToArray()).ToArray();
+                return _missingFieldNames;
+            }
+        }
+       
+
+
         /// <summary>
-        /// compares each table in the master collection with the corresponding replica table.
-        /// This version will only compare tables that appear in the master collection table list.
+        ///     compares each table in the master collection with the corresponding replica table.
+        ///     This version will only compare tables that appear in the master collection table list.
         /// </summary>
         /// <returns></returns>
-        public static ReturnValue<TableSetDiff> CompareSets(DataTableSet master, DataTableSet replica, TableCompareOptions options = TableCompareOptions.None)
+        public static ReturnValue<TableSetDiff> CompareSets(DataTableSet masterDts, DataTableSet replicaDts,
+            TableCompareOptions options = TableCompareOptions.None)
         {
             var tdDict = new TableSetDiff();
             try
             {
-                foreach (DataTable masterTable in master)
+                foreach (DataTable masterTable in masterDts)
                 {
-                    var replicaTable = replica[masterTable.TableName];
+                    DataTable replicaTable = replicaDts[masterTable.TableName];
                     ReturnValue<TableDiff> result;
                     if (replicaTable == null)
                     {
                         result = ReturnValue<TableDiff>.FailResult(string.Format(
                             "Table '{0}' was not found in the replica collection [{1}]", masterTable.TableName,
-                            replica.Id));
+                            replicaDts.Id));
                     }
                     else
                     {
-                        var dtc = new DataTableComparer();
-                        result = dtc.Compare(masterTable, replicaTable, options);
+                        var dtc = new DataTableComparer(masterTable, replicaTable);
+                        result = dtc.Compare(options);
                     }
                     tdDict.Add(masterTable.TableName, result);
                 }
@@ -52,22 +122,19 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
-        // TODO: promote master / replica to fields
-        public ReturnValue<TableDiff> Compare(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
+        public ReturnValue<TableDiff> Compare(TableCompareOptions options = TableCompareOptions.None)
         {
             try
             {
-
-                ReturnValue<SchemaDiff> schemaDiffResult = CompareSchema(master, replica);
+                ReturnValue<SchemaDiff> schemaDiffResult = CompareSchema();
                 if (!schemaDiffResult.Success)
                     return ReturnValue<TableDiff>.Cascade(schemaDiffResult);
 
-                var schemaDiff = schemaDiffResult.Value;
-                var tableDiff = new TableDiff(master, replica)
+                SchemaDiff schemaDiff = schemaDiffResult.Value;
+                var tableDiff = new TableDiff(_master, _replica)
                 {
                     SchemaDiff = schemaDiff,
                     DiffType = TableDiffType.None
-
                 };
 
                 if (!schemaDiff.IsCompatible)
@@ -75,8 +142,11 @@ namespace Craftsmaneer.DataTools.Compare
                     tableDiff.DiffType = TableDiffType.IncompatibleSchema;
                     if (!options.HasFlag(TableCompareOptions.AllowIncompatibleSchema))
                     {
-                        return ReturnValue<TableDiff>.FailResult(string.Format("The schema for replica '{0}' is not compatible with '{1}' and the AllowIncompatibleSchema option is not set",
-                            replica.TableName, master.TableName));
+                        return
+                            ReturnValue<TableDiff>.FailResult(
+                                string.Format(
+                                    "The schema for replica '{0}' is not compatible with '{1}' and the AllowIncompatibleSchema option is not set",
+                                    _replica.TableName, _master.TableName));
                     }
                 }
                 else if (schemaDiff.HasDiffs)
@@ -84,11 +154,11 @@ namespace Craftsmaneer.DataTools.Compare
                     tableDiff.DiffType = TableDiffType.CompatibleSchema;
                 }
 
-                var dataDiffsResult = GetRowDiffs(master, replica, options);
+                ReturnValue<List<RowDiff>> dataDiffsResult = GetRowDiffs(options);
                 if (!dataDiffsResult.Success)
                 {
                     ReturnValue<TableDiff>.Cascade(dataDiffsResult,
-                        string.Format("Unable to compare rows for {0} and {1}.", master.TableName, replica.TableName));
+                        string.Format("Unable to compare rows for {0} and {1}.", _master.TableName, _replica.TableName));
                 }
 
                 tableDiff.RowDiffs = dataDiffsResult.Value;
@@ -102,66 +172,67 @@ namespace Craftsmaneer.DataTools.Compare
             }
             catch (Exception ex)
             {
-                return ReturnValue<TableDiff>.FailResult(string.Format("Unhandled error comparing tables {0}.", master.TableName), ex);
+                return
+                    ReturnValue<TableDiff>.FailResult(
+                        string.Format("Unhandled error comparing tables {0}.", _master.TableName), ex);
             }
-
         }
+
         /// <summary>
-        /// returns a list of rows with differences.  will early exit with empty list if schema is not compatible.
+        ///     returns a list of rows with differences.  will early exit with empty list if schema is not compatible.
         /// </summary>
-
         /// <returns></returns>
-        public ReturnValue<List<RowDiff>> GetRowDiffs(DataTable master, DataTable replica, TableCompareOptions options = TableCompareOptions.None)
+        public ReturnValue<List<RowDiff>> GetRowDiffs(TableCompareOptions options = TableCompareOptions.None)
         {
-
-
             var rowDiffs = new List<RowDiff>();
 
             //use a Dataset to make use of a DataRelation object   
-            using (DataSet ds = new DataSet())
+            using (var ds = new DataSet())
             {
-                var hasPk = ((master.PrimaryKey != null) && master.PrimaryKey.Any());
+                bool hasPk = (_master.PrimaryKey.Any());
                 if (!hasPk && !options.HasFlag(TableCompareOptions.KeysOptional))
                 {
-                    return ReturnValue<List<RowDiff>>.FailResult("Master table has no Primary Key, and the KeysOptional flag was not set.");
+                    return
+                        ReturnValue<List<RowDiff>>.FailResult(
+                            "Master table has no Primary Key, and the KeysOptional flag was not set.");
                 }
 
                 //Add tables   
-                var masterCopy = master.Copy();
+                DataTable masterCopy = _master.Copy();
                 masterCopy.TableName = "master";
-                var repCopy = replica.Copy();
+                DataTable repCopy = _replica.Copy();
                 repCopy.TableName = "replica";
-                ds.Tables.AddRange(new DataTable[] { masterCopy, repCopy });
+                ds.Tables.AddRange(new[] { masterCopy, repCopy });
 
 
                 //Get Columns for DataRelation   
-                List<DataColumn> keyCols = new List<DataColumn>();
+                List<DataColumn> keyCols;
                 if (hasPk)
                 {
                     keyCols = ds.Tables[0].PrimaryKey.ToList();
                 }
                 else
                 {
-                    var fic = FieldsInCommon(master, replica).ToList();
+                    List<string> fic = FieldsInCommon.ToList();
                     keyCols = ds.Tables[0].Columns.Cast<DataColumn>().Where(c => fic.Contains(c.ColumnName)).ToList();
                 }
-                var numKeyCols = keyCols.Count();
-                DataColumn[] masterKeyCols = new DataColumn[numKeyCols];
-                DataColumn[] repKeyCols = new DataColumn[numKeyCols];
+                int numKeyCols = keyCols.Count();
+                var masterKeyCols = new DataColumn[numKeyCols];
+                var repKeyCols = new DataColumn[numKeyCols];
                 for (int i = 0; i < masterKeyCols.Length; i++)
                 {
-                    var keyCol = keyCols[i];
+                    DataColumn keyCol = keyCols[i];
                     masterKeyCols[i] = keyCol;
-                    repKeyCols[i] = ds.Tables[1].Columns.Cast<DataColumn>().First(k => k.ColumnName == keyCol.ColumnName);
-
+                    repKeyCols[i] = ds.Tables[1].Columns.Cast<DataColumn>()
+                        .First(k => k.ColumnName == keyCol.ColumnName);
                 }
 
 
                 //Create DataRelation   
-                DataRelation findMissingRelat = new DataRelation(string.Empty, masterKeyCols, repKeyCols, false);
+                var findMissingRelat = new DataRelation(string.Empty, masterKeyCols, repKeyCols, false);
                 ds.Relations.Add(findMissingRelat);
 
-                DataRelation findExtraRelat = new DataRelation(string.Empty, repKeyCols, masterKeyCols, false);
+                var findExtraRelat = new DataRelation(string.Empty, repKeyCols, masterKeyCols, false);
                 ds.Relations.Add(findExtraRelat);
 
                 // check for missing rows  and mismatched rows            
@@ -169,30 +240,29 @@ namespace Craftsmaneer.DataTools.Compare
                 {
                     DataRow[] childrows = parentrow.GetChildRows(findMissingRelat);
 
-                    if (childrows == null || childrows.Length == 0)
+                    if (childrows.Length == 0)
                     {
-                        rowDiffs.Add(new RowDiff()
+                        rowDiffs.Add(new RowDiff
                         {
                             DiffType = DiffType.Missing,
-                            Row = FindMasterRow(parentrow, master)
+                            Row = FindRow(_master,parentrow)
                         });
                     }
                     else if (childrows.Count() > 1)
                     {
-                        rowDiffs.Add(new RowDiff()
+                        rowDiffs.Add(new RowDiff
                         {
                             DiffType = DiffType.TypeMismatch,
-                            Row = FindMasterRow(parentrow, master)
+                            Row = FindRow(_master,parentrow)
                         });
                     }
                     else
                     {
-                        var masterRow = FindMasterRow(parentrow, master);
+                        DataRow masterRow = FindRow(_master,parentrow);
                         RowDiff matchRows = CompareRowData(masterRow, childrows[0], options);
                         if (matchRows.DiffType != DiffType.None)
                         {
                             rowDiffs.Add(matchRows);
-
                         }
                     }
                 }
@@ -201,11 +271,11 @@ namespace Craftsmaneer.DataTools.Compare
                 foreach (DataRow parentrow in ds.Tables[1].Rows)
                 {
                     DataRow[] childrows = parentrow.GetChildRows(findExtraRelat);
-                    if (childrows == null || childrows.Length == 0)
-                        rowDiffs.Add(new RowDiff()
+                    if (childrows.Length == 0)
+                        rowDiffs.Add(new RowDiff
                         {
                             DiffType = DiffType.Extra,
-                            Row = FindMasterRow(parentrow, replica)
+                            Row = FindRow(_replica, parentrow)
                         });
                 }
             }
@@ -214,24 +284,23 @@ namespace Craftsmaneer.DataTools.Compare
         }
 
         /// <summary>
-        /// finds the row in the master table by keyed look of a copy.
+        ///     finds the row in the original table with the same PK value as copyRow.
         /// </summary>
-        private DataRow FindMasterRow(DataRow copyRow, DataTable master)
+        private static DataRow FindRow(DataTable original, DataRow copyRow)
         {
-            var keyCols = master.PrimaryKey;
-            var pkVals = keyCols.Select(c => copyRow[c.ColumnName]).ToArray();
-            return master.Rows.Find(pkVals);
+            DataColumn[] keyCols = original.PrimaryKey;
+            object[] pkVals = keyCols.Select(c => copyRow[c.ColumnName]).ToArray();
+            return original.Rows.Find(pkVals);
         }
 
         /// <summary>
-        /// compares the values of the cells in each row.
-        /// Does not do a schema check.
+        ///     compares the values of the cells in each row.
+        ///     Does not do a schema check.
         /// </summary>
-
         private RowDiff CompareRowData(DataRow masterRow, DataRow repRow, TableCompareOptions options)
         {
             var colDiffs = new List<ColumnDiff>();
-            var rowDiff = new RowDiff()
+            var rowDiff = new RowDiff
             {
                 DiffType = DiffType.None,
                 ColumnDiffs = colDiffs,
@@ -240,22 +309,19 @@ namespace Craftsmaneer.DataTools.Compare
 
             //TODO: needs general clean up & optimization.
 
-            var matchFieldNames = FieldsInCommon(masterRow.Table, repRow.Table).ToArray();
-
-            foreach (var fieldName in matchFieldNames)
+            foreach (string fieldName in FieldsInCommon)
             {
-                var masterValue = masterRow[fieldName];
-                var repValue = repRow[fieldName];
+
+                object masterValue = masterRow[fieldName];
+                object repValue = repRow[fieldName];
 
                 if (!ValuesMatch(masterValue, repValue, options))
                 {
                     rowDiff.DiffType = DiffType.DataMismatch;
-                    var colDiff = new ColumnDiff()
+                    var colDiff = new ColumnDiff
                     {
-                        Column = masterRow.Table.Columns[fieldName],
+                        Column = _master.Columns[fieldName],
                         DiffType = DiffType.DataMismatch,
-
-
                     };
                     if (options.HasFlag(TableCompareOptions.CaptureValues))
                     {
@@ -266,75 +332,68 @@ namespace Craftsmaneer.DataTools.Compare
                 }
             }
 
-            if ((matchFieldNames.Count() == masterRow.Table.Columns.Count) && (matchFieldNames.Count() == repRow.Table.Columns.Count))
+            if ((FieldsInCommon.Count() == _master.Columns.Count) &&
+                (FieldsInCommon.Count() == _replica.Columns.Count))
             {
                 return rowDiff;
             }
 
-            var masterFieldNames = masterRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
-
-
-            var missingFieldNames = masterFieldNames.Except(matchFieldNames).ToArray();
+            string[] missingFieldNames = _masterFieldNames.Except(FieldsInCommon.ToArray()).ToArray();
             if (missingFieldNames.Any())
             {
                 // this means the table is not schema comptabile.  
                 //(question - if the all the values in the master column are missing, could this be considered "compatible" even if it's not 
                 // schema compatible?  This might be part of a tighter compatibility check, but for now that will be punted.)
-                Contract.Assert(options.HasFlag(TableCompareOptions.AllowIncompatibleSchema), "Missing column in replica during compare, and AllowIncompatibleSchema is not set.");
-                
-                foreach (var fieldName in missingFieldNames)
+                Contract.Assert(options.HasFlag(TableCompareOptions.AllowIncompatibleSchema),
+                    "Missing column in replica during compare, and AllowIncompatibleSchema is not set.");
+
+                foreach (string fieldName in missingFieldNames)
                 {
-                    bool valuesMatch = ValuesMatch(masterRow[fieldName], DBNull.Value, options);
-                   if (!valuesMatch)
+                    var masterValue = masterRow[fieldName];
+                    bool valuesMatch = ValuesMatch(masterValue, DBNull.Value, options);
+                    if (!valuesMatch)
                     {
                         rowDiff.DiffType = DiffType.DataMismatch;
-                        var colDiff = new ColumnDiff()
+                        var colDiff = new ColumnDiff
                         {
-                            Column = masterRow.Table.Columns[fieldName],
+                            Column = _master.Columns[fieldName],
                             DiffType = DiffType.Missing,
-
-
                         };
                         if (options.HasFlag(TableCompareOptions.CaptureValues))
                         {
                             colDiff.ReplicaValue = DBNull.Value;
-                            colDiff.MasterValue = masterRow[fieldName];
+                            colDiff.MasterValue = masterValue;
                         }
                         colDiffs.Add(colDiff);
-
                     }
                 }
             }
 
-            var replicaFieldNames = repRow.Table.Columns.Cast<DataColumn>().Select(c => c.ColumnName).ToArray();
-            var extraFieldNames = replicaFieldNames.Except(matchFieldNames).ToArray();
-            if (extraFieldNames.Any())
+
+
+            if (ExtraFieldNames.Any())
             {
-                
-                foreach (var fieldName in extraFieldNames)
+                foreach (string fieldName in ExtraFieldNames)
                 {
                     rowDiff.DiffType = DiffType.DataMismatch;
-                    bool valuesMatch = ValuesMatch( DBNull.Value, repRow[fieldName], options);
-                   if (!valuesMatch)
+                    var repValue = repRow[fieldName];
+                    bool valuesMatch = ValuesMatch(DBNull.Value, repValue, options);
+                    if (!valuesMatch)
                     {
-                        var colDiff = new ColumnDiff()
+                        var colDiff = new ColumnDiff
                         {
-                            Column = repRow.Table.Columns[fieldName],
+                            Column = _replica.Columns[fieldName],
                             DiffType = DiffType.Extra,
-
-
                         };
                         if (options.HasFlag(TableCompareOptions.CaptureValues))
                         {
-                            colDiff.ReplicaValue = repRow[fieldName];
+                            colDiff.ReplicaValue = repValue;
                             colDiff.MasterValue = DBNull.Value;
                         }
                         colDiffs.Add(colDiff);
                     }
                 }
             }
-
-
             return rowDiff;
         }
 
@@ -346,7 +405,7 @@ namespace Craftsmaneer.DataTools.Compare
             }
             if (masterValue == null)
             {
-                return (repValue == null || repValue== DBNull.Value);
+                return (repValue == null || repValue == DBNull.Value);
             }
 
             if (masterValue.GetType().Name == "Byte[]")
@@ -360,7 +419,7 @@ namespace Craftsmaneer.DataTools.Compare
                 {
                     return false;
                 }
-                return (((string) masterValue).Trim().Equals(((string) repValue).Trim()));
+                return (((string)masterValue).Trim().Equals(((string)repValue).Trim()));
             }
 
             return masterValue.Equals(repValue);
@@ -383,88 +442,47 @@ namespace Craftsmaneer.DataTools.Compare
             return true;
         }
 
-        private static IEnumerable<string> FieldsInCommon(DataTable master, DataTable replica)
-        {
-            var masterFieldNames = master.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
-            var replicaFieldNames = replica.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
 
-            return masterFieldNames.Intersect(replicaFieldNames);//TODO: exclude key fields.
-        }
 
         /// <summary>
-        /// Compares the schema of the rows, and if they are compatible, compares the data.
+        ///     compares the schemas of the two data tables, and returns any differences.  The master datatable must have primary
+        ///     keys to be comparable.
         /// </summary>
-        /// <param name="master"></param>
-        /// <param name="replica"></param>
         /// <returns></returns>
-        public RowDiff CompareRows(DataRow master, DataRow replica, TableCompareOptions options = TableCompareOptions.None)
+        public ReturnValue<SchemaDiff> CompareSchema()
         {
-            var schemaDiff = CompareSchema(master.Table.Columns, replica.Table.Columns);
-            if (!schemaDiff.IsCompatible)
+            if (!_master.PrimaryKey.Any())
             {
-                return new RowDiff()
-                {
-                    DiffType = DiffType.TypeMismatch
-                };
-            }
-            return CompareRowData(master, replica, options);
-        }
-
-        /// <summary>
-        /// compares the schemas of the two data tables, and returns any differences.  The master datatable must have primary keys to be comparable.
-        /// </summary>
-        /// <param name="master"></param>
-        /// <param name="replica"></param>
-        /// <returns></returns>
-        public ReturnValue<SchemaDiff> CompareSchema(DataTable master, DataTable replica)
-        {
-
-            if (!master.PrimaryKey.Any())
-            {
-
                 return ReturnValue<SchemaDiff>.FailResult("Primary key is missing.");
             }
 
-            return ReturnValue<SchemaDiff>.SuccessResult(CompareSchema(master.Columns, replica.Columns));
+            var diff = new SchemaDiff { IsCompatible = true };
 
-        }
-
-        public SchemaDiff CompareSchema(DataColumnCollection master, DataColumnCollection replica)
-        {
-
-
-
-            var diff = new SchemaDiff() { IsCompatible = true };
-
-            var masterCols = master.Cast<DataColumn>();
-            var repCols = replica.Cast<DataColumn>();
-
-            var missingColNames = masterCols.Select(col => col.ColumnName).Except(repCols.Select(col => col.ColumnName));
-            if (missingColNames.Count() > 0)
+           
+            if (MissingFieldNames.Any())
             {
-                diff.ColumnDiffs.AddRange(missingColNames.Select(name => new ColumnDiff()
+                diff.ColumnDiffs.AddRange(MissingFieldNames.Select(name => new ColumnDiff
                 {
-                    Column = masterCols.First(col => col.ColumnName == name),
+                    Column = _master.Columns.Cast<DataColumn>().First(col => col.ColumnName == name),
                     DiffType = DiffType.Missing
                 }));
                 diff.IsCompatible = false;
             }
 
-            var extraColNames = repCols.Select(col => col.ColumnName).Except(masterCols.Select(col => col.ColumnName));
-            diff.ColumnDiffs.AddRange(extraColNames.Select(
-                colName => new ColumnDiff()
+           
+            diff.ColumnDiffs.AddRange(ExtraFieldNames.Select(
+                colName => new ColumnDiff
                 {
-                    Column = repCols.First(col => col.ColumnName == colName),
+                    Column = _replica.Columns.Cast<DataColumn>().First(col => col.ColumnName == colName),
                     DiffType = DiffType.Extra
                 }));
 
             // naive type checking - an difference in type breaks compatibilty.
-            var inCommonNames = masterCols.Select(col => col.ColumnName).Intersect(repCols.Select(col => col.ColumnName));
-            var diffCols =
-                from masterCol in masterCols
-                join repCol in repCols on masterCol.ColumnName equals repCol.ColumnName
+            IEnumerable<ColumnDiff> diffCols =
+                from masterCol in _master.Columns.Cast<DataColumn>()
+                join repCol in _replica.Columns.Cast<DataColumn>() on masterCol.ColumnName equals repCol.ColumnName
                 where masterCol.DataType != repCol.DataType
-                select new ColumnDiff()
+                select new ColumnDiff
                 {
                     DiffType = DiffType.TypeMismatch,
                     Column = repCol
@@ -475,25 +493,7 @@ namespace Craftsmaneer.DataTools.Compare
                 diff.IsCompatible = false;
                 diff.ColumnDiffs.AddRange(diffCols);
             }
-            return diff;
-
-            /*
-            from o in Orders
-from od in o.Order_Details.DefaultIfEmpty()
-select new {o, od}
-             * */
-
-
-            /*
-            var leftOuterJoinQuery =
- from category in categories
- join prod in products on category.ID equals prod.CategoryID into prodGroup
- from item in prodGroup.DefaultIfEmpty(new Product { Name = String.Empty, CategoryID = 0 })
- select new { CatName = category.Name, ProdName = item.Name };
-            */
-
+            return ReturnValue<SchemaDiff>.SuccessResult(diff);
         }
-
-
     }
 }

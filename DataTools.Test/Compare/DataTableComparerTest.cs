@@ -16,8 +16,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = master.Copy();
-            var dtc = new DataTableComparer();
-            var diff = dtc.Compare(master, replica).Value;
+            var dtc = new DataTableComparer(master,replica);
+            var diff = dtc.Compare().Value;
 
             Assert.IsTrue(diff.SchemaDiff.IsCompatible);
             Assert.IsFalse(diff.SchemaDiff.HasDiffs);
@@ -33,8 +33,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableMissingRow();
-            var dtc = new DataTableComparer();
-            var diff = dtc.Compare(master, replica).Value;
+            var dtc = new DataTableComparer(master, replica);
+            var diff = dtc.Compare().Value;
 
             Assert.AreEqual(TableDiffType.Data, diff.DiffType);
             var rowDiff = diff.RowDiffs.First();
@@ -47,8 +47,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableExtraRow();
-            var dtc = new DataTableComparer();
-            var diff = dtc.Compare(master, replica).Value;
+            var dtc = new DataTableComparer(master, replica);
+            var diff = dtc.Compare().Value;
 
             Assert.AreEqual(TableDiffType.Data, diff.DiffType);
             var rowDiff = diff.RowDiffs.First();
@@ -61,8 +61,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableModdedRow();
-            var dtc = new DataTableComparer();
-            var diff = dtc.Compare(master, replica).Value;
+            var dtc = new DataTableComparer(master, replica);
+            var diff = dtc.Compare().Value;
 
             Assert.AreEqual(TableDiffType.Data, diff.DiffType);
             
@@ -85,8 +85,8 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableAddAndDelete();
-            var dtc = new DataTableComparer();
-            var diff = dtc.Compare(master, replica).Value;
+            var dtc = new DataTableComparer(master, replica);
+            var diff = dtc.Compare().Value;
 
             Assert.AreEqual(TableDiffType.Data, diff.DiffType);
             Assert.AreEqual(2, diff.RowDiffs.Count);

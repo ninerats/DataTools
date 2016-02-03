@@ -160,7 +160,7 @@ namespace Craftsmaneer.DataTools.Test
             var working = text.Replace("\r", "");
             return working;
         }
-        [Test]
+        [Test, Ignore("special usage")]
         public void CompareInputToOutput()
         {
             var importFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FolderDTC");

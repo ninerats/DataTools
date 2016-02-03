@@ -1,12 +1,8 @@
-﻿using Craftsmaneer.DataTools.Compare;
+﻿using System.Linq;
+using Craftsmaneer.DataTools.Compare;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Craftsmaneer.DataTools.Test
+namespace Craftsmaneer.DataTools.Test.Compare
 {
     [TestFixture]
     public class IncompatibleSchemaCompareTest
@@ -16,7 +12,7 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableMissingInt1Column();
-            var result = new DataTableComparer().Compare(master, replica, TableCompareOptions.AllowIncompatibleSchema  | TableCompareOptions.CaptureValues);
+            var result = new DataTableComparer(master,replica).Compare(TableCompareOptions.AllowIncompatibleSchema | TableCompareOptions.CaptureValues);
             Assert.IsTrue(result.Success);
             var missingRow = result.Value.RowDiffs.Single(rd => rd.DiffType == DiffType.Missing);
             var extraRow = result.Value.RowDiffs.Single(rd => rd.DiffType == DiffType.Extra);
@@ -36,7 +32,7 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTableWithNullInt1();
             var replica = TestHelper.BasicDataTableMissingInt1Column();
-            var result = new DataTableComparer().Compare(master, replica, TableCompareOptions.AllowIncompatibleSchema | TableCompareOptions.CaptureValues);
+            var result = new DataTableComparer(master,replica).Compare(TableCompareOptions.AllowIncompatibleSchema | TableCompareOptions.CaptureValues);
             Assert.IsFalse(result.Value.RowDiffs.Any());
         }
 
@@ -45,7 +41,7 @@ namespace Craftsmaneer.DataTools.Test
         {
             var master = TestHelper.BasicDataTable();
             var replica = TestHelper.BasicDataTableMissingInt1Column();
-            var result = new DataTableComparer().Compare(master, replica);
+            var result = new DataTableComparer(master,replica).Compare();
             Assert.IsFalse(result.Success);
             Assert.AreEqual("The schema for replica 'DataTable1' is not compatible with 'DataTable1' and the AllowIncompatibleSchema option is not set", result.Context);
         }
