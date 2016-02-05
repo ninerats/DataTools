@@ -114,9 +114,6 @@
     <EmbeddedResource Include="SchemaDiffDialog.resx">
       <DependentUpon>SchemaDiffDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FolderDTC.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

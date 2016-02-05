@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using Craftsmaneer.DataTools.Compare;
 using Craftsmaneer.DataToolUtils.Compare;
@@ -15,14 +16,14 @@ namespace Craftsmaneer.DataToolUtils
         public CompareDataTableSetsForm()
         {
             InitializeComponent();
-            
+
         }
 
 
         private void cmdOk_Click(object sender, EventArgs e)
         {
             Close();
-           
+
         }
 
         private void CompareDataTableSets_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,10 +49,10 @@ namespace Craftsmaneer.DataToolUtils
                 if (chkIgnoreWhitespace.Checked)
                     options = options | TableCompareOptions.IgnoreWhitespace;
 
-               // string rootFolder = Properties.Settings.Default.workspaceRoot;
+                // string rootFolder = Properties.Settings.Default.workspaceRoot;
                 ShowStatus("Loading Master Dataset...");
                 var masterSetResult = DataTableSet.FromConfigFile(txtMasterDtSet.Text);
-               // var masterSetResult = DataTableSet.FromRelativeFolderConfigFile(txtMasterDtSet.Text, rootFolder);
+                // var masterSetResult = DataTableSet.FromRelativeFolderConfigFile(txtMasterDtSet.Text, rootFolder);
                 if (!ShowStatus(masterSetResult, "Loading Master Dataset"))
                     return;
                 ShowStatus("Master Dataset loaded.  Creating Replica Dataset...");
@@ -138,7 +139,26 @@ namespace Craftsmaneer.DataToolUtils
 
         private void cmdDumpDiff_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("TableSetDiffDump.txt",lvCompareResults.TableSetDiff.ToString());
+            string exportPath = "";
+            UiTry(() =>
+            {
+                exportPath = new FileInfo("Compare_report.txt").FullName;
+                // File.WriteAllText("TableSetDiffDump.txt",lvCompareResults.TableSetDiff.ToString());
+                var items = lvCompareResults.Items.Cast<ListViewItem>()
+                    .Select(i => string.Format("{0}\t{1}\t{2}\t{3}",
+                        i.Text.PadRight(lvCompareResults.Columns[0].Width / 6),
+                         i.Group.Header.PadRight(25),
+                         i.SubItems[1].Text.PadRight(lvCompareResults.Columns[1].Width / 5),
+                         i.SubItems[2].Text));
+                var header = string.Format("Master Dataset: {0}\r\nReplica DataSet: {1}\r\nTables Compared:{2}\r\nComparison ran: {3}",
+                    txtMasterDtSet.Text, txtReplicaDtSet.Text, items.Count(), DateTime.Now);
+                var details = string.Format("Table                                               Comparison                  Schema              Description\r\n" +
+                                            "-------------------------------------------------------------------------------------------------------------------------------------\r\n{0}",
+                    string.Join("\r\n", items));
+
+                ;
+                File.WriteAllText(exportPath, string.Format("{0}\r\n\r\n{1}", header, details));
+            }, string.Format("Dumping compare report to {0}", exportPath));
         }
     }
 }

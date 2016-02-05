@@ -158,4 +158,5 @@ $RECYCLE.BIN/
 Export/
 /SQL/DataDiff_entire_database_AND_Data.sql
 localsettings.config
-DataToos.Test/localsettings.config
+/DataToos.Test/localsettings.config
+/LocalConfig
