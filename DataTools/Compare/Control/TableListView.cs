@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Craftsmaneer.Data;
 
-namespace Craftsmaneer.DataToolUtils.Compare
+namespace Craftsmaneer.DataTools.Compare.Control
 {
     public class TableListView : ListView
     {

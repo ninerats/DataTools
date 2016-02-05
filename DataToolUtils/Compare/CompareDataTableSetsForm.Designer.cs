@@ -1,4 +1,5 @@
-﻿using Craftsmaneer.DataToolUtils;
+﻿using Craftsmaneer.DataTools.Compare.Control;
+using Craftsmaneer.DataToolUtils;
 using Craftsmaneer.DataToolUtils.Compare;
 
 
@@ -98,7 +99,7 @@ namespace Craftsmaneer.DataToolUtils
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRecCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvCompareResults = new Craftsmaneer.DataToolUtils.Compare.DataTableSetListView();
+            this.lvCompareResults = new DataTableSetListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.chkShowIdentical = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();

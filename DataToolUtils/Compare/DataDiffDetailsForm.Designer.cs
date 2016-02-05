@@ -1,4 +1,6 @@
-﻿namespace Craftsmaneer.DataToolUtils.Compare
+﻿using Craftsmaneer.DataTools.Compare.Control;
+
+namespace Craftsmaneer.DataToolUtils.Compare
 {
     partial class DataDiffDetailsForm
     {
@@ -38,7 +40,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabResults = new System.Windows.Forms.TabControl();
             this.pagDelta = new System.Windows.Forms.TabPage();
-            this.tdgvDelta = new Craftsmaneer.DataToolUtils.Compare.DataTableDiffGridView();
+            this.tdgvDelta = new Craftsmaneer.DataTools.Compare.Control.DataTableDiffGridView();
             this.pagOriginal = new System.Windows.Forms.TabPage();
             this.dgvOriginal = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -90,6 +92,7 @@
             this.cmdDiffsOnly.TabIndex = 3;
             this.cmdDiffsOnly.Text = "Diffs Only";
             this.cmdDiffsOnly.UseVisualStyleBackColor = true;
+            this.cmdDiffsOnly.Click += new System.EventHandler(this.cmdDiffsOnly_Click);
             // 
             // cmdPrevious
             // 
@@ -171,7 +174,7 @@
             this.pagOriginal.Location = new System.Drawing.Point(4, 22);
             this.pagOriginal.Name = "pagOriginal";
             this.pagOriginal.Padding = new System.Windows.Forms.Padding(3);
-            this.pagOriginal.Size = new System.Drawing.Size(830, 488);
+            this.pagOriginal.Size = new System.Drawing.Size(827, 488);
             this.pagOriginal.TabIndex = 1;
             this.pagOriginal.Text = "Original Values";
             this.pagOriginal.UseVisualStyleBackColor = true;
@@ -186,7 +189,7 @@
             this.dgvOriginal.Location = new System.Drawing.Point(3, 3);
             this.dgvOriginal.Name = "dgvOriginal";
             this.dgvOriginal.ReadOnly = true;
-            this.dgvOriginal.Size = new System.Drawing.Size(824, 482);
+            this.dgvOriginal.Size = new System.Drawing.Size(821, 482);
             this.dgvOriginal.TabIndex = 0;
             // 
             // DataDiffDetailsForm

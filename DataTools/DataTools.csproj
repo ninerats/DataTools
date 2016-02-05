@@ -48,6 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.Data\DatabaseExtensions.cs" />
+    <Compile Include="Compare\Control\DataTableDiffGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compare\Control\DataTableSetListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compare\Control\TableListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Compare\DataDiff.cs" />
     <Compile Include="Compare\DataTableSet.cs" />
     <Compile Include="Compare\DataTableComparer.cs" />
@@ -55,6 +64,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common.Lang\ReturnValue.cs" />
     <Compile Include="Compare\TableCompareOptions.cs" />
+    <EmbeddedResource Include="Compare\Control\DataTableSetListView.resx">
+      <DependentUpon>DataTableSetListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -78,6 +78,11 @@ namespace Craftsmaneer.Data
             
         }
 
+        public static object[] KeyValues(this DataRow row)
+        {
+            return row.Table.PrimaryKey.Select(c => row[c.ColumnName]).ToArray();
+        }
+
        
     }
 }

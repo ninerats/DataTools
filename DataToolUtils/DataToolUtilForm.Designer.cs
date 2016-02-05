@@ -1,4 +1,5 @@
-﻿using Craftsmaneer.DataToolUtils.Compare;
+﻿using Craftsmaneer.DataTools.Compare.Control;
+using Craftsmaneer.DataToolUtils.Compare;
 
 namespace Craftsmaneer.DataToolUtils
 {

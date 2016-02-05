@@ -40,7 +40,13 @@ namespace Craftsmaneer.DataToolUtils.Compare
 
         private void DataDiffDetailsForm_Shown(object sender, EventArgs e)
         {
-            tdgvDelta.Assign(TableDiff);
+            var result = tdgvDelta.Assign(TableDiff);
+            if (!result.Success)
+            {
+                MessageBox.Show(string.Format("The follow error was occurred while highlighting the grid:\r\n\r\n{0})",result),
+                    "Error higlighting rows", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
             dgvOriginal.DataSource = TableDiff.Master;
             dgvOriginal.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
@@ -48,6 +54,11 @@ namespace Craftsmaneer.DataToolUtils.Compare
         private void cmdOk_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmdDiffsOnly_Click(object sender, EventArgs e)
+        {
+            tdgvDelta.DiffsOnly = !tdgvDelta.DiffsOnly;
         }
     }
 }
