@@ -160,5 +160,10 @@ namespace Craftsmaneer.DataToolUtils
                 File.WriteAllText(exportPath, string.Format("{0}\r\n\r\n{1}", header, details));
             }, string.Format("Dumping compare report to {0}", exportPath));
         }
+
+        private void lvCompareResults_DoubleClick(object sender, EventArgs e)
+        {
+            cmdViewDetails_Click(sender, e);
+        }
     }
 }

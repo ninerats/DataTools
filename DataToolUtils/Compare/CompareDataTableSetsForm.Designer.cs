@@ -34,6 +34,7 @@ namespace Craftsmaneer.DataToolUtils
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompareDataTableSetsForm));
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
@@ -79,7 +80,11 @@ namespace Craftsmaneer.DataToolUtils
             System.Windows.Forms.ListViewGroup listViewGroup43 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup44 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup45 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompareDataTableSetsForm));
+            System.Windows.Forms.ListViewGroup listViewGroup46 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup47 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup48 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup49 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup50 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkIgnoreWhitespace = new System.Windows.Forms.CheckBox();
             this.cmdCompare = new System.Windows.Forms.Button();
@@ -88,6 +93,7 @@ namespace Craftsmaneer.DataToolUtils
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.chkShowIdentical = new System.Windows.Forms.CheckBox();
             this.cmdDumpDiff = new System.Windows.Forms.Button();
             this.cmdTools = new System.Windows.Forms.Button();
             this.chkGroup = new System.Windows.Forms.CheckBox();
@@ -99,9 +105,8 @@ namespace Craftsmaneer.DataToolUtils
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRecCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvCompareResults = new DataTableSetListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.chkShowIdentical = new System.Windows.Forms.CheckBox();
+            this.lvCompareResults = new Craftsmaneer.DataTools.Compare.Control.DataTableSetListView();
             this.panel1.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -199,6 +204,16 @@ namespace Craftsmaneer.DataToolUtils
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(917, 43);
             this.pnlBottom.TabIndex = 1;
+            // 
+            // chkShowIdentical
+            // 
+            this.chkShowIdentical.AutoSize = true;
+            this.chkShowIdentical.Location = new System.Drawing.Point(333, 11);
+            this.chkShowIdentical.Name = "chkShowIdentical";
+            this.chkShowIdentical.Size = new System.Drawing.Size(96, 17);
+            this.chkShowIdentical.TabIndex = 6;
+            this.chkShowIdentical.Text = "Show Identical";
+            this.chkShowIdentical.UseVisualStyleBackColor = true;
             // 
             // cmdDumpDiff
             // 
@@ -322,12 +337,23 @@ namespace Craftsmaneer.DataToolUtils
             this.label3.TabIndex = 1;
             this.label3.Text = "Comparison Results";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "dataschemadiff");
+            this.imageList1.Images.SetKeyName(1, "warning");
+            this.imageList1.Images.SetKeyName(2, "error");
+            this.imageList1.Images.SetKeyName(3, "equal");
+            this.imageList1.Images.SetKeyName(4, "incompatible");
+            this.imageList1.Images.SetKeyName(5, "datadiff");
+            this.imageList1.Images.SetKeyName(6, "missing");
+            // 
             // lvCompareResults
             // 
             this.lvCompareResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvCompareResults.CheckBoxes = true;
             listViewGroup1.Header = "No Differences";
             listViewGroup1.Name = "equal";
             listViewGroup2.Header = "Differences (Incompatible)";
@@ -418,6 +444,16 @@ namespace Craftsmaneer.DataToolUtils
             listViewGroup44.Name = "missing";
             listViewGroup45.Header = "Error Comparing";
             listViewGroup45.Name = "error";
+            listViewGroup46.Header = "No Differences";
+            listViewGroup46.Name = "equal";
+            listViewGroup47.Header = "Differences (Incompatible)";
+            listViewGroup47.Name = "incompatible";
+            listViewGroup48.Header = "Differences (Compatible)";
+            listViewGroup48.Name = "datadiff";
+            listViewGroup49.Header = "Missing Tables";
+            listViewGroup49.Name = "missing";
+            listViewGroup50.Header = "Error Comparing";
+            listViewGroup50.Name = "error";
             this.lvCompareResults.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2,
@@ -463,37 +499,22 @@ namespace Craftsmaneer.DataToolUtils
             listViewGroup42,
             listViewGroup43,
             listViewGroup44,
-            listViewGroup45});
+            listViewGroup45,
+            listViewGroup46,
+            listViewGroup47,
+            listViewGroup48,
+            listViewGroup49,
+            listViewGroup50});
             this.lvCompareResults.Location = new System.Drawing.Point(22, 31);
             this.lvCompareResults.Name = "lvCompareResults";
+            this.lvCompareResults.ShowIdentical = false;
             this.lvCompareResults.Size = new System.Drawing.Size(853, 396);
             this.lvCompareResults.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvCompareResults.TabIndex = 0;
             this.lvCompareResults.TableSetDiff = null;
             this.lvCompareResults.UseCompatibleStateImageBehavior = false;
             this.lvCompareResults.View = System.Windows.Forms.View.Details;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "dataschemadiff");
-            this.imageList1.Images.SetKeyName(1, "warning");
-            this.imageList1.Images.SetKeyName(2, "error");
-            this.imageList1.Images.SetKeyName(3, "equal");
-            this.imageList1.Images.SetKeyName(4, "incompatible");
-            this.imageList1.Images.SetKeyName(5, "datadiff");
-            this.imageList1.Images.SetKeyName(6, "missing");
-            // 
-            // chkShowIdentical
-            // 
-            this.chkShowIdentical.AutoSize = true;
-            this.chkShowIdentical.Location = new System.Drawing.Point(333, 11);
-            this.chkShowIdentical.Name = "chkShowIdentical";
-            this.chkShowIdentical.Size = new System.Drawing.Size(96, 17);
-            this.chkShowIdentical.TabIndex = 6;
-            this.chkShowIdentical.Text = "Show Identical";
-            this.chkShowIdentical.UseVisualStyleBackColor = true;
+            this.lvCompareResults.DoubleClick += new System.EventHandler(this.lvCompareResults_DoubleClick);
             // 
             // CompareDataTableSetsForm
             // 

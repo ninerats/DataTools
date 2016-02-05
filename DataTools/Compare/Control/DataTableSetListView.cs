@@ -159,7 +159,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
            
             // set event handlers
             
-
+           
            
             // 
             // imagelist.
@@ -227,7 +227,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
 
 
             //settings 
-            CheckBoxes = true;
+            CheckBoxes = false;
             View = View.Details;
         }
 

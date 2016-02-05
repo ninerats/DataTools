@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
@@ -18,6 +19,12 @@ namespace Craftsmaneer.DataTools.Compare.Control
         public DataTableDiffGridView()
         {
             DataError += DataTableDiffGridView_DataError;
+            Sorted += DataTableDiffGridView_Sorted;
+        }
+
+        void DataTableDiffGridView_Sorted(object sender, EventArgs e)
+        {
+           HighlightRowDiffs();
         }
 
         [Browsable(false)]
@@ -178,16 +185,25 @@ namespace Craftsmaneer.DataTools.Compare.Control
         {
             DataView dv = ((DataTable)DataSource).DefaultView;
             dv.ApplyDefaultSort = true;
-           // var keyValues = item.Row.KeyValues();
-            int rowIdx = dv.Find(item.Row.KeyValues());
+            var keyValues = item.Row.KeyValues();
+            //int rowIdx = dv.Find(item.Row.KeyValues());
+            var dt = (DataTable) DataSource;
+            var rowInDataSource = dt.Rows.Find(keyValues);
+
            // var x = dv.FindRows(keyValues);
-           // var match = dv.Cast<DataRowView>().FirstOrDefault(drv => drv.Row.KeyValues().Equals(keyValues));
+            var match = Rows.Cast<DataGridViewRow>().FirstOrDefault(r => ((DataRowView)r.DataBoundItem).Row ==  rowInDataSource);
+            if (match == null)
+            {
+                return Rows[0];
+            }
+            return match;
+            /*
             if (rowIdx >= 0)
             {
                 return Rows[rowIdx];
             }
             Contract.Assert(false, string.Format("Row wasn't found for key value: {0}", item.Row.KeyValues()));
-            return null;
+            return null;*/
         }
 
 
@@ -203,7 +219,8 @@ namespace Craftsmaneer.DataTools.Compare.Control
                 {
                     if (colDiff.DiffType == DiffType.Extra)
                     {
-                        column.HeaderCell.Style.BackColor = Color.DeepSkyBlue;
+                        column.HeaderCell.Style.BackColor = Color.DeepSkyBlue; //! not working.
+                        column.HeaderCell.Style.Font = new Font(DefaultFont,FontStyle.Underline); 
                         column.DefaultCellStyle.BackColor = Color.DeepSkyBlue;
                     }
                 }
