@@ -45,7 +45,7 @@ namespace Craftsmaneer.DataToolUtils
         {
             UiTry(() =>
             {
-                var options = TableCompareOptions.None;
+                var options = TableCompareOptions.CaptureValues;
                 if (chkIgnoreWhitespace.Checked)
                     options = options | TableCompareOptions.IgnoreWhitespace;
 
@@ -129,7 +129,7 @@ namespace Craftsmaneer.DataToolUtils
                 return;
             }
 
-            DataDiffDetailsForm.Invoke(selected.Value);
+            ShowStatus( DataDiffDetailsForm.Invoke(selected.Value), string.Format("Details for {0}",selected.Value.Master.TableName));
         }
 
         private void cmdTools_Click(object sender, EventArgs e)

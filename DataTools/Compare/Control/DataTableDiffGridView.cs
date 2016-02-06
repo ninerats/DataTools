@@ -5,7 +5,6 @@ using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
@@ -14,17 +13,17 @@ namespace Craftsmaneer.DataTools.Compare.Control
 {
     public class DataTableDiffGridView : DataGridView
     {
+        private readonly DataGridViewCellStyle _deletedRowCellStyle = new DataGridViewCellStyle { BackColor = Color.Pink };
+        private readonly DataGridViewCellStyle _modCellStyle = new DataGridViewCellStyle { BackColor = Color.Yellow };
+        private readonly DataGridViewCellStyle _newRowCellStyle = new DataGridViewCellStyle { BackColor = Color.SkyBlue };
         private bool _diffsOnly;
+        // _modCellMap is map indexed by Row, which points to another map of (column name, original value)
+        private Dictionary<DataRow, Dictionary<string, object>> _modCellMap;
 
         public DataTableDiffGridView()
         {
             DataError += DataTableDiffGridView_DataError;
-            Sorted += DataTableDiffGridView_Sorted;
-        }
-
-        void DataTableDiffGridView_Sorted(object sender, EventArgs e)
-        {
-           HighlightRowDiffs();
+            // Sorted += DataTableDiffGridView_Sorted;
         }
 
         [Browsable(false)]
@@ -34,38 +33,37 @@ namespace Craftsmaneer.DataTools.Compare.Control
         public List<DataRow> DataRows { get; protected set; }
 
         public bool DiffsOnly
-
         {
             get { return _diffsOnly; }
             set
             {
-                
                 if (value != _diffsOnly)
                 {
                     try
                     {
-                        DataView dv = ((DataTable) DataSource).DefaultView;
+                        DataView dv = ((DataTable)DataSource).DefaultView;
 
                         if (value)
                         {
-                            dv.RowStateFilter = DataViewRowState.ModifiedOriginal;
+                            dv.RowStateFilter = DataViewRowState.Added | DataViewRowState.ModifiedCurrent |
+                                                DataViewRowState.Deleted;
                         }
                         else
                         {
-                            dv.RowStateFilter = DataViewRowState.CurrentRows;
+                            dv.RowStateFilter = DataViewRowState.CurrentRows | DataViewRowState.Deleted;
                         }
-                        HighlightRowDiffs();
+                        // HighlightRowDiffs();
                     }
                     catch (Exception ex)
                     {
                         // log
                         MessageBox.Show(ex.Message);
-
                     }
                 }
                 _diffsOnly = value;
             }
         }
+
 
         public ReturnValue Assign(TableDiff tdiff)
         {
@@ -74,21 +72,57 @@ namespace Craftsmaneer.DataTools.Compare.Control
                 if (tdiff.Replica == null) throw new ArgumentNullException("tdiff.Replica");
                 TableDiff = tdiff;
                 BuildDataSource();
-                AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-                HighlightDiffs();
+                AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+                CellFormatting += OnCellFormatting;
+                HighlightSchemaDiffs();
+                HighlightKeys();
             });
         }
+
 
         private void BuildDataSource()
         {
             DataRow[] missingRows =
                 TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Missing).Select(rd => rd.Row).ToArray();
             DataTable source = TableDiff.Replica.Copy();
+            source.AcceptChanges();
+            // deleted rows
             foreach (DataRow missingRow in missingRows)
             {
-                source.Rows.Add(missingRow.ItemArray);
+                DataRow row = source.LoadDataRow(missingRow.ItemArray, true);
+                row.Delete();
             }
-            source.AcceptChanges();
+
+            // added rows
+            IEnumerable<RowDiff> addRowDiffs = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Extra);
+            IEnumerable<DataRow> addedRows = addRowDiffs.Select(r => source.Rows.Find(r.Row.KeyValues()));
+            foreach (DataRow row in addedRows)
+            {
+                row.SetAdded();
+            }
+
+            // modded rows, build mod cell map
+
+
+            RowDiff[] modRowDiffs = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.DataMismatch).ToArray();
+            IEnumerable<DataRow> moddedRows = modRowDiffs.Select(r => source.Rows.Find(r.Row.KeyValues()));
+            foreach (DataRow row in moddedRows)
+            {
+                row.SetModified();
+            }
+            _modCellMap =
+                modRowDiffs.Select(rd => new
+                {
+                    row = source.Rows.Find(rd.Row.KeyValues()),
+                    colNames = rd.ColumnDiffs.Select(cd => new
+                    {
+                        columnName = cd.Column.ColumnName,
+                        OriginalValue = cd.MasterValue
+                    }).ToDictionary(kv => kv.columnName, kv => kv.OriginalValue)
+                }
+                    ).ToDictionary(kv => kv.row, kv => kv.colNames);
+            source.DefaultView.RowStateFilter = DataViewRowState.CurrentRows | DataViewRowState.Deleted;
+            source.DefaultView.ApplyDefaultSort = true;
             DataSource = source;
         }
 
@@ -97,114 +131,65 @@ namespace Craftsmaneer.DataTools.Compare.Control
             e.Cancel = true;
         }
 
-        private void HighlightDiffs()
+
+
+
+        private void OnCellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            HighlightKeys();
-            HighlightSchemaDiffs();
-            HighlightRowDiffs();
+            ReturnValue result = ReturnValue.Wrap(() =>
+            {
+                DataGridViewCell cell = this[e.ColumnIndex, e.RowIndex];
+                DataGridViewRow dgvr = cell.OwningRow;
+
+                var rv = dgvr.DataBoundItem as DataRowView;
+                Contract.Assert(rv != null);
+                DataRow row = rv.Row;
+                if (row.RowState == DataRowState.Added)
+                {
+                    e.CellStyle.BackColor = _newRowCellStyle.BackColor;
+                }
+                else if (row.RowState == DataRowState.Deleted)
+                {
+                    e.CellStyle.BackColor = _deletedRowCellStyle.BackColor;
+                }
+                else if (row.RowState == DataRowState.Modified)
+                {
+                    string columnName = Columns[e.ColumnIndex].DataPropertyName;
+                    Contract.Assert(_modCellMap.ContainsKey(row));
+                    if (_modCellMap[row].ContainsKey(columnName))
+                    {
+                        e.CellStyle.BackColor = _modCellStyle.BackColor;
+                        this[e.ColumnIndex, e.RowIndex].ToolTipText =
+                            ((_modCellMap[row][columnName] == null) ? "(no value)" : _modCellMap[row][columnName].ToString());
+                    }
+                }
+            }, string.Format("Formatting cell [{0}, {1}].", e.ColumnIndex, e.RowIndex));
+
+            if (!result.Success)
+            {
+                e.FormattingApplied = false;
+                MessageBox.Show(result.ToString());
+            }
         }
+
 
         private void HighlightKeys()
         {
-            foreach (var column in TableDiff.Master.PrimaryKey)
+            foreach (DataColumn column in TableDiff.Master.PrimaryKey)
             {
-                var col = Columns.Cast<DataGridViewColumn>()
+                DataGridViewColumn col = Columns.Cast<DataGridViewColumn>()
                     .FirstOrDefault(c => c.DataPropertyName == column.ColumnName);
                 Contract.Assert(col != null);
                 if (col != null)
                 {
-                    col.DefaultCellStyle.Font = new Font(DefaultFont,FontStyle.Bold);
+                    col.DefaultCellStyle.Font = new Font(DefaultFont, FontStyle.Bold);
                     col.HeaderCell.Style.Font = new Font(DefaultFont, FontStyle.Bold);
                     col.HeaderCell.Style.ForeColor = Color.DarkSlateBlue;
-                    
                 }
             }
         }
 
-        private void HighlightRowDiffs()
-        {
-            IEnumerable<RowDiff> extraRows = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Extra);
-            foreach (RowDiff rowDiff in extraRows)
-            {
-                DataGridViewRow thisRow = FindGridViewRow(rowDiff);
-                TagRow(thisRow);
-                Contract.Assert(thisRow != null);
-                thisRow.DefaultCellStyle.BackColor = Color.DeepSkyBlue;
-            }
 
-            IEnumerable<RowDiff> missingRows = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.Missing);
-            foreach (RowDiff rowDiff in missingRows)
-            {
-                DataGridViewRow thisRow = FindGridViewRow(rowDiff);
-                Contract.Assert(thisRow != null);
-                if (!(thisRow == null))
-                {
-                    TagRow(thisRow);
-                    thisRow.DefaultCellStyle.BackColor = Color.Red;
-                    thisRow.DefaultCellStyle.Font = new Font(DefaultCellStyle.Font, FontStyle.Strikeout);
-                }
-            }
-
-
-            IEnumerable<RowDiff> moddedRows = TableDiff.RowDiffs.Where(rd => rd.DiffType == DiffType.DataMismatch);
-            foreach (RowDiff rowDiff in moddedRows)
-            {
-                DataGridViewRow thisRow = FindGridViewRow(rowDiff);
-                Contract.Assert(thisRow != null);
-                TagRow(thisRow);
-                if (!(thisRow == null))
-                {
-                    foreach (ColumnDiff columnDiff in rowDiff.ColumnDiffs)
-                    {
-                        DataGridViewCell thisCell = FindGridViewCell(thisRow, columnDiff);
-                        Contract.Assert(thisCell != null);
-                        thisCell.Style.BackColor = Color.Yellow;
-                    }
-                }
-            }
-        }
-
-        private static void TagRow(DataGridViewRow thisRow)
-        {
-            var drv = thisRow.DataBoundItem as DataRowView;
-            Contract.Assert(drv != null);
-            if (drv.Row.RowState != DataRowState.Modified)
-            {
-                drv.Row.SetModified();
-            }
-        }
-
-        private DataGridViewCell FindGridViewCell(DataGridViewRow gvRow, ColumnDiff columnDiff)
-        {
-            DataGridViewCell cell = gvRow.Cells.Cast<DataGridViewCell>()
-                .FirstOrDefault(dgvc => dgvc.OwningColumn.DataPropertyName == columnDiff.Column.ColumnName);
-            return cell;
-        }
-
-        private DataGridViewRow FindGridViewRow(RowDiff item)
-        {
-            DataView dv = ((DataTable)DataSource).DefaultView;
-            dv.ApplyDefaultSort = true;
-            var keyValues = item.Row.KeyValues();
-            //int rowIdx = dv.Find(item.Row.KeyValues());
-            var dt = (DataTable) DataSource;
-            var rowInDataSource = dt.Rows.Find(keyValues);
-
-           // var x = dv.FindRows(keyValues);
-            var match = Rows.Cast<DataGridViewRow>().FirstOrDefault(r => ((DataRowView)r.DataBoundItem).Row ==  rowInDataSource);
-            if (match == null)
-            {
-                return Rows[0];
-            }
-            return match;
-            /*
-            if (rowIdx >= 0)
-            {
-                return Rows[rowIdx];
-            }
-            Contract.Assert(false, string.Format("Row wasn't found for key value: {0}", item.Row.KeyValues()));
-            return null;*/
-        }
 
 
         private void HighlightSchemaDiffs()
@@ -220,7 +205,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
                     if (colDiff.DiffType == DiffType.Extra)
                     {
                         column.HeaderCell.Style.BackColor = Color.DeepSkyBlue; //! not working.
-                        column.HeaderCell.Style.Font = new Font(DefaultFont,FontStyle.Underline); 
+                        column.HeaderCell.Style.Font = new Font(DefaultFont, FontStyle.Underline);
                         column.DefaultCellStyle.BackColor = Color.DeepSkyBlue;
                     }
                 }

@@ -48,7 +48,7 @@ namespace Craftsmaneer.DataToolUtils.Compare
                     MessageBoxIcon.Error);
             }
             dgvOriginal.DataSource = TableDiff.Master;
-            dgvOriginal.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            dgvOriginal.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
         }
 
         private void cmdOk_Click(object sender, EventArgs e)
