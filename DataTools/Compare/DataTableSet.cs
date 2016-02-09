@@ -44,7 +44,7 @@ namespace Craftsmaneer.DataTools.Compare
         }
 
         protected abstract ReturnValue<DataSet> GetTables();
-        public abstract ReturnValue ImportTables(string connStr);
+        public abstract ReturnValue<string[]> ImportTables(string connStr);
 
         // HACK: This really belongs in the FolderDataTableSet class.
         public static ReturnValue<FolderDataTableSet> FromRelativeFolderConfigFile(string configFile, string rootFolder,
@@ -232,12 +232,13 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
-        public override ReturnValue ImportTables(string connStr)
+        public override ReturnValue<string[]> ImportTables(string connStr)
         {
-            return ReturnValue.Wrap(() =>
+            return ReturnValue<string[]>.Wrap(() =>
             {
                 var dataSer = new DataTableSerializer(connStr);
                 dataSer.ImportTables(AvailableFiles).AbortOnFail();
+                return AvailableFiles;
             }, "Importing tables");
         }
     }
@@ -319,7 +320,7 @@ namespace Craftsmaneer.DataTools.Compare
             return string.Format("{0}.xml", table.TableName);
         }
 
-        public override ReturnValue ImportTables(string connStr)
+        public override ReturnValue<string[]> ImportTables(string connStr)
         {
             throw new NotImplementedException();
         }

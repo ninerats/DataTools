@@ -139,5 +139,29 @@ namespace Craftsmaneer.DataToolUtils.Properties {
                 this["txtTargetDatabase_Text"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("OriginalDB.config")]
+        public string txtOriginalDataSet_Text {
+            get {
+                return ((string)(this["txtOriginalDataSet_Text"]));
+            }
+            set {
+                this["txtOriginalDataSet_Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ModifiedDB.config")]
+        public string txtModifiedDataSet_Text {
+            get {
+                return ((string)(this["txtModifiedDataSet_Text"]));
+            }
+            set {
+                this["txtModifiedDataSet_Text"] = value;
+            }
+        }
     }
 }

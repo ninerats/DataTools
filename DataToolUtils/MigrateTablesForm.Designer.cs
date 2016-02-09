@@ -120,6 +120,16 @@
             System.Windows.Forms.ListViewGroup listViewGroup88 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup89 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup90 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup91 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup92 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup93 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup94 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup95 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup96 = new System.Windows.Forms.ListViewGroup("No Differences", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup97 = new System.Windows.Forms.ListViewGroup("Differences (Incompatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup98 = new System.Windows.Forms.ListViewGroup("Differences (Compatible)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup99 = new System.Windows.Forms.ListViewGroup("Missing Tables", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup100 = new System.Windows.Forms.ListViewGroup("Error Comparing", System.Windows.Forms.HorizontalAlignment.Left);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRecCount = new System.Windows.Forms.Label();
@@ -138,10 +148,12 @@
             this.cmdMigrateTables = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtWorkingFolder = new System.Windows.Forms.TextBox();
             this.chkIgnoreWhitespace = new System.Windows.Forms.CheckBox();
             this.txtTargetDb = new System.Windows.Forms.TextBox();
-            this.txtSourceDb = new System.Windows.Forms.TextBox();
+            this.txtModifiedDataSet = new System.Windows.Forms.TextBox();
+            this.txtOriginalDataSet = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -165,7 +177,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblStatus.Location = new System.Drawing.Point(26, 421);
+            this.lblStatus.Location = new System.Drawing.Point(26, 384);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(888, 37);
             this.lblStatus.TabIndex = 3;
@@ -199,9 +211,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lvCompareResults);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 120);
+            this.panel2.Location = new System.Drawing.Point(0, 157);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 472);
+            this.panel2.Size = new System.Drawing.Size(957, 435);
             this.panel2.TabIndex = 5;
             // 
             // lvCompareResults
@@ -390,6 +402,26 @@
             listViewGroup89.Name = "missing";
             listViewGroup90.Header = "Error Comparing";
             listViewGroup90.Name = "error";
+            listViewGroup91.Header = "No Differences";
+            listViewGroup91.Name = "equal";
+            listViewGroup92.Header = "Differences (Incompatible)";
+            listViewGroup92.Name = "incompatible";
+            listViewGroup93.Header = "Differences (Compatible)";
+            listViewGroup93.Name = "datadiff";
+            listViewGroup94.Header = "Missing Tables";
+            listViewGroup94.Name = "missing";
+            listViewGroup95.Header = "Error Comparing";
+            listViewGroup95.Name = "error";
+            listViewGroup96.Header = "No Differences";
+            listViewGroup96.Name = "equal";
+            listViewGroup97.Header = "Differences (Incompatible)";
+            listViewGroup97.Name = "incompatible";
+            listViewGroup98.Header = "Differences (Compatible)";
+            listViewGroup98.Name = "datadiff";
+            listViewGroup99.Header = "Missing Tables";
+            listViewGroup99.Name = "missing";
+            listViewGroup100.Header = "Error Comparing";
+            listViewGroup100.Name = "error";
             this.lvCompareResults.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2,
@@ -480,16 +512,28 @@
             listViewGroup87,
             listViewGroup88,
             listViewGroup89,
-            listViewGroup90});
+            listViewGroup90,
+            listViewGroup91,
+            listViewGroup92,
+            listViewGroup93,
+            listViewGroup94,
+            listViewGroup95,
+            listViewGroup96,
+            listViewGroup97,
+            listViewGroup98,
+            listViewGroup99,
+            listViewGroup100});
             this.lvCompareResults.Location = new System.Drawing.Point(22, 31);
             this.lvCompareResults.Name = "lvCompareResults";
             this.lvCompareResults.ShowIdentical = false;
-            this.lvCompareResults.Size = new System.Drawing.Size(893, 385);
+            this.lvCompareResults.Size = new System.Drawing.Size(893, 348);
             this.lvCompareResults.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvCompareResults.TabIndex = 0;
+            this.lvCompareResults.TableList = null;
             this.lvCompareResults.TableSetDiff = null;
             this.lvCompareResults.UseCompatibleStateImageBehavior = false;
             this.lvCompareResults.View = System.Windows.Forms.View.Details;
+            this.lvCompareResults.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvCompareResults_ItemChecked);
             // 
             // chkShowIdentical
             // 
@@ -514,7 +558,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 39);
+            this.label2.Location = new System.Drawing.Point(13, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 0;
@@ -525,9 +569,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Source Database";
+            this.label1.Text = "Orignal DataSet";
             // 
             // chkGroup
             // 
@@ -565,7 +609,7 @@
             // 
             // cmdCompare
             // 
-            this.cmdCompare.Location = new System.Drawing.Point(16, 97);
+            this.cmdCompare.Location = new System.Drawing.Point(16, 119);
             this.cmdCompare.Name = "cmdCompare";
             this.cmdCompare.Size = new System.Drawing.Size(75, 23);
             this.cmdCompare.TabIndex = 2;
@@ -589,6 +633,7 @@
             // 
             // cmdMigrateTables
             // 
+            this.cmdMigrateTables.Enabled = false;
             this.cmdMigrateTables.Location = new System.Drawing.Point(610, 8);
             this.cmdMigrateTables.Name = "cmdMigrateTables";
             this.cmdMigrateTables.Size = new System.Drawing.Size(100, 23);
@@ -604,29 +649,40 @@
             this.panel1.Controls.Add(this.chkIgnoreWhitespace);
             this.panel1.Controls.Add(this.cmdCompare);
             this.panel1.Controls.Add(this.txtTargetDb);
-            this.panel1.Controls.Add(this.txtSourceDb);
+            this.panel1.Controls.Add(this.txtModifiedDataSet);
+            this.panel1.Controls.Add(this.txtOriginalDataSet);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 120);
+            this.panel1.Size = new System.Drawing.Size(957, 157);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 69);
+            this.label4.Location = new System.Drawing.Point(13, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Working Folder";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Modified DataSet";
+            // 
             // txtWorkingFolder
             // 
             this.txtWorkingFolder.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtWorkingFolder_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtWorkingFolder.Location = new System.Drawing.Point(115, 66);
+            this.txtWorkingFolder.Location = new System.Drawing.Point(115, 88);
             this.txtWorkingFolder.Name = "txtWorkingFolder";
             this.txtWorkingFolder.Size = new System.Drawing.Size(595, 20);
             this.txtWorkingFolder.TabIndex = 4;
@@ -637,7 +693,7 @@
             this.chkIgnoreWhitespace.AutoSize = true;
             this.chkIgnoreWhitespace.Checked = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.chkIgnoreWhitespace_Checked;
             this.chkIgnoreWhitespace.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "chkIgnoreWhitespace_Checked", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkIgnoreWhitespace.Location = new System.Drawing.Point(752, 69);
+            this.chkIgnoreWhitespace.Location = new System.Drawing.Point(752, 91);
             this.chkIgnoreWhitespace.Name = "chkIgnoreWhitespace";
             this.chkIgnoreWhitespace.Size = new System.Drawing.Size(116, 17);
             this.chkIgnoreWhitespace.TabIndex = 3;
@@ -649,22 +705,33 @@
             this.txtTargetDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTargetDb.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtTargetDatabase_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtTargetDb.Location = new System.Drawing.Point(115, 36);
+            this.txtTargetDb.Location = new System.Drawing.Point(115, 62);
             this.txtTargetDb.Name = "txtTargetDb";
             this.txtTargetDb.Size = new System.Drawing.Size(753, 20);
             this.txtTargetDb.TabIndex = 1;
             this.txtTargetDb.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtTargetDatabase_Text;
             // 
-            // txtSourceDb
+            // txtModifiedDataSet
             // 
-            this.txtSourceDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtModifiedDataSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSourceDb.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtSourceDatabase_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtSourceDb.Location = new System.Drawing.Point(115, 10);
-            this.txtSourceDb.Name = "txtSourceDb";
-            this.txtSourceDb.Size = new System.Drawing.Size(753, 20);
-            this.txtSourceDb.TabIndex = 1;
-            this.txtSourceDb.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtSourceDatabase_Text;
+            this.txtModifiedDataSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtModifiedDataSet_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtModifiedDataSet.Location = new System.Drawing.Point(115, 36);
+            this.txtModifiedDataSet.Name = "txtModifiedDataSet";
+            this.txtModifiedDataSet.Size = new System.Drawing.Size(753, 20);
+            this.txtModifiedDataSet.TabIndex = 1;
+            this.txtModifiedDataSet.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtModifiedDataSet_Text;
+            // 
+            // txtOriginalDataSet
+            // 
+            this.txtOriginalDataSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOriginalDataSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Craftsmaneer.DataToolUtils.Properties.Settings.Default, "txtOriginalDataSet_Text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtOriginalDataSet.Location = new System.Drawing.Point(115, 10);
+            this.txtOriginalDataSet.Name = "txtOriginalDataSet";
+            this.txtOriginalDataSet.Size = new System.Drawing.Size(753, 20);
+            this.txtOriginalDataSet.TabIndex = 1;
+            this.txtOriginalDataSet.Text = global::Craftsmaneer.DataToolUtils.Properties.Settings.Default.txtOriginalDataSet_Text;
             // 
             // MigrateTablesForm
             // 
@@ -706,11 +773,13 @@
         private System.Windows.Forms.CheckBox chkIgnoreWhitespace;
         private System.Windows.Forms.Button cmdCompare;
         private System.Windows.Forms.TextBox txtTargetDb;
-        private System.Windows.Forms.TextBox txtSourceDb;
+        private System.Windows.Forms.TextBox txtOriginalDataSet;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button cmdMigrateTables;
         private System.Windows.Forms.TextBox txtWorkingFolder;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtModifiedDataSet;
+        private System.Windows.Forms.Label label5;
     }
 }

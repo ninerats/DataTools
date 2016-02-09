@@ -11,6 +11,16 @@ namespace Craftsmaneer.DataTools.Compare
     /// </summary>
     public class TableSetDiff : Dictionary<string, ReturnValue<TableDiff>>
     {
+        public DataTableSet MasterDts { get; private set; }
+        public DataTableSet ReplicaDts { get; private set; }
+
+        public TableSetDiff(DataTableSet masterDts, DataTableSet replicaDts)
+        {
+            MasterDts = masterDts;
+            ReplicaDts = replicaDts;
+           
+        }
+
         public override string ToString()
         {
             var reports = this.Select(kv => string.Format(

@@ -32,5 +32,11 @@
     <Setting Name="txtTargetDatabase_Text" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=(server);Initial Catalog=(database);Integrated Security=True</Value>
     </Setting>
+    <Setting Name="txtOriginalDataSet_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OriginalDB.config</Value>
+    </Setting>
+    <Setting Name="txtModifiedDataSet_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ModifiedDB.config</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

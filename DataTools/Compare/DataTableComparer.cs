@@ -94,7 +94,7 @@ namespace Craftsmaneer.DataTools.Compare
         public static ReturnValue<TableSetDiff> CompareSets(DataTableSet masterDts, DataTableSet replicaDts,
             TableCompareOptions options = TableCompareOptions.None)
         {
-            var tdDict = new TableSetDiff();
+            var tdDict = new TableSetDiff(masterDts, replicaDts);
             try
             {
                 foreach (DataTable masterTable in masterDts)
