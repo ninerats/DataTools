@@ -41,8 +41,13 @@ namespace Craftsmaneer.Lang
             try
             {
                 action();
-                var r = new ReturnValue();
+                var r = SuccessResult();
                 return r;
+            }
+            catch (AbortException abort)
+            {
+
+                return FailResult(string.Format("FAIL {0} -> {1}", context, abort.Caller));
             }
             catch (Exception ex)
             {
@@ -96,7 +101,16 @@ namespace Craftsmaneer.Lang
         {
             if (Success) return;
 
-            throw new AbortException(string.Format("Aborting due to failed function call: {0}.", ToString()));
+            throw new AbortException(this);
+        }
+
+        /// <summary>
+        /// ends a Wrap block early due to failre
+        /// </summary>
+        /// <param name="context"></param>
+        public static void Abort(string context)
+        {
+            FailResult(context).AbortOnFail();
         }
     }
 
@@ -107,7 +121,9 @@ namespace Craftsmaneer.Lang
     {
         public T Value { get; private set; }
 
-
+        public ReturnValue()
+        {
+        }
 
         public ReturnValue(T returnValue)
         {
@@ -123,14 +139,24 @@ namespace Craftsmaneer.Lang
             Error = exception;
         }
 
-        public static ReturnValue<T> SuccessResult(T value)
+        public static ReturnValue<T> SuccessResult(T value, string context = null)
         {
-            return new ReturnValue<T>(value);
+            return new ReturnValue<T>
+            {
+                Success = true,
+                Value = value,
+                Context = context
+            };
         }
 
-        public static ReturnValue<T> FailResult(string context = "", Exception exception = null)
+        public static ReturnValue<T> FailResult(string context = null, Exception exception = null)
         {
-            return new ReturnValue<T>(false, context, exception);
+            return new ReturnValue<T>
+            {
+                Success = false,
+                Context = context,
+                Error = exception,
+            };
         }
 
         public static ReturnValue<T> Cascade(ReturnValue inner, string context = "")
@@ -141,21 +167,38 @@ namespace Craftsmaneer.Lang
             return fail;
         }
 
+
         public static ReturnValue<T> Wrap(Func<T> func, string context = "")
         {
             try
             {
                 T ret = func();
-                var r = new ReturnValue<T>(ret);
+                var r = SuccessResult(ret, context);
                 return r;
+            }
+            catch (AbortException abort)
+            {
+
+                return FailResult(string.Format("FAIL {0} -> {1}", context, abort.Caller));
             }
             catch (Exception ex)
             {
                 // log it.
-                var r = FailResult(context =="" ?   "wrapped action failed" : context, ex);
-                r.Value = default (T);
+                var r = FailResult(context == "" ? "wrapped action failed" : context, ex);
                 return r;
             }
+        }
+
+        /// <summary>
+        /// throws AbortException if the call fails.  This should only be used inside a Wrap() block.
+        /// </summary>
+        public new T AbortOnFail()
+        {
+            if (Success) return Value;
+
+          
+            throw new AbortException(this);
+       
         }
     }
 
@@ -182,33 +225,46 @@ namespace Craftsmaneer.Lang
             return new ReturnValue<TValue, TCode>(errorCode, context, exception);
         }
 
+       
+
 
     }
 
-    /// <summary>
+     /// <summary>
     /// signals to a Wrap()ed function that the function encountered a fatal error needs to early exit.
     /// Pass the orginal Exception as the Inner parameter (if it exists)
     /// </summary>
     [Serializable]
     public class AbortException : Exception
     {
-       
+        public ReturnValue Caller { get; private set; }
+
         public AbortException()
         {
         }
 
-        public AbortException(string message) : base(message)
+        public AbortException(ReturnValue caller)
+            : this()
+        {
+            Caller = caller;
+
+        }
+        public AbortException(string message)
+            : base(message)
         {
         }
 
-        public AbortException(string message, Exception inner) : base(message, inner)
+        public AbortException(string message, Exception inner)
+            : base(message, inner)
         {
         }
 
         protected AbortException(
             SerializationInfo info,
-            StreamingContext context) : base(info, context)
+            StreamingContext context)
+            : base(info, context)
         {
         }
     }
+   
 }

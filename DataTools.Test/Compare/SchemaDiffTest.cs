@@ -19,8 +19,7 @@ namespace Craftsmaneer.DataTools.Test
             var dtc = new DataTableComparer(dtMaster,dtReplica);
             var result = dtc.CompareSchema().Value;
             Assert.IsTrue(result.IsCompatible);
-            Assert.IsFalse(result.HasDiffs);
-            
+            Assert.IsFalse(result.HasDiffs);           
         }
         [Test]
         public void ExtraFieldsTest()

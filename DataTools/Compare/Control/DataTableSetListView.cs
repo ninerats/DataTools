@@ -48,6 +48,8 @@ namespace Craftsmaneer.DataTools.Compare.Control
             }
         }
 
+        public List<string> TableList { get; set; }
+
         private void ShowHideIdentical()
         {
             foreach (ListViewItem item in Items)
