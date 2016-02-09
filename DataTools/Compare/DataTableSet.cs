@@ -269,7 +269,7 @@ namespace Craftsmaneer.DataTools.Compare
                         tableList =
                             conn.GetTableList()
                                 .Rows.Cast<DataRow>()
-                                .Select(r => string.Format("{0},{1}", r["TableName"], r["SchemaName"]))
+                                .Select(r => string.Format("{0}.{1}", r["SchemaName"],r["TableName"] ))
                                 .ToList();
                     }
                     foreach (var tableName in tableList)

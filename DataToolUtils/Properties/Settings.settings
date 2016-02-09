@@ -12,16 +12,25 @@
       <Value Profile="(Default)">D:\tfs\rdb\projects\DataTools\Export</Value>
     </Setting>
     <Setting Name="txtMasterDataTableSet_Text" Type="System.String" Scope="User">
-      <Value Profile="(Default)">FolderDTC.config</Value>
+      <Value Profile="(Default)">Data Source=(server);Initial Catalog=(database);Integrated Security=True</Value>
     </Setting>
     <Setting Name="txtReplicaDtSet_Text" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Database_DTC.config</Value>
+      <Value Profile="(Default)">Data Source=(server);Initial Catalog=(database);Integrated Security=True</Value>
     </Setting>
     <Setting Name="workspaceRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="chkIgnoreWhitespace_Checked" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtWorkingFolder_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txtSourceDatabase_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(server);Initial Catalog=(database);Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="txtTargetDatabase_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(server);Initial Catalog=(database);Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

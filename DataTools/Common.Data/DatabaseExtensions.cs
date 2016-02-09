@@ -12,7 +12,7 @@ namespace Craftsmaneer.Data
     {
         public static DataTable GetTableList(this SqlConnection conn)
         {
-            var tableInfo = ExecQuery(conn, "s.Name AS SchemaName, SELECT t.NAME AS TableName,  " +
+            var tableInfo = ExecQuery(conn, "SELECT s.Name AS SchemaName,  t.NAME AS TableName  " +
                    "FROM  sys.tables t  " +
                    "LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id " +
                    "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) " +

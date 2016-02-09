@@ -14,7 +14,7 @@ namespace Craftsmaneer.DataTools.IO
     /// <summary>
     ///     transforms dataTables between database and files
     ///     handles referential integrity.
-    /// TODO: split into importer and exporter clasess.
+    /// TODO: consider splitting into importer and exporter clasess.
     /// </summary>
     public class DataTableSerializer : IDisposable
     {

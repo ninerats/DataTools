@@ -10,12 +10,14 @@ using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataToolUtils
 {
-    public partial class CompareDataTableSetsForm : Form
+    public partial class CompareDataTableSetsForm : DataToolsFormBase
     {
         public TableSetDiff DataSetDiff { get; set; }
+
         public CompareDataTableSetsForm()
         {
             InitializeComponent();
+            StatusLabel = lblStatus;
 
         }
 
@@ -43,7 +45,7 @@ namespace Craftsmaneer.DataToolUtils
 
         private void cmdCompare_Click(object sender, EventArgs e)
         {
-            UiTry(() =>
+            UiWrap(() =>
             {
                 var options = TableCompareOptions.CaptureValues;
                 if (chkIgnoreWhitespace.Checked)
@@ -72,36 +74,6 @@ namespace Craftsmaneer.DataToolUtils
                 lvCompareResults.ShowIdentical = chkShowIdentical.Checked;
 
             }, "Comparing tables");
-        }
-
-        private void ShowStatus(string msg, Color color = default(Color))
-        {
-            if (color == default(Color)) color = Color.DarkBlue;
-            lblStatus.ForeColor = color;
-            lblStatus.Text = msg;
-            Application.DoEvents();
-
-        }
-
-        private void UiTry(Action action, string context)
-        {
-            lblStatus.ForeColor = Color.DarkBlue;
-            lblStatus.Text = context + "...";
-            var result = ReturnValue.Wrap(action);
-            ShowStatus(result, context);
-        }
-
-        private bool ShowStatus(ReturnValue result, string context)
-        {
-            if (!result.Success)
-            {
-                MessageBox.Show(result.ToString(), context,
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ShowStatus(string.Format("{0} failed.", context), Color.Red);
-                Debug.WriteLine(result);
-            }
-            ShowStatus(string.Format("{0} complete.", context));
-            return result.Success;
         }
 
         private void cmdSave_Click(object sender, EventArgs e)
@@ -134,13 +106,13 @@ namespace Craftsmaneer.DataToolUtils
 
         private void cmdTools_Click(object sender, EventArgs e)
         {
-            UiTry(() => { new DataToolUtilForm().ShowDialog(); }, "Showing Tools form");
+            UiWrap(() => { new DataToolUtilForm().ShowDialog(); }, "Showing Tools form");
         }
 
         private void cmdDumpDiff_Click(object sender, EventArgs e)
         {
             string exportPath = "";
-            UiTry(() =>
+            UiWrap(() =>
             {
                 exportPath = new FileInfo("Compare_report.txt").FullName;
                 // File.WriteAllText("TableSetDiffDump.txt",lvCompareResults.TableSetDiff.ToString());
@@ -164,6 +136,11 @@ namespace Craftsmaneer.DataToolUtils
         private void lvCompareResults_DoubleClick(object sender, EventArgs e)
         {
             cmdViewDetails_Click(sender, e);
+        }
+
+        private void cmdMigrate_Click(object sender, EventArgs e)
+        {
+            new MigrateTablesForm().ShowDialog();
         }
     }
 }
