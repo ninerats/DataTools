@@ -19,10 +19,23 @@ namespace Craftsmaneer.DataToolUtils
 
         protected void UiWrap(Action action, string context)
         {
-            StatusLabel.ForeColor = Color.DarkBlue;
-            StatusLabel.Text = context + "...";
-            var result = ReturnValue.Wrap(action);
-            ShowStatus(result, context);
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                StatusLabel.ForeColor = Color.DarkBlue;
+                var result = ReturnValue.Wrap(action, context);
+                ShowStatus(result, context);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("Exception'{0} in UiTry.\r\n\r\nStack trace{1}:\r\n", ex.Message,
+                    ex.StackTrace));
+            }
+            finally
+            {
+
+                Cursor = Cursors.Default;
+            }
         }
 
         protected bool ShowStatus(ReturnValue result, string context)
