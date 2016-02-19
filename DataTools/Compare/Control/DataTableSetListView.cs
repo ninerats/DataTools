@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Craftsmaneer.DataTools.IO;
 using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare.Control
@@ -37,6 +39,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
         }
 
         private bool _showIdentical;
+        private List<string> _tableList;
 
         public bool ShowIdentical
         {
@@ -48,7 +51,32 @@ namespace Craftsmaneer.DataTools.Compare.Control
             }
         }
 
-        public List<string> TableList { get; set; }
+        public List<string> TableList
+        {
+            get { return _tableList; }
+            set
+            {
+                _tableList = value;
+                ResetTableList();
+            }
+        }
+
+        private void ResetTableList()
+        {
+            Items.Clear();
+            foreach (var table in TableList)
+            {
+                var item = new ListViewItem(new[] {table, "", "Status unknown."});
+                item.ForeColor = Color.Gray;
+                item.Group = Groups["missing"];
+                    Items.Add(item);
+                item.ImageKey = "missing";
+            }
+
+
+           
+           
+        }
 
         private void ShowHideIdentical()
         {
@@ -158,7 +186,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
 
         private void Init()
         {
-           
+           _tableList = new List<string>();
             // set event handlers
             
            
@@ -294,7 +322,7 @@ namespace Craftsmaneer.DataTools.Compare.Control
             });
         }
 
-        public ReturnValue<TableDiff> SelectedTable()
+        public ReturnValue<TableDiff> SelectedTableDiff()
         {
             if (SelectedItems.Count == 0)
             {
@@ -303,6 +331,49 @@ namespace Craftsmaneer.DataTools.Compare.Control
             return SelectedItems[0].Tag as ReturnValue<TableDiff>;
         }
 
+        public ReturnValue<DataTableSet> CheckedTables()
+        {
+            return ReturnValue<DataTableSet>.Wrap(() =>
+            {
+                var tableDiffs = CheckedItems.Cast<ListViewItem>().Select(lvi => lvi.Tag as TableDiff);
+                var tables = tableDiffs.Select(td => td.Replica);
+                return new MemoryDataTableSet(tables);
+            }, "returning a list of DataTables the user has checked.");
+        }
       
+    }
+
+    public class MemoryDataTableSet : DataTableSet
+    {
+        private readonly DataSet _ds;
+        public MemoryDataTableSet(IEnumerable<DataTable> tables)
+        {
+           _ds = new DataSet();
+            _ds.Tables.AddRange(tables.ToArray());
+            TableList = tables.Select(t => t.TableName).ToList();
+        }
+
+        protected override ReturnValue<DataSet> GetTables()
+        {
+            return ReturnValue<DataSet>.SuccessResult(_ds);
+        }
+
+        public override ReturnValue<string[]> ImportTables(string connStr)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override ReturnValue ExportTables(string exportFolder)
+        {
+            return ReturnValue.Wrap(() =>
+            {
+                foreach (var tableName in TableList)
+                {
+                    _ds.Tables[tableName].WriteXml(exportFolder, XmlWriteMode.WriteSchema);
+                        
+                }
+            }, string.Format("Exporting to {0}.", exportFolder));
+
+        }
     }
 }

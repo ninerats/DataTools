@@ -203,7 +203,8 @@ namespace Craftsmaneer.DataTools.IO
                         }
                         catch (Exception ex)
                         {
-                            throw new AbortException(string.Format("Exception with importing table {0}",path),ex);
+                            throw new AbortException(
+                                ReturnValue.FailResult(string.Format("Exception with importing table {0}", path), ex));                           
                         }
                     }
                     // turn constraint back on. any DRI error will happen here, rolling back the transaction.
@@ -212,7 +213,7 @@ namespace Craftsmaneer.DataTools.IO
                
                     tran.Commit();
                 }
-            }, string.Format("Importing tables {0}", string.Join(", ", paths)));
+            }, string.Format("Importing tables"));
         }
 
         // TODO: cache table schema for performance.

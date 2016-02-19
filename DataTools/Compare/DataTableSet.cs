@@ -63,7 +63,7 @@ namespace Craftsmaneer.DataTools.Compare
             {
                 var originalRelativePath = dtSet.FolderPath;
                 dtSet.FolderPath = Path.Combine(rootFolder, originalRelativePath ?? "");
-                var x = 1;
+              
             }, string.Format("adding root apth {0} to relative path in config file",rootFolder));
             if (!setPathResult.Success)
             {
@@ -177,7 +177,7 @@ namespace Craftsmaneer.DataTools.Compare
         }
 
 
-       
+        public abstract ReturnValue ExportTables(string exportFolder);
     }
         #endregion
 
@@ -241,6 +241,12 @@ namespace Craftsmaneer.DataTools.Compare
                 return AvailableFiles;
             }, "Importing tables");
         }
+
+        public override ReturnValue ExportTables(string exportFolder)
+        {
+            // this is effecively a file copy.
+            throw new NotImplementedException();
+        }
     }
 
     public class DatabaseDataTableSet : DataTableSet
@@ -293,7 +299,7 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
-        public ReturnValue ExportTables(string exportFolder)
+        public override ReturnValue ExportTables(string exportFolder)
         {
             if (!Directory.Exists(exportFolder))
             {

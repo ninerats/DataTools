@@ -69,6 +69,19 @@ namespace Craftsmaneer.Lang
             return new ReturnValue(false, context, exception);
         }
 
+        /// <summary>
+        /// Links to exists return values, where one is caused by another
+        /// </summary>
+        /// <param name="orignal"></param>
+        /// <param name="handler"></param>
+        public static ReturnValue ErrorHandlerFail(ReturnValue orignal, ReturnValue handler, string context ="")
+        {
+            handler.Inner = orignal;
+            var fail = FailResult(string.Format("Error handler cascade failure: {0}",context));
+            fail.Inner = handler;
+            return fail;
+        }
+
         public override string ToString()
         {
             var desc = Error == null
@@ -85,7 +98,7 @@ namespace Craftsmaneer.Lang
         /// <summary>
         /// creates an error chain and returns failure.
         /// </summary>
-        /// <param name="inner"></param>
+        /// <param name="inner">ReturnValue containing error information that is the cause of this failure</param>
         /// <returns></returns>
         public static ReturnValue Cascade(ReturnValue inner, string context = "")
         {
@@ -93,6 +106,8 @@ namespace Craftsmaneer.Lang
             fail.Inner = inner;
             return fail;
         }
+        
+       
 
         /// <summary>
         /// throws AbortException if the call fails.  This should only be used inside a Wrap() block.
@@ -112,6 +127,14 @@ namespace Craftsmaneer.Lang
         {
             FailResult(context).AbortOnFail();
         }
+
+        public static void Abort(ReturnValue getResult)
+        {
+            throw new AbortException(getResult);
+        }
+
+
+       
     }
 
     /// <summary>
@@ -266,5 +289,7 @@ namespace Craftsmaneer.Lang
         {
         }
     }
+
+
    
 }
