@@ -51,6 +51,7 @@
     <Compile Include="IO\DataSerTestHelper.cs" />
     <Compile Include="IO\DataTableSerializerTest.cs" />
     <Compile Include="IO\ImportingTablesTest.cs" />
+    <Compile Include="MissingColumnsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Compare\SchemaDiffTest.cs" />
     <Compile Include="Scratch.cs" />

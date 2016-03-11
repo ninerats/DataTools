@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -72,6 +73,7 @@ namespace Craftsmaneer.DataToolUtils
                     return;
                 lvCompareResults.TableSetDiff = dataSetDiffResult.Value;
                 lvCompareResults.ShowIdentical = chkShowIdentical.Checked;
+                cmdMigrate.Visible = true;
 
             }, "Comparing tables");
         }
@@ -88,7 +90,7 @@ namespace Craftsmaneer.DataToolUtils
 
         private void cmdViewDetails_Click(object sender, EventArgs e)
         {
-            var selected = lvCompareResults.SelectedTable();
+            var selected = lvCompareResults.SelectedTableDiff();
             if (selected == null)
             {
                 MessageBox.Show("Couldn't get underlying data for the selected item.");
@@ -138,9 +140,99 @@ namespace Craftsmaneer.DataToolUtils
             cmdViewDetails_Click(sender, e);
         }
 
+        #region Migrate
+
         private void cmdMigrate_Click(object sender, EventArgs e)
         {
-            new MigrateTablesForm().ShowDialog();
+            UiWrap(() =>
+            {
+                lvCompareResults.CheckBoxes = true;
+                
+                var delta = 173 - pnlTop.Height;
+                pnlTop.Height += delta;
+                this.Height += delta;
+                if (string.IsNullOrEmpty(txtWorkingFolder.Text))
+                {
+                    txtWorkingFolder.Text = Path.Combine(Path.GetTempPath(), "MigrateDatabase");
+                    if (!Directory.Exists(txtWorkingFolder.Text))
+                    {
+                        Directory.CreateDirectory(txtWorkingFolder.Text);
+                    }
+                }
+            }, "Initializing working folder");
+            
+        }
+
+
+        private void cmdExecuteMigration_Click(object sender, System.EventArgs e)
+        {
+            UiWrap(() =>
+            {
+                var source = GetSource().AbortOnFail();
+                string workingFolder = ExportToWorkingFolder(source).AbortOnFail();
+                string msg = "Importing tables...";
+                ShowStatus(msg);
+                var importSource = new FolderDataTableSet(workingFolder)
+                {
+                    Id = "Source Import Folder",
+                    TableList = source.TableList
+                };
+                var importResult = importSource.ImportTables(txtTargetDb.Text);
+                if (!importResult.Success)
+                {
+                    ShowStatus(importResult, "Importing tables");
+                    return;
+                }
+                var successMsg = string.Format("Migration to database target '{0}' complete. The following tables were imported:\r\n{1}",
+                   txtTargetDb.Text, string.Join("\r\n", importResult.Value.Select(t => "\t" + t)));
+                ShowStatus(successMsg);
+                File.WriteAllText(Path.Combine(workingFolder, "TableMigrationReport.txt"), successMsg);
+                MessageBox.Show(string.Format("Migration complete. {0} tables migrated.", importResult.Value.Count())); ;
+            }, "Migrating tables");
+        }
+
+        private ReturnValue<string> ExportToWorkingFolder(DatabaseDataTableSet source)
+        {
+            var workingFolder = txtWorkingFolder.Text;
+            return ReturnValue<string>.Wrap(() =>
+            {
+                if (!Directory.Exists(workingFolder))
+                    ReturnValue.Abort(string.Format("The working folder '{0}' does not exist.", txtWorkingFolder));
+                var msg = string.Format("Exporting tables to '{0}'...", workingFolder);
+                ShowStatus(msg);
+                ShowStatus(source.ExportTables(workingFolder), msg);
+                return workingFolder;
+            }, string.Format("Exporting DatatableSet to '{0}.", workingFolder));
+        }
+
+        private ReturnValue<DatabaseDataTableSet> GetSource()
+        {
+            var selectedTableNames = lvCompareResults.CheckedItems.Cast<ListViewItem>().Select(lvi => lvi.Text).ToArray();
+            if (!selectedTableNames.Any())
+            {
+                return ReturnValue<DatabaseDataTableSet>.FailResult("No tables selected to migrate.");
+            }
+            var source = new DatabaseDataTableSet(txtSourceDb.Text) ;
+            Contract.Assert(source != null);
+            source.TableList = selectedTableNames.ToList();
+            return ReturnValue<DatabaseDataTableSet>.SuccessResult(source);
+        }
+
+
+        #endregion
+
+        private void lvCompareResults_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            cmdExecuteMigration.Enabled = (lvCompareResults.CheckedItems.Count > 0);
+        }
+
+        private void cmdExport_Click(object sender, EventArgs e)
+        {
+            UiWrap(() =>
+            {
+                var source = GetSource().AbortOnFail();
+                string workingFolder = ExportToWorkingFolder(source).AbortOnFail();
+            }, "Exporting Selectd tables.");
         }
     }
 }

@@ -69,7 +69,7 @@ namespace Craftsmaneer.Data
 
             var cmd = new SqlCommand(string.Format("SELECT * FROM {0}", tableName), conn);
            
-            using (var dr = cmd.ExecuteReader(CommandBehavior.KeyInfo | CommandBehavior.SequentialAccess))
+            using (var dr = cmd.ExecuteReader(CommandBehavior.KeyInfo ))
             {
                 var dt = new DataTable(tableName);
                 dt.Load(dr);
