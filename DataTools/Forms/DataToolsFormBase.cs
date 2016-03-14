@@ -4,10 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Craftsmaneer.Lang;
 
-namespace Craftsmaneer.DataToolUtils
+namespace Craftsmaneer.DataTools.Forms
 {
     public class DataToolsFormBase : Form
     {
+        protected Label StatusLabel { get; set; }
         protected void ShowStatus(string msg, Color color = default(Color))
         {
             if (color == default(Color)) color = Color.DarkBlue;
@@ -51,6 +52,6 @@ namespace Craftsmaneer.DataToolUtils
             return result.Success;
         }
 
-        protected Label StatusLabel { get; set; }
+      
     }
 }

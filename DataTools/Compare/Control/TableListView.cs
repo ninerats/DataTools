@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 using Craftsmaneer.Data;
+using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare.Control
 {
@@ -50,27 +51,35 @@ namespace Craftsmaneer.DataTools.Compare.Control
         }
 
         public string ConnectionString { get; set; }
+        public List<string> TableList {
+            get { return CheckedItems.Cast<ListViewItem>().Select(lvi => lvi.Text).ToList(); }
+        }
 
-        public void Connect()
+        public ReturnValue Connect()
         {
             if (ConnectionString == null)
-                return;
-            using (var conn = new SqlConnection(ConnectionString))
+                return ReturnValue.FailResult();
+
+
+            return ReturnValue.Wrap(() =>
             {
-                conn.Open();
-                _tableInfo =
-                    conn.ExecQuery(
-                        "SELECT t.NAME AS TableName, s.Name AS SchemaName,max( p.rows) AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
-                        "FROM  sys.tables t  " +
-                        "INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id " +
-                        "INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id " +
-                        "INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id " +
-                        "LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id " +
-                        "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) AND (i.OBJECT_ID > 255 ) " +
-                        "GROUP BY t.Name, s.Name " +
-                        "ORDER BY t.Name");
-                DisplayTables();
-            }
+                using (var conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    _tableInfo =
+                        conn.ExecQuery(
+                            "SELECT t.NAME AS TableName, s.Name AS SchemaName,max( p.rows) AS RowCounts, SUM(a.total_pages) * 8 AS TotalSpaceKB " +
+                            "FROM  sys.tables t  " +
+                            "INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id " +
+                            "INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id " +
+                            "INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id " +
+                            "LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id " +
+                            "WHERE (t.NAME NOT LIKE 'dt%') AND (t.is_ms_shipped = 0) AND (i.OBJECT_ID > 255 ) " +
+                            "GROUP BY t.Name, s.Name " +
+                            "ORDER BY t.Name");
+                    DisplayTables();
+                }
+            }, "Connect() failed.");
         }
 
         private void DisplayTables()
@@ -80,13 +89,16 @@ namespace Craftsmaneer.DataTools.Compare.Control
             rows = rows.OrderBy(r => r["SchemaName"] + "." + r["TableName"]);
             foreach (DataRow table in rows)
             {
+                var tableName = string.Format("{0}.{1}", table["SchemaName"], table["TableName"]);
                 var li = new ListViewItem(new[]
                 {
-                    string.Format("{0}.{1}", table["SchemaName"], table["TableName"]),
+                    tableName,
                     string.Format("{0}", table["RowCounts"]),
-                    string.Format("{0}", table["TotalSpaceKB"])
-                });
+                    string.Format("{0}", table["TotalSpaceKB"]),
+                    
+                }) {Name = tableName};
                 Items.Add(li);
+
             }
         }
 
@@ -111,6 +123,25 @@ namespace Craftsmaneer.DataTools.Compare.Control
                     ds.Tables.Add(dt);
                 }
                 return ds;
+            }
+        }
+
+        public void SelectAllTables()
+        {
+            foreach (ListViewItem item in Items)
+            {
+                item.Checked = true;
+            }
+        }
+
+        public void SelectTables(IEnumerable<string> tableList)
+        {
+            foreach (var tableName in tableList)
+            {
+                if (Items.ContainsKey(tableName))
+                {
+                    Items[tableName].Checked = true;
+                }
             }
         }
     }

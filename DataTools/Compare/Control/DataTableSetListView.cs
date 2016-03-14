@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Craftsmaneer.DataTools.IO;
+
 using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare.Control
@@ -359,6 +359,11 @@ namespace Craftsmaneer.DataTools.Compare.Control
         }
 
         public override ReturnValue<string[]> ImportTables(string connStr)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override ReturnValue SaveConfig(string dtsConfigPath)
         {
             throw new NotImplementedException();
         }

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Craftsmaneer.DataTools.Compare;
+using Craftsmaneer.DataTools.Forms;
 using Craftsmaneer.DataToolUtils.Compare;
 using Craftsmaneer.Lang;
 

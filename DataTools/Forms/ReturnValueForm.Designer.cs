@@ -1,4 +1,4 @@
-﻿namespace Craftsmaneer.DataToolUtils
+﻿namespace Craftsmaneer.DataTools.Forms
 {
     partial class ReturnValueForm
     {

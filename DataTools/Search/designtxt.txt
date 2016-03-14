@@ -1,0 +1,12 @@
+﻿OVERVIEW
+user will enter search value and type.
+user selects database and tables to search.
+app will generate SQL to efficiently search all selected tables.
+app will return table, column, and row where match was found.
+
+FEATURES
+- allow a filter for each table
+  - allow the filter to apply to related tables as well.
+- allow the user to pick the data types of the columns to search.  disable ones that don't apply in real-time as they type.
+- return the SQL statement that gets the hit for search.
+- allow wildcards in text searches.

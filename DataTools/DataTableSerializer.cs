@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Xml;
 using Craftsmaneer.Data;
 using Craftsmaneer.Lang;
 
-namespace Craftsmaneer.DataTools.IO
+namespace Craftsmaneer.DataTools
 {
     /// <summary>
     ///     transforms dataTables between database and files

@@ -2,12 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using Craftsmaneer.Data;
-using Craftsmaneer.DataTools.IO;
 using Craftsmaneer.Lang;
 
 namespace Craftsmaneer.DataTools.Compare
@@ -127,7 +124,7 @@ namespace Craftsmaneer.DataTools.Compare
             }
         }
 
-       
+        public abstract ReturnValue SaveConfig(string dtsConfigPath);
 
         #region enumeration implementation
         public void CopyTo(Array array, int index)
@@ -242,92 +239,14 @@ namespace Craftsmaneer.DataTools.Compare
             }, "Importing tables");
         }
 
+        public override ReturnValue SaveConfig(string dtsConfigPath)
+        {
+            throw new NotImplementedException();
+        }
+
         public override ReturnValue ExportTables(string exportFolder)
         {
             // this is effecively a file copy.
-            throw new NotImplementedException();
-        }
-    }
-
-    public class DatabaseDataTableSet : DataTableSet
-    {
-        public string ConnStr { get; protected set; }
-        public DatabaseDataTableSet(string connStr)
-        {
-            ConnStr = connStr;
-        }
-
-
-
-        protected override ReturnValue<DataSet> GetTables()
-        {
-            try
-            {
-                var ds = new DataSet();
-                
-                ds.EnforceConstraints = false;
-                using (var conn = new SqlConnection(ConnStr))
-                {
-                    conn.Open();
-
-                    var tableList = TableList;
-                    if (tableList == null || tableList.Count == 0)
-                    {
-                        tableList =
-                            conn.GetTableList()
-                                .Rows.Cast<DataRow>()
-                                .Select(r => string.Format("{0}.{1}", r["SchemaName"],r["TableName"] ))
-                                .ToList();
-                    }
-                    foreach (var tableName in tableList)
-                    {
-                        var thisConn = conn;
-                        var thisTableName = tableName;
-                        var result = ReturnValue.Wrap(() => ds.Tables.Add(thisConn.GetTable(thisTableName)));
-                        if (!result.Success)
-                        {
-                            return ReturnValue<DataSet>.Cascade(result,
-                                string.Format("Couldn't get DataTable for {0}.", tableName));
-                        }
-                    }
-                }
-                return ReturnValue<DataSet>.SuccessResult(ds);
-            }
-            catch (Exception ex)
-            {
-                return ReturnValue<DataSet>.FailResult("Unhanlded error while trying to tables.", ex);
-            }
-        }
-
-        public override ReturnValue ExportTables(string exportFolder)
-        {
-            if (!Directory.Exists(exportFolder))
-            {
-                return ReturnValue.FailResult(string.Format("Exporting tables"), new DirectoryNotFoundException(
-                    string.Format("The export folder '{0}' does not exist.", exportFolder)));
-            }
-            return ReturnValue.Wrap(() =>
-            {
-                var dataSer = new DataTableSerializer(ConnStr);
-                foreach (string tableName in TableList)
-                {
-
-                    var path = Path.Combine(exportFolder, string.Format("{0}.xml", tableName));
-                    dataSer.ExportTable(tableName, path).AbortOnFail();
-                 
-                    
-                }
-            }, string.Format("Exporting to folder '{0}'.", exportFolder));
-        }
-
-        //TODO: standardize this.
-        private string GetDataTablePath(DataTable table)
-        {
-            return string.Format("{0}.xml", table.TableName);
-        }
-
-        public override ReturnValue<string[]> ImportTables(string connStr)
-        {
             throw new NotImplementedException();
         }
     }

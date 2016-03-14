@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DataTool.Search.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="txtConnectionString_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(localdb)\v11.0;Initial Catalog=AdventureWorks2012;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="txtSearchValue_Txt" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

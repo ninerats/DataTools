@@ -25,6 +25,7 @@ namespace Craftsmaneer.Data
         {
             var cmd = new SqlCommand(sql, conn);
             var da = new SqlDataAdapter(cmd);
+            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             var dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -49,18 +50,6 @@ namespace Craftsmaneer.Data
             }
             var result = cmd.ExecuteNonQuery();
             return result;
-        }
-
-
-        public static DataTable GetTableUsingFill(this SqlConnection conn,string tableName )
-        {
-
-            var sql = string.Format("select * from {0}", tableName);
-            var da = new SqlDataAdapter(sql, conn);
-            var dt = new DataTable(tableName);
-            da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            da.Fill(dt);
-            return dt;
         }
 
         public static DataTable GetTable(this SqlConnection conn, string tableName)
